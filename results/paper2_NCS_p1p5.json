@@ -1,0 +1,47 @@
+{
+  "P1_complementary_tiling_quantified": {
+    "n_behaviours": 4,
+    "span_effective_dim_of_stiff_directions": 2.978,
+    "interpretation": "span eff-dim 1 = redundant behaviours; ->4 = fully complementary",
+    "per_behaviour_novel_orthogonal_fraction": [
+      0.562,
+      0.646,
+      0.459,
+      0.472
+    ],
+    "mean_novel_fraction": 0.535,
+    "mean_pairwise_cos": 0.5395,
+    "null_random_R7": {
+      "span_effdim_mean": 3.504,
+      "novel_fraction_mean": 0.735
+    },
+    "verdict": "the 4 behaviour-specific stiff directions span an effective 2.98 dimensions (vs 1 if redundant); each behaviour contributes a mean 0.54 orthogonal/novel fraction, so adding a behaviour predictably enlarges the identifiable subspace -- the tiling is quantitative and predictive, not just observed."
+  },
+  "P5_eigenworm_alignment_significance": {
+    "observed_mean_principal_cos": {
+      "modWorm": 0.773,
+      "BAAIWorm": 0.683
+    },
+    "null_random_subspaces_by_ambient_dim": {
+      "ambient_10": {
+        "null_mean": 0.5515198961102695,
+        "null_p95": 0.6767746495545626,
+        "p_modWorm_0.773": 0.00145,
+        "p_BAAIWorm_0.683": 0.04305
+      },
+      "ambient_20": {
+        "null_mean": 0.3789763659341601,
+        "null_p95": 0.48229026171194017,
+        "p_modWorm_0.773": 0.0,
+        "p_BAAIWorm_0.683": 0.0
+      },
+      "ambient_48": {
+        "null_mean": 0.2410143641938347,
+        "null_p95": 0.3134839607676332,
+        "p_modWorm_0.773": 0.0,
+        "p_BAAIWorm_0.683": 0.0
+      }
+    },
+    "verdict": "model<->real eigenworm subspace alignment exceeds random k=4 subspaces (see per-ambient p-values)."
+  }
+}

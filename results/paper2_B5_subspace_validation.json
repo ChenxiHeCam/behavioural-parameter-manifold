@@ -1,0 +1,96 @@
+{
+  "experiment": "B5_subspace_level_biological_validation",
+  "question": "does real CeNGEN expression covariance concentrate along the model SLOPPY eigenvectors (subspace test, not per-gene)",
+  "genes": [
+    "kvs-1",
+    "egl-2",
+    "egl-36",
+    "kqt-3",
+    "egl-19",
+    "cca-1",
+    "slo-1",
+    "slo-2",
+    "nca-2",
+    "irk-1"
+  ],
+  "n_genes": 10,
+  "model_eigenvalues": [
+    11.53874380859784,
+    1.529622947036965,
+    1.108586077003182,
+    0.1458828584090811,
+    2.76872930167526e-14,
+    4.390249176197267e-16,
+    2.7047081468808043e-17,
+    -3.390226903067845e-17,
+    -3.0005480573368614e-16,
+    -8.879623964027155e-16
+  ],
+  "real_variance_along_eigvec_corr": [
+    0.7238078711238808,
+    0.4638233521874462,
+    0.9477976136291403,
+    0.6701110403779146,
+    0.7577126121150529,
+    0.6512387776435851,
+    1.991294148687306,
+    0.9812116668755184,
+    2.279358458476076,
+    0.5336444588840843
+  ],
+  "real_variance_along_eigvec_cov": [
+    0.229797476478738,
+    0.18764821936722878,
+    0.33192200752242584,
+    0.1311593576695939,
+    0.2812446174295145,
+    0.19186489080346328,
+    0.4797859602868568,
+    0.3112637741410714,
+    0.5789238965843682,
+    0.17460001845161788
+  ],
+  "SUBSPACE_spearman_stiffness_vs_realvar_corr": {
+    "rho": -0.32121212121212117,
+    "p": 0.3654683104386702,
+    "predict": "NEGATIVE"
+  },
+  "SUBSPACE_spearman_stiffness_vs_realvar_cov": {
+    "rho": -0.23636363636363633,
+    "p": 0.5108853175152002
+  },
+  "stiff_subspace_dim_k": 4,
+  "stiff_subspace_real_var_per_dir": 0.7013849693295955,
+  "sloppy_subspace_real_var_per_dir": 1.1990766871136038,
+  "sloppy_over_stiff_var_ratio": 1.7095842362571825,
+  "sloppy_over_stiff_permutation_p": 0.9447527623618819,
+  "sloppy_half_share_of_real_variance_corr": 0.6436747510566567,
+  "stiff_half_share_of_real_variance_corr": 0.3563252489433434,
+  "pooled_acrosstype_spearman": {
+    "rho": -0.2121212121212121,
+    "p": 0.5563057751029299,
+    "note": "across-cell-type (identity-dominated) contrast"
+  },
+  "per_gene_control_spearman_cov": {
+    "rho": 0.23636363636363633,
+    "p": 0.5108853175152002,
+    "note": "BV1-style per-gene test, expected weak/null by construction"
+  },
+  "genes_dropped_not_in_cengen": [
+    "kcnl-1",
+    "shk-1",
+    "shl-1",
+    "unc-2"
+  ],
+  "sloppy_class_genes": [
+    "cca-1",
+    "egl-19",
+    "slo-1",
+    "slo-2",
+    "unc-2"
+  ],
+  "VERDICT": "NULL / inconclusive with available data: the within-type CeNGEN expression covariance does NOT concentrate in the model sloppy subspace beyond chance (permutation p=0.94; sloppy/stiff var ratio 1.71x is not above random gene arrangements). The directional Spearman is weakly negative (rho=-0.32) and the per-gene control is null as predicted, but the subspace prediction is NOT positively confirmed. Caveat: CeNGEN measures cross-cell-type replicate variability, a proxy that is dominated by technical/cell-identity variation rather than the cross-individual conductance freedom the prediction concerns, and 4/14 channel genes (incl. the sloppy-class unc-2) are absent. A cross-individual conductance-level dataset remains the genuinely outstanding test.",
+  "caveats": [
+    "CeNGEN expression is across cell-type replicates (proxy for biological variability), not across whole individuals; 4 of 14 channel genes (unc-2, shk-1, shl-1, kcnl-1) absent from the CeNGEN tables; model Hessian from 6 coarse behavioural observables; gene->channel aggregation hand-curated; n=10 genes limits power."
+  ]
+}

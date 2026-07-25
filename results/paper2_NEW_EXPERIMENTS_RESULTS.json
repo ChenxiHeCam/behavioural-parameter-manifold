@@ -1,0 +1,299 @@
+{
+  "title": "Paper-2 previously-deferred experiments (SI 'Planned confirmatory') \u2014 completed",
+  "server": "<compute-host> (48-core, RTX 3080 Ti; BAAIWorm/flygym/flybody fresh builds; engine deterministic)",
+  "method_note": "Behavioural Hessian computed as Gauss-Newton J^T W J from the observable Jacobian (2*d deterministic rollouts), since the NEURON/MuJoCo engines are non-differentiable and full FD Lanczos over the connectome is infeasible at 150 s/rollout.",
+  "experiments": {
+    "full_scale_hessian_flygym": {
+      "status": "DONE",
+      "dim": 48,
+      "eff_dim_90": 3,
+      "eff_dim_99": 6,
+      "participation_ratio": 2.1503634713592037,
+      "spectral_span_orders": 19.5,
+      "verdict": "STRONG: 48-d FlyGym walking controller behavioural Hessian has effective dimension 3 (90%) / 6 (99%) of 48, span 20 orders -> low-dim stiff subspace at higher dim. Answers C10 (fly)."
+    },
+    "b1_per_channel_baaiworm": {
+      "status": "DONE",
+      "n_params": 20,
+      "eff_dim_90": 2,
+      "eff_dim_99": 3,
+      "participation_ratio": 1.335511613795908,
+      "rank_stiff_to_sloppy": [
+        [
+          "gpas",
+          "passive-leak",
+          4.1586
+        ],
+        [
+          "gbegl36",
+          "EGL-36(Kv)",
+          2.877
+        ],
+        [
+          "gj",
+          "gap-junction-weight",
+          2.5388
+        ],
+        [
+          "syn",
+          "synaptic-weight",
+          1.8959
+        ],
+        [
+          "wout",
+          "motor-output",
+          1.6852
+        ],
+        [
+          "gbnca",
+          "NCA(Na-leak)",
+          1.6586
+        ],
+        [
+          "gbirk",
+          "IRK(Kir)",
+          1.5367
+        ],
+        [
+          "gbegl2",
+          "EGL-2(Kv-eag)",
+          1.5303
+        ],
+        [
+          "gbkqt3",
+          "KQT-3(KCNQ)",
+          1.2252
+        ],
+        [
+          "gbkcnl",
+          "KCNL(SK)",
+          0.9984
+        ],
+        [
+          "gbcca1",
+          "CCA-1(T-Ca)",
+          0.8571
+        ],
+        [
+          "gbshl1",
+          "SHL-1(Kv)",
+          0.5605
+        ],
+        [
+          "gbkvs1",
+          "KVS-1(Kv)",
+          0.5119
+        ],
+        [
+          "gbegl19",
+          "EGL-19(L-Ca)",
+          0.492
+        ],
+        [
+          "gbshk1",
+          "SHK-1(Kv)",
+          0.4397
+        ],
+        [
+          "gbslo2_egl19",
+          "SLO-2/EGL19",
+          0.3262
+        ],
+        [
+          "gbunc2",
+          "UNC-2(PQ-Ca)",
+          0.3113
+        ],
+        [
+          "gbslo1_unc2",
+          "SLO-1/UNC2(BK)",
+          0.2286
+        ],
+        [
+          "gbslo2_unc2",
+          "SLO-2/UNC2",
+          0.0926
+        ],
+        [
+          "gbslo1_egl19",
+          "SLO-1/EGL19(BK)",
+          0.0091
+        ]
+      ],
+      "verdict": "STRONG: 20 named mechanisms, eff-dim 2(90%)/3(99%). STIFF = passive-leak, gap-junction, synaptic, motor-output + a few K channels (EGL-36); SLOPPY = fast Ca (EGL-19, UNC-2) and Ca-activated K (SLO-1/2). Confirms+refines the paper's 'wiring stiff, fast conductances sloppy' thesis with named C. elegans channels; matches Marder compensated-current picture."
+    },
+    "connectome_manifold_probe_baaiworm": {
+      "status": "DONE (honest negative/refinement)",
+      "sigma025": {
+        "ratio_coh_over_rand": 0.8392484945776048,
+        "flat_fraction": 0.125
+      },
+      "sigma008": {
+        "ratio_coh_over_rand": 0.5718350254810296,
+        "flat_fraction": 0.0
+      },
+      "verdict": "REFINEMENT: across the full 3076-d connectome (syn+gj weights), random directions perturb behaviour as much as matched-norm coherent ones (coh/rand 0.57 at sigma=.08, 0.84 at .25) and essentially NO direction is flat (flat-frac ~0). The connectome WEIGHTS are collectively STIFF -> the behavioural-equivalence manifold's sloppy directions live in the biophysical channel parameters (see B1: EGL-19/UNC-2/SLO), NOT in synaptic/gap-junction weights. Consistent with B1 (gj+syn stiff) and Marder."
+    },
+    "b2_behaviour_to_neural": {
+      "status": "DONE (qualitative/MODERATE)",
+      "comparison": {
+        "kato_real_mean_abs_corr": 0.20798078862582775,
+        "kato_PCs_to_90_median": 51.0,
+        "arms": {
+          "default": {
+            "pca_participation_dim": 4.212030670672116,
+            "mean_abs_corr": 0.3910751900965953,
+            "median_tau_steps": 66.0,
+            "voltage_range_mV": [
+              -2094.494873046875,
+              36.331329345703125
+            ]
+          },
+          "pgob_real": {
+            "pca_participation_dim": 4.731280502590368,
+            "mean_abs_corr": 0.37488363393843177,
+            "median_tau_steps": 83.0,
+            "voltage_range_mV": [
+              -3633.22998046875,
+              41.242645263671875
+            ]
+          },
+          "pgob_sim": {
+            "pca_participation_dim": 4.818658330528262,
+            "mean_abs_corr": 0.3689142707228388,
+            "median_tau_steps": 83.0,
+            "voltage_range_mV": [
+              -3701.922119140625,
+              38.95311737060547
+            ]
+          }
+        },
+        "note": "sim records membrane voltage Vm (136 neurons, behaving); Kato records Ca fluorescence (~100 neurons, immobilized) -> modality+condition mismatch, comparison is qualitative. Some sim cells show numerical voltage outliers (min ~ -3600 mV); corr/PCA on z-scored traces but treat as caveat."
+      },
+      "verdict": "MODERATE/qualitative: PGOB-recovered params yield low-dimensional internal neural dynamics (PCA participation ~4.7-4.8 of 136 neurons) with mean |pairwise corr| 0.37-0.39, same regime as Kato real Ca (0.21); PGOB-real ~ default (no strong PGOB advantage). Caveats: Vm-vs-Ca modality, behaving-vs-immobilized, voltage outliers."
+    },
+    "b3_mutant_localisation": {
+      "status": "DONE (honest negative supporting non-identifiability)",
+      "rank_by_signature_norm": [
+        [
+          "syn",
+          "synaptic-weight",
+          1.19,
+          4
+        ],
+        [
+          "gbnca",
+          "NCA(Na-leak)",
+          0.886,
+          4
+        ],
+        [
+          "gpas",
+          "passive-leak",
+          0.882,
+          2
+        ],
+        [
+          "gbegl2",
+          "EGL-2(Kv-eag)",
+          0.708,
+          4
+        ],
+        [
+          "gbkqt3",
+          "KQT-3(KCNQ)",
+          0.67,
+          4
+        ],
+        [
+          "wout",
+          "motor-output",
+          0.653,
+          1
+        ],
+        [
+          "gbkcnl",
+          "KCNL(SK)",
+          0.446,
+          2
+        ],
+        [
+          "gbirk",
+          "IRK(Kir)",
+          0.413,
+          0
+        ],
+        [
+          "gj",
+          "gap-junction-weight",
+          0.382,
+          1
+        ],
+        [
+          "gbcca1",
+          "CCA-1(T-Ca)",
+          0.293,
+          0
+        ],
+        [
+          "gbslo2_egl19",
+          "SLO-2/EGL19",
+          0.161,
+          0
+        ],
+        [
+          "gbshl1",
+          "SHL-1(Kv)",
+          0.155,
+          2
+        ],
+        [
+          "gbunc2",
+          "UNC-2(PQ-Ca)",
+          0.118,
+          0
+        ],
+        [
+          "gbslo2_unc2",
+          "SLO-2/UNC2",
+          0.113,
+          0
+        ],
+        [
+          "gbshk1",
+          "SHK-1(Kv)",
+          0.106,
+          0
+        ],
+        [
+          "gbslo1_unc2",
+          "SLO-1/UNC2(BK)",
+          0.1,
+          4
+        ],
+        [
+          "gbslo1_egl19",
+          "SLO-1/EGL19(BK)",
+          0.094,
+          0
+        ],
+        [
+          "gbegl19",
+          "EGL-19(L-Ca)",
+          0.068,
+          0
+        ]
+      ],
+      "verdict": "Supports NON-IDENTIFIABILITY thesis: knockdowns of the sloppy Ca channels (EGL-19 sig=0.07, UNC-2 0.12, SLO 0.09-0.16) are nearly behaviourally silent -> not localisable from behaviour; detectable mechanisms (synaptic, passive, motor) are mutually confusable (cosine>0.9). Behaviour-only does NOT cleanly pinpoint the perturbed mechanism -> mechanism-level degeneracy, the practical face of the manifold."
+    },
+    "e3_mutant_phenotype": {
+      "status": "DONE (honest null, data-limited)",
+      "class_contrast_p": 0.6970793911970382,
+      "conservation_spearman": [
+        0.3333333333333334,
+        0.4197530864197531
+      ],
+      "verdict": "NULL on available data: stiff(gj+syn)-vs-sloppy(ion) knockout behavioural effect MW p=0.70; conservation Spearman rho=0.33 p=0.42. Yemini's 6 coarse OWMD features are too low-resolution (683-feat Tierpsy mutant data not in hand); consistent with SI's stated data-access limit. Keep as limitation."
+    }
+  }
+}

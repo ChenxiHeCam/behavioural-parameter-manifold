@@ -1,0 +1,11 @@
+{
+  "n_drawn": 33000,
+  "n_valid": 184,
+  "valid_rate": 0.005575757575757576,
+  "period_band_used": [
+    500.0,
+    2000.0
+  ],
+  "elapsed_s": 2769.045698404312,
+  "done": false
+}

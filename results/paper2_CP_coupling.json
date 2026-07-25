@@ -1,0 +1,48 @@
+{
+  "experiment": "CP_coupling_vs_unused (REAL modWorm)",
+  "question": "is sloppy = unused parameters (A) or coupled/degenerate combinations (B)",
+  "hessian_eigvals": [
+    22.121299539153092,
+    8.022515538865484,
+    5.195189679908389,
+    0.5629061412908148,
+    0.12466122020153249,
+    -6.485238529797695e-16,
+    -1.502344022185965e-15
+  ],
+  "stiff_eigvec_loadings": {
+    "gap": -0.034,
+    "syn": 0.259,
+    "leak": 0.529,
+    "Cm": -0.198,
+    "rise": 0.451,
+    "fall": -0.639,
+    "B": 0.028
+  },
+  "sloppy_eigvec_loadings": {
+    "gap": -0.21,
+    "syn": -0.038,
+    "leak": -0.543,
+    "Cm": 0.486,
+    "rise": 0.454,
+    "fall": -0.266,
+    "B": 0.383
+  },
+  "stiff_eigvec_participation": 3.4161768718224885,
+  "sloppy_eigvec_participation": 4.682445078369177,
+  "behaviour_change_under_moves": {
+    "stiff_eigvec_alpha0.3": 0.3835924050942481,
+    "sloppy_eigvec_alpha0.3": 0.43763718712336097,
+    "syn_alone_alpha0.3": 0.4040457464099208,
+    "stiff_eigvec_alpha0.6": 0.5798510601473175,
+    "sloppy_eigvec_alpha0.6": 0.7874836807033332,
+    "syn_alone_alpha0.6": 0.7644315778193708
+  },
+  "interpretation": {
+    "stiff_is_combination": true,
+    "sloppy_combination_preserves_behaviour": false
+  },
+  "elapsed_sec": 930.2,
+  "stiff_over_sloppy_ratio_alpha0.6": 0.7363340655255602,
+  "single_param_over_sloppy_ratio": 0.9707268817769358
+}

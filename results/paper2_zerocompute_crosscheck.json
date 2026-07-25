@@ -1,0 +1,64 @@
+{
+  "B1_baaiworm_mechanism": {
+    "params": [
+      "syn_scale",
+      "gj_scale",
+      "wout_scale",
+      "ion_scale",
+      "passive_scale"
+    ],
+    "eff_curvature_per_param": {
+      "syn_scale": 331.97221605173615,
+      "gj_scale": 299.63688734041983,
+      "wout_scale": 270.5000490570758,
+      "ion_scale": 0.0,
+      "passive_scale": 0.0
+    },
+    "finite_diff_abs_loss_change": {
+      "syn_scale": 0.037029285953199834,
+      "gj_scale": 0.025876348974095756,
+      "wout_scale": 0.020794491005649895,
+      "ion_scale": 0.0,
+      "passive_scale": 0.0
+    },
+    "eigenvalues_signed": [
+      348.0690001270441,
+      -339.6707952988995,
+      -214.3693570232882,
+      0.0,
+      0.0
+    ],
+    "eff_dim_nonzero_eigs": 3,
+    "saddle": true,
+    "verdict": "ion_scale & passive_scale have EXACTLY zero curvature (behaviour invariant) -> perfectly sloppy; syn/gj/wout stiff. Mixed-sign eigenvalues -> theta* is a saddle in the stiff 3-subspace."
+  },
+  "crosscheck_modworm": {
+    "n_dim": 30,
+    "sbc_pass_dims": [
+      0,
+      4,
+      9,
+      10,
+      18,
+      20,
+      23,
+      24,
+      25,
+      27
+    ],
+    "n_sbc_pass": 10,
+    "spearman_ksp_vs_disp": {
+      "rho": -0.04382647385984427,
+      "p": 0.818124587425803,
+      "expected_sign_if_agree": "negative"
+    },
+    "drift_dispersion_pass_mean": 0.30935824962117264,
+    "drift_dispersion_fail_mean": 0.2684505183588557,
+    "mannwhitney_pass_lower_than_fail": {
+      "U": 119.0,
+      "p": 0.8045221881088389
+    },
+    "CAVEAT": "SBC computed on the scale=1.0 prior region (NPE, N=14993); drift computed by CMA from init_scale=0.3 around theta_gt. Different regions + dispersion confounded by per-group parameter scale (dims 10-19 form a tight 1.2-cluster). So per-dim alignment is only suggestive.",
+    "verdict": "NO CLEAN AGREEMENT on current dumps -> a valid 3-measure test needs all three recomputed on ONE prior region & parameterization (compute-needed)."
+  }
+}

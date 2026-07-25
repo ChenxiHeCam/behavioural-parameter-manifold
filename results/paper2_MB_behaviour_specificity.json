@@ -1,0 +1,83 @@
+{
+  "experiment": "MB_behaviour_specificity_of_stiff_subspace (REAL modWorm, 4 behaviours)",
+  "question": "is low-dim intrinsic (shared stiff subspace across behaviours) or one-behaviour artifact",
+  "per_behaviour_eff_dim": {
+    "gentle_ant": [
+      1,
+      2,
+      "of 7",
+      "net_disp=0.292"
+    ],
+    "gentle_post": [
+      3,
+      4,
+      "of 7",
+      "net_disp=0.925"
+    ],
+    "harsh_ant": [
+      1,
+      3,
+      "of 7",
+      "net_disp=1.540"
+    ],
+    "harsh_post": [
+      2,
+      4,
+      "of 7",
+      "net_disp=0.700"
+    ]
+  },
+  "per_behaviour_top_stiff_eigvec": {
+    "gentle_ant": {
+      "gap": -0.447,
+      "syn": 0.329,
+      "leak": 0.022,
+      "Cm": -0.352,
+      "rise": 0.492,
+      "fall": -0.484,
+      "B": -0.301
+    },
+    "gentle_post": {
+      "gap": -0.015,
+      "syn": -0.283,
+      "leak": -0.531,
+      "Cm": 0.231,
+      "rise": -0.437,
+      "fall": 0.624,
+      "B": -0.067
+    },
+    "harsh_ant": {
+      "gap": -0.487,
+      "syn": 0.394,
+      "leak": -0.293,
+      "Cm": 0.442,
+      "rise": 0.519,
+      "fall": -0.11,
+      "B": -0.213
+    },
+    "harsh_post": {
+      "gap": -0.583,
+      "syn": 0.512,
+      "leak": -0.134,
+      "Cm": 0.388,
+      "rise": 0.18,
+      "fall": -0.436,
+      "B": -0.083
+    }
+  },
+  "cross_behaviour_stiff_subspace_alignment_cos": {
+    "gentle_ant__gentle_post": 0.767,
+    "gentle_ant__harsh_ant": 0.594,
+    "gentle_ant__harsh_post": 0.405,
+    "gentle_post__harsh_ant": 0.35,
+    "gentle_post__harsh_post": 0.524,
+    "harsh_ant__harsh_post": 0.597
+  },
+  "mean_cross_behaviour_alignment": 0.5395,
+  "union_eff_dim_90_99": [
+    2,
+    5
+  ],
+  "verdict": "behaviour-specific stiff subspaces (repertoire higher-dim than any one behaviour)",
+  "elapsed_sec": 373.3
+}

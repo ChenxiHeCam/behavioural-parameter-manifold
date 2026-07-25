@@ -1,0 +1,619 @@
+{
+  "description": "C. elegans ion-channel/synaptic gene conservation gradient (orthologue percent-identity across Caenorhabditis spp.)",
+  "source": "Ensembl Metazoa REST /homology/symbol (rest.ensembl.org), type=orthologues",
+  "target_species": [
+    "caenorhabditis_briggsae",
+    "caenorhabditis_remanei",
+    "caenorhabditis_brenneri",
+    "caenorhabditis_japonica"
+  ],
+  "conservation_distribution_perc_id": {
+    "n_genes_scored": 40,
+    "n_not_found": 0,
+    "min": 77.94,
+    "median": 91.2,
+    "max": 99.91
+  },
+  "rank_most_to_least_conserved": [
+    {
+      "gene": "unc-9",
+      "mean_perc_id": 99.91,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "egl-19",
+      "mean_perc_id": 97.19,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "glr-1",
+      "mean_perc_id": 96.89,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "mec-4",
+      "mean_perc_id": 96.81,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-29",
+      "mean_perc_id": 95.91,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-25",
+      "mean_perc_id": 95.38,
+      "n_orthologs": 2
+    },
+    {
+      "gene": "exp-2",
+      "mean_perc_id": 94.6,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "inx-1",
+      "mean_perc_id": 94.15,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "osm-9",
+      "mean_perc_id": 93.94,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-36",
+      "mean_perc_id": 93.29,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-38",
+      "mean_perc_id": 93.28,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "deg-3",
+      "mean_perc_id": 93.07,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "egl-36",
+      "mean_perc_id": 93.05,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "acr-2",
+      "mean_perc_id": 92.95,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "acr-16",
+      "mean_perc_id": 92.94,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-2",
+      "mean_perc_id": 92.19,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "trp-1",
+      "mean_perc_id": 92.09,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "egl-2",
+      "mean_perc_id": 91.88,
+      "n_orthologs": 2
+    },
+    {
+      "gene": "mec-10",
+      "mean_perc_id": 91.84,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "eat-4",
+      "mean_perc_id": 91.31,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "twk-18",
+      "mean_perc_id": 91.1,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-7",
+      "mean_perc_id": 90.96,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "eat-5",
+      "mean_perc_id": 90.8,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "kvs-1",
+      "mean_perc_id": 90.58,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "irk-1",
+      "mean_perc_id": 90.41,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-13",
+      "mean_perc_id": 90.24,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "shl-1",
+      "mean_perc_id": 89.69,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-17",
+      "mean_perc_id": 89.59,
+      "n_orthologs": 2
+    },
+    {
+      "gene": "slo-2",
+      "mean_perc_id": 89.58,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "inx-3",
+      "mean_perc_id": 89.04,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "shk-1",
+      "mean_perc_id": 88.55,
+      "n_orthologs": 2
+    },
+    {
+      "gene": "asic-1",
+      "mean_perc_id": 88.38,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "slo-1",
+      "mean_perc_id": 88.36,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "avr-15",
+      "mean_perc_id": 86.01,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "kvs-4",
+      "mean_perc_id": 85.28,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "nmr-1",
+      "mean_perc_id": 83.7,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "kqt-3",
+      "mean_perc_id": 83.57,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "cca-1",
+      "mean_perc_id": 83.52,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "twk-7",
+      "mean_perc_id": 83.13,
+      "n_orthologs": 3
+    },
+    {
+      "gene": "unc-49",
+      "mean_perc_id": 77.94,
+      "n_orthologs": 3
+    }
+  ],
+  "genes": [
+    {
+      "gene": "unc-9",
+      "n_orthologs": 3,
+      "mean_perc_id": 99.91,
+      "per_species": {
+        "caenorhabditis_brenneri": 100.0,
+        "caenorhabditis_briggsae": 100.0,
+        "caenorhabditis_japonica": 99.74
+      }
+    },
+    {
+      "gene": "egl-19",
+      "n_orthologs": 3,
+      "mean_perc_id": 97.19,
+      "per_species": {
+        "caenorhabditis_brenneri": 97.65,
+        "caenorhabditis_briggsae": 97.55,
+        "caenorhabditis_japonica": 96.37
+      }
+    },
+    {
+      "gene": "glr-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 96.89,
+      "per_species": {
+        "caenorhabditis_brenneri": 96.24,
+        "caenorhabditis_briggsae": 96.43,
+        "caenorhabditis_japonica": 97.99
+      }
+    },
+    {
+      "gene": "mec-4",
+      "n_orthologs": 3,
+      "mean_perc_id": 96.81,
+      "per_species": {
+        "caenorhabditis_brenneri": 97.66,
+        "caenorhabditis_briggsae": 97.14,
+        "caenorhabditis_japonica": 95.65
+      }
+    },
+    {
+      "gene": "unc-29",
+      "n_orthologs": 3,
+      "mean_perc_id": 95.91,
+      "per_species": {
+        "caenorhabditis_brenneri": 95.57,
+        "caenorhabditis_briggsae": 95.32,
+        "caenorhabditis_japonica": 96.84
+      }
+    },
+    {
+      "gene": "unc-25",
+      "n_orthologs": 2,
+      "mean_perc_id": 95.38,
+      "per_species": {
+        "caenorhabditis_brenneri": 95.85,
+        "caenorhabditis_briggsae": 94.9
+      }
+    },
+    {
+      "gene": "exp-2",
+      "n_orthologs": 3,
+      "mean_perc_id": 94.6,
+      "per_species": {
+        "caenorhabditis_brenneri": 96.1,
+        "caenorhabditis_briggsae": 94.81,
+        "caenorhabditis_japonica": 92.89
+      }
+    },
+    {
+      "gene": "inx-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 94.15,
+      "per_species": {
+        "caenorhabditis_brenneri": 99.53,
+        "caenorhabditis_briggsae": 99.53,
+        "caenorhabditis_japonica": 83.37
+      }
+    },
+    {
+      "gene": "osm-9",
+      "n_orthologs": 3,
+      "mean_perc_id": 93.94,
+      "per_species": {
+        "caenorhabditis_brenneri": 97.44,
+        "caenorhabditis_briggsae": 91.91,
+        "caenorhabditis_japonica": 92.48
+      }
+    },
+    {
+      "gene": "unc-36",
+      "n_orthologs": 3,
+      "mean_perc_id": 93.29,
+      "per_species": {
+        "caenorhabditis_brenneri": 94.73,
+        "caenorhabditis_briggsae": 94.8,
+        "caenorhabditis_japonica": 90.35
+      }
+    },
+    {
+      "gene": "unc-38",
+      "n_orthologs": 3,
+      "mean_perc_id": 93.28,
+      "per_species": {
+        "caenorhabditis_brenneri": 93.15,
+        "caenorhabditis_briggsae": 93.92,
+        "caenorhabditis_japonica": 92.76
+      }
+    },
+    {
+      "gene": "deg-3",
+      "n_orthologs": 3,
+      "mean_perc_id": 93.07,
+      "per_species": {
+        "caenorhabditis_brenneri": 94.33,
+        "caenorhabditis_briggsae": 93.43,
+        "caenorhabditis_japonica": 91.46
+      }
+    },
+    {
+      "gene": "egl-36",
+      "n_orthologs": 3,
+      "mean_perc_id": 93.05,
+      "per_species": {
+        "caenorhabditis_brenneri": 97.67,
+        "caenorhabditis_briggsae": 94.49,
+        "caenorhabditis_japonica": 86.98
+      }
+    },
+    {
+      "gene": "acr-2",
+      "n_orthologs": 3,
+      "mean_perc_id": 92.95,
+      "per_species": {
+        "caenorhabditis_brenneri": 95.49,
+        "caenorhabditis_briggsae": 95.32,
+        "caenorhabditis_japonica": 88.03
+      }
+    },
+    {
+      "gene": "acr-16",
+      "n_orthologs": 3,
+      "mean_perc_id": 92.94,
+      "per_species": {
+        "caenorhabditis_brenneri": 93.01,
+        "caenorhabditis_briggsae": 95.39,
+        "caenorhabditis_japonica": 90.42
+      }
+    },
+    {
+      "gene": "unc-2",
+      "n_orthologs": 3,
+      "mean_perc_id": 92.19,
+      "per_species": {
+        "caenorhabditis_brenneri": 92.04,
+        "caenorhabditis_briggsae": 93.51,
+        "caenorhabditis_japonica": 91.01
+      }
+    },
+    {
+      "gene": "trp-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 92.09,
+      "per_species": {
+        "caenorhabditis_brenneri": 92.27,
+        "caenorhabditis_briggsae": 91.67,
+        "caenorhabditis_japonica": 92.33
+      }
+    },
+    {
+      "gene": "egl-2",
+      "n_orthologs": 2,
+      "mean_perc_id": 91.88,
+      "per_species": {
+        "caenorhabditis_briggsae": 93.83,
+        "caenorhabditis_japonica": 89.94
+      }
+    },
+    {
+      "gene": "mec-10",
+      "n_orthologs": 3,
+      "mean_perc_id": 91.84,
+      "per_species": {
+        "caenorhabditis_brenneri": 91.0,
+        "caenorhabditis_briggsae": 94.48,
+        "caenorhabditis_japonica": 90.04
+      }
+    },
+    {
+      "gene": "eat-4",
+      "n_orthologs": 3,
+      "mean_perc_id": 91.31,
+      "per_species": {
+        "caenorhabditis_brenneri": 85.87,
+        "caenorhabditis_briggsae": 94.67,
+        "caenorhabditis_japonica": 93.38
+      }
+    },
+    {
+      "gene": "twk-18",
+      "n_orthologs": 3,
+      "mean_perc_id": 91.1,
+      "per_species": {
+        "caenorhabditis_brenneri": 91.97,
+        "caenorhabditis_briggsae": 90.02,
+        "caenorhabditis_japonica": 91.3
+      }
+    },
+    {
+      "gene": "unc-7",
+      "n_orthologs": 3,
+      "mean_perc_id": 90.96,
+      "per_species": {
+        "caenorhabditis_brenneri": 89.27,
+        "caenorhabditis_briggsae": 97.09,
+        "caenorhabditis_japonica": 86.52
+      }
+    },
+    {
+      "gene": "eat-5",
+      "n_orthologs": 3,
+      "mean_perc_id": 90.8,
+      "per_species": {
+        "caenorhabditis_brenneri": 93.66,
+        "caenorhabditis_briggsae": 92.71,
+        "caenorhabditis_japonica": 86.02
+      }
+    },
+    {
+      "gene": "kvs-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 90.58,
+      "per_species": {
+        "caenorhabditis_brenneri": 92.73,
+        "caenorhabditis_briggsae": 89.77,
+        "caenorhabditis_japonica": 89.25
+      }
+    },
+    {
+      "gene": "irk-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 90.41,
+      "per_species": {
+        "caenorhabditis_brenneri": 89.71,
+        "caenorhabditis_briggsae": 87.68,
+        "caenorhabditis_japonica": 93.85
+      }
+    },
+    {
+      "gene": "unc-13",
+      "n_orthologs": 3,
+      "mean_perc_id": 90.24,
+      "per_species": {
+        "caenorhabditis_brenneri": 89.45,
+        "caenorhabditis_briggsae": 88.44,
+        "caenorhabditis_japonica": 92.83
+      }
+    },
+    {
+      "gene": "shl-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 89.69,
+      "per_species": {
+        "caenorhabditis_brenneri": 92.6,
+        "caenorhabditis_briggsae": 93.29,
+        "caenorhabditis_japonica": 83.19
+      }
+    },
+    {
+      "gene": "unc-17",
+      "n_orthologs": 2,
+      "mean_perc_id": 89.59,
+      "per_species": {
+        "caenorhabditis_brenneri": 90.54,
+        "caenorhabditis_japonica": 88.64
+      }
+    },
+    {
+      "gene": "slo-2",
+      "n_orthologs": 3,
+      "mean_perc_id": 89.58,
+      "per_species": {
+        "caenorhabditis_brenneri": 86.82,
+        "caenorhabditis_briggsae": 90.41,
+        "caenorhabditis_japonica": 91.52
+      }
+    },
+    {
+      "gene": "inx-3",
+      "n_orthologs": 3,
+      "mean_perc_id": 89.04,
+      "per_species": {
+        "caenorhabditis_brenneri": 89.36,
+        "caenorhabditis_briggsae": 89.57,
+        "caenorhabditis_japonica": 88.18
+      }
+    },
+    {
+      "gene": "shk-1",
+      "n_orthologs": 2,
+      "mean_perc_id": 88.55,
+      "per_species": {
+        "caenorhabditis_briggsae": 88.95,
+        "caenorhabditis_japonica": 88.14
+      }
+    },
+    {
+      "gene": "asic-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 88.38,
+      "per_species": {
+        "caenorhabditis_brenneri": 87.02,
+        "caenorhabditis_briggsae": 88.21,
+        "caenorhabditis_japonica": 89.89
+      }
+    },
+    {
+      "gene": "slo-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 88.36,
+      "per_species": {
+        "caenorhabditis_brenneri": 89.59,
+        "caenorhabditis_briggsae": 85.98,
+        "caenorhabditis_japonica": 89.5
+      }
+    },
+    {
+      "gene": "avr-15",
+      "n_orthologs": 3,
+      "mean_perc_id": 86.01,
+      "per_species": {
+        "caenorhabditis_brenneri": 83.12,
+        "caenorhabditis_briggsae": 87.6,
+        "caenorhabditis_japonica": 87.31
+      }
+    },
+    {
+      "gene": "kvs-4",
+      "n_orthologs": 3,
+      "mean_perc_id": 85.28,
+      "per_species": {
+        "caenorhabditis_brenneri": 83.58,
+        "caenorhabditis_briggsae": 83.96,
+        "caenorhabditis_japonica": 88.3
+      }
+    },
+    {
+      "gene": "nmr-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 83.7,
+      "per_species": {
+        "caenorhabditis_brenneri": 90.59,
+        "caenorhabditis_briggsae": 91.22,
+        "caenorhabditis_japonica": 69.3
+      }
+    },
+    {
+      "gene": "kqt-3",
+      "n_orthologs": 3,
+      "mean_perc_id": 83.57,
+      "per_species": {
+        "caenorhabditis_brenneri": 83.99,
+        "caenorhabditis_briggsae": 83.91,
+        "caenorhabditis_japonica": 82.8
+      }
+    },
+    {
+      "gene": "cca-1",
+      "n_orthologs": 3,
+      "mean_perc_id": 83.52,
+      "per_species": {
+        "caenorhabditis_brenneri": 79.39,
+        "caenorhabditis_briggsae": 88.73,
+        "caenorhabditis_japonica": 82.45
+      }
+    },
+    {
+      "gene": "twk-7",
+      "n_orthologs": 3,
+      "mean_perc_id": 83.13,
+      "per_species": {
+        "caenorhabditis_brenneri": 98.61,
+        "caenorhabditis_briggsae": 97.58,
+        "caenorhabditis_japonica": 53.21
+      }
+    },
+    {
+      "gene": "unc-49",
+      "n_orthologs": 3,
+      "mean_perc_id": 77.94,
+      "per_species": {
+        "caenorhabditis_brenneri": 45.84,
+        "caenorhabditis_briggsae": 96.05,
+        "caenorhabditis_japonica": 91.93
+      }
+    }
+  ],
+  "not_found": [],
+  "caveat": "This table establishes a REAL evolutionary-conservation gradient across C. elegans ion-channel and synaptic genes: orthologue percent-identity to related Caenorhabditis species (briggsae/remanei/brenneri/japonica, Ensembl Metazoa REST homology) spans a wide range, identifying highly conserved ('stiff') vs more divergent ('sloppy') channel genes. HOWEVER, a direct correlation between this conservation gradient and our simulator's per-channel stiff/sloppy (Hessian) ranking is NOT yet possible: our worm sims (BAAIWorm / modWorm) calibrate global mechanism-CLASS scalings (synaptic / gap-junction / ionic / passive), not per-channel parameters. Mapping per-gene conservation onto per-channel sensitivity requires the per-channel Hessian, which is compute-deferred. Numbers are pulled live from Ensembl REST and are not fabricated; genes with no mappable symbol or no Caenorhabditis ortholog are listed under 'not_found'."
+}

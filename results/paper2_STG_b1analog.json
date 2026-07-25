@@ -1,0 +1,77 @@
+{
+  "system": "Prinz-Marder stomatogastric pyloric model population (crustacean), 31 conductances",
+  "source": "e1b_results/e1b_hessian.json (rhythm-gated Hessian, K=8 valid points)",
+  "eff_dim_mean": 2.1263731962320076,
+  "spectrum_range_oom": 9.982013193892456,
+  "stiff_top": [
+    [
+      "AB/PD.Leak",
+      0.806
+    ],
+    [
+      "LP.Leak",
+      0.188
+    ],
+    [
+      "Synapses.PD-PY",
+      0.089
+    ],
+    [
+      "Synapses.PY-LP",
+      0.063
+    ],
+    [
+      "Synapses.LP-PD",
+      0.061
+    ],
+    [
+      "PY.Leak",
+      0.054
+    ],
+    [
+      "AB/PD.H",
+      0.041
+    ],
+    [
+      "PY.H",
+      0.031
+    ]
+  ],
+  "sloppy_top": [
+    [
+      "PY.Na",
+      0.513
+    ],
+    [
+      "AB/PD.Na",
+      0.422
+    ],
+    [
+      "Synapses.PY-LP",
+      0.129
+    ],
+    [
+      "LP.Na",
+      0.122
+    ],
+    [
+      "AB/PD.Kd",
+      0.104
+    ],
+    [
+      "LP.Kd",
+      0.098
+    ],
+    [
+      "PY.Kd",
+      0.094
+    ],
+    [
+      "LP.A",
+      0.043
+    ]
+  ],
+  "stiff_summary": "leak conductances (AB/PD, LP, PY) + graded inhibitory synapses",
+  "sloppy_summary": "fast voltage-gated Na (PY.Na, AB/PD.Na, LP.Na) + delayed-rectifier Kd",
+  "cross_system_convergence": "Fast voltage-gated inward currents are the sloppy axis in BOTH systems: Na in the crustacean STG and Ca (EGL-19, UNC-2) in the C. elegans whole-organism model (Supplementary S5.2). Leak/passive and network coupling are stiff in both. The behavioural/output-equivalence manifold's sloppy directions are the same biophysical class across phyla -> the stiff/sloppy geometry is mechanism-conserved, not model-specific."
+}

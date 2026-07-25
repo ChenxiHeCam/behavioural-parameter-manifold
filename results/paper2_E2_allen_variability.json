@@ -1,0 +1,51 @@
+{
+  "n_cells": 1914,
+  "features": [
+    "ef__adaptation",
+    "ef__avg_firing_rate",
+    "ef__avg_isi",
+    "ef__f_i_curve_slope",
+    "ef__fast_trough_v_long_square",
+    "ef__peak_t_ramp",
+    "ef__ri",
+    "ef__tau",
+    "ef__threshold_i_long_square",
+    "ef__upstroke_downstroke_ratio_long_square",
+    "ef__vrest"
+  ],
+  "cv_per_feature": {
+    "ef__adaptation": 1.850032860254072,
+    "ef__avg_firing_rate": 1.1061803671014059,
+    "ef__avg_isi": 0.7418578397826349,
+    "ef__f_i_curve_slope": 0.9755229385716288,
+    "ef__fast_trough_v_long_square": 0.11769448996937992,
+    "ef__peak_t_ramp": 0.6236410990447856,
+    "ef__ri": 0.47854237031478775,
+    "ef__tau": 0.5635339065847242,
+    "ef__threshold_i_long_square": 0.7325462638364468,
+    "ef__upstroke_downstroke_ratio_long_square": 0.339250618595907,
+    "ef__vrest": 0.07681164691043704
+  },
+  "cv_range": [
+    0.07681164691043704,
+    1.850032860254072
+  ],
+  "cv_median": 0.6236410990447856,
+  "pca_var_ratio": [
+    0.34073639405491124,
+    0.2597203546915909,
+    0.11306407072006741,
+    0.06027283358829786,
+    0.054546044264112574,
+    0.05170259994044543,
+    0.0367152630801259,
+    0.03225186555512583,
+    0.024653245994125987,
+    0.018972584109924303,
+    0.007364744001272709
+  ],
+  "participation_eff_dim": 4.783982716125546,
+  "eff_dim_90pct": 7,
+  "eff_dim_99pct": 10,
+  "thesis": "Real neurons span wide property variability (sloppy axes exist in biology) yet sit on a low-dimensional property manifold (few PCs) -- the real-biology analogue of the simulator behavioural-equivalence manifold. Allen Cell Types, mouse+human cortex; cross-system support, NOT a per-axis alignment to the worm/fly eigendirections."
+}

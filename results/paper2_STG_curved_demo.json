@@ -1,0 +1,12 @@
+{
+  "experiment": "STG_curved_vs_local_demo",
+  "n_sampled": 80,
+  "population_param_dist_median": 7.696042602814716,
+  "population_behav_dist_median": 12.0,
+  "random_matched_behav_dist_median": 12.0,
+  "random_over_population_behav_ratio": 1.0,
+  "frac_pop_displacement_in_local_STIFF_subspace_median": 0.15095632216464944,
+  "frac_expected_if_random": 0.16129032258064516,
+  "local_stiff_subspace_dim": 5,
+  "elapsed_s": 370.1
+}

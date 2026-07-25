@@ -1,0 +1,19 @@
+{
+  "experiment": "BAAIWorm context-dependent identifiability (chemotaxis vs locomotion)",
+  "prediction": "chemosensory(AWA/AWC) perturbation matters WITH food (chemotaxis), silent WITHOUT (locomotion); motor matters in both",
+  "conditions": {
+    "close": {
+      "base_net_disp": 0.06106688183277987,
+      "chemo_perturb_behav_change": 0.8724286455753217,
+      "motor_perturb_behav_change": 0.10875216082018732
+    },
+    "far": {
+      "base_net_disp": 0.23073238455309156,
+      "chemo_perturb_behav_change": 0.12202641776730118,
+      "motor_perturb_behav_change": 0.3566923390423531
+    }
+  },
+  "chemo_food_vs_nofood_ratio": 7.1495063244338075,
+  "motor_food_vs_nofood_ratio": 0.30489065482080413,
+  "verdict": "chemosensory params are context-dependent (lit by chemotaxis) if chemo ratio >> motor ratio"
+}

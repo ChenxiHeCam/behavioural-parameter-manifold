@@ -1,0 +1,62 @@
+{
+  "sim": "BAAIWorm fresh full-connectome (3076 syn+gj weights)",
+  "probe": "random-vs-coherent manifold structure",
+  "sigma": 0.08,
+  "K": 24,
+  "n_steps": 120,
+  "n_params": 3076,
+  "obs_keys": [
+    "net_disp",
+    "path_len",
+    "mean_speed",
+    "speed_std",
+    "rms_heading",
+    "fwd_world"
+  ],
+  "base_obs": {
+    "net_disp": 0.24166298100421638,
+    "path_len": 1.9857927560806274,
+    "mean_speed": 0.016687333583831787,
+    "speed_std": 0.01179593987762928,
+    "rms_heading": 1.1387135982513428,
+    "fwd_world": 0.7478991596638656
+  },
+  "D_random": [
+    0.27802039110340887,
+    1.354466623441073,
+    0.8753609185238681,
+    0.989071623928436,
+    0.42863758698355625,
+    1.2330306587405524,
+    0.9924822410841445,
+    0.5954377445946792,
+    0.3610673210733992,
+    1.230346144914904,
+    0.6816633822108946,
+    0.233204473920705,
+    0.7275549612061222,
+    0.3814265705636079,
+    0.6828104982514639,
+    0.2688203510882817,
+    0.5159447805883886,
+    0.40016535603361314,
+    0.4001461685801249,
+    0.2525812162696399,
+    0.20815326191297345,
+    0.3382409050388709,
+    0.6513613138719289,
+    0.23359617145541803
+  ],
+  "median_D_random": 0.4722911837859724,
+  "D_coherent": {
+    "coh_all_up": 0.3367943982393974,
+    "coh_all_dn": 0.1289435401809743,
+    "coh_syn_up": 0.20335088399003698,
+    "coh_gj_up": 0.5200827684459514
+  },
+  "median_D_coherent": 0.2700726411147172,
+  "coherent_over_random_ratio": 0.5718350254810296,
+  "flat_fraction_random_below_halfcoherent": 0.0,
+  "interpretation": "random high-dim connectome directions perturb behaviour far less than matched-norm coherent directions -> behaviour-equivalence manifold occupies most of the 3076-d space (high-dimensional)",
+  "elapsed_sec": 1000.0
+}

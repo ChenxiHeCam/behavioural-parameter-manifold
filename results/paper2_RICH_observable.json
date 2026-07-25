@@ -1,0 +1,38 @@
+{
+  "experiment": "RICH_observable_effdim (REAL modWorm): is low-dim real or a 6-observable artifact",
+  "method": "per-mechanism eff-dim using FULL posture trajectory (T x 48 tangent angles) as observables, vs the 6 coarse scalars",
+  "results_by_duration": {
+    "NSTEP150": {
+      "n_observables": 7200,
+      "eff_dim_90": 2,
+      "eff_dim_99": 3,
+      "spectrum_normalised": [
+        1.0,
+        0.1598,
+        0.0128,
+        0.002,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "T": 150
+    },
+    "NSTEP300": {
+      "n_observables": 14400,
+      "eff_dim_90": 2,
+      "eff_dim_99": 3,
+      "spectrum_normalised": [
+        1.0,
+        0.1598,
+        0.0128,
+        0.002,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "T": 300
+    }
+  },
+  "comparison": "the 6-scalar single-behaviour eff-dim was ~1-3 of 7 (capped by 6 observables)",
+  "elapsed_sec": 50.5
+}

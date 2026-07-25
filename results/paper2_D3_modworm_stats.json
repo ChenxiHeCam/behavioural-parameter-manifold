@@ -1,0 +1,22 @@
+{
+  "experiment": "D3_modworm_threemeasure_stats",
+  "n": 7,
+  "mech": [
+    "gap",
+    "syn",
+    "leak",
+    "Cm",
+    "rise",
+    "fall",
+    "B"
+  ],
+  "spearman_rho": 0.9642857142857145,
+  "p_asymptotic": 0.0004541491691941689,
+  "p_exact_permutation": 0.002777777777777778,
+  "n_perms": 5040,
+  "bootstrap_ci95": [
+    0.5652173913043478,
+    1.0
+  ],
+  "n_bootstrap": 4988
+}

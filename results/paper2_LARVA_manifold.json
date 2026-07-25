@@ -1,0 +1,61 @@
+{
+  "experiment": "cross-species LARVA: larvaworld behavioural manifold",
+  "n_params": 10,
+  "params": [
+    "crawler.amp",
+    "crawler.freq",
+    "turner.base_activation",
+    "turner.w_cc",
+    "turner.w_ce",
+    "turner.w_ec",
+    "turner.w_ee",
+    "turner.tau",
+    "interference.attenuation",
+    "intermitter.crawl_freq"
+  ],
+  "behaviours_used": [
+    "dish",
+    "chemorbit",
+    "anemotaxis",
+    "RvsS_on"
+  ],
+  "per_behaviour": {
+    "dish": {
+      "eff_dim_90": 3,
+      "eff_dim_99": 5,
+      "net_disp": 0.025919545649848642
+    },
+    "chemorbit": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 5,
+      "net_disp": 0.018034941748537002
+    },
+    "anemotaxis": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 4,
+      "net_disp": 0.0260681450204232
+    },
+    "RvsS_on": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 3,
+      "net_disp": 0.0038145065984724847
+    }
+  },
+  "union_eff_dim_90_99": [
+    4,
+    8
+  ],
+  "union_spectrum": [
+    148.9292,
+    25.6805,
+    18.7538,
+    10.2211,
+    5.9535,
+    5.3174,
+    2.3319,
+    1.6572,
+    0.6231,
+    0.2757
+  ],
+  "elapsed_sec": 286.3
+}

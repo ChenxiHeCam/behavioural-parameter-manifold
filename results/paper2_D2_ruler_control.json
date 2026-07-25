@@ -1,0 +1,61 @@
+{
+  "experiment": "D2_eff_dim_ruler_control",
+  "A_formula_calibration": {
+    "flat_k2_in20": {
+      "designed_eff_dim": 2,
+      "eff_dim_90": 2,
+      "eff_dim_99": 2,
+      "match99": true
+    },
+    "flat_k5_in20": {
+      "designed_eff_dim": 5,
+      "eff_dim_90": 5,
+      "eff_dim_99": 5,
+      "match99": true
+    },
+    "flat_k10_in20": {
+      "designed_eff_dim": 10,
+      "eff_dim_90": 9,
+      "eff_dim_99": 10,
+      "match99": true
+    },
+    "uniform_d8": {
+      "designed_eff_dim": 8,
+      "eff_dim_90": 8,
+      "eff_dim_99": 8,
+      "match99": true
+    },
+    "uniform_d20": {
+      "designed_eff_dim": 20,
+      "eff_dim_90": 18,
+      "eff_dim_99": 20,
+      "match99": true
+    },
+    "geometric_decade_spectrum": {
+      "eff_dim_90": 1,
+      "eff_dim_99": 2,
+      "note": "decade-spaced eigenvalues -> 1 stiff / ~2 at 99%, like real sloppy systems"
+    }
+  },
+  "B_end_to_end_forward_models": {
+    "sloppy_sum_of_exponentials_5param": {
+      "n_param": 5,
+      "eff_dim_90": 1,
+      "eff_dim_99": 2,
+      "spectral_span_orders": 5.0
+    },
+    "stiff_fullrank_d8": {
+      "true_dim": 8,
+      "eff_dim_90": 8,
+      "eff_dim_99": 8,
+      "match99": true
+    },
+    "stiff_fullrank_d20": {
+      "true_dim": 20,
+      "eff_dim_90": 18,
+      "eff_dim_99": 20,
+      "match99": true
+    }
+  },
+  "verdict": "Formula calibration: prescribed spectra with k flat-equal stiff directions return eff-dim(99%)=k, a uniform full-rank spectrum returns d, and a decade-spaced (sloppy) spectrum returns ~2. End-to-end: the finite-difference GN-Hessian returns low eff-dim with a many-order spectrum for the canonical sloppy sum-of-exponentials and eff-dim=d for a stiff full-rank forward model. The ruler reports low when the system is low-dimensional and high when it is high-dimensional -> the low eff-dim measured on the simulators is a property of the systems, not a methodological artifact."
+}

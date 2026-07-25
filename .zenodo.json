@@ -1,0 +1,33 @@
+{
+  "title": "Behaviour identifies a low-dimensional parameter subspace tiled by the behavioural repertoire: code, results and reproduction container",
+  "description": "<p>Code, result files and a one-command reproduction container for a study measuring the <strong>behavioural-equivalence manifold</strong> of whole-organism nervous-system simulators &mdash; the set of parameter configurations that yield indistinguishable behaviour &mdash; across simulators spanning three phyla.</p><p>Main findings: behaviour constrains a low-dimensional stiff subspace at every parameter scale examined (5&ndash;767 parameters); in the nematode that subspace is the neural substrate of the ~4-dimensional eigenworm postural space; distinct behaviours constrain <em>complementary</em> rather than overlapping subspaces, so the identifiable dimension is the union over the behavioural repertoire and grows as behaviours are added; and the same organisation recurs across nematode, fly larva, rodent, an adult-fly visual circuit and the crustacean pyloric population, as well as in four external biological datasets.</p><p>The deposit contains the manuscript and Supplementary Information, every result file underlying the reported quantities, the analysis code, the input data, and a container that re-derives all reported numbers and regenerates the figures.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "He, Chenxi",
+      "affiliation": "Cavendish Laboratory, University of Cambridge",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "behavioural-equivalence manifold",
+    "practical identifiability",
+    "sloppy models",
+    "neural degeneracy",
+    "whole-organism simulation",
+    "connectome-constrained models",
+    "Caenorhabditis elegans",
+    "Drosophila",
+    "computational neuroscience"
+  ],
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ChenxiHeCam/behavioural-equivalence-manifold",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

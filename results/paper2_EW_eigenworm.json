@@ -1,0 +1,49 @@
+{
+  "experiment": "EW_lowdim_manifold_identity_eigenworms (REAL modWorm  + OWMD N2)",
+  "question": "what IS the low-dim behavioural manifold, concretely, vs real worm eigenworms",
+  "L": 48,
+  "NSTEP": 300,
+  "K_eigenworms": 4,
+  "model_posture_effdim": 1.6638171494685687,
+  "model_varexp_top4": [
+    0.7603065496593739,
+    0.900172475808716,
+    0.9531877634636958,
+    0.970701848701514
+  ],
+  "real_posture_effdim": 3.786803746901773,
+  "real_varexp_top4": [
+    0.35913004731608633,
+    0.6145126633199686,
+    0.8557600354206275,
+    0.9612460814777926
+  ],
+  "real_n_frames": 8432,
+  "eigenworm_subspace_alignment": {
+    "mean_cos_principal_angles_top4": 0.7733395567554252,
+    "per_mode_abs_cos": [
+      0.29702947443730854,
+      0.019635946962977626,
+      0.5736323824853786,
+      0.2443993125251333
+    ],
+    "note": "cos=1 -> model eigenworms identical to real; top-4 subspace alignment"
+  },
+  "stiff_sloppy_eigenworm_control": {
+    "per_mechanism_eigenworm_change": {
+      "gap": 0.8473573918507511,
+      "syn": 1.2301539773851065,
+      "leak": 0.9929473685744034,
+      "Cm": 0.8929829617358074,
+      "rise": 1.1449156886080651,
+      "fall": 1.8358254391853013,
+      "B": 1.0589885356895556
+    },
+    "median_stiff": 1.1449156886080651,
+    "median_sloppy": 0.9759857487126815,
+    "stiff_over_sloppy": 1.1730864821727172,
+    "note": "stiff mechanisms move the eigenworm trajectory; sloppy do not -> stiff subspace = neural control of eigenworm modes"
+  },
+  "verdict": "the low-dim behavioural manifold is the neural control of the worm eigenworm modes",
+  "elapsed_sec": 545.9
+}

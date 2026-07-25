@@ -1,0 +1,92 @@
+{
+  "sim": "REAL modWorm (c302 connectome, 279 neurons, coupled neural+body)",
+  "probe": "per-mechanism elasticity Hessian",
+  "connectome": "OpenWorm/c302 White-Varshney-Cook curation mapped to modWorm 279",
+  "delta": 0.25,
+  "n_steps": 200,
+  "mechanisms": [
+    "gap",
+    "syn",
+    "leak",
+    "Cm",
+    "rise",
+    "fall",
+    "B"
+  ],
+  "names": {
+    "gap": "gap-junction conductance",
+    "syn": "synaptic conductance",
+    "leak": "leak conductance",
+    "Cm": "membrane capacitance",
+    "rise": "synaptic rise tau",
+    "fall": "synaptic fall tau",
+    "B": "sigmoid gain"
+  },
+  "base_obs": {
+    "net_disp": 0.08413608990018691,
+    "path_len": 0.08413609169025175,
+    "mean_speed": 0.0004227944306042802,
+    "speed_std": 0.0017063332738097119,
+    "rms_heading": 0.05932198030779408,
+    "final_curve": 0.8419734493882778
+  },
+  "eigenvalues": [
+    0.00270547681804438,
+    0.0003963384935197921,
+    2.9833959688980865e-11,
+    7.399442636677351e-17,
+    1.497352989107657e-19,
+    0.0,
+    0.0
+  ],
+  "eff_dim_90": 2,
+  "eff_dim_99": 2,
+  "participation_ratio": 1.2868341044512788,
+  "per_mechanism_elasticity": {
+    "gap": 0.028939962714435084,
+    "syn": 0.029321775191873345,
+    "leak": 0.019495913172606318,
+    "Cm": 6.571245087688999e-08,
+    "rise": 0.02912139089762383,
+    "fall": 0.013280864461004703,
+    "B": 2.540866171119073e-08
+  },
+  "rank_stiff_to_sloppy": [
+    [
+      "syn",
+      "synaptic conductance",
+      0.0293
+    ],
+    [
+      "rise",
+      "synaptic rise tau",
+      0.0291
+    ],
+    [
+      "gap",
+      "gap-junction conductance",
+      0.0289
+    ],
+    [
+      "leak",
+      "leak conductance",
+      0.0195
+    ],
+    [
+      "fall",
+      "synaptic fall tau",
+      0.0133
+    ],
+    [
+      "Cm",
+      "membrane capacitance",
+      0.0
+    ],
+    [
+      "B",
+      "sigmoid gain",
+      0.0
+    ]
+  ],
+  "elapsed_sec": 28.0
+}

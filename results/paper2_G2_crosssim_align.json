@@ -1,0 +1,89 @@
+{
+  "experiment": "G2_crosssim_stiff_subspace_alignment",
+  "models": {
+    "modWorm": "7 coupled mechanisms (c302 connectome)",
+    "BAAIWorm": "20 named channels/mechanisms (NEURON, world-frame)"
+  },
+  "identical_probe": "per-mechanism GN-Hessian elasticity, same 6 observables, delta=0.25",
+  "eff_dim": {
+    "modWorm": [
+      2,
+      2,
+      "of 7"
+    ],
+    "BAAIWorm": [
+      2,
+      3,
+      "of 20"
+    ]
+  },
+  "shared_mechanism_concordance": [
+    {
+      "class": "synaptic",
+      "modWorm_elasticity": 0.0293,
+      "modWorm_stiff_pct": 1.0,
+      "BAAIWorm_elasticity": 1.8959,
+      "BAAIWorm_stiff_pct": 0.842,
+      "both_stiff_half": true
+    },
+    {
+      "class": "gap_junction",
+      "modWorm_elasticity": 0.0289,
+      "modWorm_stiff_pct": 0.667,
+      "BAAIWorm_elasticity": 2.5388,
+      "BAAIWorm_stiff_pct": 0.895,
+      "both_stiff_half": true
+    },
+    {
+      "class": "passive_leak",
+      "modWorm_elasticity": 0.0195,
+      "modWorm_stiff_pct": 0.5,
+      "BAAIWorm_elasticity": 4.1586,
+      "BAAIWorm_stiff_pct": 1.0,
+      "both_stiff_half": true
+    }
+  ],
+  "shared_class_rank_spearman": {
+    "rho": -1.0,
+    "p": 0.0,
+    "n": 3,
+    "note": "n=3; FINE within-stiff ordering differs (modWorm ranks synaptic highest, BAAIWorm ranks passive-leak highest) so this is NOT meaningful and is not used as evidence; the robust agreement is class-level (below)."
+  },
+  "PRIMARY_metric_wiring_vs_singlecell": {
+    "modWorm": {
+      "wiring": 0.833,
+      "single_cell": 0.083
+    },
+    "BAAIWorm": {
+      "wiring": 0.868,
+      "single_cell": 0.158
+    },
+    "note": "wiring stiff-pct ~0.85 vs single-cell ~0.12 in BOTH independently-built models -> robust class-level agreement."
+  },
+  "wiring_vs_singlecell_stiff_pct": {
+    "modWorm": {
+      "wiring(syn+gap)": 0.833,
+      "single_cell(Cm+gain)": 0.083
+    },
+    "BAAIWorm": {
+      "wiring(syn+gj)": 0.868,
+      "single_cell(fastCa+SLO)": 0.158
+    }
+  },
+  "single_cell_sloppy_identity": {
+    "note": "modWorm has no explicit ion channels, so the specific 'fast-Ca sloppy' claim is only testable in BAAIWorm; modWorm's sloppy axes are membrane capacitance and gain. Both fall in the same category: single-cell membrane/excitability properties.",
+    "modWorm_sloppy": {
+      "Cm": 0.16666666666666663,
+      "B(gain)": 0.0
+    },
+    "BAAIWorm_sloppy": {
+      "EGL-19": 0.3157894736842105,
+      "UNC-2": 0.1578947368421053,
+      "SLO-1/EGL19": 0.0
+    }
+  },
+  "verdict": "Two independently-built worm models agree at the CLASS level: all three shared mechanism classes (synaptic, gap-junction, passive-leak) sit in the stiff half of BOTH models, and the wiring-vs-single-cell contrast is clean and consistent (wiring stiff-pct ~0.85 vs single-cell ~0.12 in both). Network wiring is stiff and single-cell membrane/excitability is sloppy in two independent simulators -> the stiff subspace is a property of the worm, not a model artifact. The FINE ordering within the stiff classes differs (n=3 Spearman is anti-correlated, not used), and the sloppy-axis IDENTITY differs (modWorm: Cm/gain; BAAIWorm: fast Ca/SLO) because modWorm has no explicit ion channels -- an honest scope limit, reported.",
+  "caveats": [
+    "only 3 directly-shared mechanism classes (synaptic/gap/passive-leak); cross-model claim is at the class level, qualitative-quantitative."
+  ]
+}

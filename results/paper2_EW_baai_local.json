@@ -1,0 +1,36 @@
+{
+  "experiment": "EW BAAIWorm arm (local): BAAIWorm posture vs real OWMD N2 eigenworms (17-keypoint)",
+  "real_source": "owmd_real_tensor.npz (5010 windows, 40k frames sampled)",
+  "real_posture_effdim": 4.140022616215363,
+  "real_varexp_top4": [
+    0.3173502715944103,
+    0.5903800715969346,
+    0.81082705962339,
+    0.9390691857668709
+  ],
+  "baai_arms": {
+    "sim": {
+      "baai_posture_effdim": 2.757238018051493,
+      "subspace_align_to_real_mean_cos": 0.6825166611895443,
+      "per_mode_abs_cos": [
+        0.32542528923966746,
+        0.5457515101997402,
+        0.04807727761071133,
+        0.05251239468556092
+      ],
+      "frac_baai_variance_in_real_top4_eigenworms": 0.7191487284250407
+    },
+    "real": {
+      "baai_posture_effdim": 3.299576659469311,
+      "subspace_align_to_real_mean_cos": 0.689185359326852,
+      "per_mode_abs_cos": [
+        0.3330065292651452,
+        0.663878299383042,
+        0.20758470963705283,
+        0.12093101118328708
+      ],
+      "frac_baai_variance_in_real_top4_eigenworms": 0.6749580254230055
+    }
+  },
+  "note": "eigenworms from real worm posture; BAAIWorm posture projected onto the real eigenworm modes"
+}

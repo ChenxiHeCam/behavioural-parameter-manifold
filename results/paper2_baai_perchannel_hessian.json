@@ -1,0 +1,216 @@
+{
+  "sim": "BAAIWorm fresh headless (world-frame locomotion)",
+  "probe": "per-channel elasticity GN-Hessian",
+  "delta": 0.25,
+  "n_steps": 120,
+  "obs_keys": [
+    "net_disp",
+    "path_len",
+    "mean_speed",
+    "speed_std",
+    "rms_heading",
+    "fwd_world"
+  ],
+  "params": [
+    "gbshl1",
+    "gbshk1",
+    "gbkvs1",
+    "gbegl2",
+    "gbegl36",
+    "gbkqt3",
+    "gbegl19",
+    "gbunc2",
+    "gbcca1",
+    "gbslo1_egl19",
+    "gbslo1_unc2",
+    "gbslo2_egl19",
+    "gbslo2_unc2",
+    "gbkcnl",
+    "gbnca",
+    "gbirk",
+    "gpas",
+    "syn",
+    "gj",
+    "wout"
+  ],
+  "gene_names": {
+    "gbshl1": "SHL-1(Kv)",
+    "gbshk1": "SHK-1(Kv)",
+    "gbkvs1": "KVS-1(Kv)",
+    "gbegl2": "EGL-2(Kv-eag)",
+    "gbegl36": "EGL-36(Kv)",
+    "gbkqt3": "KQT-3(KCNQ)",
+    "gbegl19": "EGL-19(L-Ca)",
+    "gbunc2": "UNC-2(PQ-Ca)",
+    "gbcca1": "CCA-1(T-Ca)",
+    "gbslo1_egl19": "SLO-1/EGL19(BK)",
+    "gbslo1_unc2": "SLO-1/UNC2(BK)",
+    "gbslo2_egl19": "SLO-2/EGL19",
+    "gbslo2_unc2": "SLO-2/UNC2",
+    "gbkcnl": "KCNL(SK)",
+    "gbnca": "NCA(Na-leak)",
+    "gbirk": "IRK(Kir)",
+    "gpas": "passive-leak",
+    "syn": "synaptic-weight",
+    "gj": "gap-junction-weight",
+    "wout": "motor-output"
+  },
+  "base_obs": {
+    "net_disp": 0.24166298100421638,
+    "path_len": 1.9857927560806274,
+    "mean_speed": 0.016687333583831787,
+    "speed_std": 0.01179593987762928,
+    "rms_heading": 1.1387135982513428,
+    "fwd_world": 0.7478991596638656
+  },
+  "eigenvalues": [
+    43.21996057972596,
+    5.836104424613358,
+    0.8843235003685468,
+    0.47310124529031283,
+    2.967652447002448e-14,
+    3.499139780241107e-15,
+    9.146576285585699e-16,
+    5.194023552144162e-16,
+    2.8708627509795027e-16,
+    9.02957807293961e-17,
+    6.4181422188580136e-18,
+    7.655603221443168e-19,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "eff_dim_90": 2,
+  "eff_dim_99": 3,
+  "participation_ratio": 1.335511613795908,
+  "per_channel_stiffness": {
+    "gbshl1": 0.560500466842409,
+    "gbshk1": 0.4396557976261976,
+    "gbkvs1": 0.5118800468054293,
+    "gbegl2": 1.530264064762858,
+    "gbegl36": 2.87700347679476,
+    "gbkqt3": 1.2251661112751735,
+    "gbegl19": 0.49203585819834356,
+    "gbunc2": 0.31127035388227814,
+    "gbcca1": 0.8571010145913843,
+    "gbslo1_egl19": 0.009055004636224662,
+    "gbslo1_unc2": 0.22857951153059541,
+    "gbslo2_egl19": 0.32623459200727384,
+    "gbslo2_unc2": 0.092560003493684,
+    "gbkcnl": 0.9984281781234254,
+    "gbnca": 1.6586003980817932,
+    "gbirk": 1.5366517136395585,
+    "gpas": 4.158649593646809,
+    "syn": 1.8958860458791391,
+    "gj": 2.53877375398962,
+    "wout": 1.6852147431847104
+  },
+  "rank_stiff_to_sloppy": [
+    [
+      "gpas",
+      "passive-leak",
+      4.1586
+    ],
+    [
+      "gbegl36",
+      "EGL-36(Kv)",
+      2.877
+    ],
+    [
+      "gj",
+      "gap-junction-weight",
+      2.5388
+    ],
+    [
+      "syn",
+      "synaptic-weight",
+      1.8959
+    ],
+    [
+      "wout",
+      "motor-output",
+      1.6852
+    ],
+    [
+      "gbnca",
+      "NCA(Na-leak)",
+      1.6586
+    ],
+    [
+      "gbirk",
+      "IRK(Kir)",
+      1.5367
+    ],
+    [
+      "gbegl2",
+      "EGL-2(Kv-eag)",
+      1.5303
+    ],
+    [
+      "gbkqt3",
+      "KQT-3(KCNQ)",
+      1.2252
+    ],
+    [
+      "gbkcnl",
+      "KCNL(SK)",
+      0.9984
+    ],
+    [
+      "gbcca1",
+      "CCA-1(T-Ca)",
+      0.8571
+    ],
+    [
+      "gbshl1",
+      "SHL-1(Kv)",
+      0.5605
+    ],
+    [
+      "gbkvs1",
+      "KVS-1(Kv)",
+      0.5119
+    ],
+    [
+      "gbegl19",
+      "EGL-19(L-Ca)",
+      0.492
+    ],
+    [
+      "gbshk1",
+      "SHK-1(Kv)",
+      0.4397
+    ],
+    [
+      "gbslo2_egl19",
+      "SLO-2/EGL19",
+      0.3262
+    ],
+    [
+      "gbunc2",
+      "UNC-2(PQ-Ca)",
+      0.3113
+    ],
+    [
+      "gbslo1_unc2",
+      "SLO-1/UNC2(BK)",
+      0.2286
+    ],
+    [
+      "gbslo2_unc2",
+      "SLO-2/UNC2",
+      0.0926
+    ],
+    [
+      "gbslo1_egl19",
+      "SLO-1/EGL19(BK)",
+      0.0091
+    ]
+  ],
+  "elapsed_sec": 759.0
+}

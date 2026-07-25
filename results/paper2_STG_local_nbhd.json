@@ -1,0 +1,39 @@
+{
+  "experiment": "STG_local_neighbourhood_alignment",
+  "stiff_dim": 4,
+  "predict": "rho<0, ratio>1, perm_p<0.05 if prediction holds locally",
+  "results": {
+    "N50": {
+      "N": 50,
+      "radius_z": 5.532496566871592,
+      "spearman_rho": 0.04395161290322581,
+      "p": 0.8143878586132712,
+      "sloppy_over_stiff_ratio": 0.488973170954382,
+      "perm_p": 0.9397530123493826
+    },
+    "N100": {
+      "N": 100,
+      "radius_z": 5.838031734438461,
+      "spearman_rho": -0.031048387096774197,
+      "p": 0.8683097331573756,
+      "sloppy_over_stiff_ratio": 0.6727224784323679,
+      "perm_p": 0.8760561971901405
+    },
+    "N200": {
+      "N": 200,
+      "radius_z": 6.376661078188832,
+      "spearman_rho": -0.04395161290322581,
+      "p": 0.8143878586132712,
+      "sloppy_over_stiff_ratio": 0.8906957833480789,
+      "perm_p": 0.7107644617769111
+    },
+    "N400": {
+      "N": 400,
+      "radius_z": 6.722172979225431,
+      "spearman_rho": 0.0068548387096774195,
+      "p": 0.970805482704083,
+      "sloppy_over_stiff_ratio": 1.0390036318972173,
+      "perm_p": 0.43237838108094595
+    }
+  }
+}

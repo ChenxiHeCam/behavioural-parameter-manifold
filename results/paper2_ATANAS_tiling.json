@@ -1,0 +1,24 @@
+{
+  "experiment": "Atanas2023_tiling_validation",
+  "n_pairs": 270,
+  "mean_real_cos": 0.287673399431474,
+  "mean_null_cos": 0.19437063077891978,
+  "mean_real_jaccard": 0.15869608538458854,
+  "mean_null_jaccard": 0.09783015998877904,
+  "wilcoxon_real_less_than_null_p": 1.0,
+  "model_cross_behaviour_cos": 0.54,
+  "per_pair": {
+    "feeding|head_curve": {
+      "real_cos": 0.09313044325504705,
+      "null_cos": 0.11777981111208882
+    },
+    "feeding|velocity": {
+      "real_cos": 0.2187920522812258,
+      "null_cos": 0.17237395528744798
+    },
+    "head_curve|velocity": {
+      "real_cos": 0.4063998460012432,
+      "null_cos": 0.2388044314136478
+    }
+  }
+}

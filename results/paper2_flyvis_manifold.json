@@ -1,0 +1,10 @@
+{
+  "sim": "flyvis Drosophila connectome model",
+  "probe": "manifold/sloppiness sample",
+  "N": 30,
+  "sigma": 0.2,
+  "param_relerr_mean": 0.1608198958966467,
+  "response_dist_mean": 0.24249472613201087,
+  "response_over_param_ratio": 1.5078652102091505,
+  "elapsed_sec": 30
+}

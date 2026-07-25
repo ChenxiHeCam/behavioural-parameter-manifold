@@ -1,0 +1,13 @@
+{
+  "sim": "REAL modWorm (c302 connectome)",
+  "probe": "manifold/sloppiness sample",
+  "N": 24,
+  "sigma": 0.25,
+  "n_steps": 200,
+  "param_relerr_mean": 0.19656063412629923,
+  "behav_dist_mean": 0.006004354850769974,
+  "behav_dist_median": 0.002564283821183568,
+  "behav_over_param_ratio": 0.03054708730188518,
+  "interpretation": "large random parameter perturbations (mean relerr 0.20) produce small whitened behavioural change (mean 0.01) -> behaviour-equivalence manifold: behaviour is insensitive to most parameter directions",
+  "elapsed_sec": 112.0
+}

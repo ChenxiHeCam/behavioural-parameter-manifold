@@ -1,0 +1,96 @@
+{
+  "experiment": "SAT_identifiability_saturation (REAL modWorm, 12 behaviours)",
+  "question": "does the identifiable stiff subspace saturate as more behaviours constrain it",
+  "n_behaviours": 12,
+  "n_params": 7,
+  "saturation_curve": [
+    {
+      "n_behaviours": 1,
+      "eff_dim_90_mean": 1.1818181818181819,
+      "eff_dim_99_mean": 1.2727272727272727,
+      "eff_dim_99_max": 2
+    },
+    {
+      "n_behaviours": 2,
+      "eff_dim_90_mean": 1.5,
+      "eff_dim_99_mean": 1.7,
+      "eff_dim_99_max": 3
+    },
+    {
+      "n_behaviours": 3,
+      "eff_dim_90_mean": 1.75,
+      "eff_dim_99_mean": 2.25,
+      "eff_dim_99_max": 3
+    },
+    {
+      "n_behaviours": 4,
+      "eff_dim_90_mean": 1.85,
+      "eff_dim_99_mean": 2.45,
+      "eff_dim_99_max": 3
+    },
+    {
+      "n_behaviours": 5,
+      "eff_dim_90_mean": 1.85,
+      "eff_dim_99_mean": 2.85,
+      "eff_dim_99_max": 4
+    },
+    {
+      "n_behaviours": 6,
+      "eff_dim_90_mean": 1.95,
+      "eff_dim_99_mean": 3.1,
+      "eff_dim_99_max": 4
+    },
+    {
+      "n_behaviours": 7,
+      "eff_dim_90_mean": 1.9,
+      "eff_dim_99_mean": 3.4,
+      "eff_dim_99_max": 4
+    },
+    {
+      "n_behaviours": 8,
+      "eff_dim_90_mean": 2.0,
+      "eff_dim_99_mean": 3.45,
+      "eff_dim_99_max": 4
+    },
+    {
+      "n_behaviours": 9,
+      "eff_dim_90_mean": 2.0,
+      "eff_dim_99_mean": 3.65,
+      "eff_dim_99_max": 4
+    },
+    {
+      "n_behaviours": 10,
+      "eff_dim_90_mean": 2.0,
+      "eff_dim_99_mean": 3.8,
+      "eff_dim_99_max": 4
+    },
+    {
+      "n_behaviours": 11,
+      "eff_dim_90_mean": 2.0,
+      "eff_dim_99_mean": 3.909090909090909,
+      "eff_dim_99_max": 4
+    },
+    {
+      "n_behaviours": 12,
+      "eff_dim_90_mean": 2.0,
+      "eff_dim_99_mean": 4.0,
+      "eff_dim_99_max": 4
+    }
+  ],
+  "full_union_eff_dim_90_99": [
+    2,
+    4
+  ],
+  "full_union_spectrum": [
+    0.0116,
+    0.0044,
+    0.0005,
+    0.0002,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "truly_degenerate_dims_below_1e-3": 2,
+  "verdict": "identifiable subspace saturates at eff-dim 4/7; 2 direction(s) remain truly degenerate (unconstrainable by any of these behaviours = irreducible neutral space)",
+  "elapsed_sec": 215.5
+}

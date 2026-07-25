@@ -1,0 +1,80 @@
+{
+  "experiment": "cross-species MAMMAL: Virtual Rodent (dm_control, 38 actuators) manifold",
+  "n_actuators": 38,
+  "caveat": "open-loop sinusoidal drives, not trained natural behaviours",
+  "per_behaviour": {
+    "pat0_f2.0": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 4,
+      "net_disp": 0.047117636820894246
+    },
+    "pat1_f3.0": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 4,
+      "net_disp": 0.06611349424834975
+    },
+    "pat2_f4.0": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 3,
+      "net_disp": 0.03767810233263425
+    },
+    "pat3_f1.5": {
+      "eff_dim_90": 1,
+      "eff_dim_99": 3,
+      "net_disp": 0.043834196384205916
+    },
+    "pat4_f3.0": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 4,
+      "net_disp": 0.10371014035900271
+    },
+    "pat5_f5.0": {
+      "eff_dim_90": 2,
+      "eff_dim_99": 4,
+      "net_disp": 0.084483069198416
+    }
+  },
+  "saturation_curve": [
+    {
+      "n_behaviours": 1,
+      "eff_dim_99_mean": 3.6666666666666665
+    },
+    {
+      "n_behaviours": 2,
+      "eff_dim_99_mean": 5.928571428571429
+    },
+    {
+      "n_behaviours": 3,
+      "eff_dim_99_mean": 7.666666666666667
+    },
+    {
+      "n_behaviours": 4,
+      "eff_dim_99_mean": 9.266666666666667
+    },
+    {
+      "n_behaviours": 5,
+      "eff_dim_99_mean": 10.5
+    },
+    {
+      "n_behaviours": 6,
+      "eff_dim_99_mean": 12.0
+    }
+  ],
+  "union_eff_dim_90_99": [
+    6,
+    12
+  ],
+  "union_spectrum_top10": [
+    99.427,
+    29.5958,
+    20.7466,
+    14.59,
+    10.8328,
+    8.3606,
+    5.5218,
+    3.7673,
+    2.6566,
+    2.054
+  ],
+  "elapsed_sec": 51.6
+}

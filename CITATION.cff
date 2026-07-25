@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the manuscript below."
+title: "Behaviour identifies a low-dimensional parameter subspace tiled by the behavioural repertoire"
+authors:
+  - family-names: He
+    given-names: Chenxi
+    affiliation: "Cavendish Laboratory, University of Cambridge"
+    email: ch2067@cam.ac.uk
+version: "1.0.0"
+date-released: "2026-07-25"
+license: MIT
+keywords:
+  - behavioural-equivalence manifold
+  - identifiability
+  - sloppy models
+  - neural degeneracy
+  - whole-organism simulation
+  - Caenorhabditis elegans
+abstract: >-
+  Code, result files and reproduction container for a study measuring the behavioural-equivalence
+  manifold of whole-organism nervous-system simulators across three phyla, showing that behaviour
+  constrains a low-dimensional subspace whose extent is set by the richness of the behavioural
+  repertoire.

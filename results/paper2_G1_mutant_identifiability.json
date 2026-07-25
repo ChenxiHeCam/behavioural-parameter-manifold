@@ -1,0 +1,111 @@
+{
+  "experiment": "G1_real_mutant_behavioural_identifiability",
+  "source": "OWMD (Zenodo community open-worm-movement-database), Tierpsy/segworm features_means",
+  "n_features_common": 726,
+  "n_features_used_nonzero_mad": 691,
+  "model_prediction": "B3 per-channel signature_norm (behavioural detectability of a knockdown)",
+  "model_signature_norm": {
+    "egl-19": 0.0685,
+    "unc-2": 0.1179,
+    "egl-2": 0.7081,
+    "nca": 0.8856,
+    "gj": 0.382,
+    "syn": 1.1899
+  },
+  "gene_to_channel": {
+    "egl-19": "egl-19",
+    "unc-2": "unc-2",
+    "egl-2": "egl-2",
+    "nca-1": "nca",
+    "nca-2": "nca",
+    "unc-77": "nca",
+    "unc-79": "nca",
+    "unc-9": "gj",
+    "unc-7": "gj",
+    "unc-17": "syn",
+    "unc-29": "syn",
+    "unc-38": "syn"
+  },
+  "gene_behavioural_distance_to_N2": {
+    "egl-19": 1.342738193022974,
+    "unc-2": 2.1770523754002746,
+    "egl-2": 0.5289961355833175,
+    "nca-1": 0.7158727901987183,
+    "nca-2": 0.906122879038575,
+    "unc-77": 0.6691175290062039,
+    "unc-79": 1.1804187875809142,
+    "unc-9": 1.5277189036301795,
+    "unc-7": 1.726478304149897,
+    "unc-17": 3.032252928124088,
+    "unc-29": 0.830502562082538,
+    "unc-38": 1.68296753589652
+  },
+  "gene_n_worms": {
+    "egl-19": 12,
+    "unc-2": 12,
+    "egl-2": 12,
+    "nca-1": 12,
+    "nca-2": 12,
+    "unc-77": 12,
+    "unc-79": 12,
+    "unc-9": 12,
+    "unc-7": 12,
+    "unc-17": 12,
+    "unc-29": 12,
+    "unc-38": 12
+  },
+  "n_N2_worms": 40,
+  "channel_behavioural_distance": {
+    "egl-2": 0.5289961355833175,
+    "unc-2": 2.1770523754002746,
+    "egl-19": 1.342738193022974,
+    "syn": 1.68296753589652,
+    "gj": 1.6270986038900381,
+    "nca": 0.8109978346186466
+  },
+  "per_channel_correlation": {
+    "channels": [
+      "egl-2",
+      "unc-2",
+      "egl-19",
+      "syn",
+      "gj",
+      "nca"
+    ],
+    "model_signature": [
+      0.7081,
+      0.1179,
+      0.0685,
+      1.1899,
+      0.382,
+      0.8856
+    ],
+    "real_distance": [
+      0.5289961355833175,
+      2.1770523754002746,
+      1.342738193022974,
+      1.68296753589652,
+      1.6270986038900381,
+      0.8109978346186466
+    ],
+    "spearman_rho": -0.14285714285714288,
+    "spearman_p": 0.7871720116618075,
+    "n": 6
+  },
+  "class_contrast_fastCa_vs_rest": {
+    "hypothesis": "fast Ca (egl-19,unc-2) behaviourally weaker than synaptic/Na-leak/gap",
+    "median_fastCa": 1.7598952842116242,
+    "median_rest": 1.0432708333097447,
+    "mannwhitney_U": 5.0,
+    "mannwhitney_p_rest_greater": 0.8636363636363635,
+    "n_fastCa": 2,
+    "n_rest": 10
+  },
+  "caveats": [
+    "allele heterogeneity: OWMD strains are specific alleles (hypomorph vs null), not matched knockdown levels.",
+    "gene->model-channel map is hand-curated; aggregate channels (syn/gj/nca) map to multiple genes.",
+    "observational; behavioural distance is robust-z RMS to N2 in segworm feature space.",
+    "small n at channel level (n=6)."
+  ],
+  "elapsed_sec": 553.7
+}
