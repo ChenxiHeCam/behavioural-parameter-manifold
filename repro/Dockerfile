@@ -2,8 +2,8 @@
 # deposited result JSONs. Build from the PAPER directory (one level up) so the
 # result files are in the build context:
 #
-#   docker build -f repro/Dockerfile -t paper2-repro .
-#   docker run --rm paper2-repro
+#   docker build -f repro/Dockerfile -t repro .
+#   docker run --rm repro
 #
 # Expected output: "NUMBER AUDIT: 23/23 PASS" and a regenerated check figure.
 # No simulator, GPU, or network is required: the forward-model runs are deposited
@@ -11,14 +11,14 @@
 
 FROM python:3.11-slim
 
-WORKDIR /paper2
-COPY repro/requirements.txt /paper2/repro/requirements.txt
-RUN pip install --no-cache-dir -r /paper2/repro/requirements.txt
+WORKDIR /deposit
+COPY repro/requirements.txt /deposit/repro/requirements.txt
+RUN pip install --no-cache-dir -r /deposit/repro/requirements.txt
 
 # deposited result files (the analysis inputs) + the repro scripts
-COPY results/ /paper2/results/
-COPY repro/ /paper2/repro/
+COPY results/ /deposit/results/
+COPY repro/ /deposit/repro/
 
-WORKDIR /paper2/repro
-ENV PAPER2_DATA=/paper2/results
+WORKDIR /deposit/repro
+ENV RESULTS_DIR=/deposit/results
 CMD ["python", "regenerate_all.py"]

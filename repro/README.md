@@ -10,20 +10,20 @@ network access required.
 
 ## Run with Docker (no local Python needed)
 
-From the paper directory (the one containing `paper2_*.json`):
+From the repository root:
 
 ```bash
-docker build -f repro/Dockerfile -t paper2-repro .
-docker run --rm paper2-repro
+docker build -f repro/Dockerfile -t repro .
+docker run --rm repro
 ```
 
 ## Run directly
 
 ```bash
 pip install -r repro/requirements.txt
-python repro/regenerate_all.py          # reads ../paper2_*.json by default
+python repro/regenerate_all.py          # reads ../results/ by default
 # or point it at the JSONs explicitly:
-PAPER2_DATA=/path/to/jsons python repro/regenerate_all.py
+RESULTS_DIR=/path/to/jsons python repro/regenerate_all.py
 ```
 
 ## Expected output
@@ -40,13 +40,13 @@ PAPER2_DATA=/path/to/jsons python repro/regenerate_all.py
 
 | Claim | Source JSON |
 |---|---|
-| eigenworm identity (3.79/4.14; cos 0.77/0.68) | `paper2_EW_eigenworm.json`, `paper2_EW_baai_local.json` |
-| complementary tiling (7.15× context shift) | `paper2_BAAI_chemo.json` |
-| union saturation (worm 4/7) | `paper2_SAT_saturation.json`, `paper2_MB_behaviour_specificity.json` |
-| cross-species union (larva 8, rodent 12) | `paper2_LARVA_manifold.json`, `paper2_RODENT_manifold.json` |
-| two-model agreement (wiring 0.83/0.87) | `paper2_G2_crosssim_align.json` |
-| coupling (participation 3.42/4.68) | `paper2_CP_coupling.json` |
-| robustness (D1 multipoint, D3 stats) | `paper2_mw_D1R6.json`, `paper2_D3_modworm_stats.json` |
+| eigenworm identity (3.79/4.14; cos 0.77/0.68) | `EW_eigenworm.json`, `EW_baai_local.json` |
+| complementary tiling (7.15× context shift) | `BAAI_chemo.json` |
+| union saturation (worm 4/7) | `SAT_saturation.json`, `MB_behaviour_specificity.json` |
+| cross-species union (larva 8, rodent 12) | `LARVA_manifold.json`, `RODENT_manifold.json` |
+| two-model agreement (wiring 0.83/0.87) | `G2_crosssim_align.json` |
+| coupling (participation 3.42/4.68) | `CP_coupling.json` |
+| robustness (D1 multipoint, D3 stats) | `mw_D1R6.json`, `D3_modworm_stats.json` |
 
 External-reference datasets (Allen, WormBase/Ensembl, OWMD, Prinz–Marder) are
 public; their provenance and access are listed in the Supplementary Information.

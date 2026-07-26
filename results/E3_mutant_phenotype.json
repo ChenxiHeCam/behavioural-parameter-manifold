@@ -1,7 +1,7 @@
 {
   "experiment": "E3_mutant_phenotype_stiff_sloppy",
   "source_behaviour": "yemini2013_305strain.json (OWMD, 43 single-gene mutants, 6 OWMD features)",
-  "source_conservation": "paper2_E4_channel_conservation.json (Ensembl Metazoa orthologue %id)",
+  "source_conservation": "E4_channel_conservation.json (Ensembl Metazoa orthologue %id)",
   "behavioural_effect_metric": "RMS robust-z (median/MAD) within 43-strain population; features kept ['forward_state_prop', 'backward_state_prop', 'turn_state_prop', 'reversal_rate', 'turn_magnitude', 'body_rhythm_hz'] (dropped zero-MAD: [])",
   "class_contrast": {
     "hypothesis": "stiff (gap_junction+synaptic) knockouts perturb behaviour MORE than sloppy (ion_channel)",

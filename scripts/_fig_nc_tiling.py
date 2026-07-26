@@ -13,8 +13,8 @@ D = os.path.join(HERE, "..", "results")
 OUT = os.path.join(HERE, "..", "paper", "figures", "fig_p2_tiling_crossspecies.png")
 L = lambda n: json.load(open(os.path.join(D, n)))
 
-ew, chem = L("paper2_EW_eigenworm.json"), L("paper2_BAAI_chemo.json")
-sat, rod, lar = L("paper2_SAT_saturation.json"), L("paper2_RODENT_manifold.json"), L("paper2_LARVA_manifold.json")
+ew, chem = L("EW_eigenworm.json"), L("BAAI_chemo.json")
+sat, rod, lar = L("SAT_saturation.json"), L("RODENT_manifold.json"), L("LARVA_manifold.json")
 
 # --- validated CVD-safe palette (Okabe-Ito subset; all six checks PASS) ---
 BLUE, VERM, GREEN = "#0072B2", "#D55E00", "#009E73"

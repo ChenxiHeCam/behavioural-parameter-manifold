@@ -37,6 +37,6 @@ out={'sim':'REAL modWorm (c302 connectome)','probe':'manifold/sloppiness sample'
  'behav_over_param_ratio':float(bd.mean()/max(pr.mean(),1e-9)),
  'interpretation':'large random parameter perturbations (mean relerr %.2f) produce small whitened behavioural change (mean %.2f) -> behaviour-equivalence manifold: behaviour is insensitive to most parameter directions'%(float(pr.mean()),float(bd.mean())),
  'elapsed_sec':round(time.time()-t0,0)}
-json.dump(out,open('/root/autodl-tmp/paper2_modworm_REAL_manifold.json','w'),indent=2)
+json.dump(out,open('/root/autodl-tmp/modworm_REAL_manifold.json','w'),indent=2)
 print('=== REAL modWorm manifold probe DONE ===',flush=True)
 print('param relerr mean=%.3f  behav dist mean=%.3f median=%.3f  behav/param=%.3f'%(pr.mean(),bd.mean(),np.median(bd),out['behav_over_param_ratio']),flush=True)

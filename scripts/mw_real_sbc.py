@@ -34,7 +34,7 @@ bd=np.linalg.norm(Xz - ((np.zeros(6)-Xm)/Xs),axis=1)  # dist from default-behavi
 close=bd<np.percentile(bd,25)
 drift=[float(np.std(logt[close,k])) for k in range(7)]
 # Hessian stiffness from B1
-b1=json.load(open('/root/autodl-tmp/paper2_modworm_REAL_b1.json'))
+b1=json.load(open('/root/autodl-tmp/modworm_REAL_b1.json'))
 stiff=[b1['per_mechanism_elasticity'].get(m,0.0) for m in MECH]
 rho_hd,p_hd=stats.spearmanr(stiff,[-x for x in drift])   # stiff vs negative drift
 rho_hs,p_hs=stats.spearmanr(stiff,[1-p for p in sbc_p])  # stiff vs SBC-determinacy
@@ -43,7 +43,7 @@ res={'sim':'REAL modWorm (c302 connectome)','n_sims':N,'dim':7,'mech':MECH,
  'hessian_stiffness':dict(zip(MECH,stiff)),'manifold_drift':dict(zip(MECH,drift)),
  'three_measure_hessian_vs_negdrift_spearman':[float(rho_hd),float(p_hd)],
  'three_measure_hessian_vs_sbc_spearman':[float(rho_hs),float(p_hs)]}
-json.dump(res,open('/root/autodl-tmp/paper2_modworm_REAL_sbc.json','w'),indent=2)
+json.dump(res,open('/root/autodl-tmp/modworm_REAL_sbc.json','w'),indent=2)
 print('=== REAL modWorm SBC + 3-measure DONE ===',flush=True)
 print('SBC pass %d/7'%sum(sbc_pass), dict(zip(MECH,[round(p,3) for p in sbc_p])),flush=True)
 print('3-measure Hessian-vs-negdrift rho=%.3f p=%.3f'%(rho_hd,p_hd),flush=True)

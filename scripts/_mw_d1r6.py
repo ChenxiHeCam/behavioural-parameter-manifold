@@ -1,4 +1,4 @@
-"""Paper2 D1+R6 on REAL modWorm.
+"""D1+R6 on REAL modWorm.
 D1 (multi-point Hessian, answers reviewer R1): compute the per-mechanism behavioural-elasticity
 Hessian at K points sampled around the reference on the manifold; show eff-dim stays low (~2/7)
 -> the low-dimensionality is not a single-point artifact.
@@ -142,7 +142,7 @@ out = {
     },
     'elapsed_sec': round(time.time() - t0, 1),
 }
-json.dump(out, open('/root/autodl-tmp/paper2_mw_D1R6.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/mw_D1R6.json', 'w'), indent=2)
 print('=== D1: eff-dim per point (90/99) ===', list(zip(eff90s, eff99s)), flush=True)
 print('=== R6: stiff vs sloppy behaviour change ===', flush=True)
 for m in r6:

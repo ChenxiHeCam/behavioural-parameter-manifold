@@ -1,4 +1,4 @@
-"""Paper2 worm context-dependent identifiability: do DIFFERENT behaviours (chemotaxis vs plain
+"""worm context-dependent identifiability: do DIFFERENT behaviours (chemotaxis vs plain
 locomotion) constrain DIFFERENT worm parameters? BAAIWorm has closed-loop chemotaxis (food -> AWA/AWC
 chemosensory neurons -> navigation). Perturb the CHEMOSENSORY cells (AWA/AWC) vs MOTOR cells
 (VA/VB/DA/DB) under food-close (chemotaxis active) vs food-far (no gradient = plain locomotion).
@@ -60,7 +60,7 @@ if 'close' in conds and 'far' in conds:
     out['chemo_food_vs_nofood_ratio'] = float(cc / cf) if cf > 1e-9 else None
     out['motor_food_vs_nofood_ratio'] = float(mc / mf) if mf > 1e-9 else None
     out['verdict'] = ('chemosensory params are context-dependent (lit by chemotaxis) if chemo ratio >> motor ratio')
-json.dump(out, open('/root/autodl-tmp/paper2_BAAI_chemo.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/BAAI_chemo.json', 'w'), indent=2)
 print('=== BAAIWorm context-dependent identifiability ===', flush=True)
 print('conditions:', json.dumps(conds, indent=2), flush=True)
 print('chemo food/nofood ratio:', out.get('chemo_food_vs_nofood_ratio'), '| motor food/nofood ratio:', out.get('motor_food_vs_nofood_ratio'), flush=True)

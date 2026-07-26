@@ -38,7 +38,7 @@ We next quantified the dimensionality directly from the behavioural-loss Hessian
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.48\textwidth]{Fig_multistart_three_sim.png}\hfill
-\includegraphics[width=0.48\textwidth]{Fig_paper2_crosscheck.png}
+\includegraphics[width=0.48\textwidth]{Fig_crosscheck.png}
 \caption{\textbf{The behavioural-equivalence manifold, measured.} \textbf{a}, Multistart drift: independent optimisations converge in behaviour while the recovered parameters remain dispersed (FlyGym $29/30$ behavioural success, solution-cloud effective dimension $21.7/126$; real modWorm behaviour approximately $30\times$ less variable than its parameters), indicating a positive-dimensional manifold. \textbf{b}, Behavioural-loss curvature at the optimum (BAAIWorm five-mechanism probe): the synaptic, gap-junction and motor-output axes carry the curvature ($331.97$/$299.64$/$270.50$), whereas the ion-channel and passive-membrane axes are behaviourally flat. A small number of stiff directions and many sloppy ones.}
 \label{fig:manifold}
 \end{figure}
@@ -84,9 +84,9 @@ The directions that biology conserves (stiff) and permits to vary (sloppy) coinc
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.48\textwidth]{e1b_hessian.png}\hfill
-\includegraphics[width=0.48\textwidth]{Fig_paper2_E2_allen.png}\\[2pt]
-\includegraphics[width=0.48\textwidth]{Fig_paper2_E4_conservation.png}\hfill
-\includegraphics[width=0.48\textwidth]{Fig_paper2_E5_n2_manifold.png}
+\includegraphics[width=0.48\textwidth]{Fig_E2_allen.png}\\[2pt]
+\includegraphics[width=0.48\textwidth]{Fig_E4_conservation.png}\hfill
+\includegraphics[width=0.48\textwidth]{Fig_E5_n2_manifold.png}
 \caption{\textbf{The same low-dimensional stiff/sloppy geometry in four biological datasets that do not use our simulators.} Top-left: Prinz--Marder pyloric model population, rhythm-gated, $31$-parameter Hessian eigenspectrum (effective dimension $2.13/31$; stiff $=$ leak and inhibitory synapses, sloppy $=$ fast sodium). Top-right: Allen cortical-neuron property variability ($n{=}1914$; stiff/sloppy coefficient-of-variation gradient, participation dimension $4.78/11$). Bottom-left: \emph{C.~elegans} ion-channel-gene conservation across \emph{Caenorhabditis} ($n{=}40$ genes; \texttt{unc-9} gap junction most conserved). Bottom-right: isogenic-N2 behavioural manifold (OWMD, $n{=}61$ worms, $683$ Tierpsy features; participation dimension $9.75$).}
 \label{fig:external}
 \end{figure}

@@ -43,7 +43,7 @@ out={'sim':'REAL modWorm (c302 connectome, 279 neurons, coupled neural+body)','p
  'eff_dim_90':eff90,'eff_dim_99':eff99,'participation_ratio':pr,
  'per_mechanism_elasticity':elast,
  'rank_stiff_to_sloppy':[(m,NAME[m],round(elast[m],4)) for m in order],'elapsed_sec':round(time.time()-t0,0)}
-json.dump(out,open('/root/autodl-tmp/paper2_modworm_REAL_b1.json','w'),indent=2)
+json.dump(out,open('/root/autodl-tmp/modworm_REAL_b1.json','w'),indent=2)
 print('=== REAL modWorm B1 DONE ===',flush=True)
 print(f'eff_dim 90%={eff90} 99%={eff99}/7 PR={pr:.2f}',flush=True)
 print('STIFF->SLOPPY:',[(m,round(elast[m],3)) for m in order],flush=True)

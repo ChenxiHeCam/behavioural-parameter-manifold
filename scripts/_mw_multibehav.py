@@ -1,4 +1,4 @@
-"""Paper2 MB: is the low-dim manifold intrinsic to kinematics, or a one-behaviour artifact?
+"""MB: is the low-dim manifold intrinsic to kinematics, or a one-behaviour artifact?
 Run modWorm under 4 distinct stimuli/behaviours (gentle/harsh x anterior/posterior touch ->
 reversal vs forward escape). Per behaviour: stiff subspace (Hessian eigvecs) + eff-dim. Then ask:
 do different behaviours SHARE the stiff subspace (low-dim is intrinsic, 'eating==boxing') or have
@@ -99,7 +99,7 @@ out = {
                 if mean_align is not None else 'inconclusive'),
     'elapsed_sec': round(time.time() - t0, 1),
 }
-json.dump(out, open('/root/autodl-tmp/paper2_MB_behaviour_specificity.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/MB_behaviour_specificity.json', 'w'), indent=2)
 print('=== MB behaviour-specificity ===', flush=True)
 for bn in beh:
     print(f'  {bn}: eff-dim {beh[bn]["eff_dim_90"]}/{beh[bn]["eff_dim_99"]} of 7, net_disp {beh[bn]["net_disp"]:.3f}', flush=True)

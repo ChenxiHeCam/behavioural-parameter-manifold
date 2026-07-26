@@ -31,8 +31,8 @@ Every quantity reported in the paper is recomputed from the deposited result fil
 
 ```bash
 # with Docker (no local Python needed)
-docker build -f repro/Dockerfile -t paper2-repro .
-docker run --rm paper2-repro
+docker build -f repro/Dockerfile -t repro .
+docker run --rm repro
 
 # or directly
 pip install -r repro/requirements.txt
@@ -49,7 +49,7 @@ regenerated figure. Exit status is non-zero if any number fails to reproduce.
 | `paper/` | Manuscript and Supplementary Information (LaTeX + PDF), bibliography, and all 14 figures |
 | `results/` | Result files (JSON) for every analysis; each Supplementary section names its file |
 | `scripts/` | Analysis and experiment code (Hessian/manifold probes, eigenworm, tiling, cross-species, external references, figure generation) |
-| `data/` | Input data used by the analyses: *C. elegans* c302 connectome matrices, muscle map, OpenWorm connectivity, the Prinz–Marder valid pyloric parameter set, and CaeNDR expression |
+| `data/` | Input data used by the analyses: *C. elegans* c302 connectome matrices, muscle map, OpenWorm connectivity and the Prinz–Marder valid pyloric parameter set |
 | `repro/` | One-command reproduction container and the number-audit script |
 
 ## Data sources
@@ -61,7 +61,6 @@ retrieval scripts are provided.
 - **Allen Cell Types** electrophysiology — https://celltypes.brain-map.org
 - **WormBase ParaSite / Ensembl Metazoa** ortholog identities — https://parasite.wormbase.org
 - **OpenWorm Movement Database** (Tierpsy features, N2 and mutant strains) — http://movement.openworm.org
-- **CaeNDR / wild-isolate expression** — https://caendr.org
 
 Simulators are the published releases of BAAIWorm, modWorm, flybody, NeuroMechFly v2 / FlyGym,
 flyvis, larvaworld, and the Virtual Rodent of the `dm_control` suite; see the manuscript for

@@ -2,13 +2,13 @@
  P1 = held-out predictive tiling: do behaviour-specific stiff directions span complementary dimensions,
       and can the union growth be predicted (each behaviour's novel orthogonal component)?
  P5 = significance of the eigenworm model<->real subspace alignment (cos 0.77/0.68) vs random subspaces.
-Reads local JSONs; writes paper2_NCS_p1p5.json. Pure numpy, no simulator."""
+Reads local JSONs; writes NCS_p1p5.json. Pure numpy, no simulator."""
 import json, numpy as np
 np.random.seed(0)
 D = "NEXT_PAPER_manifold_subspace/"
 
 # ---------- P1: complementary tiling, quantified + held-out ----------
-mb = json.load(open(D + "paper2_MB_behaviour_specificity.json"))
+mb = json.load(open(D + "MB_behaviour_specificity.json"))
 mech = ['gap','syn','leak','Cm','rise','fall','B']
 V = np.array([[mb['per_behaviour_top_stiff_eigvec'][b][m] for m in mech]
               for b in mb['per_behaviour_top_stiff_eigvec']])      # 4 behaviours x 7
@@ -75,10 +75,10 @@ out = {
     'verdict': 'model<->real eigenworm subspace alignment exceeds random k=4 subspaces (see per-ambient p-values).',
   },
 }
-json.dump(out, open(D + "paper2_NCS_p1p5.json", "w"), indent=2)
+json.dump(out, open(D + "NCS_p1p5.json", "w"), indent=2)
 print("P1: span eff-dim =", round(span_effdim,3), "of", nb, "| per-behaviour novel frac =", [round(x,2) for x in novel], "mean", round(novel.mean(),3))
 print("    null random-R7: span", round(rand_span.mean(),3), "novel", round(rand_novel.mean(),3))
 print("P5 eigenworm alignment vs random subspaces:")
 for d in [10,20,48]:
     r = p5[f'ambient_{d}']; print(f"    ambient {d}: null mean {r['null_mean']:.3f} p95 {r['null_p95']:.3f} | p(modWorm 0.773)={r['p_modWorm_0.773']:.4f} p(BAAIWorm 0.683)={r['p_BAAIWorm_0.683']:.4f}")
-print("SAVED", D + "paper2_NCS_p1p5.json")
+print("SAVED", D + "NCS_p1p5.json")

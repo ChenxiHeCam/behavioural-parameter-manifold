@@ -1,4 +1,4 @@
-"""Paper2 D2: positive/negative control for the eff-dim 'ruler'.
+"""D2: positive/negative control for the eff-dim 'ruler'.
 Two parts. (A) Formula calibration: feed PRESCRIBED Hessian eigen-spectra and verify the
 eff-dim metric (#eigenvalues for 90%/99% of spectral mass) returns the designed effective
 dimension. (B) End-to-end: run the IDENTICAL finite-difference GN-Hessian pipeline used on the
@@ -70,7 +70,7 @@ verdict = ("Formula calibration: prescribed spectra with k flat-equal stiff dire
 
 out = {"experiment": "D2_eff_dim_ruler_control",
        "A_formula_calibration": A, "B_end_to_end_forward_models": B, "verdict": verdict}
-json.dump(out, open("NEXT_PAPER_manifold_subspace/paper2_D2_ruler_control.json", "w"), indent=2)
+json.dump(out, open("NEXT_PAPER_manifold_subspace/D2_ruler_control.json", "w"), indent=2)
 
 print("=== D2 eff-dim ruler control ===")
 print("(A) formula calibration:")

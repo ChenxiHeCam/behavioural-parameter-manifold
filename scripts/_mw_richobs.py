@@ -1,4 +1,4 @@
-"""Paper2 RICH: is the low eff-dim REAL, or capped by using only 6 coarse observables?
+"""RICH: is the low eff-dim REAL, or capped by using only 6 coarse observables?
 eff-dim <= min(#observables, #params). With 6 scalar observables, eff-dim <= 6 BY CONSTRUCTION.
 Re-measure the per-mechanism eff-dim using the FULL posture trajectory (T x 48 tangent angles =
 thousands of observables) instead of 6 scalars, at several durations. If eff-dim grows toward 7,
@@ -75,7 +75,7 @@ out = {
     'comparison': 'the 6-scalar single-behaviour eff-dim was ~1-3 of 7 (capped by 6 observables)',
     'elapsed_sec': round(time.time() - t0, 1),
 }
-json.dump(out, open('/root/autodl-tmp/paper2_RICH_observable.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/RICH_observable.json', 'w'), indent=2)
 print('=== RICH observable eff-dim ===', flush=True)
 for k, v in results.items():
     print(f'  {k}: {v["n_observables"]} obs -> eff-dim {v["eff_dim_90"]}/{v["eff_dim_99"]} of 7', flush=True)

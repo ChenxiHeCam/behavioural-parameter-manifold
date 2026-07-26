@@ -1,5 +1,5 @@
 """Build Fig: eigenworm identity + complementary tiling + cross-species union growth.
-Reads local paper2 JSONs, writes fig_p2_tiling_crossspecies.png into NEXT_PAPER_manifold_subspace/."""
+Reads local deposit JSONs, writes fig_p2_tiling_crossspecies.png into NEXT_PAPER_manifold_subspace/."""
 import json, os
 import numpy as np
 import matplotlib
@@ -10,12 +10,12 @@ D = r"D:/Warm/NEXT_PAPER_manifold_subspace"
 def L(n):
     with open(os.path.join(D, n)) as f: return json.load(f)
 
-ew   = L("paper2_EW_eigenworm.json")
-chem = L("paper2_BAAI_chemo.json")
-sat  = L("paper2_SAT_saturation.json")
-rod  = L("paper2_RODENT_manifold.json")
-lar  = L("paper2_LARVA_manifold.json")
-mb   = L("paper2_MB_behaviour_specificity.json")
+ew   = L("EW_eigenworm.json")
+chem = L("BAAI_chemo.json")
+sat  = L("SAT_saturation.json")
+rod  = L("RODENT_manifold.json")
+lar  = L("LARVA_manifold.json")
+mb   = L("MB_behaviour_specificity.json")
 
 plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.right": False})
 fig, ax = plt.subplots(1, 4, figsize=(15, 3.5))

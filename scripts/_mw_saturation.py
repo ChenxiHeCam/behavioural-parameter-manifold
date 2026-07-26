@@ -1,4 +1,4 @@
-"""Paper2 SAT: does the identifiable (stiff) subspace SATURATE as more behaviours constrain it?
+"""SAT: does the identifiable (stiff) subspace SATURATE as more behaviours constrain it?
 The user's question: with enough behaviours, do we pin down a higher-dim subspace (fewer free DOF)?
 Run modWorm under N distinct behaviours (4 touch presets x stimulus amplitudes). For each, the
 observable Jacobian J_b (6 obs x 7 mech). The UNION stiff subspace = eff-dim of the stacked
@@ -119,7 +119,7 @@ out = {
                '(unconstrainable by any of these behaviours = irreducible neutral space)' % (union99, len(MECH), residual),
     'elapsed_sec': round(time.time() - t0, 1),
 }
-json.dump(out, open('/root/autodl-tmp/paper2_SAT_saturation.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/SAT_saturation.json', 'w'), indent=2)
 print('=== SAT identifiability saturation ===', flush=True)
 for c in curve:
     print(f'  {c["n_behaviours"]} behaviours -> eff-dim(99) {c["eff_dim_99_mean"]:.2f} (max {c["eff_dim_99_max"]})', flush=True)

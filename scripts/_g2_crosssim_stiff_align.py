@@ -1,4 +1,4 @@
-"""Paper2 G2: cross-simulator stiff-subspace alignment, modWorm vs BAAIWorm.
+"""G2: cross-simulator stiff-subspace alignment, modWorm vs BAAIWorm.
 Two independently-built C. elegans models, IDENTICAL probe (per-mechanism GN-Hessian
 elasticity, same 6 world-frame locomotion observables, delta=0.25). If the stiff subspace
 is a property of the worm (not a model artifact), the two models should agree on which
@@ -7,8 +7,8 @@ mechanism classes are stiff. Output: shared-mechanism concordance + honest scope
 import json, numpy as np
 from scipy import stats
 
-mw = json.load(open("REPRODUCIBLE/paper2_real_experiments/paper2_modworm_REAL_b1.json"))
-ba = json.load(open("paper2_baai_perchannel_hessian.json"))
+mw = json.load(open("data/modworm_REAL_b1.json"))
+ba = json.load(open("baai_perchannel_hessian.json"))
 
 
 def percentiles(rank_list):
@@ -101,7 +101,7 @@ result = {
     "caveats": ["only 3 directly-shared mechanism classes (synaptic/gap/passive-leak); "
                 "cross-model claim is at the class level, qualitative-quantitative."],
 }
-json.dump(result, open("NEXT_PAPER_manifold_subspace/paper2_G2_crosssim_align.json", "w"), indent=2)
+json.dump(result, open("NEXT_PAPER_manifold_subspace/G2_crosssim_align.json", "w"), indent=2)
 
 print("=== G2 cross-sim stiff alignment (modWorm vs BAAIWorm) ===")
 print("shared classes (stiff percentile, 1=stiffest):")

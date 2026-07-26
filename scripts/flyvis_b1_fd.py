@@ -48,7 +48,7 @@ out={'sim':'flyvis Drosophila optic-lobe connectome (Lappalainen 2024)','probe':
  'top_eig':ev[:10].tolist(),'spectral_span_orders':float(np.log10(ev[0]/ev[ev>0][-1])) if (ev>0).any() else None,
  'rank_stiff_to_sloppy':[(names[i] if i<len(names) else f'ct{i}', round(stiff[order[j]],4)) for j,i in enumerate([names.index(o) if o in names else 0 for o in order])][:20],
  'per_celltype_stiffness':stiff,'elapsed_sec':round(time.time()-t0)}
-json.dump(out,open('/root/autodl-tmp/paper2_flyvis_b1.json','w'),indent=2)
+json.dump(out,open('/root/autodl-tmp/flyvis_b1.json','w'),indent=2)
 print('=== flyvis B1 (FD) DONE ===',flush=True)
 print('eff_dim 90%%=%d 99%%=%d /%d PR=%.2f'%(eff90,eff99,nct,pr),flush=True)
 print('STIFF cell types:',[(o,round(stiff[o],3)) for o in order[:6]],flush=True)

@@ -12,7 +12,7 @@ import json, os, sys
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA = os.environ.get("PAPER2_DATA", os.path.join(HERE, "..", "results"))  # JSONs live one level up
+DATA = os.environ.get("RESULTS_DIR", os.path.join(HERE, "..", "results"))  # JSONs live one level up
 
 def L(name):
     with open(os.path.join(DATA, name)) as f:
@@ -33,7 +33,7 @@ def check(name, got, want, tol=0.02):
     checks.append((name, ok, got, want))
 
 # ---- eigenworm identity ----
-ew = L("paper2_EW_eigenworm.json"); ewb = L("paper2_EW_baai_local.json")
+ew = L("EW_eigenworm.json"); ewb = L("EW_baai_local.json")
 check("real posture eff-dim (49pt) = 3.79", ew["real_posture_effdim"], 3.79, 0.02)
 check("real posture eff-dim (17pt) = 4.14", ewb["real_posture_effdim"], 4.14, 0.02)
 check("4 eigenworms cum-var (49pt) = 0.96", ew["real_varexp_top4"][3], 0.96, 0.01)
@@ -42,49 +42,49 @@ check("BAAIWorm-sim align cos = 0.68", ewb["baai_arms"]["sim"]["subspace_align_t
 check("BAAIWorm-sim var in real top4 = 0.72", ewb["baai_arms"]["sim"]["frac_baai_variance_in_real_top4_eigenworms"], 0.719, 0.01)
 
 # ---- complementary tiling ----
-ch = L("paper2_BAAI_chemo.json")
+ch = L("BAAI_chemo.json")
 check("chemo context ratio = 7.15", ch["chemo_food_vs_nofood_ratio"], 7.15, 0.05)
 check("motor context ratio = 0.30", ch["motor_food_vs_nofood_ratio"], 0.305, 0.02)
 
 # ---- saturation / multibehaviour ----
-sat = L("paper2_SAT_saturation.json")
+sat = L("SAT_saturation.json")
 check("modWorm 12-behaviour union eff99 = 4", sat["saturation_curve"][-1]["eff_dim_99_mean"], 4.0, 0.01)
 check("modWorm 12-behaviour union eff90 = 2", sat["saturation_curve"][-1]["eff_dim_90_mean"], 2.0, 0.01)
-mb = L("paper2_MB_behaviour_specificity.json")
+mb = L("MB_behaviour_specificity.json")
 check("4-preset union eff99 = 5", mb["union_eff_dim_90_99"][1], 5, 0.01)
 check("cross-behaviour mean cos = 0.54", mb["mean_cross_behaviour_alignment"], 0.5395, 0.01)
 
 # ---- cross-species ----
-la = L("paper2_LARVA_manifold.json"); ro = L("paper2_RODENT_manifold.json")
+la = L("LARVA_manifold.json"); ro = L("RODENT_manifold.json")
 check("larva union eff99 = 8", la["union_eff_dim_90_99"][1], 8, 0.01)
 check("rodent union eff99 = 12", ro["union_eff_dim_90_99"][1], 12, 0.01)
 check("rodent 6-behaviour curve end = 12", ro["saturation_curve"][-1]["eff_dim_99_mean"], 12.0, 0.01)
 
 # ---- G2 two-model agreement ----
-g2 = L("paper2_G2_crosssim_align.json")["PRIMARY_metric_wiring_vs_singlecell"]
+g2 = L("G2_crosssim_align.json")["PRIMARY_metric_wiring_vs_singlecell"]
 check("modWorm wiring stiff-pct = 0.833", g2["modWorm"]["wiring"], 0.833, 0.01)
 check("BAAIWorm wiring stiff-pct = 0.868", g2["BAAIWorm"]["wiring"], 0.868, 0.01)
 check("modWorm single-cell stiff-pct = 0.083", g2["modWorm"]["single_cell"], 0.083, 0.01)
 
 # ---- CP coupling ----
-cp = L("paper2_CP_coupling.json")
+cp = L("CP_coupling.json")
 check("stiff eigvec participation = 3.42", cp["stiff_eigvec_participation"], 3.416, 0.02)
 check("sloppy eigvec participation = 4.68", cp["sloppy_eigvec_participation"], 4.682, 0.02)
 
 # ---- D1 multipoint, D3 stats ----
-d1 = L("paper2_mw_D1R6.json")["D1_multipoint_hessian"]["per_point"]
+d1 = L("mw_D1R6.json")["D1_multipoint_hessian"]["per_point"]
 d1seq = [d1[f"point_{i}"]["eff_dim_99"] for i in range(5)]
 check("D1 multipoint eff99 = [4,3,1,3,4] sum=15", sum(d1seq), 15, 0.01)
-d3 = L("paper2_D3_modworm_stats.json")
+d3 = L("D3_modworm_stats.json")
 check("D3 Spearman rho = 0.964", d3["spearman_rho"], 0.9643, 0.001)
 check("D3 exact-perm p = 0.0028", d3["p_exact_permutation"], 0.002778, 0.0005)
 
 # ---- threshold-robustness table (S6.9) ----
 print("\n--- S6.9 threshold robustness (recomputed) ---")
 spectra = {
-    "modWorm full":   L("paper2_modworm_hessian_full.json")["eig"],
+    "modWorm full":   L("modworm_hessian_full.json")["eig"],
     "modWorm 7-mech": cp["hessian_eigvals"],
-    "rich-observable": L("paper2_RICH_observable.json")["results_by_duration"]["NSTEP300"]["spectrum_normalised"],
+    "rich-observable": L("RICH_observable.json")["results_by_duration"]["NSTEP300"]["spectrum_normalised"],
     "larva union":    la["union_spectrum"],
     "rodent union":   ro["union_spectrum_top10"],
 }

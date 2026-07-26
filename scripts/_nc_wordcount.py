@@ -1,6 +1,6 @@
-"""Count words/items in paper2_main.tex against Nature Communications limits."""
+"""Count words/items in manuscript.tex against Nature Communications limits."""
 import re, sys, os
-p = os.path.join(os.path.dirname(__file__), '..', 'paper', 'paper2_main.tex')
+p = os.path.join(os.path.dirname(__file__), '..', 'paper', 'manuscript.tex')
 s = open(p, encoding='utf-8').read()
 
 def strip_tex(t):

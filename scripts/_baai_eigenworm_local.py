@@ -1,4 +1,4 @@
-"""Paper2 EW (BAAIWorm arm, fully local): does BAAIWorm posture live in the same low-dim
+"""EW (BAAIWorm arm, fully local): does BAAIWorm posture live in the same low-dim
 eigenworm space as real OWMD N2? Both in 17-keypoint format (BAAIWorm_pgob npz + owmd_real_tensor).
 Real eigenworms from 5010 windows (robust); BAAIWorm 100-frame posture projected onto them.
 No simulator re-run, no server."""
@@ -67,7 +67,7 @@ out = {
     'baai_arms': results,
     'note': 'eigenworms from real worm posture; BAAIWorm posture projected onto the real eigenworm modes',
 }
-json.dump(out, open('NEXT_PAPER_manifold_subspace/paper2_EW_baai_local.json', 'w'), indent=2)
+json.dump(out, open('NEXT_PAPER_manifold_subspace/EW_baai_local.json', 'w'), indent=2)
 print('=== EW BAAIWorm (local) ===')
 print('REAL OWMD N2 posture eff-dim %.2f | top-4 var explained %s' % (effdim_r, [round(v, 3) for v in ve_r[:4]]))
 for arm, r in results.items():

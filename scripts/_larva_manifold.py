@@ -1,4 +1,4 @@
-"""Paper2 cross-species (Drosophila LARVA): larvaworld behavioural manifold.
+"""cross-species (Drosophila LARVA): larvaworld behavioural manifold.
 Fills the cross-species gradient between worm (saturates ~4) and rodent (grows to 12+).
 Perturb ~10 behavioural-module parameters (crawler/turner/interference/intermitter) and measure
 the trajectory Hessian -> eff-dim, across DISTINCT behaviours (explore/chemotaxis/wind/feeding =
@@ -102,7 +102,7 @@ out = {'experiment': 'cross-species LARVA: larvaworld behavioural manifold',
        'behaviours_used': list(beh.keys()), 'per_behaviour': beh,
        'union_eff_dim_90_99': [union90, union99], 'union_spectrum': spectrum,
        'elapsed_sec': round(time.time() - t0, 1)}
-json.dump(out, open('/root/autodl-tmp/paper2_LARVA_manifold.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/LARVA_manifold.json', 'w'), indent=2)
 print('=== Drosophila LARVA manifold ===', flush=True)
 print('per-behaviour:', {b: f"{v['eff_dim_90']}/{v['eff_dim_99']}" for b, v in beh.items()}, flush=True)
 print(f'UNION eff-dim {union90}/{union99} of {len(PARAMS)} ({nB} behaviours)', flush=True)

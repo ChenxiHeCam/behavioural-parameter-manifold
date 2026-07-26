@@ -1,4 +1,4 @@
-"""Paper2 CP: is sloppy = UNUSED parameters, or COUPLED/degenerate combinations?
+"""CP: is sloppy = UNUSED parameters, or COUPLED/degenerate combinations?
 Extract the behavioural-Hessian EIGENVECTORS (combinations of the 7 mechanisms). Then move the
 parameters ALONG a stiff eigenvector vs a sloppy eigenvector (coordinated multi-parameter moves of
 matched magnitude) and along a single parameter. If sloppy = coupled degeneracy: moving along the
@@ -96,7 +96,7 @@ if sm is not None and st is not None and sm > 0:
     out['interpretation']['sloppy_combination_preserves_behaviour'] = (st / sm > 1.5)
     out['stiff_over_sloppy_ratio_alpha0.6'] = st / sm
     out['single_param_over_sloppy_ratio'] = (sa / sm) if sa else None
-json.dump(out, open('/root/autodl-tmp/paper2_CP_coupling.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/CP_coupling.json', 'w'), indent=2)
 print('=== CP coupling vs unused ===', flush=True)
 print('Hessian eigvals:', [round(float(x), 3) for x in w], flush=True)
 print('STIFF eigvec loadings:', out['stiff_eigvec_loadings'], '| participation %.2f (1=single,7=all)' % participation(v_stiff), flush=True)

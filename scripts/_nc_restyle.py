@@ -1,6 +1,6 @@
-"""Restyle paper2_main.tex into Nature Communications house style."""
+"""Restyle manuscript.tex into Nature Communications house style."""
 import re, os
-f = os.path.join(os.path.dirname(__file__), '..', 'paper', 'paper2_main.tex')
+f = os.path.join(os.path.dirname(__file__), '..', 'paper', 'manuscript.tex')
 s = open(f, encoding='utf-8').read()
 
 # 1. TITLE: 17 -> 12 words

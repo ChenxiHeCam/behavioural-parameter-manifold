@@ -27,6 +27,6 @@ bd=np.array(bd); pr=np.array(pr)
 out={'sim':'flyvis Drosophila connectome model','probe':'manifold/sloppiness sample','N':N,'sigma':SIG,
  'param_relerr_mean':float(pr.mean()),'response_dist_mean':float(bd.mean()),'response_over_param_ratio':float(bd.mean()/max(pr.mean(),1e-9)),
  'elapsed_sec':round(time.time()-t0)}
-json.dump(out,open('/root/autodl-tmp/paper2_flyvis_manifold.json','w'),indent=2)
+json.dump(out,open('/root/autodl-tmp/flyvis_manifold.json','w'),indent=2)
 print('=== flyvis manifold DONE ===',flush=True)
 print('param relerr=%.3f response dist=%.4f response/param=%.3f'%(pr.mean(),bd.mean(),out['response_over_param_ratio']),flush=True)

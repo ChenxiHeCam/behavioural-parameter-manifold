@@ -1,0 +1,163 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Szigeti et~al.(2014)Szigeti, Gleeson, Vella,
+  et~al.]{szigeti2014openworm}
+Bal{\'a}zs Szigeti, Padraig Gleeson, Michael Vella, et~al.
+\newblock Open{W}orm: An open-science approach to modeling {Caenorhabditis
+  elegans}.
+\newblock \emph{Frontiers in Computational Neuroscience}, 8:\penalty0 137,
+  2014.
+
+\bibitem[Gleeson et~al.(2018)Gleeson, Lung, Grober, et~al.]{gleeson2018c302}
+Padraig Gleeson, David Lung, Radu Grober, et~al.
+\newblock c302: a multiscale framework for modelling the nervous system of
+  \textit{Caenorhabditis elegans}.
+\newblock \emph{Philosophical Transactions of the Royal Society B},
+  373\penalty0 (1758):\penalty0 20170379, 2018.
+
+\bibitem[Papamakarios et~al.(2017)Papamakarios, Pavlakou, and
+  Murray]{papamakarios2017maf}
+George Papamakarios, Theo Pavlakou, and Iain Murray.
+\newblock Masked autoregressive flow for density estimation.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2017.
+
+\bibitem[Tejero-Cantero et~al.(2020)Tejero-Cantero, Boelts, Deistler,
+  Lueckmann, Durkan, Gon{\c{c}}alves, Greenberg, and Macke]{tejero2020sbi}
+Alvaro Tejero-Cantero, Jan Boelts, Michael Deistler, Jan-Matthis Lueckmann,
+  Conor Durkan, Pedro~J Gon{\c{c}}alves, David~S Greenberg, and Jakob~H Macke.
+\newblock sbi: A toolkit for simulation-based inference.
+\newblock \emph{Journal of Open Source Software}, 5\penalty0 (52):\penalty0
+  2505, 2020.
+
+\bibitem[Talts et~al.(2018)Talts, Betancourt, Simpson, Vehtari, and
+  Gelman]{talts2018validating}
+Sean Talts, Michael Betancourt, Daniel Simpson, Aki Vehtari, and Andrew Gelman.
+\newblock Validating {B}ayesian inference algorithms with simulation-based
+  calibration.
+\newblock \emph{arXiv preprint arXiv:1804.06788}, 2018.
+
+\bibitem[Hermans et~al.(2022)Hermans, Delaunoy, Rozet, Wehenkel, Begy, and
+  Louppe]{hermans2022sbc}
+Joeri Hermans, Arnaud Delaunoy, Fran{\c c}ois Rozet, Antoine Wehenkel,
+  Volodimir Begy, and Gilles Louppe.
+\newblock A trust crisis in simulation-based inference? {Y}our posterior
+  approximations can be unfaithful.
+\newblock In \emph{Transactions on Machine Learning Research}, 2022.
+
+\bibitem[Prinz et~al.(2004)Prinz, Bucher, and Marder]{prinz2004similar}
+Astrid~A Prinz, Dirk Bucher, and Eve Marder.
+\newblock Similar network activity from disparate circuit parameters.
+\newblock \emph{Nature Neuroscience}, 7\penalty0 (12):\penalty0 1345--1352,
+  2004.
+
+\bibitem[Marder and Taylor(2011)]{marder2011variability}
+Eve Marder and Adam~L Taylor.
+\newblock Variability, compensation and homeostasis in neuron and network
+  function.
+\newblock \emph{Nature Reviews Neuroscience}, 12\penalty0 (10):\penalty0
+  591--603, 2011.
+
+\bibitem[Goldman et~al.(2001)Goldman, Golowasch, Marder, and
+  Abbott]{goldman2001global}
+Mark~S. Goldman, Jorge Golowasch, Eve Marder, and L.~F. Abbott.
+\newblock Global structure, robustness, and modulation of neuronal models.
+\newblock \emph{Journal of Neuroscience}, 21:\penalty0 5229--5238, 2001.
+
+\bibitem[Taylor et~al.(2009)Taylor, Goaillard, Bhatt, and
+  Marder]{taylor2009how}
+Adam~L Taylor, Jean-Marc Goaillard, Davi Bhatt, and Eve Marder.
+\newblock How multiple conductances determine electrophysiological properties
+  in a multicompartment model.
+\newblock \emph{Journal of Neuroscience}, 29\penalty0 (17):\penalty0
+  5573--5586, 2009.
+
+\bibitem[Alonso and Marder(2019)]{alonso2019visualization}
+Leandro~M Alonso and Eve Marder.
+\newblock Visualization of currents in neural models with similar behavior and
+  different conductance densities.
+\newblock \emph{eLife}, 8:\penalty0 e42722, 2019.
+
+\bibitem[Marder and Goaillard(2006)]{marder2006variability}
+Eve Marder and Jean-Marc Goaillard.
+\newblock Variability, compensation and homeostasis in neuron and network
+  function.
+\newblock \emph{Nature Reviews Neuroscience}, 7:\penalty0 563--574, 2006.
+
+\bibitem[Hines and Carnevale(1997)]{hines1997neuron}
+Michael~L. Hines and Nicholas~T. Carnevale.
+\newblock The {NEURON} simulation environment.
+\newblock \emph{Neural Computation}, 9\penalty0 (6):\penalty0 1179--1209, 1997.
+
+\bibitem[Kato et~al.(2015)Kato, Kaplan, Schr{\"o}del, et~al.]{kato2015global}
+Saul Kato, Harris~S Kaplan, Tina Schr{\"o}del, et~al.
+\newblock Global brain dynamics embed the motor command sequence of
+  \textit{Caenorhabditis elegans}.
+\newblock \emph{Cell}, 163\penalty0 (3):\penalty0 656--669, 2015.
+
+\bibitem[Lappalainen et~al.(2024)Lappalainen, Tschopp, Prakhya, McGill, Nern,
+  Shinomiya, Takemura, Gruntman, Macke, and Turaga]{lappalainen2024connectome}
+Janne~K. Lappalainen, Fabian~D. Tschopp, Sridhama Prakhya, Mason McGill,
+  Aljoscha Nern, Kazunori Shinomiya, Shin-ya Takemura, Eyal Gruntman, Jakob~H.
+  Macke, and Srinivas~C. Turaga.
+\newblock Connectome-constrained networks predict neural activity across the
+  fly visual system.
+\newblock \emph{Nature}, 634:\penalty0 1132--1140, 2024.
+
+\bibitem[Scheffer et~al.(2020)Scheffer, Xu, Januszewski,
+  et~al.]{scheffer2020connectome}
+Louis~K. Scheffer, C.~Shan Xu, Michal Januszewski, et~al.
+\newblock A connectome and analysis of the adult {Drosophila} central brain.
+\newblock \emph{eLife}, 9:\penalty0 e57443, 2020.
+
+\bibitem[Dorkenwald et~al.(2024)Dorkenwald, Matsliah, Sterling,
+  et~al.]{dorkenwald2024flywire}
+Sven Dorkenwald, Arie Matsliah, Amy~R. Sterling, et~al.
+\newblock Neuronal wiring diagram of an adult brain.
+\newblock \emph{Nature}, 634:\penalty0 124--138, 2024.
+
+\bibitem[Stephens et~al.(2008)Stephens, Johnson-Kerner, Bialek, and
+  Ryu]{stephens2008dimensionality}
+Greg~J Stephens, Bethany Johnson-Kerner, William Bialek, and William~S Ryu.
+\newblock Dimensionality and dynamics in the behavior of \textit{C.~elegans}.
+\newblock \emph{PLoS Computational Biology}, 4\penalty0 (4):\penalty0 e1000028,
+  2008.
+
+\bibitem[Merel et~al.(2019)Merel, Aldarondo, Marshall, Tassa, Wayne, and
+  {\"O}lveczky]{merel2019deep}
+Josh Merel, Diego Aldarondo, Jesse Marshall, Yuval Tassa, Greg Wayne, and Bence
+  {\"O}lveczky.
+\newblock Deep neuroethology of a virtual rodent.
+\newblock \emph{arXiv preprint arXiv:1911.09451}, 2019.
+\newblock International Conference on Learning Representations (ICLR) 2020.
+
+\bibitem[Aldarondo et~al.(2024)Aldarondo, Merel, Marshall, Hasenclever,
+  Klibaite, Gellis, Tassa, Wayne, Botvinick, and
+  {\"O}lveczky]{aldarondo2024virtual}
+Diego Aldarondo, Josh Merel, Jesse~D. Marshall, Leonard Hasenclever, Ugne
+  Klibaite, Amanda Gellis, Yuval Tassa, Greg Wayne, Matthew Botvinick, and
+  Bence~P. {\"O}lveczky.
+\newblock A virtual rodent predicts the structure of neural activity across
+  behaviours.
+\newblock \emph{Nature}, 632\penalty0 (8025):\penalty0 594--602, 2024.
+
+\bibitem[Tunyasuvunakool et~al.(2020)Tunyasuvunakool, Muldal, Doron, Liu,
+  Bohez, Merel, Erez, Lillicrap, Heess, and
+  Tassa]{tunyasuvunakool2020dmcontrol}
+Saran Tunyasuvunakool, Alistair Muldal, Yotam Doron, Siqi Liu, Steven Bohez,
+  Josh Merel, Tom Erez, Timothy Lillicrap, Nicolas Heess, and Yuval Tassa.
+\newblock {dm\_control}: software and tasks for continuous control.
+\newblock \emph{Software Impacts}, 6:\penalty0 100022, 2020.
+
+\bibitem[Todorov et~al.(2012)Todorov, Erez, and Tassa]{todorov2012mujoco}
+Emanuel Todorov, Tom Erez, and Yuval Tassa.
+\newblock {MuJoCo}: A physics engine for model-based control.
+\newblock In \emph{2012 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems (IROS)}, pages 5026--5033, 2012.
+
+\end{thebibliography}

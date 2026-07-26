@@ -1,4 +1,4 @@
-"""Paper2 cross-species (MAMMAL): Virtual Rodent (dm_control, 38 actuators) behavioural manifold.
+"""cross-species (MAMMAL): Virtual Rodent (dm_control, 38 actuators) behavioural manifold.
 Parallel to FlyGym-48d but mammal. Per actuator-gain Hessian -> eff-dim (identifiable dimension of
 the 38-actuator system); and multi-behaviour: does the union stiff subspace grow / saturate as you
 switch motor patterns ('actions')? Tests the cross-species 'identifiability = behaviour richness' law.
@@ -103,7 +103,7 @@ out = {
     'union_spectrum_top10': [round(float(x), 4) for x in wall[:10]],
     'elapsed_sec': round(time.time() - t0, 1),
 }
-json.dump(out, open('/root/autodl-tmp/paper2_RODENT_manifold.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/RODENT_manifold.json', 'w'), indent=2)
 print('=== Virtual Rodent (mammal) manifold ===', flush=True)
 print('per-behaviour eff-dim:', {b: f"{v['eff_dim_90']}/{v['eff_dim_99']}" for b, v in beh_res.items()}, flush=True)
 print('saturation:', [(c['n_behaviours'], round(c['eff_dim_99_mean'], 2)) for c in curve], flush=True)

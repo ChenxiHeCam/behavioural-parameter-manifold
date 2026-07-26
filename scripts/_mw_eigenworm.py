@@ -1,4 +1,4 @@
-"""Paper2 EW: what IS the low-dimensional manifold, concretely, in real biology?
+"""EW: what IS the low-dimensional manifold, concretely, in real biology?
 Maps the model's behavioural-equivalence manifold to the worm's canonical low-dim behaviour =
 EIGENWORMS (Stephens 2008: real C. elegans posture lives in ~4 eigenworm modes). Three results:
 (1) does modWorm posture span the same low-dim eigenworm space as REAL OWMD N2 worms (shape +
@@ -148,7 +148,7 @@ out = {
     'verdict': 'the low-dim behavioural manifold is the neural control of the worm eigenworm modes',
     'elapsed_sec': round(time.time() - t0, 1),
 }
-json.dump(out, open('/root/autodl-tmp/paper2_EW_eigenworm.json', 'w'), indent=2)
+json.dump(out, open('/root/autodl-tmp/EW_eigenworm.json', 'w'), indent=2)
 print('=== EW eigenworm manifold identity ===', flush=True)
 print('model posture eff-dim %.2f (top4 var %s)' % (effdim_m, [round(v, 2) for v in ve_m[:4]]), flush=True)
 print('real  posture eff-dim %.2f (top4 var %s)' % (effdim_r, [round(v, 2) for v in ve_r[:4]]), flush=True)
