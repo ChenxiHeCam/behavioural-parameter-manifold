@@ -5,6 +5,8 @@ Code, result files and reproduction container for the manuscript:
 > Chenxi He. *Behaviour identifies a low-dimensional parameter subspace tiled by the behavioural
 > repertoire.* (2026)
 
+Archived at Zenodo: [https://doi.org/10.5281/zenodo.21594746](https://doi.org/10.5281/zenodo.21594746)
+
 Whole-organism biophysical simulators reproduce animal behaviour from hundreds to thousands of
 internal parameters. This work measures the **behavioural-equivalence manifold** — the set of
 parameter configurations that yield indistinguishable behaviour — across simulators spanning three
