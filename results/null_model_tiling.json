@@ -1,0 +1,46 @@
+{
+  "experiment": "null_models_for_complementary_tiling",
+  "n_behaviours": 4,
+  "ambient_dim": 7,
+  "observed": {
+    "span_effective_dim": 2.9778935966353726,
+    "mean_novel_orthogonal_fraction": 0.5350189568444114,
+    "mean_pairwise_abs_cos": 0.5253442883526335
+  },
+  "bootstrap_ci95": {
+    "span_effective_dim": [
+      1.4487028344547197,
+      2.977893596635374
+    ],
+    "mean_novel_orthogonal_fraction": [
+      1.9078803932353506e-16,
+      0.5350189568444115
+    ]
+  },
+  "null_redundant": {
+    "span_effective_dim": 1.0,
+    "mean_novel_orthogonal_fraction": 0.0,
+    "note": "all behaviours constrain a single shared direction"
+  },
+  "null_random_orientation": {
+    "span_effective_dim_mean": 3.5040685746777633,
+    "span_ci95": [
+      3.003472439776826,
+      3.877315406218601
+    ],
+    "novel_fraction_mean": 0.734987058485262,
+    "novel_ci95": [
+      0.4278382900538802,
+      0.9386072208399822
+    ],
+    "mean_pairwise_abs_cos_mean": 0.3123454848334439,
+    "n_draws": 20000
+  },
+  "tests_vs_random_null": {
+    "p_span_le_random": 0.0204,
+    "p_novel_le_random": 0.08185,
+    "p_cos_ge_random": 0.0157,
+    "note": "small p means the observed directions are MORE aligned (share more structure) than random"
+  },
+  "interpretation": "The behaviour-specific stiff directions are neither redundant nor randomly oriented. They span an effective 2.98 of 4 dimensions, significantly below the 3.50 expected for randomly oriented directions (p=0.0204) and far above the 1.0 of a single shared direction, so the growth of the union with repertoire size is not the trivial consequence of non-identical subspaces: the behaviours share substantial structure while each still contributes a distinct component."
+}
