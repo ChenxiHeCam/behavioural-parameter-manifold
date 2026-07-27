@@ -1,4 +1,4 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,14 +39,6 @@ Mark~S. Goldman, Jorge Golowasch, Eve Marder, and L.~F. Abbott.
 \newblock Global structure, robustness, and modulation of neuronal models.
 \newblock \emph{Journal of Neuroscience}, 21:\penalty0 5229--5238, 2001.
 
-\bibitem[Taylor et~al.(2009)Taylor, Goaillard, Bhatt, and
-  Marder]{taylor2009how}
-Adam~L Taylor, Jean-Marc Goaillard, Davi Bhatt, and Eve Marder.
-\newblock How multiple conductances determine electrophysiological properties
-  in a multicompartment model.
-\newblock \emph{Journal of Neuroscience}, 29\penalty0 (17):\penalty0
-  5573--5586, 2009.
-
 \bibitem[Marder and Taylor(2011)]{marder2011variability}
 Eve Marder and Adam~L Taylor.
 \newblock Variability, compensation and homeostasis in neuron and network
@@ -59,12 +51,6 @@ Gerald~M Edelman and Joseph~A Gally.
 \newblock Degeneracy and complexity in biological systems.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 98\penalty0
   (24):\penalty0 13763--13768, 2001.
-
-\bibitem[Alonso and Marder(2019)]{alonso2019visualization}
-Leandro~M Alonso and Eve Marder.
-\newblock Visualization of currents in neural models with similar behavior and
-  different conductance densities.
-\newblock \emph{eLife}, 8:\penalty0 e42722, 2019.
 
 \bibitem[Zhao et~al.(2024)Zhao, Wang, Jiang, Ma, Ma, He, Du, Ma, and
   Huang]{wang2025baaiworm}
@@ -108,15 +94,6 @@ Emanuel Todorov, Tom Erez, and Yuval Tassa.
 \newblock In \emph{2012 IEEE/RSJ International Conference on Intelligent Robots
   and Systems (IROS)}, pages 5026--5033, 2012.
 
-\bibitem[Delp et~al.(2007)Delp, Anderson, Arnold, Loan, Habib, John,
-  Guendelman, and Thelen]{delp2007opensim}
-Scott~L. Delp, Frank~C. Anderson, Allison~S. Arnold, Peter Loan, Ayman Habib,
-  Chand~T. John, Eran Guendelman, and Darryl~G. Thelen.
-\newblock {OpenSim}: open-source software to create and analyze dynamic
-  simulations of movement.
-\newblock \emph{IEEE Transactions on Biomedical Engineering}, 54\penalty0
-  (11):\penalty0 1940--1950, 2007.
-
 \bibitem[White et~al.(1986)White, Southgate, Thomson, and
   Brenner]{white1986structure}
 John~G White, Eileen Southgate, J~Nichol Thomson, and Sydney Brenner.
@@ -125,55 +102,17 @@ John~G White, Eileen Southgate, J~Nichol Thomson, and Sydney Brenner.
 \newblock \emph{Philosophical Transactions of the Royal Society of London B},
   314\penalty0 (1165):\penalty0 1--340, 1986.
 
-\bibitem[Varshney et~al.(2011)Varshney, Chen, Paniagua, Hall, and
-  Chklovskii]{varshney2011structural}
-Lav~R. Varshney, Beth~L. Chen, Eric Paniagua, David~H. Hall, and Dmitri~B.
-  Chklovskii.
-\newblock Structural properties of the {Caenorhabditis elegans} neuronal
-  network.
-\newblock \emph{PLoS Computational Biology}, 7\penalty0 (2):\penalty0 e1001066,
-  2011.
-
 \bibitem[Cook et~al.(2019)Cook, Jarrell, Brittin, et~al.]{cook2019connectome}
 Steven~J Cook, Travis~A Jarrell, Christopher~A Brittin, et~al.
 \newblock Whole-animal connectomes of both \textit{Caenorhabditis elegans}
   sexes.
 \newblock \emph{Nature}, 571\penalty0 (7763):\penalty0 63--71, 2019.
 
-\bibitem[Witvliet et~al.(2021)Witvliet, Mulcahy, Mitchell, Meirovitch, Berger,
-  Wu, et~al.]{witvliet2021connectomes}
-Daniel Witvliet, Ben Mulcahy, James~K. Mitchell, Yaron Meirovitch, Daniel~R.
-  Berger, Yuelong Wu, et~al.
-\newblock Connectomes across development reveal principles of brain maturation.
-\newblock \emph{Nature}, 596\penalty0 (7871):\penalty0 257--261, 2021.
-
-\bibitem[Yan et~al.(2017)Yan, V{\'e}rtes, Towlson, Chew, Walker, Schafer, and
-  Barab{\'a}si]{yan2017network}
-Gang Yan, Petra~E. V{\'e}rtes, Emma~K. Towlson, Yee~Lian Chew, Denise~S.
-  Walker, William~R. Schafer, and Albert-L{\'a}szl{\'o} Barab{\'a}si.
-\newblock Network control principles predict neuron function in the
-  {Caenorhabditis elegans} connectome.
-\newblock \emph{Nature}, 550\penalty0 (7677):\penalty0 519--523, 2017.
-
-\bibitem[Scheffer et~al.(2020)Scheffer, Xu, Januszewski,
-  et~al.]{scheffer2020connectome}
-Louis~K. Scheffer, C.~Shan Xu, Michal Januszewski, et~al.
-\newblock A connectome and analysis of the adult {Drosophila} central brain.
-\newblock \emph{eLife}, 9:\penalty0 e57443, 2020.
-
 \bibitem[Dorkenwald et~al.(2024)Dorkenwald, Matsliah, Sterling,
   et~al.]{dorkenwald2024flywire}
 Sven Dorkenwald, Arie Matsliah, Amy~R. Sterling, et~al.
 \newblock Neuronal wiring diagram of an adult brain.
 \newblock \emph{Nature}, 634:\penalty0 124--138, 2024.
-
-\bibitem[Azevedo et~al.(2024)Azevedo, Lesser, Phelps, Mark, Elabbady, Kuroda,
-  et~al.]{azevedo2024connectomic}
-Anthony Azevedo, Ellen Lesser, Jasper~S. Phelps, Brandon Mark, Leila Elabbady,
-  Sumiya Kuroda, et~al.
-\newblock Connectomic reconstruction of a female {Drosophila} ventral nerve
-  cord.
-\newblock \emph{Nature}, 631\penalty0 (8020):\penalty0 360--368, 2024.
 
 \bibitem[Szigeti et~al.(2014)Szigeti, Gleeson, Vella,
   et~al.]{szigeti2014openworm}
@@ -182,15 +121,6 @@ Bal{\'a}zs Szigeti, Padraig Gleeson, Michael Vella, et~al.
   elegans}.
 \newblock \emph{Frontiers in Computational Neuroscience}, 8:\penalty0 137,
   2014.
-
-\bibitem[Sarma et~al.(2018)Sarma, Lee, Portegys, Ghayoomie, Jacobs, Alicea,
-  et~al.]{sarma2018openworm}
-Gopal~P. Sarma, Chee~Wai Lee, Tom Portegys, Vahid Ghayoomie, Travis Jacobs,
-  Bradly Alicea, et~al.
-\newblock {OpenWorm}: overview and recent advances in integrative biological
-  simulation of {Caenorhabditis elegans}.
-\newblock \emph{Philosophical Transactions of the Royal Society B},
-  373\penalty0 (1758):\penalty0 20170382, 2018.
 
 \bibitem[Gleeson et~al.(2018)Gleeson, Lung, Grober, et~al.]{gleeson2018c302}
 Padraig Gleeson, David Lung, Radu Grober, et~al.
@@ -232,31 +162,6 @@ Greg~J Stephens, Bethany Johnson-Kerner, William Bialek, and William~S Ryu.
 \newblock \emph{PLoS Computational Biology}, 4\penalty0 (4):\penalty0 e1000028,
   2008.
 
-\bibitem[Stephens et~al.(2011)Stephens, Bueno~de Mesquita, Ryu, and
-  Bialek]{stephens2011emergence}
-Greg~J. Stephens, Matthew Bueno~de Mesquita, William~S. Ryu, and William
-  Bialek.
-\newblock Emergence of long timescales and stereotyped behaviors in
-  {Caenorhabditis elegans}.
-\newblock \emph{Proceedings of the National Academy of Sciences}, 108\penalty0
-  (18):\penalty0 7286--7289, 2011.
-
-\bibitem[Brown et~al.(2013)Brown, Yemini, Grundy, Jucikas, and
-  Schafer]{brown2013dictionary}
-Andr{\'e} E.~X. Brown, Eviatar~I. Yemini, Laura~J. Grundy, Tadas Jucikas, and
-  William~R. Schafer.
-\newblock A dictionary of behavioral motifs reveals clusters of genes affecting
-  {Caenorhabditis elegans} locomotion.
-\newblock \emph{Proceedings of the National Academy of Sciences}, 110\penalty0
-  (2):\penalty0 791--796, 2013.
-
-\bibitem[Yemini et~al.(2013)Yemini, Jucikas, Grundy, Brown, and
-  Schafer]{yemini2013openworm}
-Eviatar Yemini, Tadas Jucikas, Laura~J. Grundy, Andr{\'e} E.~X. Brown, and
-  William~R. Schafer.
-\newblock A database of {C}aenorhabditis elegans behavioral phenotypes.
-\newblock \emph{Nature Methods}, 10:\penalty0 877--879, 2013.
-
 \bibitem[Javer et~al.(2018)Javer, Currie, Lee, Hokanson, Li, Martineau, Yemini,
   Grundy, Li, Ch'ng, Schafer, Nollen, Kerr, and Brown]{javer2018open}
 Avelino Javer, Michael Currie, Chee~Wai Lee, Jim Hokanson, Kezhi Li,
@@ -265,20 +170,6 @@ Avelino Javer, Michael Currie, Chee~Wai Lee, Jim Hokanson, Kezhi Li,
   Brown.
 \newblock An open-source platform for analyzing and sharing worm-behavior data.
 \newblock \emph{Nature Methods}, 15\penalty0 (9):\penalty0 645--646, 2018.
-
-\bibitem[Pereira et~al.(2022)Pereira, Tabris, Matsliah, Turner, Li,
-  Ravindranath, et~al.]{pereira2022sleap}
-Talmo~D. Pereira, Nathaniel Tabris, Arie Matsliah, David~M. Turner, Junyu Li,
-  Shruthi Ravindranath, et~al.
-\newblock {SLEAP}: a deep learning system for multi-animal pose tracking.
-\newblock \emph{Nature Methods}, 19\penalty0 (4):\penalty0 486--495, 2022.
-
-\bibitem[Karashchuk et~al.(2021)Karashchuk, Rupp, Dickinson, Walling-Bell,
-  Sanders, Azim, Brunton, and Tuthill]{karashchuk2021anipose}
-Pierre Karashchuk, Katie~I. Rupp, Evyn~S. Dickinson, Sarah Walling-Bell,
-  Elischa Sanders, Eiman Azim, Bingni~W. Brunton, and John~C. Tuthill.
-\newblock {Anipose}: a toolkit for robust markerless 3{D} pose estimation.
-\newblock \emph{Cell Reports}, 36\penalty0 (13):\penalty0 109730, 2021.
 
 \bibitem[Pereira et~al.(2020)Pereira, Shaevitz, and
   Murthy]{pereira2020quantifying}
@@ -308,20 +199,6 @@ Alvaro Tejero-Cantero, Jan Boelts, Michael Deistler, Jan-Matthis Lueckmann,
 \newblock \emph{Journal of Open Source Software}, 5\penalty0 (52):\penalty0
   2505, 2020.
 
-\bibitem[Papamakarios et~al.(2017)Papamakarios, Pavlakou, and
-  Murray]{papamakarios2017maf}
-George Papamakarios, Theo Pavlakou, and Iain Murray.
-\newblock Masked autoregressive flow for density estimation.
-\newblock In \emph{Advances in Neural Information Processing Systems
-  (NeurIPS)}, 2017.
-
-\bibitem[Durkan et~al.(2019)Durkan, Bekasov, Murray, and
-  Papamakarios]{durkan2019nsf}
-Conor Durkan, Artur Bekasov, Iain Murray, and George Papamakarios.
-\newblock Neural spline flows.
-\newblock In \emph{Advances in Neural Information Processing Systems
-  (NeurIPS)}, 2019.
-
 \bibitem[Spall(1992)]{spall1992multivariate}
 James~C Spall.
 \newblock Multivariate stochastic approximation using a simultaneous
@@ -334,17 +211,6 @@ Nikolaus Hansen and Andreas Ostermeier.
 \newblock Completely derandomized self-adaptation in evolution strategies.
 \newblock \emph{Evolutionary Computation}, 9\penalty0 (2):\penalty0 159--195,
   2001.
-
-\bibitem[Hansen(2016)]{hansen2016cma}
-Nikolaus Hansen.
-\newblock The {CMA} evolution strategy: A tutorial.
-\newblock \emph{arXiv preprint arXiv:1604.00772}, 2016.
-
-\bibitem[Spall(2003)]{spall2003introduction}
-James~C. Spall.
-\newblock \emph{Introduction to Stochastic Search and Optimization: Estimation,
-  Simulation, and Control}.
-\newblock John Wiley \& Sons, Hoboken, NJ, 2003.
 
 \bibitem[He(2026)]{he2026pgob}
 Chenxi He.
@@ -373,12 +239,6 @@ James~P. Sethna.
   design.
 \newblock \emph{Molecular BioSystems}, 6:\penalty0 1846, 2010.
 
-\bibitem[Transtrum et~al.(2010)Transtrum, Machta, and
-  Sethna]{transtrum2010sloppy}
-Mark~K. Transtrum, Benjamin~B. Machta, and James~P. Sethna.
-\newblock Why are nonlinear fits to data so challenging?
-\newblock \emph{Physical Review Letters}, 104:\penalty0 060201, 2010.
-
 \bibitem[Karr et~al.(2012)Karr, Sanghvi, Macklin, Gutschow, Jacobs, Bolival~Jr,
   Assad-Garcia, Glass, and Covert]{karr2012whole}
 Jonathan~R. Karr, Jayodita~C. Sanghvi, Derek~N. Macklin, Miriam~V. Gutschow,
@@ -393,18 +253,6 @@ Anthony Zador, Sean Escola, Blake Richards, Bence {\"O}lveczky, Yoshua Bengio,
   Kwabena Boahen, et~al.
 \newblock Catalyzing next-generation artificial intelligence through {NeuroAI}.
 \newblock \emph{Nature Communications}, 14:\penalty0 1597, 2023.
-
-\bibitem[Urai et~al.(2022)Urai, Doiron, Leifer, and
-  Churchland]{urai2022largescale}
-Anne~E. Urai, Brent Doiron, Andrew~M. Leifer, and Anne~K. Churchland.
-\newblock Large-scale neural recordings call for new insights to link brain and
-  behavior.
-\newblock \emph{Nature Neuroscience}, 25\penalty0 (1):\penalty0 11--19, 2022.
-
-\bibitem[Bargmann and Marder(2013)]{bargmann2013connectome}
-Cornelia~I. Bargmann and Eve Marder.
-\newblock From the connectome to brain function.
-\newblock \emph{Nature Methods}, 10\penalty0 (6):\penalty0 483--490, 2013.
 
 \bibitem[Gray et~al.(2005)Gray, Hill, and Bargmann]{gray2005circuit}
 Jesse~M. Gray, Joseph~J. Hill, and Cornelia~I. Bargmann.
@@ -432,33 +280,12 @@ Anthony~D. Fouad, Shelly Teng, Julian~R. Mark, Alice Liu, Pilar Alvarez-Illera,
   forward locomotion.
 \newblock \emph{eLife}, 7:\penalty0 e29913, 2018.
 
-\bibitem[Gao et~al.(2018)Gao, Guan, Fouad, Meng, Kawano, Huang,
-  et~al.]{gao2018excitatory}
-Shangbang Gao, Sihui~Asuka Guan, Anthony~D. Fouad, Jun Meng, Taizo Kawano,
-  Yung-Chi Huang, et~al.
-\newblock Excitatory motor neurons are local oscillators for backward
-  locomotion.
-\newblock \emph{eLife}, 7:\penalty0 e29915, 2018.
-
-\bibitem[Boyle et~al.(2012)Boyle, Berri, and Cohen]{boyle2012gait}
-Jordan~H Boyle, Stefano Berri, and Netta Cohen.
-\newblock Gait modulation in {C.~elegans}: An integrated neuromechanical model.
-\newblock \emph{Frontiers in Computational Neuroscience}, 6:\penalty0 10, 2012.
-
 \bibitem[Izquierdo and Beer(2018)]{izquierdo2018connecting}
 Eduardo~J Izquierdo and Randall~D Beer.
 \newblock Connecting a connectome to behavior: an ensemble of neuroanatomical
   models of \textit{C.~elegans} klinotaxis.
 \newblock \emph{PLoS Computational Biology}, 14\penalty0 (2):\penalty0
   e1005968, 2018.
-
-\bibitem[Rakowski et~al.(2017)Rakowski, Srinivasan, Sternberg, and
-  Bhatt]{rakowski2017optimal}
-Franciszek Rakowski, Jagan Srinivasan, Paul~W Sternberg, and Jyotirmoy Bhatt.
-\newblock Optimal synaptic signaling connectome for locomotory behavior in
-  {Caenorhabditis elegans}: Design minimality and individual variability.
-\newblock \emph{PLoS Computational Biology}, 13\penalty0 (11):\penalty0
-  e1005834, 2017.
 
 \bibitem[Merel et~al.(2019)Merel, Aldarondo, Marshall, Tassa, Wayne, and
   {\"O}lveczky]{merel2019deep}
@@ -502,11 +329,6 @@ Julijana Gjorgjieva, Guillaume Drion, Davi Bhatt, and Eve Marder.
   timescales in neurons and synapses for circuit function.
 \newblock \emph{Current Opinion in Neurobiology}, 37:\penalty0 44--52, 2016.
 
-\bibitem[O'Connor et~al.(2024)]{oconnor2024neural}
-Daniel~H O'Connor et~al.
-\newblock Neural circuit mechanisms of individual variability in behavior.
-\newblock \emph{Annual Review of Neuroscience}, 47:\penalty0 1--25, 2024.
-
 \bibitem[Talts et~al.(2018)Talts, Betancourt, Simpson, Vehtari, and
   Gelman]{talts2018validating}
 Sean Talts, Michael Betancourt, Daniel Simpson, Aki Vehtari, and Andrew Gelman.
@@ -521,21 +343,6 @@ Joeri Hermans, Arnaud Delaunoy, Fran{\c c}ois Rozet, Antoine Wehenkel,
 \newblock A trust crisis in simulation-based inference? {Y}our posterior
   approximations can be unfaithful.
 \newblock In \emph{Transactions on Machine Learning Research}, 2022.
-
-\bibitem[Papamakarios and Murray(2016)]{papamakarios2016mdn}
-George Papamakarios and Iain Murray.
-\newblock Fast $\varepsilon$-free inference of simulation models with
-  {B}ayesian conditional density estimation.
-\newblock In \emph{Advances in Neural Information Processing Systems
-  (NeurIPS)}, 2016.
-
-\bibitem[Deistler et~al.(2022)Deistler, Gon{\c{c}}alves, and
-  Macke]{deistler2022truncated}
-Michael Deistler, Pedro~J Gon{\c{c}}alves, and Jakob~H Macke.
-\newblock Truncated proposals for scalable and hassle-free simulation-based
-  inference.
-\newblock \emph{Advances in Neural Information Processing Systems},
-  35:\penalty0 23135--23149, 2022.
 
 \bibitem[Lappalainen et~al.(2024)Lappalainen, Tschopp, Prakhya, McGill, Nern,
   Shinomiya, Takemura, Gruntman, Macke, and Turaga]{lappalainen2024connectome}

@@ -13,20 +13,20 @@ def strip_tex(t):
     return t
 
 ab = re.search(r'\\begin\{abstract\}(.*?)\\end\{abstract\}', s, re.S).group(1)
-print(f"Abstract words   : {len(strip_tex(ab).split()):5d}   (NC: 150-200)")
+print(f"Abstract words   : {len(strip_tex(ab).split()):5d}   (NCS: 100-150)")
 print(f"Abstract has cites: {'YES - must remove' if 'cite' in ab else 'no'}")
 
 ti = re.search(r'\\title\{(.*?)\}\s*\n', s, re.S).group(1)
-print(f"Title words      : {len(strip_tex(ti).split()):5d}   (NC: <15)")
+print(f"Title words      : {len(strip_tex(ti).split()):5d}   (NCS: <=15)")
 
 body = s.split('Introduction}')[1].split('\\section*{Methods}')[0]
-print(f"Main text words  : {len(strip_tex(body).split()):5d}   (NC: <5000)")
+print(f"Main text words  : {len(strip_tex(body).split()):5d}   (NCS: <=3500)")
 
 meth = s.split('\\section*{Methods}')[1].split('\\section*{Data availability}')[0]
-print(f"Methods words    : {len(strip_tex(meth).split()):5d}   (NC: <3000)")
+print(f"Methods words    : {len(strip_tex(meth).split()):5d}   (NCS Methods)")
 
-print(f"Display items    : {s.count('begin{figure}') + s.count('begin{table}'):5d}   (NC: <=10)")
+print(f"Display items    : {s.count('begin{figure}') + s.count('begin{table}'):5d}   (NCS: <=6)")
 cites = set()
 for m in re.findall(r'\\cite[a-zA-Z]*\{([^}]*)\}', s):
     cites.update(x.strip() for x in m.split(','))
-print(f"Unique refs(main): {len(cites):5d}   (NC guide: <=70)")
+print(f"Unique refs(main): {len(cites):5d}   (NCS guide: <=50)")
