@@ -107,10 +107,9 @@ To extend the stiff/sloppy decomposition to a connectome-constrained \emph{neura
 Applying the same Hessian-eigenspectrum probe to the canonical Prinz--Marder stomatogastric conductance population (a non-worm, non-fly crustacean circuit; \S2.1) gives effective dimension $2.13/31$ with stiff $=$ leak and inhibitory-synapse conductances and sloppy $=$ fast voltage-gated Na and delayed-rectifier K---the same biophysical split seen in the worm models, where the fast voltage-gated calcium channels (EGL-19, UNC-2) are sloppy (\S5.2). Across four real models and three phyla, behaviour/output is set by network wiring and slow/passive properties and left free along the fast voltage-gated inward currents. File \texttt{STG\_b1analog.json}.
 
 \begin{figure}[H]\centering
-\includegraphics[width=0.32\textwidth]{fig_p2_modworm_real_b1.png}\hfill
-\includegraphics[width=0.32\textwidth]{fig_p2_flyvis_b1.png}\hfill
-\includegraphics[width=0.32\textwidth]{fig_p2_crosssystem_real.png}
-\caption{All-real stiff/sloppy decompositions. Left: real modWorm per-mechanism elasticity (synaptic/gap-junction/rise-time stiff). Middle: flyvis fly connectome per-cell-type (T4/T5 motion detectors stiff, photoreceptors sloppy). Right: the same stiff/sloppy geometry across four real models and three phyla.}
+\includegraphics[width=0.47\textwidth]{fig_p2_flyvis_b1.png}\hfill
+\includegraphics[width=0.47\textwidth]{fig_p2_crosssystem_real.png}
+\caption{	extbf{Stiff and sloppy structure in a connectome-constrained visual model and in the crustacean pyloric population.} 	extbf{a} Behavioural elasticity of the flyvis optic-lobe model across its $65$ named cell types, showing the ten stiffest above the dashed line and the ten sloppiest below. Blue: stiff; grey: sloppy. The elementary motion detectors T4a--d and their medulla inputs are stiff, whereas photoreceptors and lamina wide-field cells are sloppy, and the effective dimension is $43$ of $65$. 	extbf{b} Eigenvector loadings of the rhythm-gated Prinz--Marder pyloric population, with the six largest stiff loadings above the dashed line and the six largest sloppy loadings below. Stiff, leak and inhibitory-synapse conductances; sloppy, fast voltage-gated sodium; effective dimension $2.13$ of $31$ over $K{=}8$ valid points. Note that the biophysical split is the same in both systems and in the worm models of the main text (connectivity and slow or passive properties stiff, fast voltage-gated inward currents sloppy), while the effective dimension is not: a precision visual code constrains many more directions than a whole-body motor pattern. Both probes use the identical Gauss--Newton method and the same finite-difference step.}
 \label{fig:si_allreal}
 \end{figure}
 

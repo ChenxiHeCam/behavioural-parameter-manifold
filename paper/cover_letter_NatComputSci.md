@@ -80,6 +80,6 @@ a result we establish across three phyla against explicit null models.
 
 ## Related manuscripts by the author
 A separate manuscript on behaviour-based parameter generation for whole-organism simulators is
-available as a preprint (https://doi.org/10.5281/zenodo.20691877) and is cited here as related work.
+available as a preprint (https://doi.org/10.21203/rs.3.rs-10486658/v1) and is cited here as related work.
 The present study is independent of it: it measures identifiability in published simulators and
 shares no analyses, datasets or claims with that manuscript.
