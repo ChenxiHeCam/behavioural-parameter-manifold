@@ -1,0 +1,128 @@
+{
+  "experiment": "E7_E11_modworm",
+  "build": "modWorm public repository, Cook connectome, 279 neurons",
+  "observable": "body tangent-angle trajectory (rich)",
+  "delta": 0.25,
+  "n_steps": 150,
+  "E7_nested_union": {
+    "behaviour_sequence": [
+      "input_mat_gentle_ant_touch",
+      "input_mat_gentle_post_touch",
+      "input_mat_harsh_ant_touch",
+      "input_mat_harsh_post_touch"
+    ],
+    "curve": [
+      {
+        "n_behaviours": 1,
+        "eff_dim_90": 2,
+        "eff_dim_99": 3,
+        "participation_ratio": 1.2457096738914146
+      },
+      {
+        "n_behaviours": 2,
+        "eff_dim_90": 3,
+        "eff_dim_99": 3,
+        "participation_ratio": 1.9757637222556212
+      },
+      {
+        "n_behaviours": 3,
+        "eff_dim_90": 3,
+        "eff_dim_99": 4,
+        "participation_ratio": 2.0102600936290322
+      },
+      {
+        "n_behaviours": 4,
+        "eff_dim_90": 3,
+        "eff_dim_99": 4,
+        "participation_ratio": 1.8596646868327331
+      }
+    ],
+    "note": "one nested set, so the union cannot decrease"
+  },
+  "E11_point_dependence": {
+    "n_points": 24,
+    "sigma": 0.15,
+    "eff_dim_per_point_90": [
+      3,
+      3,
+      2,
+      3,
+      2,
+      2,
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      1,
+      3,
+      2,
+      3,
+      3,
+      2,
+      1,
+      2,
+      1,
+      2,
+      3,
+      3
+    ],
+    "eff_dim_per_point_99": [
+      4,
+      4,
+      3,
+      4,
+      4,
+      2,
+      4,
+      4,
+      4,
+      3,
+      5,
+      2,
+      3,
+      4,
+      3,
+      4,
+      4,
+      3,
+      2,
+      3,
+      3,
+      4,
+      3,
+      4
+    ],
+    "stiffest_mechanism_per_point": [
+      "rise",
+      "leak",
+      "syn",
+      "syn",
+      "syn",
+      "fall",
+      "leak",
+      "gap",
+      "leak",
+      "rise",
+      "leak",
+      "rise",
+      "rise",
+      "rise",
+      "gap",
+      "syn",
+      "rise",
+      "fall",
+      "leak",
+      "syn",
+      "rise",
+      "syn",
+      "rise",
+      "rise"
+    ],
+    "pairwise_order_spearman_mean": 0.6345755693581782,
+    "pairwise_order_spearman_sd": 0.19038509670256376,
+    "fraction_of_points_with_same_stiffest": 0.375
+  },
+  "elapsed_sec": 575.8
+}

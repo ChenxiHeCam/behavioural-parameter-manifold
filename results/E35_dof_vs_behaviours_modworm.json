@@ -1,0 +1,77 @@
+{
+  "experiment": "E35_dof_vs_behaviours",
+  "model": "real modWorm, public build, 7 mechanisms",
+  "observable": "body tangent-angle trajectory (rich, uncapped)",
+  "delta": 0.25,
+  "n_steps": 150,
+  "curve": [
+    {
+      "n_behaviours": 1,
+      "n_subsets": 4,
+      "eff_dim_90_mean": 2.5,
+      "eff_dim_90_sd": 0.5,
+      "eff_dim_99_mean": 4.0,
+      "eff_dim_99_sd": 0.7071067811865476,
+      "participation_ratio_mean": 1.7451779939292433,
+      "participation_ratio_sd": 0.5199601314950856
+    },
+    {
+      "n_behaviours": 2,
+      "n_subsets": 6,
+      "eff_dim_90_mean": 2.6666666666666665,
+      "eff_dim_90_sd": 0.4714045207910317,
+      "eff_dim_99_mean": 4.0,
+      "eff_dim_99_sd": 0.5773502691896257,
+      "participation_ratio_mean": 1.830265931884612,
+      "participation_ratio_sd": 0.3384835373954738
+    },
+    {
+      "n_behaviours": 3,
+      "n_subsets": 4,
+      "eff_dim_90_mean": 2.75,
+      "eff_dim_90_sd": 0.4330127018922193,
+      "eff_dim_99_mean": 4.0,
+      "eff_dim_99_sd": 0.0,
+      "participation_ratio_mean": 1.8508710586000414,
+      "participation_ratio_sd": 0.19921917131979053
+    },
+    {
+      "n_behaviours": 4,
+      "n_subsets": 1,
+      "eff_dim_90_mean": 3.0,
+      "eff_dim_90_sd": 0.0,
+      "eff_dim_99_mean": 4.0,
+      "eff_dim_99_sd": 0.0,
+      "participation_ratio_mean": 1.8596617554128256,
+      "participation_ratio_sd": 0.0
+    }
+  ],
+  "shuffled_control": [
+    {
+      "n_behaviours": 1,
+      "eff_dim_90_mean": 4.0,
+      "eff_dim_99_mean": 4.25,
+      "participation_ratio_mean": 3.5395915010589207
+    },
+    {
+      "n_behaviours": 2,
+      "eff_dim_90_mean": 4.0,
+      "eff_dim_99_mean": 4.5,
+      "participation_ratio_mean": 3.740587860004051
+    },
+    {
+      "n_behaviours": 3,
+      "eff_dim_90_mean": 4.0,
+      "eff_dim_99_mean": 4.0,
+      "participation_ratio_mean": 3.8155487828240973
+    },
+    {
+      "n_behaviours": 4,
+      "eff_dim_90_mean": 4.0,
+      "eff_dim_99_mean": 4.0,
+      "participation_ratio_mean": 3.855233132064072
+    }
+  ],
+  "note": "each point averages over all subsets of that size, so the curve does not depend on one arbitrary ordering of behaviours",
+  "elapsed_sec": 7.2
+}

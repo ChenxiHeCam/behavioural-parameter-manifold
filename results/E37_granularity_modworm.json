@@ -1,0 +1,40 @@
+{
+  "experiment": "E37_parameter_granularity_modworm",
+  "question": "does the low effective dimension survive at cell resolution?",
+  "n_params": 279,
+  "parameter": "per-neuron leak conductance",
+  "observable": "body tangent-angle trajectory (rich)",
+  "delta": 0.25,
+  "behaviour": "input_mat_gentle_post_touch",
+  "eff_dim_90": 1,
+  "eff_dim_99": 2,
+  "participation_ratio": 1.0636781609697157,
+  "fraction_of_curvature_in_uniform_direction": 0.002953450940330498,
+  "published_seven_multiplier": {
+    "eff_dim_90": 2,
+    "eff_dim_99": 2,
+    "participation_ratio": 1.29
+  },
+  "top_cells_by_elasticity": [
+    182,
+    0,
+    3,
+    213,
+    183,
+    191,
+    38,
+    185,
+    176,
+    28,
+    85,
+    219,
+    23,
+    111,
+    174
+  ],
+  "elasticity_range": [
+    4.1920215352891516e-10,
+    2.3360651780200236e-05
+  ],
+  "elapsed_sec": 48.9
+}

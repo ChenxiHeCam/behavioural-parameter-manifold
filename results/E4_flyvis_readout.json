@@ -1,0 +1,84 @@
+{
+  "experiment": "E4_E22_flyvis_readout_and_groups",
+  "delta": 0.2,
+  "free_parameter_groups": {
+    "nodes_bias": 65,
+    "nodes_time_const": 65,
+    "edges_syn_strength": 604
+  },
+  "params_probed_per_group": {
+    "nodes_bias": 65,
+    "nodes_time_const": 65,
+    "edges_syn_strength": 200
+  },
+  "readout_sweep": {
+    "64": {
+      "n_readouts": 64,
+      "n_params": 65,
+      "eff_dim_90": 43,
+      "eff_dim_99": 58,
+      "participation_ratio": 36.266082763671875
+    },
+    "32": {
+      "n_readouts": 32,
+      "n_params": 65,
+      "eff_dim_90": 24,
+      "eff_dim_99": 31,
+      "participation_ratio": 20.685794830322266
+    },
+    "16": {
+      "n_readouts": 16,
+      "n_params": 65,
+      "eff_dim_90": 13,
+      "eff_dim_99": 16,
+      "participation_ratio": 12.298104286193848
+    },
+    "8": {
+      "n_readouts": 8,
+      "n_params": 65,
+      "eff_dim_90": 7,
+      "eff_dim_99": 8,
+      "participation_ratio": 6.1625566482543945
+    },
+    "6": {
+      "n_readouts": 6,
+      "n_params": 65,
+      "eff_dim_90": 5,
+      "eff_dim_99": 6,
+      "participation_ratio": 4.459842681884766
+    }
+  },
+  "group_sweep": {
+    "nodes_bias": {
+      "n_params_probed": 65,
+      "eff_dim_90": 43,
+      "eff_dim_99": 58,
+      "participation_ratio": 36.266082763671875
+    },
+    "nodes_time_const": {
+      "n_params_probed": 65,
+      "eff_dim_90": 5,
+      "eff_dim_99": 7,
+      "participation_ratio": 4.277541637420654
+    },
+    "edges_syn_strength": {
+      "n_params_probed": 200,
+      "eff_dim_90": 14,
+      "eff_dim_99": 32,
+      "participation_ratio": 9.624547958374023
+    }
+  },
+  "all_groups_joint": {
+    "n_params_probed": 330,
+    "eff_dim_90": 14,
+    "eff_dim_99": 32,
+    "participation_ratio": 9.681556701660156
+  },
+  "published": {
+    "eff_dim_90": 43,
+    "n_cell_types": 65,
+    "readout_dim": 64,
+    "note": "bias group only"
+  },
+  "elapsed_sec": 1109.8
+}

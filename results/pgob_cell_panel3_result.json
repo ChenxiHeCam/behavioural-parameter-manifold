@@ -1,0 +1,252 @@
+{
+ "protocol": "target = published parameters; search starts from a random point drawn independently of it, theta * exp(U(-ln f, ln f)), as in the whole-organism driver",
+ "start_fold_widths": [
+  1.5,
+  3.0,
+  10.0
+ ],
+ "losses": [
+  "phase_invariant",
+  "pointwise_trace"
+ ],
+ "seeds": 8,
+ "converged_threshold": 0.02,
+ "by_model": {
+  "HH": {
+   "n": 24,
+   "n_converged": 23,
+   "convergence_rate": 0.9583333333333334,
+   "n_params": 3,
+   "class": "neural",
+   "rel_after_median": 6.207655197212714e-05,
+   "rel_before_median": 0.4367604389480118,
+   "per_param_median_ratio": {
+    "gNa": 1.0000646243305782,
+    "gK": 1.0000212734605691,
+    "gL": 1.0002895480677463
+   }
+  },
+  "HH_Acurrent": {
+   "n": 24,
+   "n_converged": 1,
+   "convergence_rate": 0.041666666666666664,
+   "n_params": 4,
+   "class": "neural",
+   "rel_after_median": 0.051640884036998895,
+   "rel_before_median": 0.20207814839528135,
+   "per_param_median_ratio": {
+    "gNa": 0.946843923156459,
+    "gK": 1.0120415101452345,
+    "gA": 1.2015911395718357,
+    "gL": 0.3979288270644635
+   }
+  },
+  "WangBuzsaki": {
+   "n": 24,
+   "n_converged": 2,
+   "convergence_rate": 0.08333333333333333,
+   "n_params": 3,
+   "class": "neural",
+   "rel_after_median": 0.00016363303642382045,
+   "rel_before_median": 0.47546805105615664,
+   "per_param_median_ratio": {
+    "gNa": 1.0001666068487187,
+    "gK": 0.9998908230892294,
+    "gL": 1.000240880687755
+   }
+  },
+  "MorrisLecar": {
+   "n": 24,
+   "n_converged": 17,
+   "convergence_rate": 0.7083333333333334,
+   "n_params": 4,
+   "class": "neural",
+   "rel_after_median": 3.4835710772190455e-07,
+   "rel_before_median": 0.39421257220036754,
+   "per_param_median_ratio": {
+    "gCa": 1.0000004034732493,
+    "gK": 0.9999996951307423,
+    "gL": 1.0000006129253904,
+    "phi": 1.0000011774112665
+   }
+  },
+  "FitzHughNagumo": {
+   "n": 24,
+   "n_converged": 15,
+   "convergence_rate": 0.625,
+   "n_params": 4,
+   "class": "neural",
+   "rel_after_median": 8.492160081706304e-07,
+   "rel_before_median": 0.26759638083015613,
+   "per_param_median_ratio": {
+    "a": 1.0000004931261046,
+    "b": 1.0000005011403796,
+    "tau": 0.9999997753871654,
+    "I": 1.0000002028722124
+   }
+  },
+  "MAPK": {
+   "n": 24,
+   "n_converged": 5,
+   "convergence_rate": 0.20833333333333334,
+   "n_params": 11,
+   "class": "biochemical",
+   "rel_after_median": 0.39919450246127564,
+   "rel_before_median": 0.30450036367365885,
+   "per_param_median_ratio": {
+    "V1": 1.0415967792922056,
+    "Ki": 1.1985114619718211,
+    "V2": 1.0598592297784384,
+    "k3": 0.8799663335656184,
+    "k4": 1.1373414284090184,
+    "V5": 1.1476913700680718,
+    "V6": 1.3421530023042187,
+    "k7": 0.8208868347961266,
+    "k8": 0.8350831219398434,
+    "V9": 0.9802910951260168,
+    "V10": 0.7535895608070565
+   }
+  },
+  "Repressilator": {
+   "n": 24,
+   "n_converged": 18,
+   "convergence_rate": 0.75,
+   "n_params": 4,
+   "class": "biochemical",
+   "rel_after_median": 0.13696986397352184,
+   "rel_before_median": 0.30150592407451704,
+   "per_param_median_ratio": {
+    "alpha": 1.031777192599567,
+    "alpha0": 1.1522634971800798,
+    "beta": 1.0010203074835062,
+    "n": 1.006113661138186
+   }
+  },
+  "Goodwin": {
+   "n": 24,
+   "n_converged": 6,
+   "convergence_rate": 0.25,
+   "n_params": 8,
+   "class": "biochemical",
+   "rel_after_median": 0.0974299279935066,
+   "rel_before_median": 0.1388781281038199,
+   "per_param_median_ratio": {
+    "k1": 1.216007664005035,
+    "k2": 1.2235415450562948,
+    "k3": 0.7380923993723665,
+    "k4": 0.9219468427048734,
+    "k5": 1.2043800360718526,
+    "k6": 0.9197944232596019,
+    "Ki": 1.0144646012483218,
+    "n": 1.04092688546223
+   }
+  },
+  "Selkov": {
+   "n": 24,
+   "n_converged": 24,
+   "convergence_rate": 1.0,
+   "n_params": 2,
+   "class": "biochemical",
+   "rel_after_median": 5.346220062700332e-07,
+   "rel_before_median": 0.47018776644021476,
+   "per_param_median_ratio": {
+    "a": 1.000000144604661,
+    "b": 1.0000005416137285
+   }
+  },
+  "Brusselator": {
+   "n": 24,
+   "n_converged": 14,
+   "convergence_rate": 0.5833333333333334,
+   "n_params": 2,
+   "class": "biochemical",
+   "rel_after_median": 5.565714247786548e-06,
+   "rel_before_median": 0.42594231931058835,
+   "per_param_median_ratio": {
+    "A": 0.9999975209876377,
+    "B": 0.9999943087241744
+   }
+  },
+  "GoldbeterMitotic": {
+   "n": 24,
+   "n_converged": 10,
+   "convergence_rate": 0.4166666666666667,
+   "n_params": 9,
+   "class": "biochemical",
+   "rel_after_median": 0.16583021636339088,
+   "rel_before_median": 0.23175805167005528,
+   "per_param_median_ratio": {
+    "vi": 0.9613126629741748,
+    "vd": 1.264661954719075,
+    "Kd": 1.0452694744523496,
+    "kd": 0.7332638612212922,
+    "VM1": 0.983651308136894,
+    "Kc": 1.094605381994703,
+    "V2": 0.9841693549352704,
+    "VM3": 0.86191444048736,
+    "V4": 0.937657781709412
+   }
+  }
+ },
+ "by_loss_scale": {
+  "phase_invariant@1.5": {
+   "n": 88,
+   "n_converged": 62,
+   "convergence_rate": 0.7045454545454546,
+   "rel_before_median": 0.1891815808979822,
+   "mean_per_param_deviation_at_start": 0.1867283683018688,
+   "L_final_median": 0.0039627953632008816,
+   "rel_after_median_converged": 2.441128682555554e-05,
+   "improvement_factor": 7813.021469492137
+  },
+  "phase_invariant@3.0": {
+   "n": 88,
+   "n_converged": 41,
+   "convergence_rate": 0.4659090909090909,
+   "rel_before_median": 0.5706120096654101,
+   "mean_per_param_deviation_at_start": 0.6115406252031597,
+   "L_final_median": 0.02568187320915228,
+   "rel_after_median_converged": 7.219035144624875e-06,
+   "improvement_factor": 78500.65522801169
+  },
+  "phase_invariant@10.0": {
+   "n": 88,
+   "n_converged": 32,
+   "convergence_rate": 0.36363636363636365,
+   "rel_before_median": 0.8265073860359712,
+   "mean_per_param_deviation_at_start": 1.4229640198057532,
+   "L_final_median": 0.19177691830344318,
+   "rel_after_median_converged": 2.3527878545298353e-05,
+   "improvement_factor": 24357.94231884699
+  },
+  "pointwise_trace@1.5": {
+   "n": 88,
+   "n_converged": 32,
+   "convergence_rate": 0.36363636363636365,
+   "rel_before_median": 0.1891815808979822,
+   "mean_per_param_deviation_at_start": 0.1867283683018688,
+   "L_final_median": 0.12362733204913096,
+   "rel_after_median_converged": 1.3337932355156145e-05,
+   "improvement_factor": 13707.519452669258
+  },
+  "pointwise_trace@3.0": {
+   "n": 88,
+   "n_converged": 10,
+   "convergence_rate": 0.11363636363636363,
+   "rel_before_median": 0.5706120096654101,
+   "mean_per_param_deviation_at_start": 0.6115406252031597,
+   "L_final_median": 0.19210574386105886,
+   "rel_after_median_converged": 9.59671931335132e-06,
+   "improvement_factor": 54212.289005321916
+  },
+  "pointwise_trace@10.0": {
+   "n": 88,
+   "n_converged": 0,
+   "convergence_rate": 0.0,
+   "rel_before_median": 0.8265073860359712,
+   "mean_per_param_deviation_at_start": 1.4229640198057532,
+   "L_final_median": 0.36004977332922217
+  }
+ },
+ "elapsed_sec": 6868.9
+}

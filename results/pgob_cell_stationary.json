@@ -1,0 +1,134 @@
+{
+ "HH": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 4.514926487553277e-05,
+  "range_at_choice": 104.1711779771423,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0,
+   "0.5": 0.0,
+   "0.6": 0.2443,
+   "0.7": 0.4238
+  }
+ },
+ "HH_Acurrent": {
+  "chosen_drop": 0.5,
+  "cv_at_choice": 0.08151844341017439,
+  "range_at_choice": 98.58087525776972,
+  "stationary": true,
+  "all": {
+   "0.4": 0.5341,
+   "0.5": 0.0815,
+   "0.6": 0.0261,
+   "0.7": 0.0474
+  }
+ },
+ "WangBuzsaki": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 0.0017099100898807617,
+  "range_at_choice": 93.30569322768785,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0017,
+   "0.5": 0.0012,
+   "0.6": 0.0008,
+   "0.7": 0.0004
+  }
+ },
+ "MorrisLecar": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 0.14465809663676107,
+  "range_at_choice": 67.71703842206098,
+  "stationary": true,
+  "all": {
+   "0.4": 0.1447,
+   "0.5": 0.4947,
+   "0.6": 0.4813,
+   "0.7": 0.5197
+  }
+ },
+ "FitzHughNagumo": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 1.4374276476592325e-05,
+  "range_at_choice": 3.833958910457559,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0,
+   "0.5": 0.0,
+   "0.6": 0.0559,
+   "0.7": 0.0779
+  }
+ },
+ "MAPK": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 0.08105621506292113,
+  "range_at_choice": 248.35216939520762,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0811,
+   "0.5": 0.1983,
+   "0.6": 0.1369,
+   "0.7": 0.2495
+  }
+ },
+ "Repressilator": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 3.192585738707498e-05,
+  "range_at_choice": 57.95939259499755,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0,
+   "0.5": 0.0,
+   "0.6": 0.0,
+   "0.7": 0.0857
+  }
+ },
+ "Goodwin": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 0.05971712512552596,
+  "range_at_choice": 1.2494965093157933,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0597,
+   "0.5": 0.1816,
+   "0.6": 0.1532,
+   "0.7": 0.3577
+  }
+ },
+ "Selkov": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 3.6065983167571005e-05,
+  "range_at_choice": 0.8259868629078875,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0,
+   "0.5": 0.0002,
+   "0.6": 0.0001,
+   "0.7": 0.0002
+  }
+ },
+ "Brusselator": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 0.00013521487235206687,
+  "range_at_choice": 3.380685080835847,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0001,
+   "0.5": 0.0007,
+   "0.6": 0.0004,
+   "0.7": 0.0006
+  }
+ },
+ "GoldbeterMitotic": {
+  "chosen_drop": 0.4,
+  "cv_at_choice": 0.03046248868267138,
+  "range_at_choice": 0.38516903136948355,
+  "stationary": true,
+  "all": {
+   "0.4": 0.0305,
+   "0.5": 0.1809,
+   "0.6": 0.2076,
+   "0.7": 0.3798
+  }
+ }
+}

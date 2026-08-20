@@ -1,0 +1,26 @@
+{
+  "experiment": "E19_dispersion_null",
+  "question": "is a solution-cloud dimension of 21.7 of 126 evidence of a manifold, or the scatter any stochastic optimiser leaves?",
+  "dim": 126,
+  "n_runs": 30,
+  "optimiser": "separable CMA-ES",
+  "controls": {
+    "identifiable": {
+      "n_runs": 30,
+      "cloud_participation_dim": 20.162548488253947,
+      "final_loss_median": 0.009482175926820272,
+      "final_loss_max": 0.01646010475404262,
+      "param_dispersion": 0.00909104810032436
+    },
+    "degenerate_k20": {
+      "n_runs": 30,
+      "cloud_participation_dim": 11.726229911150057,
+      "final_loss_median": 0.003929521597092923,
+      "final_loss_max": 0.015145167077132373,
+      "param_dispersion": 0.7118591117434718
+    }
+  },
+  "reported_flygym_cloud_dim": 21.7,
+  "note": "the identifiable control has a unique optimum, so its cloud dimension is pure optimiser scatter; the degenerate control has exactly 20 flat directions by construction",
+  "elapsed_sec": 4.3
+}

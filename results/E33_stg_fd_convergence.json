@@ -1,0 +1,28 @@
+{
+  "experiment": "E33_pyloric_fd_convergence",
+  "question": "does the rich-observable effective dimension survive a finite-difference convergence test?",
+  "n_points": 12,
+  "deltas": [
+    0.1,
+    0.05,
+    0.025
+  ],
+  "eff_dim_90_by_delta": {
+    "0.1": {
+      "mean": 25.416666666666668,
+      "sd": 1.1873172373979173
+    },
+    "0.05": {
+      "mean": 25.666666666666668,
+      "sd": 0.9428090415820635
+    },
+    "0.025": {
+      "mean": 25.666666666666668,
+      "sd": 0.74535599249993
+    }
+  },
+  "subspace_cos_05_vs_025_mean": 0.862767839973611,
+  "subspace_cos_10_vs_05_mean": 0.8677745399583593,
+  "note": "a stable effective dimension and a subspace cosine near 1 mean the directions are real curvature; a dimension that grows as the step shrinks and a cosine well below 1 mean finite-difference noise",
+  "elapsed_sec": 114.6
+}

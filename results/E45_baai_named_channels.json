@@ -1,0 +1,85 @@
+{
+  "experiment": "E45_baaiworm_named_channels_rich",
+  "model": "BAAIWorm point circuit",
+  "observable": "motor-neuron membrane potentials",
+  "n_observables": 10320,
+  "n_mechanisms": 12,
+  "delta": 0.5,
+  "eff_dim_90": 3,
+  "eff_dim_99": 6,
+  "participation_ratio": 2.4223164552297756,
+  "ranking_stiff_to_sloppy": [
+    [
+      "IRK (Kir)",
+      123.52940733779312
+    ],
+    [
+      "NCA (Na-leak)",
+      117.71460822162075
+    ],
+    [
+      "EGL-36 (Kv)",
+      85.96758414919958
+    ],
+    [
+      "EGL-2 (Kv-eag)",
+      44.62626838072519
+    ],
+    [
+      "CCA-1 (T-Ca)",
+      39.08166753397222
+    ],
+    [
+      "KQT-3 (KCNQ)",
+      29.077677045566585
+    ],
+    [
+      "SHK-1 (Kv)",
+      15.647029352411677
+    ],
+    [
+      "KCNL (SK)",
+      15.06103682931883
+    ],
+    [
+      "KVS-1 (Kv)",
+      3.006780218329533
+    ],
+    [
+      "EGL-19 (L-Ca)",
+      1.770499252799968
+    ],
+    [
+      "SHL-1 (Kv)",
+      0.43625106192030844
+    ],
+    [
+      "UNC-2 (PQ-Ca)",
+      0.1674111282490158
+    ]
+  ],
+  "mechanisms_without_measurable_effect": [
+    [
+      "gbslo1",
+      "no measurable effect"
+    ],
+    [
+      "gbslo1",
+      "no measurable effect"
+    ],
+    [
+      "gbslo2",
+      "no measurable effect"
+    ],
+    [
+      "gbslo2",
+      "no measurable effect"
+    ]
+  ],
+  "published_six_observable": {
+    "eff_dim_90": 2,
+    "eff_dim_99": 3,
+    "n_mechanisms": 20
+  },
+  "elapsed_sec": 8.6
+}

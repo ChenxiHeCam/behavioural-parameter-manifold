@@ -1,0 +1,62 @@
+{
+  "experiment": "E36_dof_vs_behaviours_flygym",
+  "model": "FlyGym HybridTurningController, 48 actuator gains",
+  "observable": "joint-angle trajectory (rich, uncapped)",
+  "behaviours": [
+    [
+      1.0,
+      1.0
+    ],
+    [
+      0.4,
+      1.0
+    ],
+    [
+      1.0,
+      0.2
+    ],
+    [
+      1.0,
+      0.6
+    ]
+  ],
+  "curve": [
+    {
+      "n_behaviours": 1,
+      "n_subsets": 4,
+      "eff_dim_90_mean": 16.5,
+      "eff_dim_90_sd": 2.692582403567252,
+      "eff_dim_99_mean": 37.0,
+      "eff_dim_99_sd": 1.0,
+      "participation_ratio_mean": 8.18034816825325
+    },
+    {
+      "n_behaviours": 2,
+      "n_subsets": 6,
+      "eff_dim_90_mean": 18.166666666666668,
+      "eff_dim_90_sd": 1.863389981249825,
+      "eff_dim_99_mean": 39.0,
+      "eff_dim_99_sd": 0.5773502691896257,
+      "participation_ratio_mean": 9.480979692898162
+    },
+    {
+      "n_behaviours": 3,
+      "n_subsets": 4,
+      "eff_dim_90_mean": 19.0,
+      "eff_dim_90_sd": 1.0,
+      "eff_dim_99_mean": 39.75,
+      "eff_dim_99_sd": 0.4330127018922193,
+      "participation_ratio_mean": 10.031407662537772
+    },
+    {
+      "n_behaviours": 4,
+      "n_subsets": 1,
+      "eff_dim_90_mean": 19.0,
+      "eff_dim_90_sd": 0.0,
+      "eff_dim_99_mean": 40.0,
+      "eff_dim_99_sd": 0.0,
+      "participation_ratio_mean": 10.332682141880094
+    }
+  ],
+  "elapsed_sec": 88.1
+}

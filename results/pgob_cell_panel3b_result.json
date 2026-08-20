@@ -1,0 +1,118 @@
+{
+ "protocol": "target = published parameters; search starts from a random point drawn independently of it, theta * exp(U(-ln f, ln f)), as in the whole-organism driver",
+ "start_fold_widths": [
+  1.5,
+  3.0,
+  10.0
+ ],
+ "losses": [
+  "phase_invariant",
+  "pointwise_trace"
+ ],
+ "seeds": 24,
+ "converged_threshold": 0.02,
+ "by_model": {
+  "HH": {
+   "n": 72,
+   "n_converged": 72,
+   "convergence_rate": 1.0,
+   "n_params": 3,
+   "class": "neural",
+   "rel_after_median": 1.8457608367916085e-05,
+   "rel_before_median": 0.45122466129231037,
+   "per_param_median_ratio": {
+    "gNa": 1.000017804890694,
+    "gK": 1.000007566034891,
+    "gL": 1.0000867409261747
+   }
+  },
+  "HH_Acurrent": {
+   "n": 72,
+   "n_converged": 15,
+   "convergence_rate": 0.20833333333333334,
+   "n_params": 4,
+   "class": "neural",
+   "rel_after_median": 2.43204635709662e-05,
+   "rel_before_median": 0.2414248282220876,
+   "per_param_median_ratio": {
+    "gNa": 1.0000149407162713,
+    "gK": 1.0000062368139806,
+    "gA": 0.9999750506940996,
+    "gL": 1.0000742634816062
+   }
+  },
+  "WangBuzsaki": {
+   "n": 72,
+   "n_converged": 39,
+   "convergence_rate": 0.5416666666666666,
+   "n_params": 3,
+   "class": "neural",
+   "rel_after_median": 2.4701923230225077e-05,
+   "rel_before_median": 0.2805561820991191,
+   "per_param_median_ratio": {
+    "gNa": 0.9999829432899373,
+    "gK": 1.0000222454582326,
+    "gL": 0.9999654915787795
+   }
+  }
+ },
+ "by_loss_scale": {
+  "phase_invariant@1.5": {
+   "n": 72,
+   "n_converged": 54,
+   "convergence_rate": 0.75,
+   "rel_before_median": 0.20020074626752982,
+   "mean_per_param_deviation_at_start": 0.19584692615237267,
+   "L_final_median": 3.287321253598348e-06,
+   "rel_after_median_converged": 1.789461165403006e-05,
+   "improvement_factor": 11243.916885067987
+  },
+  "phase_invariant@3.0": {
+   "n": 72,
+   "n_converged": 41,
+   "convergence_rate": 0.5694444444444444,
+   "rel_before_median": 0.678169899757874,
+   "mean_per_param_deviation_at_start": 0.6425380330573024,
+   "L_final_median": 1.07393033780336e-05,
+   "rel_after_median_converged": 2.471506210891854e-05,
+   "improvement_factor": 21580.553678453587
+  },
+  "phase_invariant@10.0": {
+   "n": 72,
+   "n_converged": 31,
+   "convergence_rate": 0.4305555555555556,
+   "rel_before_median": 0.7630300466048685,
+   "mean_per_param_deviation_at_start": 1.537009705737917,
+   "L_final_median": 0.08852073069819763,
+   "rel_after_median_converged": 2.466241003903423e-05,
+   "improvement_factor": 28608.269935734825
+  },
+  "pointwise_trace@1.5": {
+   "n": 72,
+   "n_converged": 7,
+   "convergence_rate": 0.09722222222222222,
+   "rel_before_median": 0.20020074626752982,
+   "mean_per_param_deviation_at_start": 0.19584692615237267,
+   "L_final_median": 0.10756267757122492,
+   "rel_after_median_converged": 1.5440474304279366e-05,
+   "improvement_factor": 10209.275670858387
+  },
+  "pointwise_trace@3.0": {
+   "n": 72,
+   "n_converged": 0,
+   "convergence_rate": 0.0,
+   "rel_before_median": 0.678169899757874,
+   "mean_per_param_deviation_at_start": 0.6425380330573024,
+   "L_final_median": 0.1305405252923737
+  },
+  "pointwise_trace@10.0": {
+   "n": 72,
+   "n_converged": 0,
+   "convergence_rate": 0.0,
+   "rel_before_median": 0.7630300466048685,
+   "mean_per_param_deviation_at_start": 1.537009705737917,
+   "L_final_median": 0.13609200944440542
+  }
+ },
+ "elapsed_sec": 8357.8
+}

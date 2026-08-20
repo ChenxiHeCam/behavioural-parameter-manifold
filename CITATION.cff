@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the manuscript below."
-title: "Behaviour identifies a low-dimensional parameter subspace tiled by the behavioural repertoire"
+title: "How much of a nervous-system model does behaviour identify?"
 authors:
   - family-names: He
     given-names: Chenxi
     affiliation: "Cavendish Laboratory, University of Cambridge"
     email: ch2067@cam.ac.uk
 version: "1.0.0"
-doi: "10.5281/zenodo.21594746"
+doi: "10.5281/zenodo.21594740"
 date-released: "2026-07-25"
 license: MIT
 keywords:

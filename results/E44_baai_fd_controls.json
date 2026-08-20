@@ -1,0 +1,35 @@
+{
+  "E46_step_scan": [
+    {
+      "delta": 0.05,
+      "median_rel_rms": 1.4273050965130096e-05,
+      "rel_rms_over_delta": 0.0002854610193026019
+    },
+    {
+      "delta": 0.1,
+      "median_rel_rms": 2.8358952476992272e-05,
+      "rel_rms_over_delta": 0.0002835895247699227
+    },
+    {
+      "delta": 0.25,
+      "median_rel_rms": 7.09987089066999e-05,
+      "rel_rms_over_delta": 0.0002839948356267996
+    },
+    {
+      "delta": 0.5,
+      "median_rel_rms": 0.00014197779091773555,
+      "rel_rms_over_delta": 0.0002839555818354711
+    },
+    {
+      "delta": 1.0,
+      "median_rel_rms": 0.0002840601810021326,
+      "rel_rms_over_delta": 0.0002840601810021326
+    }
+  ],
+  "E44_noise_null": {
+    "n_repeats": 24,
+    "eff_dim_90": 0,
+    "eff_dim_99": 0,
+    "participation_ratio": 0.0
+  }
+}

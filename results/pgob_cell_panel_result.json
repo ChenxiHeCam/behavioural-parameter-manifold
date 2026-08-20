@@ -1,0 +1,539 @@
+{
+ "estimator": "Gauss-Newton H = J^T W J, central differences in log parameters",
+ "obs_per_param": 12,
+ "delta_log": 0.05,
+ "models": {
+  "HH": {
+   "class": "neural",
+   "n_params": 3,
+   "n_obs": 36,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "gNa",
+    "gK",
+    "gL"
+   ],
+   "elasticity": {
+    "gNa": 2204.1773266720693,
+    "gK": 2220.3992532762654,
+    "gL": 1004.001390384184
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 3,
+   "participation_ratio": 1.5230266429198225,
+   "spectrum_decades": 1.0713372978427809,
+   "constrained_fraction_90": 0.6666666666666666,
+   "constrained_fraction_99": 1.0,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.40675,
+    "rel_theta_iqr": [
+     0.29955000000000004,
+     0.7195750000000001
+    ],
+    "L_final_median": 0.119505,
+    "max_excursion_x": 3.755922018678641,
+    "per_param_median_ratio": {
+     "gNa": 1.231708086163259,
+     "gK": 1.3073966140605968,
+     "gL": 0.5433949079264839
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": -0.5,
+    "p": 0.6666666666666666,
+    "n": 3
+   }
+  },
+  "HH_Acurrent": {
+   "class": "neural",
+   "n_params": 4,
+   "n_obs": 48,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "gNa",
+    "gK",
+    "gA",
+    "gL"
+   ],
+   "elasticity": {
+    "gNa": 1756.5620076775683,
+    "gK": 1397.2167227397128,
+    "gA": 2014.700251372747,
+    "gL": 1814.9307009455042
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 4,
+   "participation_ratio": 2.109154124828501,
+   "spectrum_decades": 1.2352260075279307,
+   "constrained_fraction_90": 0.5,
+   "constrained_fraction_99": 1.0,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.20775,
+    "rel_theta_iqr": [
+     0.07655,
+     0.47035
+    ],
+    "L_final_median": 0.165165,
+    "max_excursion_x": 4.481688268956862,
+    "per_param_median_ratio": {
+     "gNa": 0.8666359368807783,
+     "gK": 0.9091440957722305,
+     "gA": 0.7493496354256202,
+     "gL": 1.2132146114509996
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": 1.0,
+    "p": 0.0,
+    "n": 4
+   }
+  },
+  "WangBuzsaki": {
+   "class": "neural",
+   "n_params": 3,
+   "n_obs": 36,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "gNa",
+    "gK",
+    "gL"
+   ],
+   "elasticity": {
+    "gNa": 1160.3064457096582,
+    "gK": 1139.8721119104227,
+    "gL": 2118.9698622361716
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 3,
+   "participation_ratio": 1.4498479646266487,
+   "spectrum_decades": 1.0156139455555515,
+   "constrained_fraction_90": 0.6666666666666666,
+   "constrained_fraction_99": 1.0,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.19665,
+    "rel_theta_iqr": [
+     0.092675,
+     0.381225
+    ],
+    "L_final_median": 0.10547999999999999,
+    "max_excursion_x": 2.8191385355581513,
+    "per_param_median_ratio": {
+     "gNa": 0.959272757306866,
+     "gK": 1.087955544250534,
+     "gL": 0.9477950420469541
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": -0.5,
+    "p": 0.6666666666666666,
+    "n": 3
+   }
+  },
+  "MorrisLecar": {
+   "class": "neural",
+   "n_params": 4,
+   "n_obs": 48,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "gCa",
+    "gK",
+    "gL",
+    "phi"
+   ],
+   "elasticity": {
+    "gCa": 1818.967222223887,
+    "gK": 1692.7043860297758,
+    "gL": 1904.0005577104862,
+    "phi": 1566.7768481700346
+   },
+   "eff_dim_90": 3,
+   "eff_dim_99": 4,
+   "participation_ratio": 2.381354055554212,
+   "spectrum_decades": 1.738244659952172,
+   "constrained_fraction_90": 0.75,
+   "constrained_fraction_99": 1.0,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.2141,
+    "rel_theta_iqr": [
+     0.16802499999999998,
+     0.42274999999999996
+    ],
+    "L_final_median": 0.12037,
+    "max_excursion_x": 2.1075251661442653,
+    "per_param_median_ratio": {
+     "gCa": 0.9694025969253528,
+     "gK": 1.1716146470981221,
+     "gL": 0.6104790673827798,
+     "phi": 0.6501675407999585
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": 0.19999999999999998,
+    "p": 0.8,
+    "n": 4
+   }
+  },
+  "FitzHughNagumo": {
+   "class": "neural",
+   "n_params": 4,
+   "n_obs": 48,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "a",
+    "b",
+    "tau",
+    "I"
+   ],
+   "elasticity": {
+    "a": 109.17517300813977,
+    "b": 31.98471965373865,
+    "tau": 167.71875644666503,
+    "I": 86.81936714657463
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 2,
+   "participation_ratio": 1.3339412311998322,
+   "spectrum_decades": 3.2676309670288597,
+   "constrained_fraction_90": 0.5,
+   "constrained_fraction_99": 0.5,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.0869,
+    "rel_theta_iqr": [
+     0.043899999999999995,
+     0.31045
+    ],
+    "L_final_median": 0.14524,
+    "max_excursion_x": 2.861227396017912,
+    "per_param_median_ratio": {
+     "a": 0.9484807490726948,
+     "b": 0.9845956388010608,
+     "tau": 1.0178246503276407,
+     "I": 0.8959234613241358
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": 0.19999999999999998,
+    "p": 0.8,
+    "n": 4
+   }
+  },
+  "MAPK": {
+   "class": "biochemical",
+   "n_params": 11,
+   "n_obs": 132,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "V1",
+    "Ki",
+    "V2",
+    "k3",
+    "k4",
+    "V5",
+    "V6",
+    "k7",
+    "k8",
+    "V9",
+    "V10"
+   ],
+   "elasticity": {
+    "V1": 4221.221496671663,
+    "Ki": 3701.2771426926433,
+    "V2": 10994.067302616339,
+    "k3": 2077.4472442408733,
+    "k4": 3095.8660103720385,
+    "V5": 3728.280731820032,
+    "V6": 730.7119358548656,
+    "k7": 1765.1184366751843,
+    "k8": 6817.6493533028115,
+    "V9": 5296.338649335647,
+    "V10": 2735.828605086222
+   },
+   "eff_dim_90": 1,
+   "eff_dim_99": 3,
+   "participation_ratio": 1.1766813154992026,
+   "spectrum_decades": 6.20942569507597,
+   "constrained_fraction_90": 0.09090909090909091,
+   "constrained_fraction_99": 0.2727272727272727,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.44805,
+    "rel_theta_iqr": [
+     0.2188,
+     0.734675
+    ],
+    "L_final_median": 0.043665,
+    "max_excursion_x": 4.4797395880647946,
+    "per_param_median_ratio": {
+     "V1": 0.9833341789345433,
+     "Ki": 1.120124732069419,
+     "V2": 0.7913301924626067,
+     "k3": 1.0691521562745763,
+     "k4": 1.1393779105814452,
+     "V5": 1.1076098149287041,
+     "V6": 1.707696789090643,
+     "k7": 1.489623326940345,
+     "k8": 0.9983699125811287,
+     "V9": 1.077006764675176,
+     "V10": 0.9835168409170341
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": -0.39090909090909093,
+    "p": 0.23454006709519437,
+    "n": 11
+   }
+  },
+  "Repressilator": {
+   "class": "biochemical",
+   "n_params": 4,
+   "n_obs": 48,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "alpha",
+    "alpha0",
+    "beta",
+    "n"
+   ],
+   "elasticity": {
+    "alpha": 1086.115651755165,
+    "alpha0": 752.8955141775568,
+    "beta": 2097.6933322963882,
+    "n": 1956.4427217567966
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 3,
+   "participation_ratio": 1.7865045580584848,
+   "spectrum_decades": 3.146918253675817,
+   "constrained_fraction_90": 0.5,
+   "constrained_fraction_99": 0.75,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.2549,
+    "rel_theta_iqr": [
+     0.099,
+     0.545425
+    ],
+    "L_final_median": 0.38414000000000004,
+    "max_excursion_x": 3.8047299656159916,
+    "per_param_median_ratio": {
+     "alpha": 1.147532584632197,
+     "alpha0": 0.8835928407152858,
+     "beta": 0.6099501428446825,
+     "n": 0.8394019713557449
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": 1.0,
+    "p": 0.0,
+    "n": 4
+   }
+  },
+  "Goodwin": {
+   "class": "biochemical",
+   "n_params": 8,
+   "n_obs": 96,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "k1",
+    "k2",
+    "k3",
+    "k4",
+    "k5",
+    "k6",
+    "Ki",
+    "n"
+   ],
+   "elasticity": {
+    "k1": 2.570428751395839,
+    "k2": 37.48681483411183,
+    "k3": 14.623245190975938,
+    "k4": 40.27081451218322,
+    "k5": 16.860317581032806,
+    "k6": 42.70379172882505,
+    "Ki": 25.42180404479148,
+    "n": 20.02938953081282
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 3,
+   "participation_ratio": 1.4904155644687926,
+   "spectrum_decades": 8.267453972116423,
+   "constrained_fraction_90": 0.25,
+   "constrained_fraction_99": 0.375,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.18095,
+    "rel_theta_iqr": [
+     0.0886,
+     0.283475
+    ],
+    "L_final_median": 0.034755,
+    "max_excursion_x": 3.3161664901265047,
+    "per_param_median_ratio": {
+     "k1": 0.5395329894245209,
+     "k2": 1.0664611854820694,
+     "k3": 0.8564761594379651,
+     "k4": 1.025108306658256,
+     "k5": 1.1437829641009059,
+     "k6": 1.071799993367676,
+     "Ki": 1.1183915891700322,
+     "n": 1.0455419379984954
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": -0.7380952380952381,
+    "p": 0.03655276105286081,
+    "n": 8
+   }
+  },
+  "Selkov": {
+   "class": "biochemical",
+   "n_params": 2,
+   "n_obs": 24,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "a",
+    "b"
+   ],
+   "elasticity": {
+    "a": 23.481417198999196,
+    "b": 18.52928092692431
+   },
+   "eff_dim_90": 1,
+   "eff_dim_99": 1,
+   "participation_ratio": 1.0199493006731672,
+   "spectrum_decades": 2.0010591036637178,
+   "constrained_fraction_90": 0.5,
+   "constrained_fraction_99": 0.5,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.1906,
+    "rel_theta_iqr": [
+     0.157975,
+     0.263475
+    ],
+    "L_final_median": 0.356375,
+    "max_excursion_x": 1.1872754752216435,
+    "per_param_median_ratio": {
+     "a": 1.08110011848738,
+     "b": 0.8098140911826942
+    }
+   }
+  },
+  "Brusselator": {
+   "class": "biochemical",
+   "n_params": 2,
+   "n_obs": 24,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "A",
+    "B"
+   ],
+   "elasticity": {
+    "A": 64.73914044836232,
+    "B": 73.57226951501555
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 2,
+   "participation_ratio": 1.9261953591925474,
+   "spectrum_decades": 0.17224520777317595,
+   "constrained_fraction_90": 1.0,
+   "constrained_fraction_99": 1.0,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.36905,
+    "rel_theta_iqr": [
+     0.255825,
+     0.473125
+    ],
+    "L_final_median": 0.540185,
+    "max_excursion_x": 0.9470055846348847,
+    "per_param_median_ratio": {
+     "A": 0.7057648662959387,
+     "B": 0.6311815195208383
+    }
+   }
+  },
+  "GoldbeterMitotic": {
+   "class": "biochemical",
+   "n_params": 9,
+   "n_obs": 108,
+   "obs_per_param": 12.0,
+   "n_dead_params": 0,
+   "param_names": [
+    "vi",
+    "vd",
+    "Kd",
+    "kd",
+    "VM1",
+    "Kc",
+    "V2",
+    "VM3",
+    "V4"
+   ],
+   "elasticity": {
+    "vi": 12.723205548266767,
+    "vd": 6.722409575469191,
+    "Kd": 0.05600619752195645,
+    "kd": 0.7822900564507637,
+    "VM1": 25.672670859825022,
+    "Kc": 17.311794819616807,
+    "V2": 24.35040774750829,
+    "VM3": 10.521465824694642,
+    "V4": 7.012916419524731
+   },
+   "eff_dim_90": 2,
+   "eff_dim_99": 4,
+   "participation_ratio": 1.6059014775540212,
+   "spectrum_decades": 7.669688790943169,
+   "constrained_fraction_90": 0.2222222222222222,
+   "constrained_fraction_99": 0.4444444444444444,
+   "recovery": {
+    "n_seeds": 12,
+    "rel_theta_median": 0.42175,
+    "rel_theta_iqr": [
+     0.22187500000000002,
+     0.65505
+    ],
+    "L_final_median": 0.161355,
+    "max_excursion_x": 4.333006896182581,
+    "per_param_median_ratio": {
+     "vi": 0.8724875454297437,
+     "vd": 1.0501834006718025,
+     "Kd": 1.1061168794514378,
+     "kd": 0.8647263146528419,
+     "VM1": 0.9249368719656335,
+     "Kc": 1.6077724983359798,
+     "V2": 0.6909752478325626,
+     "VM3": 1.3053365506820724,
+     "V4": 1.0165668572049376
+    }
+   },
+   "sensitivity_vs_error": {
+    "spearman_rho": 0.33333333333333337,
+    "p": 0.38071318167686347,
+    "n": 9
+   }
+  }
+ },
+ "pooled_sensitivity_vs_error": {
+  "spearman_rho": 0.11387660752313043,
+  "p": 0.4122672934497754,
+  "n": 54
+ },
+ "elapsed_sec": 163.2
+}

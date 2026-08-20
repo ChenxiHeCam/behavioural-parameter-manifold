@@ -1,0 +1,144 @@
+{
+ "experiment": "E58_baai_multipoint",
+ "question": "does the low effective dimension hold away from the published parameter point?",
+ "n_connections_sampled": 300,
+ "delta": 0.5,
+ "tstop_ms": 1500,
+ "points": [
+  {
+   "tag": "published",
+   "fold": 0,
+   "seed": 0
+  },
+  {
+   "tag": "f1.25_a",
+   "fold": 1.25,
+   "seed": 11
+  },
+  {
+   "tag": "f1.25_b",
+   "fold": 1.25,
+   "seed": 12
+  },
+  {
+   "tag": "f1.5_a",
+   "fold": 1.5,
+   "seed": 21
+  },
+  {
+   "tag": "f1.5_b",
+   "fold": 1.5,
+   "seed": 22
+  }
+ ],
+ "per_point": {
+  "published": {
+   "eff_dim_90": 9,
+   "eff_dim_99": 29,
+   "participation_ratio": 2.4597141814987773,
+   "spectrum_decades": 13.993088022551433,
+   "status": "ok",
+   "n_usable": 300,
+   "baseline_std": 18.242294311523438
+  },
+  "f1.25_a": {
+   "eff_dim_90": 10,
+   "eff_dim_99": 28,
+   "participation_ratio": 2.6769257166973808,
+   "spectrum_decades": 13.992341202194362,
+   "status": "ok",
+   "n_usable": 300,
+   "baseline_std": 18.186073303222656
+  },
+  "f1.25_b": {
+   "eff_dim_90": 8,
+   "eff_dim_99": 28,
+   "participation_ratio": 2.0816190666622267,
+   "spectrum_decades": 13.963937646257456,
+   "status": "ok",
+   "n_usable": 300,
+   "baseline_std": 18.46399688720703
+  },
+  "f1.5_a": {
+   "eff_dim_90": 12,
+   "eff_dim_99": 30,
+   "participation_ratio": 3.3722585447196547,
+   "spectrum_decades": 13.98331337209617,
+   "status": "ok",
+   "n_usable": 300,
+   "baseline_std": 18.08292579650879
+  },
+  "f1.5_b": {
+   "eff_dim_90": 8,
+   "eff_dim_99": 28,
+   "participation_ratio": 2.141060765787093,
+   "spectrum_decades": 13.974787418662054,
+   "status": "ok",
+   "n_usable": 300,
+   "baseline_std": 18.27633285522461
+  }
+ },
+ "pairwise_stiff_overlap": [
+  {
+   "a": "published",
+   "b": "f1.25_a",
+   "k": 9,
+   "mean_principal_cos": 0.8884595184027996
+  },
+  {
+   "a": "published",
+   "b": "f1.25_b",
+   "k": 8,
+   "mean_principal_cos": 0.8762743907345677
+  },
+  {
+   "a": "published",
+   "b": "f1.5_a",
+   "k": 9,
+   "mean_principal_cos": 0.7783262795194701
+  },
+  {
+   "a": "published",
+   "b": "f1.5_b",
+   "k": 8,
+   "mean_principal_cos": 0.9928747053483455
+  },
+  {
+   "a": "f1.25_a",
+   "b": "f1.25_b",
+   "k": 8,
+   "mean_principal_cos": 0.9984531618391278
+  },
+  {
+   "a": "f1.25_a",
+   "b": "f1.5_a",
+   "k": 10,
+   "mean_principal_cos": 0.8333068302819356
+  },
+  {
+   "a": "f1.25_a",
+   "b": "f1.5_b",
+   "k": 8,
+   "mean_principal_cos": 0.8759862817962918
+  },
+  {
+   "a": "f1.25_b",
+   "b": "f1.5_a",
+   "k": 8,
+   "mean_principal_cos": 0.8735520130030008
+  },
+  {
+   "a": "f1.25_b",
+   "b": "f1.5_b",
+   "k": 8,
+   "mean_principal_cos": 0.8735963993627325
+  },
+  {
+   "a": "f1.5_a",
+   "b": "f1.5_b",
+   "k": 8,
+   "mean_principal_cos": 0.8719216004439028
+  }
+ ],
+ "elapsed_sec": 743.0
+}
