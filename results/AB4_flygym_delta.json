@@ -1,0 +1,96 @@
+{
+ "experiment": "AB4_flygym_step_size",
+ "question": "does the FlyGym effective dimension survive at a step where the response is proportional, as S1.5 requires?",
+ "n_params": 48,
+ "n_seeds": 5,
+ "rollout_seconds": 0.5,
+ "frames_kept": 100,
+ "n_rich_observables": 4200,
+ "deltas": [
+  0.05,
+  0.15,
+  0.25,
+  0.5
+ ],
+ "by_delta": [
+  {
+   "delta": 0.05,
+   "n_gains_with_no_usable_leg": 0,
+   "median_response_norm": 0.09888874457661094,
+   "response_over_delta": 1.9777748915322186,
+   "coarse": {
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.00016286962577
+   },
+   "rich": {
+    "eff_dim_90": 16,
+    "eff_dim_99": 38,
+    "participation_ratio": 8.090656280517578
+   }
+  },
+  {
+   "delta": 0.15,
+   "n_gains_with_no_usable_leg": 0,
+   "median_response_norm": 0.20826175588979767,
+   "response_over_delta": 1.3884117059319845,
+   "coarse": {
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.0007644694085371
+   },
+   "rich": {
+    "eff_dim_90": 12,
+    "eff_dim_99": 31,
+    "participation_ratio": 7.163601875305176
+   }
+  },
+  {
+   "delta": 0.25,
+   "n_gains_with_no_usable_leg": 0,
+   "median_response_norm": 0.33608412605160964,
+   "response_over_delta": 1.3443365042064386,
+   "coarse": {
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.001105287343918
+   },
+   "rich": {
+    "eff_dim_90": 11,
+    "eff_dim_99": 31,
+    "participation_ratio": 7.038981914520264
+   }
+  },
+  {
+   "delta": 0.5,
+   "n_gains_with_no_usable_leg": 2,
+   "median_response_norm": 0.6562912423896077,
+   "response_over_delta": 1.3125824847792154,
+   "coarse": {
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.0010199852984114
+   },
+   "rich": {
+    "eff_dim_90": 11,
+    "eff_dim_99": 29,
+    "participation_ratio": 7.020687942535636
+   }
+  }
+ ],
+ "n_legs_diverged": 10,
+ "n_legs_total": 1925,
+ "ratio_spread_all_steps": 1.506781413333344,
+ "ratio_spread_valid_region": 1.0241920182506201,
+ "published_at_delta_0.05": {
+  "coarse_eff_dim_90_99": [
+   1,
+   1
+  ],
+  "rich_eff_dim_90_99": [
+   16,
+   38
+  ]
+ },
+ "elapsed_sec": 1214.4
+}

@@ -68,8 +68,17 @@ check("modWorm single-cell stiff-pct = 0.083", g2["modWorm"]["single_cell"], 0.0
 
 # ---- CP coupling ----
 cp = L("CP_coupling.json")
-check("stiff eigvec participation = 3.42", cp["stiff_eigvec_participation"], 3.416, 0.02)
-check("sloppy eigvec participation = 4.68", cp["sloppy_eigvec_participation"], 4.682, 0.02)
+# the modWorm participations are computed from eigenvectors at 1e-15, so the paper
+# takes this measurement on BAAIWorm instead; both are checked, and the modWorm
+# spectrum is checked to be the degenerate one that motivates the switch
+check("modWorm trailing eigenvalues are numerically zero",
+      max(abs(v) for v in cp["hessian_eigvals"][-2:]) < 1e-14, True, 0.01)
+_ab7 = L("AB7_baai_participation.json")
+check("AB7 all 16 BAAIWorm eigenvectors resolved", _ab7["n_resolved_eigenvectors"], 16, 0.01)
+check("AB7 stiffest participation = 2.88", _ab7["stiffest"]["participation"], 2.88, 0.02)
+check("AB7 sloppiest participation = 1.02", _ab7["sloppiest_resolved"]["participation"], 1.02, 0.02)
+check("AB7 sloppiest eigenvalue is five orders above the floor",
+      _ab7["sloppiest_resolved"]["eigenvalue"] / _ab7["resolution_floor"] > 1e4, True, 0.01)
 
 # ---- D1 multipoint, D3 stats ----
 d1 = L("mw_D1R6.json")["D1_multipoint_hessian"]["per_point"]
@@ -118,10 +127,29 @@ _em = L("E1_pyloric_manifold.json")
 check("S2.1 pyloric population participation dim = 23.2", _em["participation_eff_dim"], 23.157, 0.01)
 check("S2.1 pyloric population 90% dim = 23", _em["eff_dim_90pct"], 23, 0.01)
 
-# ---- FlyGym: the rank-controlled coarse reading is the reported one (S5.1) ----
+# ---- FlyGym: reported at a step where the response is proportional (S5.1) ----
 _fg = L("E1_flygym_rank.json")
 check("S5.1 FlyGym coarse eff-dim 90% = 1", _fg["coarse"]["eff_dim_90"], 1, 0.01)
-check("S5.1 FlyGym rich eff-dim 90% = 16", _fg["rich"]["eff_dim_90"], 16, 0.01)
+_ab4 = L("AB4_flygym_delta.json")
+_by = {r["delta"]: r for r in _ab4["by_delta"]}
+check("S5.1 FlyGym rich eff-dim 90% = 11 at the valid step",
+      _by[0.25]["rich"]["eff_dim_90"], 11, 0.01)
+check("S5.1 FlyGym rich eff-dim 99% = 31 at the valid step",
+      _by[0.25]["rich"]["eff_dim_99"], 31, 0.01)
+check("S5.1 the 0.05 step inflates it to 16", _by[0.05]["rich"]["eff_dim_90"], 16, 0.01)
+check("S1.5 FlyGym proportional across the valid region",
+      _ab4["ratio_spread_valid_region"] < 1.10, True, 0.01)
+check("S1.5 FlyGym not proportional across the full range",
+      _ab4["ratio_spread_all_steps"] > 1.40, True, 0.01)
+check("S5.1 FlyGym coarse reading is 1/1 at every step",
+      all(r["coarse"]["eff_dim_90"] == 1 for r in _ab4["by_delta"]), True, 0.01)
+# the saturation curve at the same valid step
+_e36 = L("E36b_flygym_validstep.json")["curve"]
+check("S6.5 FlyGym union 12.25 at one behaviour", _e36[0]["eff_dim_90_mean"], 12.25, 0.01)
+check("S6.5 FlyGym union 13.00 at four behaviours", _e36[-1]["eff_dim_90_mean"], 13.0, 0.01)
+check("S6.5 the increment is under half the single-behaviour spread",
+      (_e36[-1]["eff_dim_90_mean"] - _e36[0]["eff_dim_90_mean"]) < 0.5 * _e36[0]["eff_dim_90_sd"],
+      True, 0.01)
 
 # ---- the class-gain probe reaches little of the per-cell curvature (S5.2.1) ----
 check("S5.2.1 uniform direction carries 0.295% of the curvature",

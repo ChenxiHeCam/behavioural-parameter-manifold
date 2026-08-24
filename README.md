@@ -35,10 +35,12 @@ whether the response is linear in the perturbation, and what the numerical noise
   leak NCA; the fast voltage-gated calcium channels EGL-19 (1.77) and UNC-2 (0.17) are among the
   sloppiest, together with SLO-2 (0.57-0.78) and SLO-1/EGL-19 (0.09), while the other
   calcium-activated potassium conductances KCNL (15.1) and SLO-1/UNC-2 (6.68) rank mid-table.
-- **Behavioural richness helps, with diminishing returns.** Adding behaviours enlarges the
-  identifiable subspace monotonically (nematode 2.50 to 3.00 of 7; fly 16.5 to 19.0 of 48) but
-  saturates by the third or fourth behaviour. Four fly behaviours give 19 dimensions rather than
-  four times the 16.5 that one gives, so behaviours overlap far more than they complement.
+- **Behavioural richness helps very little within one action.** Adding aspects of one action barely
+  enlarges the identifiable subspace: the fly goes from 12.25 +- 3.03 at one descending command to
+  13.00 at four, an increment of a quarter of the single-behaviour spread, and the nematode saturates
+  at 4 of its 5 live mechanisms. Behaviours overlap far more than they complement. An action with a
+  different functional demand does reach new directions, but weak ones: chemotaxis and locomotion
+  give rank 4 each and 6 together, and the two extra directions carry 0.56% of the curvature.
 - **Ground truth verifies the geometry where it can be known.** Whole-organism models have no true
   parameter vector; eleven cell models do. Recovered from random starts drawn independently of the
   truth, the 2-4-parameter neuronal models come back exactly (median error below 1e-4), while the
@@ -53,8 +55,9 @@ whether the response is linear in the perturbation, and what the numerical noise
   pin down.
 - **An effective dimension is a statement about the measurement.** A Gauss-Newton Hessian built from
   n observables has rank at most n. The same FlyGym controller reads as 1 of 48 dimensions through
-  ten summary statistics and 16 of 48 through 4200 joint-angle observables, against a measured noise
-  floor of 7.
+  ten summary statistics and 11 of 48 through 4200 joint-angle observables, against a measured noise
+  floor of 7. Both are quoted at a perturbation of 0.25, where this controller's response is
+  proportional to the step; at the 0.05 used in an earlier probe the figure inflates to 16.
 - **The gates retire one of our own headline numbers.** Two widely used simulators fail the
   differentiability test. modWorm has a discontinuous response to its own parameters, with two of
   seven mechanism classes producing no change at machine precision. In the Prinz-Marder pyloric
@@ -80,7 +83,7 @@ pip install -r repro/requirements.txt
 python repro/regenerate_all.py
 ```
 
-Expected output: `=== NUMBER AUDIT: 46/46 PASS ===`, the threshold-robustness table, and the
+Expected output: `=== NUMBER AUDIT: 57/57 PASS ===`, the threshold-robustness table, and the
 regenerated figure. Exit status is non-zero if any number fails to reproduce.
 
 ## Contents
