@@ -163,23 +163,31 @@ e5 = L("E5_n2_manifold.json")
 
 fig, ax = plt.subplots(2, 2, figsize=(183 * MM, 108 * MM))
 
-# a  pyloric Hessian scree
-spec = np.array(e1["mean_spectrum_sorted"], dtype=float)
-spec = np.abs(spec)
-for s in e1["spectrum_per_point"]:
-    s = np.sort(np.abs(np.array(s, dtype=float)))[::-1]
-    ax[0, 0].plot(range(1, len(s) + 1), np.maximum(s, 1e-6), color=LGREY, lw=0.4, zorder=1)
-ax[0, 0].plot(range(1, len(spec) + 1), np.maximum(spec, 1e-6), "o-", color=BLUE,
-              lw=1.0, ms=2.2, markeredgecolor="white", markeredgewidth=0.3, zorder=3)
-ax[0, 0].set_yscale("log")
-ax[0, 0].set_xlabel("Eigenvalue index")
-ax[0, 0].set_ylabel("Curvature (log scale)")
-ax[0, 0].text(0.97, 0.93, f"effective dimension {e1['eff_dim_mean']:.2f} of 31\n"
-                          f"across {e1['mean_spectrum_range_oom']:.0f} orders of magnitude",
-              transform=ax[0, 0].transAxes, ha="right", va="top", fontsize=6,
+# a  pyloric population geometry.  The curvature scree that used to sit here was
+#    withdrawn: the pyloric response saturates in the step for both observable
+#    sets (S1.5), so no finite-difference dimension is admissible.  What is shown
+#    instead needs no finite differences at all -- the shape of the published
+#    population of behaviourally equivalent networks.
+em = L("E1_pyloric_manifold.json")
+var = np.array(em["pca_var_ratio"], dtype=float)
+cum = np.cumsum(var) / var.sum()
+k90 = int(np.searchsorted(cum, 0.90) + 1)
+ax[0, 0].bar(range(1, len(var) + 1), var / var.sum(), color=LGREY, width=0.75, zorder=1)
+ax[0, 0].plot(range(1, len(cum) + 1), cum, "o-", color=BLUE, lw=1.0, ms=2.2,
+              markeredgecolor="white", markeredgewidth=0.3, zorder=3)
+ax[0, 0].axhline(0.90, color=GREY, lw=0.6, ls=(0, (3, 3)), zorder=2)
+ax[0, 0].axvline(k90, color=BLUE, lw=0.6, ls=(0, (3, 3)), zorder=2)
+ax[0, 0].set_xlabel("Principal component")
+ax[0, 0].set_ylabel("Variance explained")
+ax[0, 0].set_ylim(0, 1.04)
+ax[0, 0].text(0.045, 0.93, f"{em['n_valid']:,} networks producing the same rhythm\n"
+                           f"span {em['participation_eff_dim']:.1f} of 31 dimensions",
+              transform=ax[0, 0].transAxes, ha="left", va="top", fontsize=6,
               color=INK, linespacing=1.3)
-ax[0, 0].text(0.97, 0.72, f"grey: each of the {e1['K']} valid points\nblue: mean",
-              transform=ax[0, 0].transAxes, ha="right", va="top", fontsize=5.5, color=GREY,
+ax[0, 0].text(0.045, 0.70, f"grey: per-component variance\n"
+                           f"blue: cumulative, "
+                           f"{k90} of 31 reach 90%",
+              transform=ax[0, 0].transAxes, ha="left", va="top", fontsize=5.5, color=GREY,
               linespacing=1.3)
 panel(ax[0, 0], "a", dx=-0.16)
 

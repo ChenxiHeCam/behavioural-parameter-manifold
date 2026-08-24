@@ -6,8 +6,8 @@ authors:
     given-names: Chenxi
     affiliation: "Cavendish Laboratory, University of Cambridge"
     email: ch2067@cam.ac.uk
-version: "1.0.0"
-doi: "10.5281/zenodo.21594740"
+version: "1.1.0"
+doi: "10.5281/zenodo.21594739"
 date-released: "2026-08-24"
 license: MIT
 keywords:

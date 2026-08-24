@@ -88,19 +88,68 @@ check("S5.2 no mechanism identically zero", min(_el) > 0 and not e45["identicall
 check("S5.2 eff-dim 90% = 3", e45["eff_dim_90"], 3, 0.01)
 check("S5.2 eff-dim 99% = 6", e45["eff_dim_99"], 6, 0.01)
 
-# ---- AB2 pyloric K-scan (S2.1): the deposited 2.13 must sit inside the population ----
+# ---- pyloric: the withdrawal must stay withdrawn (S2.1) ----
 ab2 = L("AB2_stg_scan.json")
 _c = ab2["coarse_15_summary_stats"]
 check("S2.1 K-scan usable points = 24", _c["n"], 24, 0.01)
 check("S2.1 K-scan mean eff-dim = 2.33", _c["mean"], 2.333, 0.01)
-_k8 = [r for r in _c["running"] if r["K"] == 8][0]
-check("S2.1 deposited 2.13 within one sd of the K-scan",
+check("S2.1 the retired 2.13 sits within one sd of it (sample size was not the problem)",
       abs(2.13 - _c["mean"]) <= _c["sd"], True, 0.01)
-check("S2.1 rich-observable eff-dim = 3.17", ab2["rich_voltage_observables"]["mean"], 3.167, 0.01)
+
+# the trace response must be flat in the step: that is what makes J scale as 1/delta
+_tr = {r["delta"]: r["mean"] for r in L("AB2b_stg_scaling.json")["trace_response"]}
+_lo, _hi = _tr[min(_tr)], _tr[max(_tr)]
+check("S1.5 pyloric trace response flat across a 250-fold step range",
+      max(_lo, _hi) / min(_lo, _hi) < 1.3, True, 0.01)
+
+# and the summary statistics must fail proportionality too, under both whitenings:
+# that is what retires the pyloric dimension, not the sample size
+_w = L("AB2d_stg_whitening.json")
+_sat = _w["saturated_reference_spread"]
+for _tag in ("baseline", "population"):
+    _r = _w["ratio_spread_" + _tag]
+    check("S2.1 summary stats saturated under " + _tag + " whitening",
+          _r["median"] > 0.8 * _sat, True, 0.01)
+    check("S2.1 few pairs proportional under " + _tag + " whitening",
+          _r["fraction_proportional"] < 0.10, True, 0.01)
+
+# the population geometry that replaces it needs no finite difference at all
+_em = L("E1_pyloric_manifold.json")
+check("S2.1 pyloric population participation dim = 23.2", _em["participation_eff_dim"], 23.157, 0.01)
+check("S2.1 pyloric population 90% dim = 23", _em["eff_dim_90pct"], 23, 0.01)
+
+# ---- FlyGym: the rank-controlled coarse reading is the reported one (S5.1) ----
+_fg = L("E1_flygym_rank.json")
+check("S5.1 FlyGym coarse eff-dim 90% = 1", _fg["coarse"]["eff_dim_90"], 1, 0.01)
+check("S5.1 FlyGym rich eff-dim 90% = 16", _fg["rich"]["eff_dim_90"], 16, 0.01)
+
+# ---- the class-gain probe reaches little of the per-cell curvature (S5.2.1) ----
+check("S5.2.1 uniform direction carries 0.295% of the curvature",
+      L("E37_granularity_modworm.json")["fraction_of_curvature_in_uniform_direction"],
+      0.002953, 0.01)
+
+# ---- union: rank grows, effective dimension does not (S6.10) ----
+_b6 = L("B6_union_crossbehaviour.json")
+check("S6.10 union eff-dim equals chemotaxis alone",
+      _b6["eff_dim_UNION_90_99"] == _b6["eff_dim_chemotaxis_90_99"], True, 0.01)
+_eig = _b6["eig_union"]
+check("S6.10 the two extra rank directions carry 0.56% of the mass",
+      (_eig[4] + _eig[5]) / sum(_eig), 0.00557, 0.02)
+
+# ---- sloppy directions move behaviour more, not less, at a finite step (S6.7) ----
+_cp = L("CP_coupling.json")["behaviour_change_under_moves"]
+check("S6.7 sloppy eigenvector moves behaviour more than stiff at alpha=0.6",
+      _cp["sloppy_eigvec_alpha0.6"] > _cp["stiff_eigvec_alpha0.6"], True, 0.01)
+
+# ---- Holm correction over the S6.4 family leaves both survivors significant ----
+_ps = sorted([0.0157, 0.0204, 0.08185])
+_holm = [pv * (len(_ps) - i) for i, pv in enumerate(_ps)]
+check("S6.4 Holm-corrected cosine p = 0.047", _holm[0], 0.0471, 0.01)
+check("S6.4 Holm-corrected span p = 0.041", _holm[1], 0.0408, 0.01)
+check("S6.4 Holm-corrected novel fraction stays non-significant", _holm[2] > 0.05, True, 0.01)
 
 print("\n--- S6.9 threshold robustness (recomputed) ---")
 spectra = {
-    "modWorm full":   L("modworm_hessian_full.json")["eig"],
     "modWorm 7-mech": cp["hessian_eigvals"],
     "rich-observable": L("RICH_observable.json")["results_by_duration"]["NSTEP300"]["spectrum_normalised"],
     "larva union":    la["union_spectrum"],
