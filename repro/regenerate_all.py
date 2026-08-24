@@ -80,6 +80,24 @@ check("D3 Spearman rho = 0.964", d3["spearman_rho"], 0.9643, 0.001)
 check("D3 exact-perm p = 0.0028", d3["p_exact_permutation"], 0.002778, 0.0005)
 
 # ---- threshold-robustness table (S6.9) ----
+# ---- per-channel decomposition (S5.2): every named mechanism must respond ----
+e45 = L("E45b_baai_named_channels.json")
+_el = [abs(r[1]) for r in e45["ranking_stiff_to_sloppy"]]
+check("S5.2 named mechanisms = 16", e45["n_mechanisms"], 16, 0.01)
+check("S5.2 no mechanism identically zero", min(_el) > 0 and not e45["identically_zero"], True, 0.01)
+check("S5.2 eff-dim 90% = 3", e45["eff_dim_90"], 3, 0.01)
+check("S5.2 eff-dim 99% = 6", e45["eff_dim_99"], 6, 0.01)
+
+# ---- AB2 pyloric K-scan (S2.1): the deposited 2.13 must sit inside the population ----
+ab2 = L("AB2_stg_scan.json")
+_c = ab2["coarse_15_summary_stats"]
+check("S2.1 K-scan usable points = 24", _c["n"], 24, 0.01)
+check("S2.1 K-scan mean eff-dim = 2.33", _c["mean"], 2.333, 0.01)
+_k8 = [r for r in _c["running"] if r["K"] == 8][0]
+check("S2.1 deposited 2.13 within one sd of the K-scan",
+      abs(2.13 - _c["mean"]) <= _c["sd"], True, 0.01)
+check("S2.1 rich-observable eff-dim = 3.17", ab2["rich_voltage_observables"]["mean"], 3.167, 0.01)
+
 print("\n--- S6.9 threshold robustness (recomputed) ---")
 spectra = {
     "modWorm full":   L("modworm_hessian_full.json")["eig"],

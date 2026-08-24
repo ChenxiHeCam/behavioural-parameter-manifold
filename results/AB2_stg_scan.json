@@ -1,0 +1,1664 @@
+{
+ "experiment": "AB2_stg_scaling_scan",
+ "question": "is the pyloric effective dimension a property of the population or of K=8?",
+ "n_points_requested": 160,
+ "delta": 0.05,
+ "voltage_stride": 400,
+ "per_point": [
+  {
+   "k": 0,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 1,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 2,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 3,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 4,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 5,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 6,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 7,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 8,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 9,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 10,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 11,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 12,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 13,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 14,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 15,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 16,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 17,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 2,
+    "eff_dim_99": 5,
+    "participation_ratio": 1.937951546533585,
+    "spectrum_decades": 7.17898368414244
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 6,
+    "eff_dim_99": 22,
+    "participation_ratio": 3.800990450303026,
+    "spectrum_decades": 2.8855478902913387
+   }
+  },
+  {
+   "k": 18,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 19,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 5,
+    "participation_ratio": 2.4486818638775256,
+    "spectrum_decades": 7.572893639668726
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 3,
+    "participation_ratio": 1.0662978111402126,
+    "spectrum_decades": 5.139769775596369
+   }
+  },
+  {
+   "k": 20,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 21,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 22,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 2,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.8048652081868877,
+    "spectrum_decades": 7.279325957934893
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.0101264346438437,
+    "spectrum_decades": 5.546722149917187
+   }
+  },
+  {
+   "k": 23,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 24,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 25,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 26,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 1,
+    "eff_dim_99": 4,
+    "participation_ratio": 1.0765384742213076,
+    "spectrum_decades": 9.506932504934408
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 3,
+    "eff_dim_99": 13,
+    "participation_ratio": 1.6144833832616234,
+    "spectrum_decades": 3.861035771278322
+   }
+  },
+  {
+   "k": 27,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 28,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 6,
+    "participation_ratio": 2.9163425514587575,
+    "spectrum_decades": 6.3560416112666225
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 9,
+    "participation_ratio": 1.1844012891087572,
+    "spectrum_decades": 3.9233407654707513
+   }
+  },
+  {
+   "k": 29,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 30,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 31,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 32,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 33,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 34,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 35,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 36,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 37,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 38,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 39,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 40,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 41,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 42,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 43,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 44,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 45,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 46,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 47,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 48,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 49,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 50,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 51,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 52,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 53,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 54,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 55,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 56,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 1,
+    "eff_dim_99": 4,
+    "participation_ratio": 1.1616410129757686,
+    "spectrum_decades": 8.62805695826564
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.0202051842716462,
+    "spectrum_decades": 5.719677068720682
+   }
+  },
+  {
+   "k": 57,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 58,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 59,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 60,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 61,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 1,
+    "eff_dim_99": 4,
+    "participation_ratio": 1.1509514222844708,
+    "spectrum_decades": 8.329994200095982
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 14,
+    "eff_dim_99": 28,
+    "participation_ratio": 7.066907819828537,
+    "spectrum_decades": 2.0464351944707224
+   }
+  },
+  {
+   "k": 62,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 63,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 64,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 65,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 66,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 67,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 68,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 69,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 70,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 71,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 72,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 1,
+    "eff_dim_99": 5,
+    "participation_ratio": 1.222750908271557,
+    "spectrum_decades": 7.52514531439055
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 4,
+    "participation_ratio": 1.1085260408806914,
+    "spectrum_decades": 4.108943240238026
+   }
+  },
+  {
+   "k": 73,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 74,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 75,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 76,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 77,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.00263038825089,
+    "spectrum_decades": 9.733786777078441
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 4,
+    "eff_dim_99": 18,
+    "participation_ratio": 2.4749470767943036,
+    "spectrum_decades": 3.0910985993181623
+   }
+  },
+  {
+   "k": 78,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 79,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 80,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 81,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 82,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.6641484990536664,
+    "spectrum_decades": 7.645068200145787
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 2,
+    "eff_dim_99": 5,
+    "participation_ratio": 1.327818723819442,
+    "spectrum_decades": 3.960577417441133
+   }
+  },
+  {
+   "k": 83,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 84,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 5,
+    "participation_ratio": 2.771830903742975,
+    "spectrum_decades": 7.146922187499221
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 2,
+    "participation_ratio": 1.0396900982369524,
+    "spectrum_decades": 5.363309107192316
+   }
+  },
+  {
+   "k": 85,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 86,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 87,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 88,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 89,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 90,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 91,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 92,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 93,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 94,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 95,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 96,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 4,
+    "eff_dim_99": 6,
+    "participation_ratio": 2.4386700406973794,
+    "spectrum_decades": 7.331998541938839
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 11,
+    "eff_dim_99": 27,
+    "participation_ratio": 5.666475693941858,
+    "spectrum_decades": 2.198916556729886
+   }
+  },
+  {
+   "k": 97,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 98,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 99,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 100,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 101,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 102,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 103,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 104,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 105,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.0033762577514311,
+    "spectrum_decades": 9.894740706262041
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 2,
+    "participation_ratio": 1.1380018418442912,
+    "spectrum_decades": 4.8455484086087495
+   }
+  },
+  {
+   "k": 106,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 107,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 108,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 2,
+    "eff_dim_99": 5,
+    "participation_ratio": 1.5226038412483347,
+    "spectrum_decades": 9.182770682542486
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 2,
+    "eff_dim_99": 2,
+    "participation_ratio": 1.2768761845396828,
+    "spectrum_decades": 4.979780804974615
+   }
+  },
+  {
+   "k": 109,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 110,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 111,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 112,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 113,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 4,
+    "eff_dim_99": 6,
+    "participation_ratio": 2.1279516086444907,
+    "spectrum_decades": 6.820192772857505
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 2,
+    "eff_dim_99": 13,
+    "participation_ratio": 1.3330461744799957,
+    "spectrum_decades": 3.5984115657613587
+   }
+  },
+  {
+   "k": 114,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 115,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 116,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 117,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.0034538557163217,
+    "spectrum_decades": 9.611977595405964
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 3,
+    "participation_ratio": 1.0696381681664942,
+    "spectrum_decades": 4.3917103807137705
+   }
+  },
+  {
+   "k": 118,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 119,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 5,
+    "participation_ratio": 1.9648677461075723,
+    "spectrum_decades": 7.724824071428399
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 5,
+    "eff_dim_99": 16,
+    "participation_ratio": 4.048987359202972,
+    "spectrum_decades": 3.042783920610192
+   }
+  },
+  {
+   "k": 120,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 121,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 122,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 123,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 124,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 125,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 126,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 127,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 128,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 129,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 130,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 131,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 132,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 2,
+    "eff_dim_99": 4,
+    "participation_ratio": 1.3818075712639688,
+    "spectrum_decades": 9.317443316551376
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.1423576010706853,
+    "spectrum_decades": 4.0801659479959085
+   }
+  },
+  {
+   "k": 133,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 134,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 135,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.656007575412582,
+    "spectrum_decades": 7.016706931469517
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 4,
+    "eff_dim_99": 21,
+    "participation_ratio": 1.484400659213105,
+    "spectrum_decades": 3.085297651335232
+   }
+  },
+  {
+   "k": 136,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 137,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 138,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 139,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 140,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 141,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 142,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 143,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.5557541378731015,
+    "spectrum_decades": 6.969076960338074
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 2,
+    "eff_dim_99": 5,
+    "participation_ratio": 1.395578611311902,
+    "spectrum_decades": 4.031941684837306
+   }
+  },
+  {
+   "k": 144,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.4610950094151198,
+    "spectrum_decades": 7.427051841986148
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 13,
+    "participation_ratio": 1.0893165279418158,
+    "spectrum_decades": 3.44250918011724
+   }
+  },
+  {
+   "k": 145,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 146,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.7311989293503547,
+    "spectrum_decades": 7.1441433434319475
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 1,
+    "eff_dim_99": 1,
+    "participation_ratio": 1.0051665875405165,
+    "spectrum_decades": 6.400077432871887
+   }
+  },
+  {
+   "k": 147,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 148,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 6,
+    "participation_ratio": 1.9121336340746364,
+    "spectrum_decades": 7.527655872333899
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 3,
+    "eff_dim_99": 16,
+    "participation_ratio": 2.4048899274298394,
+    "spectrum_decades": 3.3061715482962613
+   }
+  },
+  {
+   "k": 149,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 150,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 151,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 152,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 153,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 154,
+   "status": "baseline_failed"
+  },
+  {
+   "k": 155,
+   "status": "ok",
+   "coarse": {
+    "status": "ok",
+    "n_obs": 15,
+    "eff_dim_90": 3,
+    "eff_dim_99": 7,
+    "participation_ratio": 2.6735159652711054,
+    "spectrum_decades": 6.812858693652882
+   },
+   "rich": {
+    "status": "ok",
+    "n_obs": 3300,
+    "eff_dim_90": 7,
+    "eff_dim_99": 24,
+    "participation_ratio": 3.446711549215249,
+    "spectrum_decades": 2.7017060870598764
+   }
+  },
+  {
+   "k": 156,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 157,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 158,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  },
+  {
+   "k": 159,
+   "status": "ok",
+   "coarse": {
+    "status": "leg_failed"
+   },
+   "rich": {
+    "status": "leg_failed"
+   }
+  }
+ ],
+ "coarse_15_summary_stats": {
+  "per_point_values": [
+   2,
+   3,
+   2,
+   1,
+   3,
+   1,
+   1,
+   1,
+   1,
+   3,
+   3,
+   4,
+   1,
+   2,
+   4,
+   1,
+   3,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ],
+  "running": [
+   {
+    "K": 4,
+    "mean": 2.0,
+    "sd": 0.816496580927726,
+    "sem": 0.408248290463863
+   },
+   {
+    "K": 8,
+    "mean": 1.75,
+    "sd": 0.8864052604279183,
+    "sem": 0.31339158526400435
+   },
+   {
+    "K": 12,
+    "mean": 2.0833333333333335,
+    "sd": 1.0836246694508316,
+    "sem": 0.31281549730397845
+   },
+   {
+    "K": 16,
+    "mean": 2.0625,
+    "sd": 1.1236102527122116,
+    "sem": 0.2809025631780529
+   },
+   {
+    "K": 24,
+    "mean": 2.3333333333333335,
+    "sd": 1.0072203103706696,
+    "sem": 0.20559798491465373
+   }
+  ],
+  "n": 24,
+  "mean": 2.3333333333333335,
+  "sd": 1.0072203103706696
+ },
+ "rich_voltage_observables": {
+  "per_point_values": [
+   6,
+   1,
+   1,
+   3,
+   1,
+   1,
+   14,
+   1,
+   4,
+   2,
+   1,
+   11,
+   1,
+   2,
+   2,
+   1,
+   5,
+   1,
+   4,
+   2,
+   1,
+   1,
+   3,
+   7
+  ],
+  "running": [
+   {
+    "K": 4,
+    "mean": 2.75,
+    "sd": 2.362907813126304,
+    "sem": 1.181453906563152
+   },
+   {
+    "K": 8,
+    "mean": 3.5,
+    "sd": 4.59813626840888,
+    "sem": 1.625686668105863
+   },
+   {
+    "K": 12,
+    "mean": 3.8333333333333335,
+    "sd": 4.386618771038148,
+    "sem": 1.2663077641455702
+   },
+   {
+    "K": 16,
+    "mean": 3.25,
+    "sd": 3.9072582032246945,
+    "sem": 0.9768145508061736
+   },
+   {
+    "K": 24,
+    "mean": 3.1666666666666665,
+    "sd": 3.383677786420989,
+    "sem": 0.6906903358934585
+   }
+  ],
+  "n": 24,
+  "mean": 3.1666666666666665,
+  "sd": 3.383677786420989
+ },
+ "elapsed_sec": 441.3
+}

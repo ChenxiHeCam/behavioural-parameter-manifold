@@ -4,7 +4,7 @@ p = os.path.join(os.path.dirname(__file__), '..', 'paper', 'manuscript.tex')
 s = open(p, encoding='utf-8').read()
 
 def strip_tex(t):
-    t = re.sub(r'%.*', '', t)
+    t = re.sub(r'(?<!\\)%.*', '', t)
     t = re.sub(r'\\begin\{figure\}.*?\\end\{figure\}', '', t, flags=re.S)
     t = re.sub(r'\\citep?\[[^]]*\]\{[^}]*\}', '', t)
     t = re.sub(r'\\cite[a-zA-Z]*\{[^}]*\}', '', t)

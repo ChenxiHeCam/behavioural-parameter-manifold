@@ -1,0 +1,54 @@
+{
+ "n_repeat": 12,
+ "observables": [
+  "net_disp",
+  "path_len",
+  "mean_speed",
+  "speed_std",
+  "bend_rms",
+  "heading_rms"
+ ],
+ "baseline_mean": [
+  0.02444246955966477,
+  0.04059556195069182,
+  0.0001357711102029827,
+  8.419335953274299e-05,
+  0.9874728408616056,
+  0.46598044028409497
+ ],
+ "whitened_run_to_run_sd": [
+  0.40632466729045946,
+  0.1277730743444366,
+  0.12777213640703947,
+  0.08886295772870886,
+  0.23496701326439876,
+  0.2360286901313471
+ ],
+ "per_parameter_mean_abs_diff": {
+  "crawler.amp": 0.21482487882873047,
+  "crawler.freq": 0.2623827060288867,
+  "turner.base_activation": 0.46965151199679295,
+  "turner.w_cc": 0.15294427669432217,
+  "turner.w_ce": 0.2033013826341309,
+  "turner.w_ec": 0.12506291847010967,
+  "turner.w_ee": 0.47868154705093935,
+  "turner.tau": 0.3052432013444567,
+  "interference.attenuation": 0.10429729514883983,
+  "intermitter.crawl_freq": 0.23280084471082507
+ },
+ "per_parameter_snr": {
+  "crawler.amp": 1.2138046336983643,
+  "crawler.freq": 2.0949508914257735,
+  "turner.base_activation": 1.8182205184062041,
+  "turner.w_cc": 0.6124486647798781,
+  "turner.w_ce": 1.2023228486459017,
+  "turner.w_ec": 0.6994288061993119,
+  "turner.w_ee": 1.7436878098031736,
+  "turner.tau": 1.4836010238068689,
+  "interference.attenuation": 0.4573758578487001,
+  "intermitter.crawl_freq": 1.0279964911106765
+ },
+ "median_snr": 1.208063741172133,
+ "n_params_above_noise": 7,
+ "elapsed_sec": 207.4
+}

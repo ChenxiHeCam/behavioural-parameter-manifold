@@ -1,0 +1,81 @@
+{
+ "experiment": "E45b_baaiworm_named_channels_mechfix",
+ "supersedes": "E45_baai_named_channels.json",
+ "fix": "explicit mechanism suffix; results keyed by suffix not conductance name; a perturbation that does not reach the model is an error, not a zero",
+ "n_mechanisms": 16,
+ "n_observables": 10320,
+ "delta": 0.5,
+ "tstop_ms": 1500,
+ "eff_dim_90": 3,
+ "eff_dim_99": 6,
+ "participation_ratio": 2.427474845113764,
+ "ranking_stiff_to_sloppy": [
+  [
+   "IRK (Kir)",
+   123.52940733779312
+  ],
+  [
+   "NCA (Na-leak)",
+   117.71460822162075
+  ],
+  [
+   "EGL-36 (Kv)",
+   85.9675841491996
+  ],
+  [
+   "EGL-2 (Kv-eag)",
+   44.6262683807252
+  ],
+  [
+   "CCA-1 (T-Ca)",
+   39.081667533972215
+  ],
+  [
+   "KQT-3 (KCNQ)",
+   29.07767704556658
+  ],
+  [
+   "SHK-1 (Kv)",
+   15.647029352411677
+  ],
+  [
+   "KCNL (SK)",
+   15.061036829318832
+  ],
+  [
+   "SLO-1/UNC-2 (BK)",
+   6.679333041081982
+  ],
+  [
+   "KVS-1 (Kv)",
+   3.006780218329533
+  ],
+  [
+   "EGL-19 (L-Ca)",
+   1.770499252799968
+  ],
+  [
+   "SLO-2/EGL-19 (SK)",
+   0.7797661357275951
+  ],
+  [
+   "SLO-2/UNC-2 (SK)",
+   0.5731713174867392
+  ],
+  [
+   "SHL-1 (Kv)",
+   0.43625106192030844
+  ],
+  [
+   "UNC-2 (PQ-Ca)",
+   0.16741112824901577
+  ],
+  [
+   "SLO-1/EGL-19 (BK)",
+   0.0881699924210668
+  ]
+ ],
+ "identically_zero": [],
+ "failed": {},
+ "elapsed_sec": 13.8
+}

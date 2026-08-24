@@ -56,7 +56,7 @@ def save(fig, name):
 fig, ax = plt.subplots(1, 2, figsize=(183 * MM, 62 * MM),
                        gridspec_kw={"width_ratios": [1.0, 1.0], "wspace": 0.42})
 
-c = L("E45_baai_named_channels.json")
+c = L("E45b_baai_named_channels.json")   # mechanism-lookup fix; supersedes E45
 rank = c["ranking_stiff_to_sloppy"]
 nm = [r[0] for r in rank]
 val = np.array([r[1] for r in rank], dtype=float)
@@ -71,9 +71,8 @@ a.set_yticklabels(nm, fontsize=5.4)
 a.invert_yaxis()
 a.set_xscale("log")
 a.set_xlabel("Behavioural elasticity (log scale)")
-a.text(0.97, 0.10, f"effective dimension {c['eff_dim_90']} of {c['n_mechanisms']}\n"
-                   "SLO-1 and SLO-2: no measurable effect",
-       transform=a.transAxes, ha="right", fontsize=6, color=INK, linespacing=1.35)
+a.text(0.97, 0.08, f"effective dimension {c['eff_dim_90']} of {c['n_mechanisms']}",
+       transform=a.transAxes, ha="right", fontsize=6, color=INK)
 letter(a, "a", -0.34)
 
 r = L("E1_flygym_rank.json")

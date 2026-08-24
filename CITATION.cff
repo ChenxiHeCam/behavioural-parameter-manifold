@@ -8,7 +8,7 @@ authors:
     email: ch2067@cam.ac.uk
 version: "1.0.0"
 doi: "10.5281/zenodo.21594740"
-date-released: "2026-07-25"
+date-released: "2026-08-24"
 license: MIT
 keywords:
   - behavioural-equivalence manifold
@@ -18,7 +18,8 @@ keywords:
   - whole-organism simulation
   - Caenorhabditis elegans
 abstract: >-
-  Code, result files and reproduction container for a study measuring the behavioural-equivalence
-  manifold of whole-organism nervous-system simulators across three phyla, showing that behaviour
-  constrains a low-dimensional subspace whose extent is set by the richness of the behavioural
-  repertoire.
+  Code, result files and reproduction container for a study measuring how much of a whole-organism
+  nervous-system model behaviour constrains. One Gauss-Newton curvature estimator is applied to
+  every system, each reported dimension is gated on observable count, linearity and noise floor,
+  and ground truth from eleven cell models separates behavioural fit quality from parameter
+  recovery.

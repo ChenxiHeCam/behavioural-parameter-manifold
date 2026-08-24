@@ -10,7 +10,7 @@ afterwards.
 
 | figure (paper/figures/) | owner script | note |
 |---|---|---|
-| Fig1_concept.png | (external: generated image, prompt in chat) | replace when ≥2400 px version exists |
+| Fig1_concept.png | `_fig1_concept.py` | drawn schematic, 4275 px (652 dpi as placed); PDF written alongside |
 | Fig_connectome_curvature.png | `_redraw_fig2_three.py` | 3-panel; `_redraw_new_results.py` writes an obsolete 2-panel version |
 | fig_p2_tiling_crossspecies.png | `_redraw_tiling.py` | |
 | fig_p2_b1_perchannel.png | `_redraw_new_results.py` | BAAIWorm named conductances (IRK 123.5 top, SLO omitted); `_redraw_figures.py` and `_redraw_remaining.py` write obsolete versions |

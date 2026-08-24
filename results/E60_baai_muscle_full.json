@@ -1,0 +1,27 @@
+{
+ "experiment": "E58_baai_multipoint",
+ "question": "does the low effective dimension hold away from the published parameter point?",
+ "n_connections_sampled": 3076,
+ "delta": 0.5,
+ "tstop_ms": 1500,
+ "points": [
+  {
+   "tag": "muscle_full",
+   "fold": 0,
+   "seed": 0
+  }
+ ],
+ "per_point": {
+  "muscle_full": {
+   "eff_dim_90": 3,
+   "eff_dim_99": 11,
+   "participation_ratio": 2.5318142518685134,
+   "spectrum_decades": 13.999786794274891,
+   "status": "ok",
+   "n_usable": 3076,
+   "baseline_std": 479.293701171875
+  }
+ },
+ "pairwise_stiff_overlap": [],
+ "elapsed_sec": 1700.7
+}

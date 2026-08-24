@@ -1,0 +1,74 @@
+{
+  "experiment": "B6b_worm_cell-class_union (BAAIWorm chemotaxis vs locomotion)",
+  "classes": [
+    "AWA",
+    "AWC",
+    "ASE",
+    "ASH",
+    "AIY",
+    "AIZ",
+    "RIA",
+    "AIB",
+    "VA",
+    "VB",
+    "DA",
+    "DB",
+    "VD",
+    "DD"
+  ],
+  "delta": 0.25,
+  "eff_dim_chemotaxis_90_99": [
+    2,
+    4
+  ],
+  "eff_dim_locomotion_90_99": [
+    1,
+    2
+  ],
+  "eff_dim_UNION_90_99": [
+    1,
+    4
+  ],
+  "stiff_subspace_overlap_top3_cos": 0.5340404490942506,
+  "stiffest_classes_chemotaxis": [
+    "AWC",
+    "DB",
+    "VA",
+    "AIZ"
+  ],
+  "stiffest_classes_locomotion": [
+    "DD",
+    "VA",
+    "VD",
+    "DA"
+  ],
+  "eig_chemo": [
+    9.727616677902338,
+    2.4763680342374883,
+    0.8552907813551098,
+    0.18886059296871033,
+    2.1553960644702078e-14,
+    2.5023682768234394e-16
+  ],
+  "eig_loco": [
+    175.8656942533806,
+    2.2082141339181396,
+    0.20992490283393547,
+    0.1719256927444101,
+    2.8132950385989608e-14,
+    1.2716331400122465e-14
+  ],
+  "eig_union": [
+    177.59787911059362,
+    8.626718472055321,
+    3.5216289831380756,
+    1.3842758377531548,
+    0.2665938886566631,
+    0.19344640279179254
+  ],
+  "base_net_disp": {
+    "chemotaxis": 0.20290264743523245,
+    "locomotion": 0.05650863382846973
+  },
+  "elapsed_s": 1083.0
+}
