@@ -83,8 +83,15 @@ pip install -r repro/requirements.txt
 python repro/regenerate_all.py
 ```
 
-Expected output: `=== NUMBER AUDIT: 57/57 PASS ===`, the threshold-robustness table, and the
+Expected output: `=== NUMBER AUDIT: 72/72 PASS ===`, the threshold-robustness table, and the
 regenerated figure. Exit status is non-zero if any number fails to reproduce.
+
+Two further checks verify the manuscript itself rather than the numbers:
+
+```bash
+python repro/check_manuscript.py   # journal limits, cross-references, cited files, figure dpi
+python repro/check_style.py        # constructions the manuscript avoids
+```
 
 ## Contents
 
@@ -107,7 +114,8 @@ retrieval scripts are provided.
 - **OpenWorm Movement Database** (Tierpsy features, N2 and mutant strains) — http://movement.openworm.org
 
 Simulators are the published releases of BAAIWorm, modWorm, flybody, NeuroMechFly v2 / FlyGym,
-flyvis, larvaworld, and the Virtual Rodent of the `dm_control` suite; see the manuscript for
+flyvis, larvaworld (whose probe is withdrawn on its noise floor, Supplementary S6.5), and the
+Virtual Rodent of the `dm_control` suite; see the manuscript for
 citations. Scripts that must run inside a simulator's own environment use that environment's paths
 and are provided for reference rather than as a turnkey pipeline.
 

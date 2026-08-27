@@ -1,5 +1,9 @@
 {
+  "experiment": "E2_allen_variability",
+  "source": "Allen Cell Types database, electrophysiology table (https://celltypes.brain-map.org); mouse and human cortical neurons",
+  "n_cells_available": 2333,
   "n_cells": 1914,
+  "inclusion": "all eleven intrinsic properties present; no imputation",
   "features": [
     "ef__adaptation",
     "ef__avg_firing_rate",
@@ -14,38 +18,38 @@
     "ef__vrest"
   ],
   "cv_per_feature": {
-    "ef__adaptation": 1.850032860254072,
-    "ef__avg_firing_rate": 1.1061803671014059,
-    "ef__avg_isi": 0.7418578397826349,
-    "ef__f_i_curve_slope": 0.9755229385716288,
-    "ef__fast_trough_v_long_square": 0.11769448996937992,
-    "ef__peak_t_ramp": 0.6236410990447856,
-    "ef__ri": 0.47854237031478775,
-    "ef__tau": 0.5635339065847242,
-    "ef__threshold_i_long_square": 0.7325462638364468,
-    "ef__upstroke_downstroke_ratio_long_square": 0.339250618595907,
-    "ef__vrest": 0.07681164691043704
+    "ef__adaptation": 1.8500328602282299,
+    "ef__avg_firing_rate": 1.1061803671013586,
+    "ef__avg_isi": 0.7418578397826255,
+    "ef__f_i_curve_slope": 0.9755229385683497,
+    "ef__fast_trough_v_long_square": 0.11769448996937765,
+    "ef__peak_t_ramp": 0.6236410990446749,
+    "ef__ri": 0.47854237031478514,
+    "ef__tau": 0.5635339065846958,
+    "ef__threshold_i_long_square": 0.7325462638364407,
+    "ef__upstroke_downstroke_ratio_long_square": 0.33925061859579503,
+    "ef__vrest": 0.07681164691043597
   },
   "cv_range": [
-    0.07681164691043704,
-    1.850032860254072
+    0.07681164691043597,
+    1.8500328602282299
   ],
-  "cv_median": 0.6236410990447856,
+  "cv_median": 0.6236410990446749,
+  "pca_note": "properties z-scored before PCA; the eleven carry different units",
   "pca_var_ratio": [
-    0.34073639405491124,
-    0.2597203546915909,
-    0.11306407072006741,
-    0.06027283358829786,
-    0.054546044264112574,
-    0.05170259994044543,
-    0.0367152630801259,
-    0.03225186555512583,
-    0.024653245994125987,
-    0.018972584109924303,
-    0.007364744001272709
+    0.34073639405511047,
+    0.25972035469175736,
+    0.1130640707196488,
+    0.06027283358838968,
+    0.054546044264210954,
+    0.051702599940297696,
+    0.03671526308015504,
+    0.03225186555505302,
+    0.024653245994169883,
+    0.018972584109920487,
+    0.0073647440012867505
   ],
-  "participation_eff_dim": 4.783982716125546,
+  "participation_eff_dim": 4.783982716122484,
   "eff_dim_90pct": 7,
-  "eff_dim_99pct": 10,
-  "thesis": "Real neurons span wide property variability (sloppy axes exist in biology) yet sit on a low-dimensional property manifold (few PCs) -- the real-biology analogue of the simulator behavioural-equivalence manifold. Allen Cell Types, mouse+human cortex; cross-system support, NOT a per-axis alignment to the worm/fly eigendirections."
+  "eff_dim_99pct": 10
 }

@@ -2,9 +2,8 @@
 
 Reproduces every quantitative claim and the cross-species hero figure from the
 deposited result files. The forward-model simulations (BAAIWorm, modWorm,
-larvaworld, Virtual Rodent, flyvis, the Prinz–Marder STG population) are
-deposited as result JSONs; this bundle reproduces the **analysis layer** on top
-of them — effective dimension, participation ratio, complementary tiling, union
+Virtual Rodent, flyvis, the Prinz–Marder STG population) are
+deposited as result JSONs; this bundle reproduces the **analysis layer** on top of them — effective dimension, participation ratio, complementary tiling, union
 growth, the two-model agreement, and the figure — with no simulator, GPU, or
 network access required.
 
@@ -28,13 +27,35 @@ RESULTS_DIR=/path/to/jsons python repro/regenerate_all.py
 
 ## Expected output
 
-- `=== NUMBER AUDIT: 23/23 PASS ===` — every number cited in the main text and
+- `=== NUMBER AUDIT: 72/72 PASS ===` — every number cited in the main text and
   SI is recomputed from its source JSON and checked (non-zero exit on any FAIL).
 - The S6.9 threshold-robustness table (effective dimension at 80/90/95/99 % of
   spectral mass + participation ratio), recomputed from the saved eigenspectra.
 - `fig_p2_tiling_crossspecies_CHECK.png` — the four-panel hero figure
-  regenerated from the JSONs. (The publication-quality version is produced by
-  `_fig_p2_tiling.py`; the check version verifies the data, not the styling.)
+    regenerated from the JSONs. (The publication-quality version is produced by
+  `_fig_nc_tiling.py`; the check version verifies the data, not the styling.)
+
+## Checking the manuscript
+
+`regenerate_all.py` verifies the numbers. Two further scripts verify the document:
+
+```bash
+python repro/check_manuscript.py
+```
+
+checks the journal's Article limits (abstract, main text, display items, references,
+title, subheading placement) and the manuscript's internal consistency: that every
+Supplementary cross-reference resolves, that every result file cited in either document
+exists in `results/`, and that every figure clears 300 dpi at its printed width. Exit
+status is non-zero on any failure.
+
+```bash
+python repro/check_style.py
+```
+
+flags constructions the manuscript avoids: em-dashes in prose, hedging formulas,
+changelog phrasing, bullet lists, and infrastructure detail. Not every hit is a fault;
+em-dashes in section headings and in table cells marking a withdrawn row are legitimate.
 
 ## What maps to what
 

@@ -123,6 +123,32 @@ for _tag in ("baseline", "population"):
           _r["fraction_proportional"] < 0.10, True, 0.01)
 
 # the population geometry that replaces it needs no finite difference at all
+# ---- external datasets that use none of our forward models (S2.2-S2.4) ----
+_al = L("E2_allen_variability.json")
+check("S2.2 Allen cohort is 1914 complete cases", _al["n_cells"], 1914, 0.5)
+check("S2.2 Allen property participation dimension 4.78 of 11",
+      _al["participation_eff_dim"], 4.78, 0.02)
+_cvr = [v for k, v in _al["cv_per_feature"].items()
+        if k not in ("ef__vrest", "ef__fast_trough_v_long_square")]
+check("S2.2 ratio-scale CV runs 0.34 to 1.85 (voltages excluded)",
+      round(min(_cvr), 2), 0.34, 0.01)
+check("S2.2 the most variable property is adaptation at 1.85",
+      round(max(_cvr), 2), 1.85, 0.01)
+
+_gn = L("E4_channel_conservation.json")["genes"]
+check("S2.3 forty worm channel and synaptic genes", len(_gn), 40, 0.5)
+check("S2.3 unc-9 is the most conserved at 99.91",
+      max(g["mean_perc_id"] for g in _gn), 99.91, 0.02)
+check("S2.3 unc-49 is the least conserved at 77.94",
+      min(g["mean_perc_id"] for g in _gn), 77.94, 0.02)
+
+_n2 = L("E5_n2_manifold.json")
+check("S2.4 sixty-one isogenic N2 animals", _n2["n_worms"], 61, 0.5)
+check("S2.4 cross-individual participation dimension 9.75",
+      _n2["participation_eff_dim"], 9.75, 0.02)
+check("S2.4 the feature count exceeds the animal count, so rank is capped",
+      _n2["n_features"] > _n2["n_worms"], True, 0.01)
+
 _em = L("E1_pyloric_manifold.json")
 check("S2.1 pyloric population participation dim = 23.2", _em["participation_eff_dim"], 23.157, 0.01)
 check("S2.1 pyloric population 90% dim = 23", _em["eff_dim_90pct"], 23, 0.01)
@@ -163,6 +189,16 @@ check("S6.10 union eff-dim equals chemotaxis alone",
 _eig = _b6["eig_union"]
 check("S6.10 the two extra rank directions carry 0.56% of the mass",
       (_eig[4] + _eig[5]) / sum(_eig), 0.00557, 0.02)
+check("S6.10 the fifth direction carries 0.30% of the mass",
+      100 * _eig[4] / sum(_eig), 0.30, 0.02)
+check("S6.10 the sixth direction carries 0.26% of the mass",
+      100 * _eig[5] / sum(_eig), 0.26, 0.02)
+check("S6.10 the third direction carries 1.51% of the mass",
+      100 * _eig[2] / sum(_eig), 1.51, 0.02)
+check("S6.10 the fourth direction carries 1.03% of the mass",
+      100 * _eig[3] / sum(_eig), 1.03, 0.02)
+check("S6.10 the leading union direction carries 87% on its own",
+      100 * _eig[0] / sum(_eig), 87.1, 0.05)
 
 # ---- sloppy directions move behaviour more, not less, at a finite step (S6.7) ----
 _cp = L("CP_coupling.json")["behaviour_change_under_moves"]
