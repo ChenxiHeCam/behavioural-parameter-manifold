@@ -5,6 +5,29 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Zhao et~al.(2024)Zhao, Wang, Jiang, Ma, Ma, He, Du, Ma, and
+  Huang]{wang2025baaiworm}
+Mengdi Zhao, Ning Wang, Xinyu Jiang, Xiaohan Ma, Haoran Ma, Gan He, Kai Du, Lei
+  Ma, and Tiejun Huang.
+\newblock An integrative data-driven model simulating \textit{C.~elegans}
+  brain, body and environment interactions.
+\newblock \emph{Nature Computational Science}, 4:\penalty0 106--120, 2024.
+
+\bibitem[Vaxenburg et~al.(2025)Vaxenburg, Siwanowicz, Merel, Robie, Morrow,
+  Novati, Stupski, Card, and Turaga]{vaxenburg2025flybody}
+Roman Vaxenburg, Igor Siwanowicz, Josh Merel, Alice~A Robie, Carmen Morrow,
+  Guido Novati, Sam Stupski, Gwyneth~M Card, and Srinivas~C Turaga.
+\newblock Whole-body simulation of {\textit{drosophila}} reveals motor control
+  of behavior.
+\newblock \emph{Nature}, 2025.
+\newblock flybody release, Figshare DOI 10.25378/janelia.25309105.
+
+\bibitem[Wang-Chen et~al.(2024)]{wangchen2024neuromechfly}
+Sibo Wang-Chen et~al.
+\newblock Neuromechfly v2: simulating embodied sensorimotor control in adult
+  drosophila.
+\newblock \emph{Nature Methods}, 2024.
+
 \bibitem[Prinz et~al.(2004)Prinz, Bucher, and Marder]{prinz2004similar}
 Astrid~A Prinz, Dirk Bucher, and Eve Marder.
 \newblock Similar network activity from disparate circuit parameters.
@@ -52,33 +75,10 @@ Gerald~M Edelman and Joseph~A Gally.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 98\penalty0
   (24):\penalty0 13763--13768, 2001.
 
-\bibitem[Zhao et~al.(2024)Zhao, Wang, Jiang, Ma, Ma, He, Du, Ma, and
-  Huang]{wang2025baaiworm}
-Mengdi Zhao, Ning Wang, Xinyu Jiang, Xiaohan Ma, Haoran Ma, Gan He, Kai Du, Lei
-  Ma, and Tiejun Huang.
-\newblock An integrative data-driven model simulating \textit{C.~elegans}
-  brain, body and environment interactions.
-\newblock \emph{Nature Computational Science}, 4:\penalty0 106--120, 2024.
-
 \bibitem[Shlizerman et~al.(2025)]{shlizerman2025modworm}
 Eli Shlizerman et~al.
 \newblock modworm: a modular muscular-skeletal c. elegans simulator.
 \newblock \emph{Preprint}, 2025.
-
-\bibitem[Vaxenburg et~al.(2025)Vaxenburg, Siwanowicz, Merel, Robie, Morrow,
-  Novati, Stupski, Card, and Turaga]{vaxenburg2025flybody}
-Roman Vaxenburg, Igor Siwanowicz, Josh Merel, Alice~A Robie, Carmen Morrow,
-  Guido Novati, Sam Stupski, Gwyneth~M Card, and Srinivas~C Turaga.
-\newblock Whole-body simulation of {\textit{drosophila}} reveals motor control
-  of behavior.
-\newblock \emph{Nature}, 2025.
-\newblock flybody release, Figshare DOI 10.25378/janelia.25309105.
-
-\bibitem[Wang-Chen et~al.(2024)]{wangchen2024neuromechfly}
-Sibo Wang-Chen et~al.
-\newblock Neuromechfly v2: simulating embodied sensorimotor control in adult
-  drosophila.
-\newblock \emph{Nature Methods}, 2024.
 
 \bibitem[Lobato-Rios et~al.(2022)Lobato-Rios, Ramalingasetty, {\"O}zdil,
   Arreguit, Ijspeert, and Ramdya]{lobatorios2022neuromechfly}
