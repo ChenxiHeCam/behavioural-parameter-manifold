@@ -14,7 +14,7 @@ OUT = os.path.join(HERE, "..", "paper", "figures", "fig_p2_tiling_crossspecies.p
 L = lambda n: json.load(open(os.path.join(D, n)))
 
 ew, chem = L("EW_eigenworm.json"), L("BAAI_chemo.json")
-sat, rod, lar = L("SAT_saturation.json"), L("RODENT_manifold.json"), L("LARVA_manifold.json")
+sat, fly = L("SAT_saturation.json"), L("E36b_flygym_validstep.json")
 
 # --- validated CVD-safe palette (Okabe-Ito subset; all six checks PASS) ---
 BLUE, VERM, GREEN = "#0072B2", "#D55E00", "#009E73"
@@ -68,23 +68,18 @@ ax[2].axhline(4, ls=(0, (3, 3)), color=GRID, lw=0.6, zorder=1)
 ax[2].set_xlabel("Number of behaviours"); ax[2].set_ylabel("Union effective dimension")
 ax[2].set_xticks([1, 4, 8, 12]); ax[2].set_ylim(1, 4.4)
 
-# ---- d: union growth across phyla (direct labels, no legend box) ----
-rc = rod["saturation_curve"]
-rnb = [r["n_behaviours"] for r in rc]; re99 = [r["eff_dim_99_mean"] for r in rc]
-lar_single = float(np.mean([v["eff_dim_99"] for v in lar["per_behaviour"].values()]))
-lar_union = lar["union_eff_dim_90_99"][1]
-ax[3].plot(rnb, re99, "s-", color=VERM, lw=1.4, ms=3.2, clip_on=False, zorder=3)
-ax[3].plot([1, len(lar["per_behaviour"])], [lar_single, lar_union], "^-", color=BLUE,
-           lw=1.4, ms=3.6, clip_on=False, zorder=3)
-ax[3].plot(nb, e99, "o-", color=GREEN, lw=1.4, ms=3.0, clip_on=False, zorder=3)
-ax[3].annotate("Rodent", xy=(6, 12.0), xytext=(5, 6), textcoords="offset points",
-               color=VERM, fontsize=6.5, va="center", ha="left")
-ax[3].annotate("Larva", xy=(4, lar_union), xytext=(5, -7), textcoords="offset points",
-               color=BLUE, fontsize=6.5, va="center", ha="left")
-ax[3].annotate("Worm", xy=(12, 4.0), xytext=(5, 0), textcoords="offset points",
-               color=GREEN, fontsize=6.5, va="center", ha="left")
+# ---- d: fly union at the valid step, mean +/- sd over subsets ----
+fc = fly["curve"]
+fnb = [r["n_behaviours"] for r in fc]
+f90 = [r["eff_dim_90_mean"] for r in fc]
+fsd = [r["eff_dim_90_sd"] for r in fc]
+ax[3].errorbar(fnb, f90, yerr=fsd, fmt="s-", color=VERM, lw=1.4, ms=3.2,
+               capsize=2.0, elinewidth=0.7, clip_on=False, zorder=3)
+ax[3].axhline(13.0, ls=(0, (3, 3)), color=GRID, lw=0.6, zorder=1)
 ax[3].set_xlabel("Number of behaviours"); ax[3].set_ylabel("Union effective dimension")
-ax[3].set_xlim(0.5, 15.5); ax[3].set_ylim(0, 13.5); ax[3].set_xticks([1, 4, 8, 12])
+ax[3].set_xticks([1, 2, 3, 4]); ax[3].set_xlim(0.7, 4.3); ax[3].set_ylim(8, 16)
+ax[3].annotate("Fly, 48 actuator gains", xy=(2.4, 14.9), color=VERM, fontsize=6.5,
+               ha="left", va="center")
 
 # ---- panel labels: bold lowercase, outside axes (NC convention) ----
 for a, lab in zip(ax, "abcd"):
