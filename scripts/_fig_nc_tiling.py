@@ -71,14 +71,14 @@ ax[2].set_xticks([1, 4, 8, 12]); ax[2].set_ylim(1, 4.4)
 # ---- d: fly union at the valid step, mean +/- sd over subsets ----
 fc = fly["curve"]
 fnb = [r["n_behaviours"] for r in fc]
-f90 = [r["eff_dim_90_mean"] for r in fc]
-fsd = [r["eff_dim_90_sd"] for r in fc]
+f90 = [r["eff_dim_99_mean"] for r in fc]
+fsd = [r["eff_dim_99_sd"] for r in fc]
 ax[3].errorbar(fnb, f90, yerr=fsd, fmt="s-", color=VERM, lw=1.4, ms=3.2,
                capsize=2.0, elinewidth=0.7, clip_on=False, zorder=3)
-ax[3].axhline(13.0, ls=(0, (3, 3)), color=GRID, lw=0.6, zorder=1)
+ax[3].axhline(32.0, ls=(0, (3, 3)), color=GRID, lw=0.6, zorder=1)
 ax[3].set_xlabel("Number of behaviours"); ax[3].set_ylabel("Union effective dimension")
-ax[3].set_xticks([1, 2, 3, 4]); ax[3].set_xlim(0.7, 4.3); ax[3].set_ylim(8, 16)
-ax[3].annotate("Fly, 48 actuator gains", xy=(2.4, 14.9), color=VERM, fontsize=6.5,
+ax[3].set_xticks([1, 2, 3, 4]); ax[3].set_xlim(0.7, 4.3); ax[3].set_ylim(28, 34)
+ax[3].annotate("Fly, 48 actuator gains", xy=(2.4, 33.2), color=VERM, fontsize=6.5,
                ha="left", va="center")
 
 # ---- panel labels: bold lowercase, outside axes (NC convention) ----

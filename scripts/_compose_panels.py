@@ -75,24 +75,28 @@ a.text(0.97, 0.08, f"effective dimension {c['eff_dim_90']} of {c['n_mechanisms']
        transform=a.transAxes, ha="right", fontsize=6, color=INK)
 letter(a, "d", -0.34)
 
-r = L("E1_flygym_rank.json")
-nl = L("E1_flygym_null.json")
-ev = np.sort(np.array(r["rich"]["top_eigenvalues"], dtype=float))[::-1]
+sc = L("AB4_flygym_delta.json")
+rows = sorted(sc["by_delta"], key=lambda r: r["delta"])
+dl = [r["delta"] for r in rows]
+d90 = [r["rich"]["eff_dim_90"] for r in rows]
 b = ax[1]
-b.plot(range(1, len(ev) + 1), np.maximum(ev, 1e-12), "o-", color=BLUE, lw=1.0,
-       ms=2.6, markeredgecolor="white", markeredgewidth=0.3)
-b.axvline(r["rich"]["eff_dim_90"] + 0.5, ls=(0, (3, 3)), color=INK, lw=0.7)
-b.axvline(nl["null_eff_dim_90"] + 0.5, ls=(0, (1, 2)), color=GREY, lw=0.7)
-b.set_yscale("log")
-b.set_xlabel("Eigenvalue index")
-b.set_ylabel("Curvature (log scale)")
-b.text(r["rich"]["eff_dim_90"] + 1.2, ev.max() * 0.30,
-       f"{r['rich']['eff_dim_90']} reach 90%", fontsize=6, color=INK)
-b.text(nl["null_eff_dim_90"] - 0.4, ev.min() * 1.25,
-       f"noise floor {nl['null_eff_dim_90']}", fontsize=6, color=GREY,
-       ha="right", va="bottom")
-b.text(0.02, 0.03, f"{r['rich']['n_observables']} observables against "
-                   f"{r['n_params']} parameters",
+b.axvspan(0.20, 0.55, color="#F0F0F0", zorder=0)
+b.plot(dl, d90, "o-", color=BLUE, lw=1.1, ms=3.4,
+       markeredgecolor="white", markeredgewidth=0.4, zorder=3, clip_on=False)
+b.axhline(11, ls=(0, (3, 3)), color=LGREY, lw=0.7, zorder=1)
+b.set_xscale("log")
+b.set_xticks(dl)
+b.get_xaxis().set_major_formatter(__import__("matplotlib").ticker.ScalarFormatter())
+b.set_xlabel("Perturbation step")
+b.set_ylabel("Effective dimension (90%)")
+b.set_ylim(9.5, 17)
+b.annotate("below the proportional range", xy=(0.05, 16), xytext=(0.075, 16.4),
+           fontsize=5.8, color=GREY, ha="left", va="center",
+           arrowprops=dict(arrowstyle="-", lw=0.5, color=GREY))
+b.text(0.36, 11.55, "11 across the proportional range", fontsize=6, color=INK,
+       ha="center", linespacing=1.25)
+b.text(0.02, 0.04, f"{sc['n_rich_observables']} observables against "
+                   f"{sc['n_params']} parameters",
        transform=b.transAxes, ha="left", va="bottom", fontsize=6, color=INK)
 letter(b, "e", -0.16)
 save(fig, "Fig_channels_flygym.png")
@@ -183,34 +187,29 @@ a.invert_yaxis(); a.set_xlabel("Behavioural elasticity")
 xm = max(t[1] for t in sel)
 a.set_xlim(0, xm * 1.42)
 a.axhline(len(top) - 0.5, color=LGREY, lw=0.6, ls=(0, (2, 2)), zorder=1)
-a.text(xm * 1.40, 12.6, f"effective dimension\n{d['eff_dim_90']} of "
-                        f"{d['n_cell_types']} cell types",
-       ha="right", va="center", fontsize=6, color=INK, linespacing=1.3, zorder=4)
 a.text(xm * 1.40, 1.0, "10 stiffest", ha="right", va="center", fontsize=5.8,
        color=BLUE, zorder=4)
 a.text(xm * 1.40, 15.0, "10 sloppiest", ha="right", va="center", fontsize=5.8,
        color=GREY, zorder=4)
 letter(a, "a", -0.26)
 
-d = L("STG_b1analog.json")
-stiff = [(n, float(w)) for n, w in d["stiff_top"]][:6]
-sloppy = [(n, float(w)) for n, w in d["sloppy_top"]][:6]
-sl_names = {n for n, _ in stiff}
-sloppy = [(f"{n} (sloppy ev.)" if n in sl_names else n, w) for n, w in sloppy]
-sel = stiff + sloppy
+d = L("E1_pyloric_manifold.json")
+stiff = [(n, float(v)) for n, v in d["stiff_conductances_lowCV"]]
+sloppy = [(n, float(v)) for n, v in d["sloppy_conductances_highCV"]]
+sel = stiff + sloppy[::-1]
 b = ax[1]
-b.barh(range(len(sel)), [t[1] for t in sel],
+b.barh(range(len(sel)), [t_[1] for t_ in sel],
        color=[BLUE] * len(stiff) + [GREY] * len(sloppy), height=0.72, zorder=2)
-b.set_yticks(range(len(sel))); b.set_yticklabels([t[0] for t in sel], fontsize=5.4)
-b.invert_yaxis(); b.set_xlabel("Eigenvector loading")
-b.set_xlim(0, 1.16)
+b.set_yticks(range(len(sel))); b.set_yticklabels([t_[0] for t_ in sel], fontsize=5.4)
+b.invert_yaxis(); b.set_xlabel("Coefficient of variation across the population")
+b.set_xlim(0, 1.02)
 b.axhline(len(stiff) - 0.5, color=LGREY, lw=0.6, ls=(0, (2, 2)), zorder=1)
-b.text(1.14, 3.2, "stiff: leak and\ninhibitory synapses", ha="right", va="center",
-       fontsize=5.8, color=BLUE, linespacing=1.25, zorder=4)
-b.text(1.14, 9.2, "sloppy: fast voltage-\ngated sodium", ha="right", va="center",
+b.text(1.0, 1.4, "least variable:\nA-current and\ninhibitory synapses",
+       ha="right", va="center", fontsize=5.8, color=BLUE, linespacing=1.25, zorder=4)
+b.text(1.0, 7.6, "most variable:\nleak, H and CaT", ha="right", va="center",
        fontsize=5.8, color=GREY, linespacing=1.25, zorder=4)
-b.text(1.14, 11.4, f"effective dimension {d['eff_dim_mean']:.2f} of 31",
-       ha="right", va="center", fontsize=6, color=INK, zorder=4)
+b.text(1.0, 9.6, f"{d['n_valid']} networks, one rhythm", ha="right", va="center",
+       fontsize=6, color=INK, zorder=4)
 letter(b, "b", -0.36)
 save(fig, "Fig_si_flyvis_pyloric.png")
 
