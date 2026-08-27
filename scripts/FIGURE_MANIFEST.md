@@ -12,7 +12,8 @@ afterwards.
 |---|---|---|
 | Fig1_concept.png | `_fig1_concept.py` | drawn schematic, 4275 px (652 dpi as placed); PDF written alongside |
 | Fig_connectome_curvature.png | `_redraw_fig2_three.py` | 3-panel; `_redraw_new_results.py` writes an obsolete 2-panel version |
-| fig_p2_tiling_crossspecies.png | `_redraw_tiling.py` | |
+| Fig_measurement.png | `_fig_measurement.py` | stacks Fig_connectome_curvature (a-c) over Fig_channels_flygym (d,e); rerun after either source changes |
+| fig_p2_tiling_crossspecies.png | `_fig_nc_tiling.py` | 2x2 layout; `_redraw_tiling.py` writes an obsolete version with the invalid-step fly curve |
 | fig_p2_b1_perchannel.png | `_redraw_new_results.py` | BAAIWorm named conductances (IRK 123.5 top, SLO omitted); `_redraw_figures.py` and `_redraw_remaining.py` write obsolete versions |
 | fig_p2_flygym_hessian48.png | `_redraw_new_results.py` | |
 | Fig_biological_datasets.png | `_redraw_remaining.py` | |

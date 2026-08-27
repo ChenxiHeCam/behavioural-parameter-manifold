@@ -73,7 +73,7 @@ a.set_xscale("log")
 a.set_xlabel("Behavioural elasticity (log scale)")
 a.text(0.97, 0.08, f"effective dimension {c['eff_dim_90']} of {c['n_mechanisms']}",
        transform=a.transAxes, ha="right", fontsize=6, color=INK)
-letter(a, "a", -0.34)
+letter(a, "d", -0.34)
 
 r = L("E1_flygym_rank.json")
 nl = L("E1_flygym_null.json")
@@ -94,7 +94,7 @@ b.text(nl["null_eff_dim_90"] - 0.4, ev.min() * 1.25,
 b.text(0.02, 0.03, f"{r['rich']['n_observables']} observables against "
                    f"{r['n_params']} parameters",
        transform=b.transAxes, ha="left", va="bottom", fontsize=6, color=INK)
-letter(b, "b", -0.16)
+letter(b, "e", -0.16)
 save(fig, "Fig_channels_flygym.png")
 
 

@@ -34,8 +34,10 @@ plt.rcParams.update({
     "figure.dpi": 600, "savefig.dpi": 600,
 })
 
-fig, ax = plt.subplots(1, 4, figsize=(180 * MM, 45 * MM))
-plt.subplots_adjust(left=0.055, right=0.995, top=0.86, bottom=0.24, wspace=0.42)
+fig, axs = plt.subplots(2, 2, figsize=(150 * MM, 92 * MM))
+ax = [axs[0, 0], axs[0, 1], axs[1, 0], axs[1, 1]]
+plt.subplots_adjust(left=0.075, right=0.985, top=0.93, bottom=0.11,
+                    wspace=0.40, hspace=0.48)
 
 # ---- a: eigenworm cumulative variance ----
 cv = ew["real_varexp_top4"]
