@@ -4,7 +4,7 @@ Code, result files and reproduction container for the manuscript:
 
 > Chenxi He. *How much of a nervous-system model does behaviour identify?* (2026)
 
-Archived at Zenodo: [https://doi.org/10.5281/zenodo.21594739](https://doi.org/10.5281/zenodo.21594739)
+Archived at Zenodo: [https://doi.org/10.5281/zenodo.22120840](https://doi.org/10.5281/zenodo.22120840)
 
 Whole-organism biophysical simulators reproduce animal behaviour from hundreds to thousands of
 internal parameters. This work measures how many of those parameters behaviour actually constrains,
