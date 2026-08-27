@@ -33,7 +33,7 @@ plt.rcParams.update({
     "xtick.color": INK, "ytick.color": INK, "savefig.dpi": 600, "figure.dpi": 600,
 })
 
-rows = json.load(open(os.path.join(W, "pgob_cell_scale_result.json")))["rows"]
+rows = json.load(open(os.path.join(W, "cell_scale_result.json")))["rows"]
 series = {}
 for r in rows:
     series.setdefault(r["obs_per_param_target"], []).append(

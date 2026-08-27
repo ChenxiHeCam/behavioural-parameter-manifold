@@ -5,14 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Zhao et~al.(2024)Zhao, Wang, Jiang, Ma, Ma, He, Du, Ma, and
-  Huang]{wang2025baaiworm}
-Mengdi Zhao, Ning Wang, Xinyu Jiang, Xiaohan Ma, Haoran Ma, Gan He, Kai Du, Lei
-  Ma, and Tiejun Huang.
-\newblock An integrative data-driven model simulating \textit{C.~elegans}
-  brain, body and environment interactions.
-\newblock \emph{Nature Computational Science}, 4:\penalty0 106--120, 2024.
-
 \bibitem[Vaxenburg et~al.(2025)Vaxenburg, Siwanowicz, Merel, Robie, Morrow,
   Novati, Stupski, Card, and Turaga]{vaxenburg2025flybody}
 Roman Vaxenburg, Igor Siwanowicz, Josh Merel, Alice~A Robie, Carmen Morrow,
@@ -27,6 +19,22 @@ Sibo Wang-Chen et~al.
 \newblock Neuromechfly v2: simulating embodied sensorimotor control in adult
   drosophila.
 \newblock \emph{Nature Methods}, 2024.
+
+\bibitem[Lobato-Rios et~al.(2022)Lobato-Rios, Ramalingasetty, {\"O}zdil,
+  Arreguit, Ijspeert, and Ramdya]{lobatorios2022neuromechfly}
+Victor Lobato-Rios, Shravan~Tata Ramalingasetty, Pembe~Gizem {\"O}zdil,
+  Jonathan Arreguit, Auke~Jan Ijspeert, and Pavan Ramdya.
+\newblock {NeuroMechFly}, a neuromechanical model of adult {Drosophila
+  melanogaster}.
+\newblock \emph{Nature Methods}, 19\penalty0 (5):\penalty0 620--627, 2022.
+
+\bibitem[Zhao et~al.(2024)Zhao, Wang, Jiang, Ma, Ma, He, Du, Ma, and
+  Huang]{wang2025baaiworm}
+Mengdi Zhao, Ning Wang, Xinyu Jiang, Xiaohan Ma, Haoran Ma, Gan He, Kai Du, Lei
+  Ma, and Tiejun Huang.
+\newblock An integrative data-driven model simulating \textit{C.~elegans}
+  brain, body and environment interactions.
+\newblock \emph{Nature Computational Science}, 4:\penalty0 106--120, 2024.
 
 \bibitem[Prinz et~al.(2004)Prinz, Bucher, and Marder]{prinz2004similar}
 Astrid~A Prinz, Dirk Bucher, and Eve Marder.
@@ -79,14 +87,6 @@ Gerald~M Edelman and Joseph~A Gally.
 Eli Shlizerman et~al.
 \newblock modworm: a modular muscular-skeletal c. elegans simulator.
 \newblock \emph{Preprint}, 2025.
-
-\bibitem[Lobato-Rios et~al.(2022)Lobato-Rios, Ramalingasetty, {\"O}zdil,
-  Arreguit, Ijspeert, and Ramdya]{lobatorios2022neuromechfly}
-Victor Lobato-Rios, Shravan~Tata Ramalingasetty, Pembe~Gizem {\"O}zdil,
-  Jonathan Arreguit, Auke~Jan Ijspeert, and Pavan Ramdya.
-\newblock {NeuroMechFly}, a neuromechanical model of adult {Drosophila
-  melanogaster}.
-\newblock \emph{Nature Methods}, 19\penalty0 (5):\penalty0 620--627, 2022.
 
 \bibitem[Todorov et~al.(2012)Todorov, Erez, and Tassa]{todorov2012mujoco}
 Emanuel Todorov, Tom Erez, and Yuval Tassa.

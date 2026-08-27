@@ -25,13 +25,13 @@ import numpy as np
 import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
-import pgob_cell_hh as HH
-import pgob_cell_mapk as MK
+import cell_hh as HH
+import cell_mapk as MK
 
 CTX = mp.get_context("spawn")
 NW = 5
 SEEDS = 20
-OUT = "pgob_cell_audit_result.json"
+OUT = "cell_audit_result.json"
 
 
 # ----------------------------------------------------------------- observables

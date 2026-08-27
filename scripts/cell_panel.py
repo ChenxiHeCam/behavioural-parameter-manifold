@@ -27,7 +27,7 @@ import _simguard
 
 CTX = mp.get_context("spawn")
 NW = int(os.environ.get("NW", "26"))
-OUT = "pgob_cell_panel_result.json"
+OUT = "cell_panel_result.json"
 DELTA = 0.05
 OBS_PER_PAR = 12
 SEEDS = int(os.environ.get("SEEDS", "12"))
@@ -234,7 +234,7 @@ def run_model(name, theta):
 
 
 # How much of each trace is transient. Chosen per model by stationarity of the
-# quarter ranges (pgob_cell_stationary.py): the A-current neuron falls silent
+# quarter ranges (cell_stationary.py): the A-current neuron falls silent
 # partway through its window and resumes, so a uniform 0.4 begins reading inside
 # the silent stretch. Every other model is already stationary at 0.4, so their
 # numbers are unchanged by construction.

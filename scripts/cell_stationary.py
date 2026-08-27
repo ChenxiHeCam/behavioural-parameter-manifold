@@ -15,7 +15,7 @@ the models that were already stationary at 40% and repairs the one that was not.
 """
 import json
 import numpy as np
-import pgob_cell_panel as P
+import cell_panel as P
 
 DROPS = [0.4, 0.5, 0.6, 0.7]
 TOL = 0.15                    # quarters must agree to within 15% of their mean
@@ -71,6 +71,6 @@ if __name__ == "__main__":
         flag = "" if r["stationary"] else "   <-- never settles"
         mark = "*" if r["chosen_drop"] != 0.4 else " "
         print(f"  {n:17s} {cells}   chosen {r['chosen_drop']}{mark}{flag}")
-    json.dump(out, open("pgob_cell_stationary.json", "w"), indent=1)
+    json.dump(out, open("cell_stationary.json", "w"), indent=1)
     changed = [n for n, r in out.items() if r["chosen_drop"] != 0.4]
     print(f"\n{len(changed)} model(s) need a different discard: {changed}")

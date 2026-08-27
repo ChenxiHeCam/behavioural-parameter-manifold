@@ -35,7 +35,7 @@ import _simguard
 
 CTX = mp.get_context("spawn")
 NW = int(os.environ.get("NW", "26"))
-OUT = "pgob_cell_scale_result.json"
+OUT = "cell_scale_result.json"
 
 E_Na, E_K, E_L, C_m = 50.0, -77.0, -54.4, 1.0
 E_SYN = 0.0            # excitatory reversal

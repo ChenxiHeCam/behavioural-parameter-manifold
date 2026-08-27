@@ -49,8 +49,8 @@ plt.rcParams.update({
 })
 
 # ---------------------------------------------------------------- panel a data
-d3 = json.load(open(os.path.join(W, "pgob_cell_panel3_result.json")))["by_model"]
-d3b = json.load(open(os.path.join(W, "pgob_cell_panel3b_result.json")))["by_model"]
+d3 = json.load(open(os.path.join(W, "cell_panel3_result.json")))["by_model"]
+d3b = json.load(open(os.path.join(W, "cell_panel3b_result.json")))["by_model"]
 merged = dict(d3)
 merged.update(d3b)          # the aliasing-corrected rerun supersedes those models
 
@@ -113,7 +113,7 @@ a.annotate("behaviour matched,\nparameters wrong", (7.6, 0.62), ha="right",
 a.text(-0.13, 1.02, "b", transform=a.transAxes, fontsize=8, fontweight="bold")
 
 # ---------------------------------------------------------------- panel b data
-lad = json.load(open(os.path.join(W, "pgob_cell_ladder_result.json")))["grid"]
+lad = json.load(open(os.path.join(W, "cell_ladder_result.json")))["grid"]
 order_obs = ["single", "fi7", "trace1", "trace5"]
 obs_label = ["1", "7", "200", "1000"]
 npars = [3, 5, 8]

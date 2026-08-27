@@ -28,7 +28,7 @@ import numpy as np
 import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
-import pgob_cell_panel as P
+import cell_panel as P
 
 CTX = mp.get_context("spawn")
 NW = int(os.environ.get("NW", "26"))
@@ -36,7 +36,7 @@ SEEDS = int(os.environ.get("SEEDS", "8"))
 FOLDS = [1.5, 3.0, 10.0]      # 3.0 is the published BAAIWorm random-start regime
 LOSSES = ["phase_invariant", "pointwise_trace"]
 CONVERGED = 0.02
-OUT = os.environ.get("OUT", "pgob_cell_panel3_result.json")
+OUT = os.environ.get("OUT", "cell_panel3_result.json")
 
 
 def raw_trace(name, theta, npts):

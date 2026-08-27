@@ -37,7 +37,7 @@ import _simguard
 CTX = mp.get_context("spawn")
 NW = 5
 SEEDS = 8
-OUT = "pgob_cell_ladder_result.json"
+OUT = "cell_ladder_result.json"
 
 E_Na, E_K = 50.0, -77.0
 I_LEVELS = np.array([4.0, 7.0, 10.0, 15.0, 20.0])

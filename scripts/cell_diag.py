@@ -29,15 +29,15 @@ import numpy as np
 import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
-import pgob_cell_panel as P
-import pgob_cell_panel3 as P3
+import cell_panel as P
+import cell_panel3 as P3
 
 CTX = mp.get_context("spawn")
 NW = int(os.environ.get("NW", "26"))
 SEEDS = int(os.environ.get("SEEDS", "32"))
 MODELS = ["HH", "MorrisLecar", "WangBuzsaki", "HH_Acurrent"]
 FOLD = 3.0
-OUT = "pgob_cell_diag_result.json"
+OUT = "cell_diag_result.json"
 
 
 def _observe(name, theta, npts, tmul):

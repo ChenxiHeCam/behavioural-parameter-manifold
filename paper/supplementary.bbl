@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -225,5 +225,13 @@ Albert Goldbeter.
   and cdc2 kinase.
 \newblock \emph{Proceedings of the National Academy of Sciences}, 88:\penalty0
   9107--9111, 1991.
+
+\bibitem[He(2026)]{he2026pgob}
+Chenxi He.
+\newblock Generating behaviour-equivalent parameters for whole-organism
+  simulators from tracking video.
+\newblock Preprint, 2026.
+\newblock URL \url{https://doi.org/10.21203/rs.3.rs-10486658/v1}.
+\newblock Preprint.
 
 \end{thebibliography}
