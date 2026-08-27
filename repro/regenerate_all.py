@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""One-command reproduction of every quantitative claim and figure in Paper 2
-from the deposited result JSONs. Run: python regenerate_all.py
+"""One-command reproduction of every quantitative claim and figure in the
+accompanying manuscript, from the deposited result JSONs. Run: python regenerate_all.py
 
 It (1) recomputes effective dimension / participation from the saved eigenspectra,
 (2) machine-checks each number cited in the main text and SI against its JSON,

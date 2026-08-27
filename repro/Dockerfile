@@ -1,6 +1,6 @@
-# Reproduces every quantitative claim and the hero figure of Paper 2 from the
-# deposited result JSONs. Build from the PAPER directory (one level up) so the
-# result files are in the build context:
+# Reproduces every quantitative claim and the cross-species figure of the
+# accompanying study from the deposited result JSONs. Build from the repository
+# root (one level up) so the result files are in the build context:
 #
 #   docker build -f repro/Dockerfile -t repro .
 #   docker run --rm repro

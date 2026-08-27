@@ -1,4 +1,4 @@
-# Paper 2 — one-command reproduction
+# One-command reproduction
 
 Reproduces every quantitative claim and the cross-species hero figure from the
 deposited result files. The forward-model simulations (BAAIWorm, modWorm,
