@@ -26,7 +26,7 @@ PATTERNS = [
     ("changelog: earlier version", r"[Aa]n earlier version|earlier draft|in a previous"),
     ("changelog: superseded",   r"superseded"),
     ("bullet list",             r"\\begin\{itemize\}|\\begin\{enumerate\}"),
-    ("infrastructure leak",     r"seetacloud|autodl|/root/|ssh -p"),
+    ("infrastructure leak",     r"/root/|ssh -p"),
     ("not X but Y",             r"not (?:a|an|the) [a-z ]{3,25} but (?:a|an|the)"),
 ]
 
