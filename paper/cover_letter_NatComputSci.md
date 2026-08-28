@@ -6,56 +6,47 @@ ch2067@cam.ac.uk
 
 Dear Editors,
 
-Please consider the enclosed manuscript, **"How much of a nervous-system model does behaviour
-identify?"**, for publication as an Article in *Nature Computational Science*. I am the sole
-author, and the work is not under consideration elsewhere.
+Please consider the manuscript "How much of a nervous-system model does behaviour identify?" for
+publication as an Article in *Nature Computational Science*. I am the sole author, and the work is
+not under consideration elsewhere.
 
-**The question.** Whole-organism simulators are built against the animal's own data — virtual
-flies imitate recorded trajectories, a virtual nematode tuned to electrophysiology is judged by
-whether the assembled loop crawls and chemotaxes like the worm — and the calibrated model is then
-read as the animal's biophysics. That reading assumes behaviour determines the parameters that
-produce it. Classic work on small circuits, from pyloric degeneracy to sloppy-model theory, says
-the map from parameters to dynamics is many-to-one; whether and how strongly that holds for a model
-with thousands of connectome weights had never been measured. The answer decides what any
-behaviour-based calibration of these models can be expected to return.
+Whole-organism simulators are calibrated against behaviour and the calibrated model is then read as
+the animal's biophysics, yet which parameter combinations behaviour determines is unknown. This
+matters because behaviour-based calibration can recover a working parameter set without recovering
+unique biophysical values. The manuscript measures what behaviour can and cannot identify in
+published whole-organism nervous-system models.
 
-**The measurement.** On the BAAIWorm nematode model published in this journal (Zhao et al., *Nat.
-Comput. Sci.* 4, 106–120), we perturb each of the 3076 connectome weights in turn and read the
-motor command through 9600 observables, so observables outnumber parameters and the curvature rank
-is not capped by the assay. Eight directions carry 90% of the Gauss–Newton curvature and 47 carry
-99%; only four weights produce no measurable effect, so the weakly curved directions are
-degeneracy, not disconnection. The number describes a region, not a point — four displaced
-operating points give 8–12 with coinciding stiff subspaces — and a connectome-constrained
-*Drosophila* visual model concentrates its curvature the same way, at 14 of 330 sampled
-parameters.
+In the connectome-based nematode model BAAIWorm, published in this journal (Zhao et al., *Nat.
+Comput. Sci.* 4, 106–120; 2024), perturbing each of the 3,076 connectome weights with more
+observables than parameters shows that behaviour constrains eight directions at 90% of the
+curvature and 47 at 99%. A connectome-constrained *Drosophila* optic-lobe model gives a
+corresponding result, 14 of 330 sampled directions at 90%: across a motor and a visual model in two
+phyla, behaviour leaves the great majority of a connectome-scale parameter space free. The
+constrained space has biological structure: chemical synapses carry 87% of the curvature and gap
+junctions 13%, while the calcium currents EGL-19 and UNC-2, documented as homeostatically
+compensated in small circuits, are left free. Cell models with known truth provide a direct check:
+small neuronal models are recovered exactly, whereas the degenerate MAPK cascade matches behaviour
+with its parameters 40% from the truth.
 
-**What the geometry means.** What is determined and what is left free has biophysical identity:
-chemical synapses carry 87% of the curvature against 13% from gap junctions, and the conductances
-behaviour leaves free — the calcium currents EGL-19 and UNC-2 — are the currents biology itself
-lets vary between animals. Refining one action saturates (twelve behaviours never exceed the
-subspace four of them already span), whereas a functionally different action extends the identified
-set; assay diversity, not recording duration, is the quantity to optimise. And at the cell scale,
-where truth is knowable, the geometry is verified against it: identified models are recovered
-exactly, the canonical MAPK cascade matches behaviour with its parameters 40% wrong, and an
-effective dimension is shown to be a statement about curvature concentration, not a bound on
-recoverable parameters — twelve assay combinations on one neuron all give dimension one while
-recovery error spans tenfold.
+The analysis yields an assay-design principle. Further aspects of one action add little, because
+the subspaces they determine overlap; an action with different functional demands reaches
+directions the first cannot. Assay diversity rather than recording duration is therefore the
+quantity to optimise. Every reported dimension carries three admission conditions — observable
+count, step-size proportionality, and the simulator's own noise floor — and these conditions have
+teeth: they retired our own headline number for the pyloric circuit.
 
-**Why we think this belongs in this journal.** The contribution is a measurement of a property of
-computational models, made with the discipline such a measurement needs. Every reported dimension
-carries three admission conditions — observables outnumbering parameters, response proportional to
-the step, signal above the simulator's own noise floor — and the conditions have teeth: they
-retired our own headline number for the pyloric circuit, whose response saturates in the step for
-every observable set we tried, and they corrected the fly walking figure from 16 to 11 once it was
-measured where the response is proportional. The release deposits one result file per analysis, a
-72-check audit that re-derives the audited quantities from those files in a container, and a
-specification table giving every assay's step, rollout, observables, whitening and seeds.
+The study suits *Nature Computational Science* because it makes behavioural identifiability a
+measurable property of mechanistic simulation and connects model geometry to assay design. Its
+scope spans connectome-scale motor and visual models and cell models with known parameters, and it
+should interest the journal's readership across computational modelling, biological simulation and
+parameter inference.
 
-For programmes that fit mechanistic models to behaviour — digital twins included — the practical
-statement is short: the stiff subspace is the part of a fitted model the assay pins down and that
-supports biological interpretation; the free directions name what it leaves open and which further
-behaviours would close it.
+A related manuscript describing the behaviour-based parameter-generation method, used here as one
+independent probe and cited in the text, is available as a preprint (Research Square,
+doi:10.21203/rs.3.rs-10486658); its claims do not overlap with this study's.
 
 Thank you for your consideration.
+
+Yours sincerely,
 
 Chenxi He
