@@ -14,7 +14,7 @@ import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
 sys.path.insert(0, "/root/autodl-tmp")
-from e3_pyloric import _sim, eff_dim, DELTA
+from _e3_pyloric_gate import _sim, eff_dim, DELTA
 
 CTX = mp.get_context("spawn")
 K_MAX = 60

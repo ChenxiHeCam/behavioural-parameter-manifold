@@ -62,6 +62,41 @@ A Gauss--Newton curvature assembled by central differences is meaningful only wh
 
 The general point is that an effective dimension is a statement about a measurement as much as about a model, and it should be accompanied by the step-size scan, the noise floor and the count of parameters that do anything at all. Files \texttt{E44\_baai\_fd\_controls.json}, \texttt{E33\_stg\_fd\_convergence.json}, \texttt{E1\_flygym\_null.json}.
 
+\subsection{Assay specifications}
+Every curvature in this work is fully specified by its perturbation step and scheme, rollout,
+observable construction, whitening, and seeding. The table collects them; each script named in the
+results manifest hard-codes exactly these values.
+
+\begin{table}[H]\centering\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\resizebox{\textwidth}{!}{\begin{tabular}{llllll}
+\toprule
+assay & step $\delta$ (scheme) & rollout & observables & whitening & seeds \\
+\midrule
+connectome, voltage & $0.5$ (multiplicative, central) & $2000$\,ms & $80$ motor neurons $\times$ $120$ samples $=9600$ & per-neuron temporal s.d., clip $10^{-3}$ & deterministic \\
+displaced points & $0.5$ & $1500$\,ms & as above, $300$-connection subsample & per-time across-neuron s.d. & point seeds $11$/$12$/$21$/$22$ \\
+muscle readout & $0.5$ & $1500$\,ms & $96$ muscle activations over time & as displaced points & deterministic \\
+named conductances & $0.5$ & $1500$\,ms & $10{,}320$ trajectory samples & per-neuron temporal s.d. & deterministic \\
+$20$ class gains & $0.25$ (log-step) & $120$ steps & $6$ path statistics$^{a}$ & baseline magnitude & deterministic \\
+FlyGym gains & $0.05$--$0.5$ scan; $0.25$ reported & $0.25$--$0.5$\,s at $10^{-4}$\,s & $42$ joint angles $\times$ $100$ frames $=4200$ & baseline magnitude & $5$ seeds averaged$^{b}$ \\
+flyvis & $0.2$ relative, floor $0.05$ & $20$-frame grating & last-$5$-frame mean, $64$ index bins & baseline magnitude $+10^{-6}$ & deterministic \\
+modWorm repertoire & $0.25$ ($1\pm\delta$) & $150$ steps & $6$ kinematics$^{a}$ & baseline magnitude & subset cap $20$, seed $0$ \\
+cell panel & $0.05$ (log-space) & settled trace & $12$ per parameter$^{c}$ & Jacobian row scale & $8$/$24$ seeds $\times$ $3$ folds \\
+\bottomrule
+\end{tabular}}
+\caption{\textbf{Assay specifications.} $^{a}$Net displacement, path length, mean speed, speed
+s.d., r.m.s.\ heading change, and forward fraction (worm) or final curvature (modWorm).
+$^{b}$The repertoire run of \S6.5 uses one fixed seed; the controller is deterministic given the
+seed. $^{c}$Amplitude quantiles ($2$--$98\%$), spectral magnitudes and autocorrelation at lags
+$1$--$4$, computed at full resolution and then reduced; optimiser CMA-ES, population $16$, at most
+$400$ iterations, seed $31s{+}7$ for start $s$; random-start folds $f\in\{1.5,3,10\}$. The twelve
+modWorm behaviours are the four touch presets (gentle/harsh $\times$ anterior/posterior) at stimulus
+scales $0.5$, $1$ and $2$. flyvis probes all $65$ biases, all $65$ time constants and $200$ of $604$
+synaptic strengths at uniform index spacing.}
+\label{tab:assays}
+\end{table}
+
+% =========================================================
 \section{External references (no simulator used)}
 % =========================================================
 
@@ -80,9 +115,7 @@ conductance pairs correlate at $|r|>0.3$, recovering the disparate-but-co-regula
 documented for this circuit \citep{marder2011variability,goldman2001global,taylor2009how,alonso2019visualization},
 and the least variable conductances are the PY A-current and four graded inhibitory synapses
 (coefficient of variation $0.20$--$0.26$) against the most variable, which are the AB/PD leak,
-AB/PD H-current and LP CaT ($0.60$--$0.73$). This is the same ordering the worm models give from the
-other direction, with the fast inward currents free and coupling and passive properties constrained,
-and it is obtained without any finite difference. File \texttt{E1\_pyloric\_manifold.json}.
+AB/PD H-current and LP CaT ($0.60$--$0.73$). The worm models give the same placement of coupling (constrained) and fast inward currents (free) from the curvature, while the leak conductances sit on opposite sides in the two systems; the population ordering is obtained without any finite difference. File \texttt{E1\_pyloric\_manifold.json}.
 
 \textbf{Why no curvature dimension is reported.} A Gauss--Newton curvature requires the response to be
 proportional to the step, and in this simulator it is not, for either observable set. Perturbing one

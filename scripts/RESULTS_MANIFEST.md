@@ -36,3 +36,12 @@ Result files carrying main-text claims:
 
 Files marked "not retained" predate this release's provenance rule; their
 construction is specified in the Supplementary section that cites them.
+
+Run-time output names that differ from the deposited names (the deposited file is
+the run's output, renamed on deposit):
+
+| script writes | deposited as |
+|---|---|
+| E33_stg_noise.json | E33_stg_fd_convergence.json |
+| E44_baai_controls.json | E44_baai_fd_controls.json |
+| E37_granularity.json | E37_granularity_modworm.json |

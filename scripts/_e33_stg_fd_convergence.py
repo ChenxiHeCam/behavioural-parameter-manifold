@@ -22,7 +22,7 @@ import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
 sys.path.insert(0, "/root/autodl-tmp")
-from e3_pyloric import _sim
+from _e3_pyloric_gate import _sim
 
 CTX = mp.get_context("spawn")
 DELTAS = [0.10, 0.05, 0.025]

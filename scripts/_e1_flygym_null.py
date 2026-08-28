@@ -15,7 +15,7 @@ import numpy as np
 from concurrent.futures import ProcessPoolExecutor
 
 sys.path.insert(0, "/root/autodl-tmp")
-from e1_flygym import rollout, eff_dim, DELTA, NSEED
+from _e1_flygym_rank import rollout, eff_dim, DELTA, NSEED
 
 NSEED_NULL = 20   # independent seeds at the base parameter value
 
