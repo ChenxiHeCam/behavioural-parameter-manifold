@@ -80,7 +80,15 @@ if os.path.exists(toc_path):
 else:
     print("  (supplementary.toc absent; compile the supplement to check its references)")
 
-res = set(os.listdir(os.path.join(ROOT, "results")))
+res = set()
+for _dp, _dn, _fn in os.walk(os.path.join(ROOT, "results")):
+    res.update(_fn)
+# a citation containing a wildcard can never name a real file; the plain regex
+# below cannot see it, so it is checked here explicitly
+for name in ("manuscript.tex", "supplementary.tex"):
+    wc = re.findall(r"[A-Za-z0-9_\-]*\*[A-Za-z0-9_\-]*\.json", read("paper", name))
+    if wc:
+        check("no wildcard file citations in " + name, ", ".join(wc), None, False)
 cited = set()
 for name in ("manuscript.tex", "supplementary.tex"):
     cited.update(re.findall(r"([A-Za-z0-9_\-]+\.json)", read("paper", name).replace("\\_", "_")))
@@ -109,7 +117,8 @@ try:
     if low:
         print("      below: " + ", ".join(low))
 except ImportError:
-    print("  (Pillow absent; figure resolution not checked)")
+    print("  (Pillow absent; figure resolution NOT checked)")
+    fail.append("figure resolution unchecked (install Pillow)")
 
 print("\n=== MANUSCRIPT: %s ===" % ("PASS" if not fail else "FAIL -- " + "; ".join(fail)))
 sys.exit(1 if fail else 0)

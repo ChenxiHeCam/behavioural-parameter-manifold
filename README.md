@@ -18,12 +18,12 @@ whether the response is linear in the perturbation, and what the numerical noise
   cells, 3076 synaptic and gap-junction weights), behaviour constrains 8 directions at 90% of the
   curvature and 47 at 99%, participation ratio 2.55. Only 4 weights have no measurable effect, so
   the flat directions are degeneracy rather than unconnected parameters. Observables (9600)
-  outnumber parameters, the response is proportional to the step to four significant figures over a
+  outnumber parameters, the response is proportional to the step to within 0.7% on a sampled connection over a
   twentyfold range, and repeat simulations are bit-identical, so the noise floor is zero.
 - **A second connectome model agrees.** The flyvis *Drosophila* optic-lobe model (734 free
   parameters), probed across all three parameter groups and read through its visual response,
   gives effective dimension 14 (90%) / 32 (99%) of 330 sampled parameters. It is also the best
-  conditioned model here: response proportional to the step across two decades, ratio 0.498.
+  proportional to the step at the single deposited setting; its dimension is reported under the below-cap rule.
 - **The curvature is not spread evenly over the connectome.** Chemical synapses carry 87% of it from
   1992 connections, gap junctions 13% from 1084: per connection, a chemical synapse matters about
   3.6 times more, though the median elasticities differ by only 1.20x, so the split is carried by a
@@ -48,7 +48,7 @@ whether the response is linear in the perturbation, and what the numerical noise
   than they started. A perfect behavioural fit does not imply recovered parameters.
 - **The low dimension is a property of the region, not of one point.** Displacing the entire 3076-
   weight vector to four new operating points leaves the effective dimension at 8-12, and the stiff
-  subspaces coincide across points at principal cosine 0.89 against a random null of 0.145.
+  subspaces coincide across points at principal cosine 0.89 against a random null of 0.16.
 - **Effective dimension is not recoverable dimension.** On a parameter-count x observable grid over
   one neuron model the 90% effective dimension is 1 in every cell while the achieved recovery error
   spans 4% to 56%: it measures how concentrated the curvature is, not how many parameters a fit can

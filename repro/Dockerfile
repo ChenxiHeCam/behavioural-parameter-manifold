@@ -5,7 +5,7 @@
 #   docker build -f repro/Dockerfile -t repro .
 #   docker run --rm repro
 #
-# Expected output: "NUMBER AUDIT: 23/23 PASS" and a regenerated check figure.
+# Expected output: "NUMBER AUDIT: 72/72 PASS" and a regenerated check figure.
 # No simulator, GPU, or network is required: the forward-model runs are deposited
 # as result files and this image reproduces the analysis layer on top of them.
 

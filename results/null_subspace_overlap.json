@@ -1,0 +1,17 @@
+{
+  "experiment": "null_subspace_overlap",
+  "question": "chance level for the mean pairwise principal cosine of E58's stiff subspaces",
+  "ambient_dim": 300,
+  "subspace_dims": [
+    9,
+    10,
+    8,
+    12,
+    8
+  ],
+  "n_draws": 4000,
+  "seed": 20260828,
+  "mean": 0.1624,
+  "sd": 0.0193,
+  "p95": 0.1928
+}
