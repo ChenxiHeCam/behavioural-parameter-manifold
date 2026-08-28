@@ -6,12 +6,11 @@ Panel a  The degeneracy itself, in the model's own output: the MAPK oscillation
          3%, and at a displacement of the same magnitude taken off the
          equivalence manifold, which changes the rhythm outright.
 
-Panel b  Behaviour distance against parameter error for every converged fit in
-         the protocol-matched recovery run (11 cell models, random starts drawn
-         independently of the truth). The identifiable models sit at the origin:
-         behaviour matched, parameters exact. The degenerate models sit up the
-         left edge: behaviour matched, parameters wrong -- direct evidence that
-         a perfect behavioural fit does not imply recovered parameters.
+Panel b  Median parameter error against parameter count for every model in the
+         protocol-matched recovery run (11 cell models, random starts drawn
+         independently of the truth); marker area encodes convergence rate.
+         Identifiable models lie on the numerical floor, whereas degenerate
+         models match behaviour with the wrong parameters.
 
 Panel c  The same Hodgkin-Huxley model measured twelve ways. The 90% effective
          dimension is 1 in every cell of the parameter-count x observable grid,
@@ -20,8 +19,8 @@ Panel c  The same Hodgkin-Huxley model measured twelve ways. The 90% effective
          an upper bound on what recovery achieves.
 
 Style follows the manuscript: Okabe-Ito, blue #0072B2 = identifiable/determined,
-grey #808080 = degenerate/free, vermillion #D55E00 = second condition, 89 mm
-single column, 600 dpi, 5-7 pt sans-serif.
+grey #808080 = degenerate/free, vermillion #D55E00 = second condition, 183 mm
+full width, 600 dpi, 5-7 pt sans-serif.
 """
 import json, os
 import numpy as np
@@ -52,7 +51,7 @@ plt.rcParams.update({
 d3 = json.load(open(os.path.join(W, "cell_panel3_result.json")))["by_model"]
 d3b = json.load(open(os.path.join(W, "cell_panel3b_result.json")))["by_model"]
 merged = dict(d3)
-merged.update(d3b)          # the aliasing-corrected rerun supersedes those models
+merged.update(d3b)          # use the aliasing-corrected records for these models
 
 pts = []                    # (param error after fit, n_params, converged fraction)
 for name, m in merged.items():
@@ -105,11 +104,20 @@ a.text(2.0, 5.5e-4, "recovered exactly", fontsize=5.6, color=BLUE, va="bottom")
 lab = {"MAPK": (11, 0.399), "Goodwin": (8, 0.097), "GoldbeterMitotic": (9, 0.166),
        "Repressilator": (4, 0.137)}
 for k, (x, y) in lab.items():
+    offset = (4, 5) if k == "Repressilator" else (-4, 5)
+    align = "left" if k == "Repressilator" else "right"
     a.annotate(k if k != "GoldbeterMitotic" else "Goldbeter",
-               (x, y), textcoords="offset points", xytext=(-4, 5), ha="right",
+               (x, y), textcoords="offset points", xytext=offset, ha=align,
                fontsize=5.2, color=INK)
 a.annotate("behaviour matched,\nparameters wrong", (7.6, 0.62), ha="right",
            fontsize=5.8, color=GREY, linespacing=1.3)
+legend_rates = (0.25, 0.50, 1.00)
+legend_handles = [a.scatter([], [], s=22 * rate, color=GREY, edgecolor=INK,
+                            linewidth=0.25) for rate in legend_rates]
+a.legend(legend_handles, ["25%", "50%", "100%"], title="Convergence rate",
+         loc="lower right", ncol=3, frameon=False, borderaxespad=0.3,
+         columnspacing=0.55, handletextpad=0.25, labelspacing=0.2,
+         fontsize=4.8, title_fontsize=5.0)
 a.text(-0.13, 1.02, "b", transform=a.transAxes, fontsize=8, fontweight="bold")
 
 # ---------------------------------------------------------------- panel b data
@@ -134,15 +142,29 @@ for i, p in enumerate(npars):
 b = ax[1]
 im = b.imshow(err, cmap=matplotlib.colors.LinearSegmentedColormap.from_list(
     "bw", ["#FFFFFF", BLUE]), vmin=0, vmax=0.6, aspect="auto")
+
+def relative_luminance(rgb):
+    linear = [v / 12.92 if v <= 0.04045 else ((v + 0.055) / 1.055) ** 2.4
+              for v in rgb]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+def contrast_ratio(rgb1, rgb2):
+    hi, lo = sorted((relative_luminance(rgb1), relative_luminance(rgb2)),
+                    reverse=True)
+    return (hi + 0.05) / (lo + 0.05)
+
+ink_rgb = matplotlib.colors.to_rgb(INK)
 for i in range(len(npars)):
     for j in range(len(order_obs)):
         if np.isfinite(err[i, j]):
-            dark = err[i, j] > 0.33
+            background = im.cmap(im.norm(err[i, j]))[:3]
+            text_colour = ("white" if contrast_ratio(background, (1, 1, 1)) >
+                           contrast_ratio(background, ink_rgb) else INK)
             star = "" if matched[i, j] else "†"
             b.text(j, i - 0.13, f"{err[i,j]*100:.0f}%{star}", ha="center",
-                   va="center", fontsize=6.4, color="white" if dark else INK)
+                   va="center", fontsize=6.4, color=text_colour)
             b.text(j, i + 0.24, f"dim {eff[i,j]:.0f}", ha="center", va="center",
-                   fontsize=5.0, color="white" if dark else GREY)
+                   fontsize=5.2, fontweight="semibold", color=text_colour)
 b.set_xticks(range(len(order_obs)))
 b.set_xticklabels(obs_label)
 b.set_yticks(range(len(npars)))
@@ -165,4 +187,9 @@ fig.savefig(p, bbox_inches="tight", pad_inches=0.02, facecolor="white")
 plt.close(fig)
 from PIL import Image
 w, h = Image.open(p).size
-print(f"fig_p2_cell_groundtruth.png  {w}x{h}  = {w/300*25.4:.0f} mm at 300 dpi")
+printed_width_mm = 0.98 * 183.0
+printed_dpi = w / (printed_width_mm * MM)
+if printed_dpi < 300:
+    raise RuntimeError(f"figure is only {printed_dpi:.0f} dpi at printed width")
+print(f"fig_p2_cell_groundtruth.png  {w}x{h}  = {printed_dpi:.0f} dpi "
+      f"at {printed_width_mm:.1f} mm printed width")
