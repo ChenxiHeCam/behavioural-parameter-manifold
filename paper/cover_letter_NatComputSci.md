@@ -4,61 +4,58 @@ Chenxi He
 Cavendish Laboratory, University of Cambridge
 ch2067@cam.ac.uk
 
-Dear Editor,
+Dear Editors,
 
 Please consider the enclosed manuscript, **"How much of a nervous-system model does behaviour
-identify?"**, for publication as an Article in *Nature Computational Science*.
+identify?"**, for publication as an Article in *Nature Computational Science*. I am the sole
+author, and the work is not under consideration elsewhere.
 
-**The problem.** Whole-organism simulators — connectome-constrained models of *C. elegans* and
-*Drosophila*, musculoskeletal fly models, mammalian controllers — are now routinely fitted to
-behavioural data on the premise that the fit recovers the underlying biophysics. That premise rests
-on an assumption about identifiability that has not been measured at this scale. Work on much
-smaller systems, from pyloric degeneracy to sloppy-model theory, shows that many parameter sets
-produce indistinguishable dynamics. Whether that holds for a model with three thousand connectome
-weights, and which parameters it spares, determines what any behaviour-based calibration can be
-expected to return.
+**The question.** Whole-organism simulators are built against the animal's own data — virtual
+flies imitate recorded trajectories, a virtual nematode tuned to electrophysiology is judged by
+whether the assembled loop crawls and chemotaxes like the worm — and the calibrated model is then
+read as the animal's biophysics. That reading assumes behaviour determines the parameters that
+produce it. Classic work on small circuits, from pyloric degeneracy to sloppy-model theory, says
+the map from parameters to dynamics is many-to-one; whether and how strongly that holds for a model
+with thousands of connectome weights had never been measured. The answer decides what any
+behaviour-based calibration of these models can be expected to return.
 
-**The main result.** We measure it on the BAAIWorm model published in this journal in 2024. Every
-one of its 3076 synaptic and gap-junction weights is perturbed in turn and the motor output read
-through 9600 observables, so that observables outnumber parameters and the curvature rank is not
-capped by the measurement. Behaviour constrains eight directions at 90 per cent of the curvature and
-47 at 99 per cent: three thousand directions are flat. Only four weights have no measurable effect,
-so the flat directions are genuine degeneracy rather than unconnected parameters. The curvature that
-remains divides unevenly by connection type — chemical synapses carry 87 per cent of it and gap
-junctions 13 per cent, from 1992 and 1084 connections — so per connection a chemical synapse matters
-about five times more.
+**The measurement.** On the BAAIWorm nematode model published in this journal (Zhao et al., *Nat.
+Comput. Sci.* 4, 106–120), we perturb each of the 3076 connectome weights in turn and read the
+motor command through 9600 observables, so observables outnumber parameters and the curvature rank
+is not capped by the assay. Eight directions carry 90% of the Gauss–Newton curvature and 47 carry
+99%; only four weights produce no measurable effect, so the weakly curved directions are
+degeneracy, not disconnection. The number describes a region, not a point — four displaced
+operating points give 8–12 with coinciding stiff subspaces — and a connectome-constrained
+*Drosophila* visual model concentrates its curvature the same way, at 14 of 330 sampled
+parameters.
 
-**What behaviour cannot see is biologically interpretable.** Re-measured over the model's named
-conductances through the full motor trajectory, the stiffest axes are the inward rectifier IRK and
-the sodium leak NCA, whereas the fast voltage-gated calcium channels EGL-19 and UNC-2 are among the
-sloppiest and the calcium-activated potassium channels SLO-1 and SLO-2 produce no measurable change
-at all. Those are precisely the currents known to be homeostatically compensated and variable
-between individual animals: the directions behaviour cannot resolve are the directions biology
-itself leaves free.
+**What the geometry means.** What is determined and what is left free has biophysical identity:
+chemical synapses carry 87% of the curvature against 13% from gap junctions, and the conductances
+behaviour leaves free — the calcium currents EGL-19 and UNC-2 — are the currents biology itself
+lets vary between animals. Refining one action saturates (twelve behaviours never exceed the
+subspace four of them already span), whereas a functionally different action extends the identified
+set; assay diversity, not recording duration, is the quantity to optimise. And at the cell scale,
+where truth is knowable, the geometry is verified against it: identified models are recovered
+exactly, the canonical MAPK cascade matches behaviour with its parameters 40% wrong, and an
+effective dimension is shown to be a statement about curvature concentration, not a bound on
+recoverable parameters — twelve assay combinations on one neuron all give dimension one while
+recovery error spans tenfold.
 
-**A methodological point we think the field needs.** An effective dimension is a statement about a
-measurement as much as about a model, and we show this concretely. A Gauss–Newton Hessian built from
-*n* observables has rank at most *n*, so the same FlyGym controller reads as 1 of 48 dimensions
-through ten summary statistics and 16 of 48 through 4200 joint-angle observables, against a noise
-floor of 7 that we measure rather than assume. We therefore accompany every curvature figure with a
-step-size scan, a noise floor, and a count of parameters that do anything at all — and report that
-two widely used simulators fail this test outright: one has a discontinuous response to its own
-parameters, and in another any perturbation decorrelates the trajectory, so the phase-invariant
-summary statistics that literature uses are the correct choice rather than a shortcut. Separating
-degeneracy in a model from a defect in it has not, to our knowledge, been done systematically.
+**Why we think this belongs in this journal.** The contribution is a measurement of a property of
+computational models, made with the discipline such a measurement needs. Every reported dimension
+carries three admission conditions — observables outnumbering parameters, response proportional to
+the step, signal above the simulator's own noise floor — and the conditions have teeth: they
+retired our own headline number for the pyloric circuit, whose response saturates in the step for
+every observable set we tried, and they corrected the fly walking figure from 16 to 11 once it was
+measured where the response is proportional. The release deposits one result file per analysis, a
+72-check audit that re-derives the audited quantities from those files in a container, and a
+specification table giving every assay's step, rollout, observables, whitening and seeds.
 
-**On behavioural richness.** Enriching the behavioural repertoire does enlarge the identifiable
-subspace, monotonically and in every threshold, but the gain is bounded and saturates by the third
-or fourth behaviour: four fly behaviours give 19 identifiable dimensions rather than four times the
-16.5 that one gives. We report that as measured, with its saturation, rather than as an identity.
+For programmes that fit mechanistic models to behaviour — digital twins included — the practical
+statement is short: the stiff subspace is the part of a fitted model the assay pins down and that
+supports biological interpretation; the free directions name what it leaves open and which further
+behaviours would close it.
 
-**Fit to the journal.** The work is a measurement of computational models rather than of animals,
-its object is a simulator published in *Nature Computational Science*, and its practical output is a
-diagnostic that any group fitting a mechanistic model to behaviour can run before committing to the
-fit. All analysis code, the per-experiment result files, and a container that reproduces every
-reported quantity from those files are deposited publicly.
+Thank you for your consideration.
 
-We confirm that this manuscript is not under consideration elsewhere.
-
-Yours sincerely,
 Chenxi He
