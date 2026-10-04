@@ -1,19 +1,16 @@
-"""One BAAIWorm circuit rollout under a scaling of one connection weight.
+"""One BAAIWorm point-circuit rollout with explicit output coordinates.
 
-The 136-cell, 3076-connection circuit is built from the tuned abstract circuit
-shipped with the repository and run as point neurons in NEURON. The observable is
-the motor output: soma voltages of the output cells mapped through the model's own
-readout to the 96 muscle activations, which is the last quantity before body
-mechanics and so the closest thing to behaviour that can be computed without the
-compiled physics engine.
-
-argv1: {"conn": index or -1, "sign": +1/-1, "delta": float, "tstop": ms}
-Prints RESULT {"muscle": [[...]], "sec": float}
+JSON argv1 specifies connection or named mechanism gain, simulation duration,
+and observable. motor_voltage is the default. muscle_preactivation is V @ W;
+muscle_activation is the native clip((V @ W + 80)/100, 0, .8).
+The ambiguous label muscle is rejected. Named gains use the mechanism SUFFIX
+and RANGE variable explicitly; absence is a simulation error.
+RESULT keeps the motor array key for compatibility and records observable.
 """
 import sys, json, time, os, pickle, warnings
 
 warnings.filterwarnings("ignore")
-ROOT = "/root/autodl-tmp/BAAIWorm_fresh"
+ROOT = os.environ.get("BAAI_ROOT", "/root/autodl-tmp/BAAIWorm_fresh")
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "eworm", "ghost_in_mesh_sim"))
 os.chdir(ROOT)
@@ -26,6 +23,8 @@ spec = json.loads(sys.argv[1])
 t0 = time.time()
 
 cfg = json.load(open("eworm/network/config.json"))
+if os.environ.get("BAAI_MECHANISM_DIR"):
+    cfg["dir_info"]["mechanism_dir"] = os.environ["BAAI_MECHANISM_DIR"]
 GRP = spec.get("group", "video_offline")
 GD = f"eworm/ghost_in_mesh_sim/data/tuned/{GRP}"
 abs_c = pickle.load(open(f"{GD}/{GRP}_abscircuit.pkl", "rb"))
@@ -53,20 +52,8 @@ chan = spec.get("channel")
 if chan:
     from neuron import h as _h
     factor = 1.0 + spec["sign"] * spec["delta"]
-    mech = chan[2:] if chan.startswith("gb") else chan       # gbshl1 -> shl1
-    touched = 0
-    for sec in _h.allsec():
-        try:
-            if not sec.has_membrane(mech):
-                continue
-            for seg in sec:
-                m = getattr(seg, mech)
-                setattr(m, chan, getattr(m, chan) * factor)
-                touched += 1
-        except Exception:
-            continue
-    if touched == 0:
-        print(f"WARN channel {chan} not found", file=sys.stderr)
+    from _baai_worker_support import scale_conductance
+    touched = scale_conductance(_h.allsec(), chan, spec.get("mech"), factor)
 
 tstop = float(spec.get("tstop", 3000))
 sim_config = {"dt": 5 / 3, "tstop": tstop, "v_init": -65, "secondorder": 0}
@@ -143,11 +130,19 @@ if mods:
 out = circuit.simulation(sim_config, inp, in_names, out_names)
 out = np.asarray(out, dtype=float)
 
-# the motor-neuron membrane potentials are the model's motor command, one step
-# before the muscle readout; the readout itself passes through a tanh that is
-# saturated at this voltage scale and so carries no usable derivative
+# Output coordinates are explicit. Preactivation and clipped activation are
+# different observables and must never share a result label.
+from _baai_worker_support import select_readout
 V = out if out.shape[0] == len(out_names) else out.T
-sub = max(1, V.shape[1] // 120)
-print("RESULT " + json.dumps({"motor": V[:, ::sub].tolist(),
-                              "n_cells": int(V.shape[0]),
+observable = spec.get("observable", "motor_voltage")
+wout = None
+if observable != "motor_voltage":
+    with open(f"{GD}/{GRP}_wout.pkl", "rb") as f:
+        wout = pickle.load(f)
+readout = select_readout(V, observable, wout)
+sub = max(1, readout.shape[1] // 120)
+print("RESULT " + json.dumps({"motor": readout[:, ::sub].tolist(),
+                              "observable": observable,
+                              "n_cells": int(readout.shape[0]),
+                              "n_conductance_segments_touched": touched if chan else 0,
                               "sec": round(time.time() - t0, 2)}), flush=True)

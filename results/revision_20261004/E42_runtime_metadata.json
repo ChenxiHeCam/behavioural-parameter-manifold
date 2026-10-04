@@ -1,0 +1,31 @@
+{
+  "neuron_version": "8.2.7+",
+  "n_connections": 3076,
+  "negative_weights": 1341,
+  "positive_weights": 1735,
+  "zero_weights": 0,
+  "min_weight": -1.688939519226551,
+  "max_weight": 1.5977938892319798,
+  "by_category": {
+    "syn": {
+      "n": 1992,
+      "negative": 1341
+    },
+    "gj": {
+      "n": 1084,
+      "negative": 0
+    }
+  },
+  "mechanism_libraries": {
+    "/root/autodl-tmp/paper2_revision_20261004/mechanisms/x86_64/libnrnmech.so": {
+      "sha256": "dd01c39e5f7a418b175a42ae50a48103748399578c3b1ab133fa6dc2b6061572",
+      "bytes": 262776
+    },
+    "/root/autodl-tmp/paper2_revision_20261004/mechanisms/x86_64/.libs/libnrnmech.so": {
+      "sha256": "dd01c39e5f7a418b175a42ae50a48103748399578c3b1ab133fa6dc2b6061572",
+      "bytes": 262776
+    }
+  },
+  "mechanism_compile_command": "cd /root/autodl-tmp/paper2_revision_20261004/mechanisms && /root/autodl-tmp/paper2_revision_20261004/venv/bin/nrnivmodl /root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile",
+  "collected_at": "2026-10-04T18:33:00Z"
+}

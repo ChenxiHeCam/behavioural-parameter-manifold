@@ -1,0 +1,289 @@
+{
+  "study": "prospective BAAIWorm synthetic-data comparison",
+  "n_independent_truths": 12,
+  "noise_realizations_per_truth": 1,
+  "channels": [
+    "cca1",
+    "egl19",
+    "egl2",
+    "egl36",
+    "irk",
+    "kcnl",
+    "kqt3",
+    "kvs1",
+    "nca",
+    "shk1",
+    "shl1",
+    "slo1_egl19",
+    "slo1_unc2",
+    "slo2_egl19",
+    "slo2_unc2",
+    "unc2"
+  ],
+  "truth_seed": 202610041,
+  "truth_distribution": "independent uniform log gains [-0.2,0.2] about published reference",
+  "noise_seed": 680019,
+  "noise_sd_mV": 1.0,
+  "prior_sd_log_gain": 0.35,
+  "parameter_box_abs_log_gain": 0.6931471805599453,
+  "baseline": "olfactory_step_-5",
+  "candidate_library": {
+    "olfactory_step_-5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "AWAL",
+            "AWAR",
+            "AWCL",
+            "AWCR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": -5.0
+        }
+      ]
+    },
+    "olfactory_step_+5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "AWAL",
+            "AWAR",
+            "AWCL",
+            "AWCR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": 5.0
+        }
+      ]
+    },
+    "chemical_step_-5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "ASKL",
+            "ASKR",
+            "PHAL",
+            "PHAR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": -5.0
+        }
+      ]
+    },
+    "chemical_step_+5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "ASKL",
+            "ASKR",
+            "PHAL",
+            "PHAR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": 5.0
+        }
+      ]
+    },
+    "anterior_step_-5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "ALNL",
+            "ALNR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": -5.0
+        }
+      ]
+    },
+    "anterior_step_+5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "ALNL",
+            "ALNR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": 5.0
+        }
+      ]
+    },
+    "posterior_step_-5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "PLML"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": -5.0
+        }
+      ]
+    },
+    "posterior_step_+5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "PLML"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": 5.0
+        }
+      ]
+    },
+    "ury_step_-5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "URYDL",
+            "URYDR",
+            "URYVL",
+            "URYVR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": -5.0
+        }
+      ]
+    },
+    "ury_step_+5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "URYDL",
+            "URYDR",
+            "URYVL",
+            "URYVR"
+          ],
+          "shape": "step",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": 5.0
+        }
+      ]
+    },
+    "olfactory_ramp_+5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "AWAL",
+            "AWAR",
+            "AWCL",
+            "AWCR"
+          ],
+          "shape": "ramp",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": 5.0
+        }
+      ]
+    },
+    "chemical_ramp_+5": {
+      "off_mV": -65.0,
+      "components": [
+        {
+          "cells": [
+            "ASKL",
+            "ASKR",
+            "PHAL",
+            "PHAR"
+          ],
+          "shape": "ramp",
+          "start_ms": 250,
+          "end_ms": 1000,
+          "on_mV": 5.0
+        }
+      ]
+    }
+  },
+  "heldout": {
+    "off_mV": -65.0,
+    "components": [
+      {
+        "cells": [
+          "URYDL",
+          "URYDR",
+          "URYVL",
+          "URYVR"
+        ],
+        "shape": "ramp",
+        "start_ms": 200,
+        "end_ms": 950,
+        "on_mV": 2.0
+      },
+      {
+        "cells": [
+          "PLML"
+        ],
+        "shape": "step",
+        "start_ms": 1050,
+        "end_ms": 1250,
+        "on_mV": -2.0
+      }
+    ]
+  },
+  "heldout_used_for_selection": false,
+  "duration_ms": 1500,
+  "dt_ms": 1.6666666666666667,
+  "output_shape": [
+    80,
+    129
+  ],
+  "observed_budget_per_arm": "one baseline plus one additional full voltage trajectory",
+  "shared_randomness": "baseline observation shared across arms; same independent additional noise array across arms; independent arrays across truths",
+  "fit": "bounded trust-region nonlinear least squares with Gaussian log-gain regularization",
+  "difference_step_log_gain": 0.001,
+  "fit_initial_trust_radius_L2": 0.05,
+  "max_iterations_per_start": 50,
+  "starts_per_baseline_and_arm": 2,
+  "noise_matching_RMSE_threshold_mV": 1.05,
+  "ensemble_size": 16,
+  "ensemble": "baseline-compatible Laplace proposals with fixed scales 1, 0.5, 0.25 and nonlinear objective gate; not exact posterior samples",
+  "ensemble_objective_increment_gate": 13.148,
+  "arms": [
+    "complementary_ensemble",
+    "repeat",
+    "random",
+    "max_response"
+  ],
+  "selection": "Gaussian output-ensemble information score computed on candidate predictions, without truth or heldout outputs",
+  "primary_endpoint": "nonlinear heldout prediction RMSE mV",
+  "secondary_endpoint": "log-parameter RMSE and training noise-match failure rates",
+  "failure_policy": "retain all baseline/ensemble failures; report conditional comparison and denominators; retain arm fitting failures in endpoint summaries",
+  "statistical_unit": "independent generating parameter vector, n=12; not voltage samples",
+  "uncertainty": "paired bootstrap of independent truths, 10000 draws, fixed seed 921711",
+  "scope": "synthetic Gaussian observations of this point-neuron model and these interventions; no animal validation or general identifiability theorem",
+  "source_sha256": {
+    "run_formal.py": "620429dfe0b1d2606afcfa3d41071e6556f8e7e16343475b994cc876ae1e8e64",
+    "nonlinear_engine.py": "0425c4833591cb85f3c5995d05123ba08f11d6085b24a1d4192a57a35b66833d",
+    "persistent_backend.py": "61c9d9b8ed2aa68908c275dc3c0f8664a7ec6a0ecebce9040c9ae76b8e4beabf",
+    "_prospective_worker.py": "337e2b4ebf04cf210000db32c99c39ee1214d9fe2d089bc98ef262dd0b96aeb7"
+  }
+}

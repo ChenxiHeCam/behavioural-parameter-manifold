@@ -1,0 +1,39 @@
+{
+  "historical_result": "results/B6_union_crossbehaviour.json",
+  "new_result": "results/revision_20261004/B6_full_union_rerun/result.json",
+  "baseline_net_disp_exact_match": {
+    "chemo": true,
+    "loco": true
+  },
+  "full_baselines_exact_match_independent_B6b_rerun": {
+    "chemo": true,
+    "loco": true
+  },
+  "eigenvalue_prefix_parity": {
+    "chemo": {
+      "allclose_rtol1e_12_atol1e_10": true,
+      "max_abs_difference": 0.0,
+      "retained_historical_eigenvalues": 6
+    },
+    "loco": {
+      "allclose_rtol1e_12_atol1e_10": true,
+      "max_abs_difference": 0.0,
+      "retained_historical_eigenvalues": 6
+    },
+    "union": {
+      "allclose_rtol1e_12_atol1e_10": true,
+      "max_abs_difference": 3.552713678800501e-14,
+      "retained_historical_eigenvalues": 6
+    }
+  },
+  "dimension_parity": {
+    "chemo": true,
+    "loco": true,
+    "union": true
+  },
+  "numeric_rank_at_relative_SVD_tolerance_1e_6": {
+    "chemo": 4,
+    "loco": 4,
+    "union": 8
+  }
+}

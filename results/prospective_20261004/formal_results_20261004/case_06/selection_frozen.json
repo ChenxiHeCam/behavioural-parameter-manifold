@@ -1,0 +1,37 @@
+{
+  "choices": {
+    "complementary_ensemble": "posterior_step_+5",
+    "repeat": "olfactory_step_-5",
+    "random": "posterior_step_-5",
+    "max_response": "olfactory_ramp_+5"
+  },
+  "ensemble_information_scores": {
+    "olfactory_step_+5": 3.2947284876719145,
+    "chemical_step_-5": 4.556482308338003,
+    "chemical_step_+5": 3.2967463647613298,
+    "anterior_step_-5": 3.8209218765387067,
+    "anterior_step_+5": 3.617419383239713,
+    "posterior_step_-5": 10.126360071325667,
+    "posterior_step_+5": 13.72451526262461,
+    "ury_step_-5": 4.659978268461623,
+    "ury_step_+5": 3.399189568217918,
+    "olfactory_ramp_+5": 5.769112694200134,
+    "chemical_ramp_+5": 5.774048565443318
+  },
+  "ensemble_response_RMS_mV": {
+    "olfactory_step_+5": 14.464975082718798,
+    "chemical_step_-5": 13.729420959073902,
+    "chemical_step_+5": 13.876377929217618,
+    "anterior_step_-5": 8.057002885951551,
+    "anterior_step_+5": 8.100968049954075,
+    "posterior_step_-5": 11.45010699815585,
+    "posterior_step_+5": 11.152654923893246,
+    "ury_step_-5": 12.351002579154919,
+    "ury_step_+5": 13.342725675225914,
+    "olfactory_ramp_+5": 14.54090022422364,
+    "chemical_ramp_+5": 14.27438922959744
+  },
+  "frozen_epoch": 1791066518.6551805,
+  "input": "baseline-fitted parameter ensemble only",
+  "heldout_and_truth_candidate_outputs_unavailable_to_selection": true
+}

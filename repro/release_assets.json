@@ -1,0 +1,48 @@
+{
+  "tag": "paper2-code-20261004",
+  "repository": "ChenxiHeCam/behavioural-parameter-manifold",
+  "assets": [
+    {
+      "path": "results/revision_20261004/E42_deposited_precision_matrices.npz",
+      "asset": "E42_deposited_precision_matrices.npz",
+      "bytes": 118596502,
+      "sha256": "4afbd3918c6d13428edf3e3ee0c438295f28e697a7e1a0f01feef3e63c6623bf",
+      "url": "https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/download/paper2-code-20261004/E42_deposited_precision_matrices.npz"
+    },
+    {
+      "path": "results/revision_20261004/E42_motor_voltage_matrices.npz",
+      "asset": "E42_motor_voltage_matrices.npz",
+      "bytes": 148449390,
+      "sha256": "9116f671ae2174eebb481676e2eaf131ea83597ea4406b42505f30530cdeb80c",
+      "url": "https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/download/paper2-code-20261004/E42_motor_voltage_matrices.npz"
+    },
+    {
+      "path": "results/revision_20261004/E42_muscle_activation_matrices.npz",
+      "asset": "E42_muscle_activation_matrices.npz",
+      "bytes": 116848642,
+      "sha256": "57ad1ff4f66db46ad2d32bd06bd61e44ac54bfb5180c41d206f86eff0c09160c",
+      "url": "https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/download/paper2-code-20261004/E42_muscle_activation_matrices.npz"
+    },
+    {
+      "path": "results/revision_20261004/E42_muscle_preactivation_matrices.npz",
+      "asset": "E42_muscle_preactivation_matrices.npz",
+      "bytes": 326371832,
+      "sha256": "1264d35e417c97561cf402d4f30b075267162e35ae1882261b84d8fad62463f4",
+      "url": "https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/download/paper2-code-20261004/E42_muscle_preactivation_matrices.npz"
+    },
+    {
+      "path": "results/revision_20261004/E42_raw_responses.tar",
+      "asset": "E42_raw_responses.tar",
+      "bytes": 233134080,
+      "sha256": "ac9221099930d0366d26db152747fe9679b136e7f2dbc89cd41015dae0943c7d",
+      "url": "https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/download/paper2-code-20261004/E42_raw_responses.tar"
+    },
+    {
+      "path": "results/prospective_20261004/formal_evidence_20261004.zip",
+      "asset": "formal_evidence_20261004.zip",
+      "bytes": 947277783,
+      "sha256": "2947584672e46d6ba4b4a38578a89249521078343ff9f48c976d95e4e1f1f4a9",
+      "url": "https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/download/paper2-code-20261004/formal_evidence_20261004.zip"
+    }
+  ]
+}

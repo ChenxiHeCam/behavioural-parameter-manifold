@@ -1,0 +1,168 @@
+{
+  "experiment": "matched_E42_baseline_repeat_and_sampled_steps",
+  "n_sampled_connections": 4,
+  "n_total_connections": 3076,
+  "samples": {
+    "strongest": 1424,
+    "median": 2273,
+    "lower_quartile": 1489,
+    "weakest_nonzero": 1457
+  },
+  "steps": [
+    0.05,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "n_rollouts": 34,
+  "scope": "four sampled columns only; not all3076columns and not a full-spectrum step sweep",
+  "worker_sha256": "90919a64bf4fb5244ba3283559174b86210b1339b0635a69832c71926ea4cf02",
+  "producer_sha256": "69e99f0eb6ff4bd30a15ed5dff5a622baa4d22d91a2816c96e71784e6baa513f",
+  "baseline_exact_match_to_main": {
+    "repeat0": true,
+    "repeat1": true
+  },
+  "baseline_repeat_max_abs_difference": 0.0,
+  "columns": {
+    "strongest": {
+      "connection_index": 1424,
+      "full_probe_delta0_5_norm": 121.7331151824282,
+      "delta0_5_exact_match_to_main_J": true,
+      "steps": [
+        {
+          "delta": 0.05,
+          "normalized_derivative_norm": 121.74003168088139,
+          "relative_change_from_delta0_05": 0.0,
+          "direction_cosine_to_delta0_05": 1.0,
+          "normalized_symmetric_response_norm": 12.17400316808814
+        },
+        {
+          "delta": 0.1,
+          "normalized_derivative_norm": 121.73971810354925,
+          "relative_change_from_delta0_05": 8.970689164120862e-06,
+          "direction_cosine_to_delta0_05": 0.9999999999630805,
+          "normalized_symmetric_response_norm": 24.347943620709852
+        },
+        {
+          "delta": 0.25,
+          "normalized_derivative_norm": 121.73830034164043,
+          "relative_change_from_delta0_05": 1.6918552027857233e-05,
+          "direction_cosine_to_delta0_05": 0.9999999999580077,
+          "normalized_symmetric_response_norm": 60.86915017082021
+        },
+        {
+          "delta": 0.5,
+          "normalized_derivative_norm": 121.73311518242818,
+          "relative_change_from_delta0_05": 6.103660480579429e-05,
+          "direction_cosine_to_delta0_05": 0.999999999751149,
+          "normalized_symmetric_response_norm": 121.73311518242818
+        }
+      ]
+    },
+    "median": {
+      "connection_index": 2273,
+      "full_probe_delta0_5_norm": 0.12089435844386663,
+      "delta0_5_exact_match_to_main_J": true,
+      "steps": [
+        {
+          "delta": 0.05,
+          "normalized_derivative_norm": 0.12089427803411863,
+          "relative_change_from_delta0_05": 0.0,
+          "direction_cosine_to_delta0_05": 1.0,
+          "normalized_symmetric_response_norm": 0.012089427803411865
+        },
+        {
+          "delta": 0.1,
+          "normalized_derivative_norm": 0.12089504583955475,
+          "relative_change_from_delta0_05": 0.0019345784068225552,
+          "direction_cosine_to_delta0_05": 0.9999981287352462,
+          "normalized_symmetric_response_norm": 0.02417900916791095
+        },
+        {
+          "delta": 0.25,
+          "normalized_derivative_norm": 0.12089499642742442,
+          "relative_change_from_delta0_05": 0.0019628804408702845,
+          "direction_cosine_to_delta0_05": 0.9999980735792907,
+          "normalized_symmetric_response_norm": 0.06044749821371221
+        },
+        {
+          "delta": 0.5,
+          "normalized_derivative_norm": 0.12089435844386662,
+          "relative_change_from_delta0_05": 0.0019639370877142237,
+          "direction_cosine_to_delta0_05": 0.9999980714770618,
+          "normalized_symmetric_response_norm": 0.12089435844386662
+        }
+      ]
+    },
+    "lower_quartile": {
+      "connection_index": 1489,
+      "full_probe_delta0_5_norm": 0.004060030139754614,
+      "delta0_5_exact_match_to_main_J": true,
+      "steps": [
+        {
+          "delta": 0.05,
+          "normalized_derivative_norm": 0.004074525317600206,
+          "relative_change_from_delta0_05": 0.0,
+          "direction_cosine_to_delta0_05": 1.0000000000000002,
+          "normalized_symmetric_response_norm": 0.00040745253176002066
+        },
+        {
+          "delta": 0.1,
+          "normalized_derivative_norm": 0.0040595194991529466,
+          "relative_change_from_delta0_05": 0.08190638017847311,
+          "direction_cosine_to_delta0_05": 0.9966400800501697,
+          "normalized_symmetric_response_norm": 0.0008119038998305894
+        },
+        {
+          "delta": 0.25,
+          "normalized_derivative_norm": 0.00405779134475292,
+          "relative_change_from_delta0_05": 0.08417263737282867,
+          "direction_cosine_to_delta0_05": 0.9964513429347204,
+          "normalized_symmetric_response_norm": 0.00202889567237646
+        },
+        {
+          "delta": 0.5,
+          "normalized_derivative_norm": 0.004060030139754613,
+          "relative_change_from_delta0_05": 0.08269630798403034,
+          "direction_cosine_to_delta0_05": 0.9965748030897769,
+          "normalized_symmetric_response_norm": 0.004060030139754613
+        }
+      ]
+    },
+    "weakest_nonzero": {
+      "connection_index": 1457,
+      "full_probe_delta0_5_norm": 1.3571565502607833e-07,
+      "delta0_5_exact_match_to_main_J": true,
+      "steps": [
+        {
+          "delta": 0.05,
+          "normalized_derivative_norm": 0.0,
+          "relative_change_from_delta0_05": null,
+          "direction_cosine_to_delta0_05": null,
+          "normalized_symmetric_response_norm": 0.0
+        },
+        {
+          "delta": 0.1,
+          "normalized_derivative_norm": 6.785782751303916e-07,
+          "relative_change_from_delta0_05": null,
+          "direction_cosine_to_delta0_05": null,
+          "normalized_symmetric_response_norm": 1.3571565502607833e-07
+        },
+        {
+          "delta": 0.25,
+          "normalized_derivative_norm": 2.7143131005215667e-07,
+          "relative_change_from_delta0_05": null,
+          "direction_cosine_to_delta0_05": null,
+          "normalized_symmetric_response_norm": 1.3571565502607833e-07
+        },
+        {
+          "delta": 0.5,
+          "normalized_derivative_norm": 1.3571565502607833e-07,
+          "relative_change_from_delta0_05": null,
+          "direction_cosine_to_delta0_05": null,
+          "normalized_symmetric_response_norm": 1.3571565502607833e-07
+        }
+      ]
+    }
+  }
+}

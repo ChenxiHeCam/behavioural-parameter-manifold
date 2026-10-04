@@ -1,0 +1,44 @@
+{
+  "motor_voltage": {
+    "n_full_eigenvalues": 3076,
+    "d90_from_spectrum": 26,
+    "d99_from_spectrum": 66,
+    "spectrum_matches_json": true,
+    "J_shape": [
+      9600,
+      3076
+    ],
+    "G_shape": [
+      3076,
+      3076
+    ]
+  },
+  "muscle_preactivation": {
+    "n_full_eigenvalues": 3076,
+    "d90_from_spectrum": 3,
+    "d99_from_spectrum": 9,
+    "spectrum_matches_json": true,
+    "J_shape": [
+      11520,
+      3076
+    ],
+    "G_shape": [
+      3076,
+      3076
+    ]
+  },
+  "muscle_activation": {
+    "n_full_eigenvalues": 3076,
+    "d90_from_spectrum": 5,
+    "d99_from_spectrum": 17,
+    "spectrum_matches_json": true,
+    "J_shape": [
+      11520,
+      3076
+    ],
+    "G_shape": [
+      3076,
+      3076
+    ]
+  }
+}

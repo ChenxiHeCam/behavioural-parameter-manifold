@@ -1,0 +1,16 @@
+{
+  "sha256": "2947584672e46d6ba4b4a38578a89249521078343ff9f48c976d95e4e1f1f4a9",
+  "bytes": 947277783,
+  "all_case_outputs_included": true,
+  "formal_directory": "formal_results_20261004",
+  "includes_development_sanity_checks": true,
+  "runtime_dependency_supplement": {
+    "reason": "run_formal.py imports GROUPS and stimulus from run_pilot.py; the locked snapshot omitted this dependency.",
+    "run_pilot_sha256": "4d5ac7538e8967b173555cd9497a17a872d8d3775daa68f586b732978ed96a22",
+    "matches_preserved_pilot_runtime_byte_for_byte": true,
+    "locked_source_snapshot_sha256_unchanged": "14873e06d2e72ed3208f9de740b5176f9aa351197c86f7ed00c13ab026c5a04e",
+    "locked_protocol_sha256_unchanged": "290ec096a4eb348c603e211584967f6ff7656122ca6b3707bd5267bae3e5e8cc",
+    "replay_instruction": "Extract source_snapshot.zip to a runtime directory, then copy supplemental_runtime_dependencies/run_pilot.py into that directory. Use the separately retained model bundle and the recorded environment.",
+    "scope": "Post-run provenance supplement only; no protocol, result, or runtime source was edited."
+  }
+}

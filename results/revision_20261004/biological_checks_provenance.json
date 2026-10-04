@@ -1,0 +1,14 @@
+[
+  {
+    "source": "D:\\Warm\\animal_evidence\\two_connectome_consistency.json",
+    "destination": "results\\revision_20261004\\two_connectome_consistency.json",
+    "sha256": "fdf329df9bb6569a152d9ed3c0431848fe021cd715eb7faabfb6833074d240b0",
+    "status": "unchanged historical exploratory comparison"
+  },
+  {
+    "source": "D:\\Warm\\animal_evidence\\card2_leifer\\leifer_class_test.json",
+    "destination": "results\\revision_20261004\\leifer_class_test.json",
+    "sha256": "9915bfaf5b1cd39a6d60bf157f1f0672e8352402bd23da1d1026beb3a5c441a9",
+    "status": "unchanged historical exploratory comparison"
+  }
+]

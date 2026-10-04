@@ -1,51 +1,28 @@
-"""E-59: the connectome measurement read through the muscle output.
+"""Legacy full-connectome readout producer with an explicit observable choice.
 
-The flagship number was measured on motor-neuron membrane potentials, which are
-internal signals. The model ships a readout from those voltages to the 96 muscle
-activations that drive the body, the last quantity before body mechanics. This
-repeats the measurement on that output, so the number the paper reports is about
-what the animal does rather than what its neurons hold.
-
-Original header follows.
-
-E-58: is the connectome-scale low dimension a property of one parameter point?
-
-Every reviewer of the current draft raised the same objection: the flagship
-BAAIWorm measurement is a local Gauss-Newton curvature evaluated at the published
-parameter set, and the paper speaks of a manifold. The five-point and
-twenty-four-point checks that exist cover only the seven-mechanism modWorm space;
-the 3076-dimensional measurement itself has never been repeated anywhere else in
-parameter space.
-
-This repeats it. The whole weight vector is displaced to new operating points,
-theta_i = theta_i * exp(U(-ln f, ln f)) drawn independently per connection at
-f = 1.25 and f = 1.5, two points each. At every point, including the published
-one, the same randomly chosen subsample of 300 connections is perturbed both
-ways and the Gauss-Newton spectrum assembled over the motor output, so the five
-measurements are like for like. If the effective dimension stays low at every
-point, the low dimension is a property of the region of parameter space the
-model occupies; if it does not, the published point is special and the paper's
-language must change.
-
-A point only counts if its baseline still produces structured motor output
-(finite, non-constant); a displacement that silences the model is reported as
-such, not folded into the spectrum.
+Native muscle_activation is clip((V @ W + 80)/100, 0, .8).
+The unbounded muscle_preactivation is V @ W and has different units.
+Use _e42_recover_full_spectrum.py for paired readouts from the same saved
+rollouts and complete J/G/eigenvalue retention. Historical E60 scalar values
+are retained separately and are not labelled as native clipped activation.
 """
-import json, os, subprocess, time
+import json, os, subprocess, time, sys
+from pathlib import Path
 import numpy as np
 import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
 CTX = mp.get_context("spawn")
-PY = "/root/miniconda3/bin/python"
-WORKER = "/root/autodl-tmp/cell/baai_worker.py"
-OUT = "/root/autodl-tmp/cell/E60_baai_muscle_full.json"
+PY = os.environ.get("BAAI_PYTHON", sys.executable)
+WORKER = os.environ.get("BAAI_WORKER", str(Path(__file__).with_name("_baai_worker.py")))
+OUTDIR = Path(os.environ.get("PAPER2_OUTPUT_DIR", "results/revision_20261004/E60_explicit_readout"))
+OUT = str(OUTDIR / "result.json")
 NW = int(os.environ.get("NW", "28"))
 N_SAMPLE = 3076
 DELTA = 0.5
 TSTOP = 1500
 POINTS = [{"tag": "muscle_full", "fold": 0, "seed": 0}]
-OBSERVABLE = "muscle"
+OBSERVABLE = os.environ.get("OBSERVABLE", "muscle_activation")
 
 
 def call(spec):
@@ -84,6 +61,7 @@ def leading(H, k):
 
 
 def main():
+    OUTDIR.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     rng = np.random.default_rng(0)
     conns = list(range(3076))     # every connection, as in E42
@@ -107,10 +85,11 @@ def main():
             if n % 200 == 0:
                 print(f"  {n}/{len(specs)}  {time.time()-t0:.0f}s", flush=True)
 
-    out = {"experiment": "E58_baai_multipoint",
+    out = {"experiment": "E60_explicit_readout", "observable": OBSERVABLE,
            "question": "does the low effective dimension hold away from the "
                        "published parameter point?",
            "n_connections_sampled": N_SAMPLE, "delta": DELTA, "tstop_ms": TSTOP,
+           "normalization": "baseline temporal SD per output, floor1e-3",
            "points": POINTS, "per_point": {}, "pairwise_stiff_overlap": []}
 
     H = {}
@@ -126,14 +105,14 @@ def main():
                                      "baseline_std": float(base.std())}
             print(f"  {tag}: baseline silent (std {base.std():.2e})", flush=True)
             continue
-        sd = base.std(0).clip(1e-6)
+        sd = base.std(1).clip(1e-3)[:, None]
         cols, used = [], []
         for i in conns:
             a, b = store.get((tag, i, +1)), store.get((tag, i, -1))
             if a is None or b is None:
                 continue
-            t = min(base.shape[0], a.shape[0], b.shape[0])
-            cols.append((((a[:t] - b[:t]) / (2 * DELTA)) / sd).ravel())
+            t = min(base.shape[1], a.shape[1], b.shape[1])
+            cols.append((((a[:, :t] - b[:, :t]) / (2 * DELTA)) / sd).ravel())
             used.append(i)
         if len(used) < 100:
             out["per_point"][tag] = {"status": f"only {len(used)} usable columns"}
@@ -143,6 +122,9 @@ def main():
         M = J.T @ J
         Hm = M / max(np.trace(M), 1e-30)
         H[tag] = Hm
+        np.savez_compressed(OUTDIR / f"{tag}_matrices.npz", J=J, G=M,
+                            baseline=base, output_scale=sd, connection_indices=np.asarray(used),
+                            eigenvalues=np.linalg.eigvalsh(M)[::-1])
         e = eff(Hm)
         e.update({"status": "ok", "n_usable": len(used),
                   "baseline_std": float(base.std())})

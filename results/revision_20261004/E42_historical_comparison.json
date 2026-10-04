@@ -1,0 +1,63 @@
+{
+  "historical_result": {
+    "experiment": "E42_baaiworm_connectome",
+    "model": "BAAIWorm point circuit, 136 cells, connectome weights",
+    "observable": "motor-neuron membrane potentials, 80 cells x time",
+    "n_parameters": 3076,
+    "n_observables": 9600,
+    "delta": 0.5,
+    "tstop_ms": 2000,
+    "eff_dim_90": 8,
+    "eff_dim_99": 47,
+    "participation_ratio": 2.545062930455321,
+    "n_parameters_with_no_measurable_effect": 4,
+    "elasticity_percentiles": {
+      "1": 6.530183412577584e-06,
+      "25": 0.0014084915637948758,
+      "50": 0.08126441530964273,
+      "75": 0.9052273790304332,
+      "99": 59.68993153881255
+    },
+    "by_connection_category": {
+      "gj": {
+        "n": 1084,
+        "median_elasticity": 0.06944437134123362,
+        "share_of_curvature": 0.13034546901185717
+      },
+      "syn": {
+        "n": 1992,
+        "median_elasticity": 0.08357196734908356,
+        "share_of_curvature": 0.869654530988143
+      }
+    },
+    "elapsed_sec": 1176.9
+  },
+  "new_motor_voltage_summary": {
+    "eff_dim_90": 26,
+    "eff_dim_99": 66,
+    "participation_ratio": 6.826214303912985,
+    "n_parameters_with_no_measurable_effect": 0,
+    "elasticity_percentiles": {
+      "1": 4.642815829548562e-06,
+      "25": 0.004050557613924671,
+      "50": 0.1208567287274857,
+      "75": 1.0785971537937125,
+      "99": 30.176694653022672
+    },
+    "by_connection_category": {
+      "gj": {
+        "n": 1084,
+        "median_elasticity": 0.024686963571707993,
+        "share_of_curvature": 0.30775392793403
+      },
+      "syn": {
+        "n": 1992,
+        "median_elasticity": 0.16337503362288297,
+        "share_of_curvature": 0.69224607206597
+      }
+    }
+  },
+  "conclusion": "Current deposited model/worker/input do not reproduce the historical E42 spectrum summaries; exact float32 arithmetic was checked and does not explain discrepancy. Original runtime input and worker unavailable.",
+  "current_input": "15phase-shifted sinusoidal voltage drives; amplitude2,0.5Hz,phasei/15,15sensorycells; no recorded trajectory file found",
+  "archive_model_input_hash_parity": "The original local baai_upload.tgz abstract circuit,config,point circuit match current remote source SHA256 exactly."
+}

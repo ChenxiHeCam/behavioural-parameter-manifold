@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "fresh_forward_checks": [
+    {
+      "case": 0,
+      "state": "baseline_truth",
+      "shape": [
+        80,
+        129
+      ],
+      "max_abs_mV": 0.0
+    },
+    {
+      "case": 0,
+      "state": "complementary_ensemble",
+      "shape": [
+        80,
+        129
+      ],
+      "max_abs_mV": 0.0
+    },
+    {
+      "case": 0,
+      "state": "repeat",
+      "shape": [
+        80,
+        129
+      ],
+      "max_abs_mV": 0.0
+    },
+    {
+      "case": 11,
+      "state": "baseline_truth",
+      "shape": [
+        80,
+        129
+      ],
+      "max_abs_mV": 0.0
+    },
+    {
+      "case": 11,
+      "state": "complementary_ensemble",
+      "shape": [
+        80,
+        129
+      ],
+      "max_abs_mV": 0.0
+    },
+    {
+      "case": 11,
+      "state": "repeat",
+      "shape": [
+        80,
+        129
+      ],
+      "max_abs_mV": 0.0
+    }
+  ],
+  "worker_sha256": "337e2b4ebf04cf210000db32c99c39ee1214d9fe2d089bc98ef262dd0b96aeb7",
+  "scope": "Fresh model-process checks at the first/last independent truths and fitted complementary/repeat states; not all formal rollouts."
+}

@@ -1,0 +1,11 @@
+{
+  "B6_full_union_rerun": {
+    "producer_sha_matches_retained_source": true,
+    "worker_sha_matches_retained_source": true
+  },
+  "B6b_full_union_rerun": {
+    "producer_sha_matches_retained_source": true,
+    "worker_sha_matches_retained_source": true
+  },
+  "source_manifest_members_verified": 905
+}

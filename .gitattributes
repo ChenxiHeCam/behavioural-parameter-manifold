@@ -1,0 +1,11 @@
+# Preserve deposited bytes, including source and result files with SHA256 records.
+* -text
+*.npz binary
+*.npy binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary
+*.tar binary
+*.pt binary
+*.so binary

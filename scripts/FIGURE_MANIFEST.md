@@ -1,38 +1,22 @@
 # Which script owns which figure
 
-Several scripts in this directory can write the same output file, because later
-figure revisions were made in new scripts without retiring the old ones. On
-2026-08-20 rerunning `_redraw_remaining.py` for a one-line fix silently replaced
-`fig_p2_b1_perchannel.png` and `Fig_connectome_curvature.png` with obsolete
-versions that no longer matched their captions. **Regenerate figures only with
-the owner listed here.** If you must run a non-owner script, rerun the owners
-afterwards.
+## Current revision, 2026-10-04
 
-| figure (paper/figures/) | owner script | note |
-|---|---|---|
-| Fig1_concept.png | `_fig1_concept.py` | drawn schematic, 4275 px (652 dpi as placed); PDF written alongside |
-| Fig_connectome_curvature.png | `_redraw_fig2_three.py` | 3-panel; `_redraw_new_results.py` writes an obsolete 2-panel version |
-| Fig_measurement.png | `_fig_measurement.py` | stacks Fig_connectome_curvature (a-c) over Fig_channels_flygym (d,e); rerun after either source changes |
-| fig_p2_tiling_crossspecies.png | `_fig_nc_tiling.py` | 2x2 layout; `_redraw_tiling.py` writes an obsolete version with the invalid-step fly curve |
-| fig_p2_b1_perchannel.png | `_redraw_new_results.py` | BAAIWorm named conductances (IRK 123.5 top, SLO omitted); `_redraw_figures.py` and `_redraw_remaining.py` write obsolete versions |
-| fig_p2_flygym_hessian48.png | `_redraw_new_results.py` | |
-| Fig_biological_datasets.png | `_redraw_remaining.py` | |
-| Fig_multistart_three_sim.png | `_redraw_remaining.py` | |
-| fig_p2_b2_neural.png | `_fix_si_figs.py` | |
-| fig_p2_b3_localise.png | `_fix_si_figs.py` | |
-| fig_p2_crosssystem_real.png | `_fix_si_figs.py` | |
-| fig_p2_flyvis_b1.png | `_fix_si_figs.py` | `_redraw_figures.py` writes an obsolete version |
-| fig_p2_cell_groundtruth.png | `_fig_cell_groundtruth.py` | |
-| fig_p2_cell_scale.png | `_fig_cell_scale.py` | |
-| fig_p2_modworm_real_b1.png | `_redraw_figures.py` | |
-| e1b_hessian.png, Fig_E*.png, Fig_crosscheck.png | archival, no active owner | do not regenerate |
+Only these figures are included in the revised manuscript. Their PNG/PDF/SVG versions share the same plotted data and printed width.
 
-Safe full rebuild order (later overwrites earlier where they collide):
+| Main/SI figure | Basename | Owner | Evidence |
+|---|---|---|---|
+| Main 1 | output_concentration | redraw_output_sensitivity.py | Overview panel a with recorded E42 baseline voltage; unchanged full E42 spectra and class contributions, AB7 and E58 in b-e |
+| Main 2 | measurement_dependence | redraw_output_sensitivity.py | AB4 matched steps/readouts; E1 output metadata |
+| Main 3 | Fig_visual_sensitivity | redraw_visual_sensitivity.py | Flyvis common-weight, shared-coordinate comparison and step controls |
+| Main 4 | context_dependence | redraw_output_sensitivity.py | Closed-loop contexts, full reconstructed joint spectrum, FlyGym subset curves |
+| Main 5 | sensitivity_and_recovery | redraw_output_sensitivity.py | Corrected cell panels, HH assay grid, MAPK traces and verified time metadata |
+| SI 1 | cell_network_scaling | redraw_output_sensitivity.py | Coupled HH family, including the single-cell control |
+| SI 2 | stimulus_comparison | prospective/plot_formal.py | All 12 paired prospective cases and 48 outcomes; mean endpoints, paired ensemble-minus-control differences and independent-case bootstrap intervals; failure retained |
 
-    _redraw_figures.py
-    _redraw_remaining.py
-    _redraw_new_results.py
-    _redraw_fig2_three.py
-    _redraw_tiling.py
-    _fix_si_figs.py
-    _fig_cell_groundtruth.py
+`output_sensitivity_style.py` defines shared appearance. `results/revision_20261004/figure_sources.json` records data-source hashes. Numerical rank and spectral-mass counts have different meanings. No incomplete spectrum is extended synthetically.
+
+
+
+
+Earlier figures and their scripts remain in repository history. Use the current owners listed above to regenerate manuscript figures.

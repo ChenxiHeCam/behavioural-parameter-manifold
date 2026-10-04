@@ -1,27 +1,9 @@
-"""Cell-scale recovery run under the protocol the whole-organism work actually uses.
+"""Parameter recovery from phase-invariant features in the cell-model panel.
 
-Two things were wrong with the first pass and both are corrected here.
-
-The perturbation was far too small. The published work does not displace the
-parameters slightly: BAAIWorm is started from a pure random point, theta *
-exp(U(-ln 3, ln 3)), drawn independently of the ground truth, and modWorm at
-scale 1.0, about 81% mean per-parameter deviation. The start is a random point
-in parameter space, not a nudge. The cell models get the same regime, bracketed
-by 1.5x and 10x on either side of the published 3x, and the reported quantity is
-how far a random start can be from the target and still be pulled back to it.
-Cell models have a ground truth, so that curve can be drawn here; in a
-whole-organism model it cannot.
-
-The loss was a pointwise difference between trajectories. For an oscillator that
-quantity is dominated by phase: a small parameter change shifts the phase, the
-pointwise difference saturates, and the landscape becomes untraversable. This is
-the same failure that invalidated a trajectory loss on the stomatogastric model
-earlier in this project, and it reappeared here. The observable is therefore
-built from phase-invariant quantities -- the amplitude distribution, the power
-spectrum magnitude, and the autocorrelation -- which stay high-dimensional, so
-observables still outnumber parameters and the curvature rank is not capped by
-the assay. The pointwise trajectory loss is kept as the second arm so the two can
-be compared rather than one being asserted.
+Starts are multiplicative displacements centered on the generating parameters.
+Features combine amplitude quantiles, Fourier magnitudes and autocorrelation.
+Successful output fits and their conditional parameter errors are reported
+separately from the fraction of successful fits.
 """
 import json, os, time
 import numpy as np

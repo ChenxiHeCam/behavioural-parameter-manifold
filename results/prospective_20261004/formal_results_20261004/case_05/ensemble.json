@@ -1,0 +1,88 @@
+{
+  "samples": [
+    {
+      "proposal_scale": 0.0,
+      "objective": 5176.189454979489
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5184.5610265825335
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5188.760863147801
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5186.026400333441
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5187.428301229681
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5184.969719162577
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5189.073632156987
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5187.259324479324
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5182.615035545081
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5180.592613643044
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5184.242345354145
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5182.646555491007
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5182.097469225776
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5187.247646361585
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5179.667858341318
+    },
+    {
+      "proposal_scale": 1.0,
+      "objective": 5180.099509621936
+    }
+  ],
+  "attempted_proposals": 32,
+  "acceptance_objective_threshold": 5189.337454979489,
+  "precision_eigenvalues": [
+    8.202911255698073,
+    11.434892106869897,
+    11.785074387104244,
+    15.194098118274535,
+    42.18276906241771,
+    697.6990769837565,
+    1439.1432685392474,
+    2055.8453100120937,
+    5458.236977488309,
+    17159.552103022084,
+    46101.63297305313,
+    95648.07715433142,
+    142385.78899265637,
+    288908.4721338016,
+    572047.9544049059,
+    4653426.112463019
+  ]
+}

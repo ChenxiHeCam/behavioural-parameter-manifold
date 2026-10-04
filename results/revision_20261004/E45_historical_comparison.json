@@ -1,0 +1,14 @@
+{
+  "d90_exact_match": true,
+  "d99_exact_match": true,
+  "PR_exact_match": true,
+  "n_observables_exact_match": true,
+  "sorted_gain_elasticities_exact_match": false,
+  "historical_file": "results/E45b_baai_named_channels.json",
+  "new_file": "results/revision_20261004/E45_named_channels_rerun.json",
+  "gain_elasticity_max_absolute_difference": 1.4210854715202004e-14,
+  "gain_elasticity_max_relative_difference": 1.8180972834448587e-16,
+  "gain_elasticities_allclose_rtol_1e-12_atol_1e-12": true,
+  "AB7_full_spectrum_allclose_rtol_1e-12_atol_1e-8": true,
+  "AB7_eigenvalue_max_absolute_difference": 1.0913936421275139e-11
+}

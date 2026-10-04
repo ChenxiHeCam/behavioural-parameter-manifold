@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": {
+    "case_00": "PASS",
+    "case_01": "PASS",
+    "case_02": "PASS",
+    "case_03": "PASS",
+    "case_04": "PASS",
+    "case_05": "PASS",
+    "case_06": "PASS",
+    "case_07": "PASS",
+    "case_08": "PASS",
+    "case_09": "PASS",
+    "case_10": "PASS",
+    "case_11": "PASS"
+  },
+  "scope": "Recompute observations, all recorded fitting objectives, parameter bounds and budgets, ensemble gates and Jacobians, selection scores, acquisition order, and heldout/parameter errors from retained outputs. Not fresh forward simulation.",
+  "complete_cases": 12,
+  "retained_failure_cases": 0
+}

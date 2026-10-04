@@ -1,6 +1,6 @@
 {
-  "title": "How much of a nervous-system model does behaviour identify? Code, results and reproduction container",
-  "description": "<p>Code, result files and a one-command reproduction container for a study measuring how much of a whole-organism nervous-system model behaviour actually constrains. A single Gauss-Newton curvature estimator is applied to every system, and each reported dimension is accompanied by the checks that make it meaningful: whether the observables outnumber the parameters, whether the response is proportional to the perturbation, and what the simulator's own noise floor is.</p><p>Main findings. In the connectome-scale nematode model (3076 synaptic and gap-junction weights) behaviour constrains 8 directions at 90% of the curvature and 47 at 99%; a connectome-constrained Drosophila optic-lobe model gives 14 of 330, so in two phyla behaviour reaches a few per cent of a connectome-scale parameter space. The low dimension is a property of the region rather than of one parameter point, and does not depend on which layer of the model is read. Chemical synapses carry 87% of the curvature and gap junctions 13%; the conductances behaviour leaves free are the fast voltage-gated calcium currents. Further aspects of one action re-measure the combinations that action already determines and the union saturates, whereas an action with a different functional demand determines directions the first cannot reach. Where the true parameters are known, in eleven cell models, a fit can match behaviour to 1e-3 while the parameters remain 40% from the truth, so a perfect behavioural fit does not imply recovered parameters; effective dimension is shown not to be the same quantity as recoverable dimension. The same low-dimensional stiff and sloppy structure appears in four biological datasets that use none of the simulators.</p><p>The deposit contains the manuscript and Supplementary Information, every result file underlying the reported quantities, the analysis and figure code, the input data, and a container that re-derives all reported numbers and regenerates the figures.</p>",
+  "title": "Concentrated output sensitivity in connectome-scale biological models",
+  "description": "<p>Analysis and simulation code, model inputs, complete sensitivity spectra and parameter-recovery results. Includes matched measurements, combined-condition spectra, known-truth fitting, and a prospective simulated stimulus comparison.</p>",
   "upload_type": "software",
   "license": "MIT",
   "creators": [
@@ -10,15 +10,11 @@
     }
   ],
   "keywords": [
-    "behavioural-equivalence manifold",
-    "practical identifiability",
-    "sloppy models",
-    "neural degeneracy",
-    "whole-organism simulation",
-    "connectome-constrained models",
-    "Caenorhabditis elegans",
-    "Drosophila",
-    "computational neuroscience"
+    "output sensitivity",
+    "mechanistic models",
+    "parameter recovery",
+    "connectome",
+    "systems biology"
   ],
   "access_right": "open",
   "language": "eng",

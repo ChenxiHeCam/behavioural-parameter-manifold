@@ -1,0 +1,82 @@
+{
+  "config": {
+    "delta": 0.5,
+    "tstop_ms": 2000.0,
+    "n_connections": 3076,
+    "n_workers": 24,
+    "observable": "motor_voltage",
+    "simulation_dt_ms": 1.6666666666666667,
+    "parameter_coordinate": "relative weight increment (theta=theta0*(1+u)); central secant at u=+-delta",
+    "recorded_input_present": false,
+    "normalization_motor_voltage": "baseline standard deviation over time per neuron; floor 1e-3 mV",
+    "normalization_muscle": "baseline standard deviation over time per muscle; floor 1e-3 in each observable's units"
+  },
+  "source_sha256": {
+    "/root/autodl-tmp/paper2_revision_20261004/_e42_recover_full_spectrum.py": "071ca6769c9097dfada10305824f51640c001ff3d0c8d79a594f71ede41c1e2f",
+    "/root/autodl-tmp/paper2_revision_20261004/_baai_worker.py": "90919a64bf4fb5244ba3283559174b86210b1339b0635a69832c71926ea4cf02",
+    "/root/autodl-tmp/paper2_revision_20261004/_baai_worker_support.py": "633289ca5c7177b0b18bc1f4b5aa00c2a2b93a338f8b646e8767072d6c7e0813",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/network/config.json": "bd80e8cb5b71d23a5548ebdf2e0f7b9412626253c466d32be0f9b86be549e338",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/ghost_in_mesh_sim/data/tuned/video_offline/video_offline_abscircuit.pkl": "792a912ca1b466443d6fded8bd47cd4796a29aef044bb9c3c1c953965f1bd651",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/ghost_in_mesh_sim/data/tuned/video_offline/video_offline_wout.pkl": "903efa4e6d8c2e206d45ae529f26596907baabae222122cfa3cbaa1a7335fe58",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/network/point_circuit.py": "9187e495cd3bda3e7020d01a3176c0e080f3f8fb6fc8e9643e15895793112457",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/network/transform.py": "278e6638b3ed3f037a1de464fcc9900079ec60a879c9be129417e499dbe1cf4a",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/ghost_in_mesh_sim/worm_neural_network.py": "5609aef9898f28138ea5520697a6f8452435a9fd5e6f28eac1a40079c95dd7f4",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/cainternm.mod": "53b8d944e833db7e8f0f0bdcdabd95f286b5250cb1dbea2d23d6e8e360e5f103",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/cca1.mod": "38a2a7ded82758691dda8bbe46525d3f275bd96d09e5f5c2ff8bd7234902c857",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/egl19.mod": "1909b43c7c6c026eee7e57abbb2f1d122f8db9ffcc61d7afc68d0d3d978aa640",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/egl2.mod": "0d70c85bc3e7edbbbd28b4ab25c532f038c9f32cd8e7fe88893c598acdd07619",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/egl36.mod": "4ed51923abf79a6a907e8f1870c059a233b4938269fe48988c23e3940833924d",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/exc_syn_advance.mod": "533005e4dca464ad0dcb9b8a6015adca099fbddd2b55498d63c714c614eb99db",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/gapjunction.mod": "0a96ddbe839f09e83990ed106a81a17930178db5dc3c01aae086a4e625b8f15a",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/gapjunction_advance.mod": "b6a12d34209f2f8e367db882cfabf004469787d41b9dce71d553fe8cdeaa8f19",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/inh_syn_advance.mod": "4d1e00cdaa4d792dee2b52e40445dc52b5e2b03ca0dabb86a308a3db07f6127f",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/irk.mod": "f1c91dff896290ca275c3522c3f946d62ddf200d34ddef5b3202c5e0e8891698",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/kcnl.mod": "d370c5f9fdf6391a3cbdd6d918ff39af8eb6aff08950774081be13bdbc159b3d",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/kqt3.mod": "c8644d1eeaadd2c292e1578da881ae83d2dd12959cd3c3286accb774324ec936",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/kvs1.mod": "3a7f37db5f525623540b82381e43e83fc591f31344ab197c7b38a5e37d5798bb",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/nca.mod": "a98fd6abea66a6d655c147b0ff494c3d35783311da2ce1de5239c835a23ccaec",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/neuron_to_neuron_exc_syn.mod": "222700af6edd7380646c4e021b3ce0a4255f2cbf64034dca1883b413cf6a1b40",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/neuron_to_neuron_inh_syn.mod": "264456692e02d9d5dcff59a29ead0ec4056fee7be2be8ba125fbac287927e80e",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/shk1.mod": "4d07a4e203dba88272bcbe0223154e2a91b57da2a1a64099a7011b5b3d07aad9",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/shl1.mod": "5469b0d1a40a78f8c32a5e592e9898a6cb60d416a9966eaff5d39896ee9708e7",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/slo1_egl19.mod": "c19652ae3a0b5abf0acc1803700c764036feff339fb11d309984c8ee0445cf95",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/slo1_unc2.mod": "b40e4e78eaa41ab1cd51079014ea821dea53f45bce2b970d93a8275f2f1823d6",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/slo2_egl19.mod": "6da7fdd8e0399e00ca443fd6cc8c8e85532b7d4a8b8049ba7f3b5668b52c13f2",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/slo2_unc2.mod": "ecc19d8fa7502f6f8456b499c99a9f47572a956e697e2079b62969cd6f692e4f",
+    "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile/unc2.mod": "7080ffa84a50626a97f4cd2edf628cca46f22a548b34886572eaa6670aa5c2b3"
+  },
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "numpy": "2.3.2",
+  "historical_result_overwritten": false,
+  "additional_runtime_metadata": {
+    "neuron_version": "8.2.7+",
+    "n_connections": 3076,
+    "negative_weights": 1341,
+    "positive_weights": 1735,
+    "zero_weights": 0,
+    "min_weight": -1.688939519226551,
+    "max_weight": 1.5977938892319798,
+    "by_category": {
+      "syn": {
+        "n": 1992,
+        "negative": 1341
+      },
+      "gj": {
+        "n": 1084,
+        "negative": 0
+      }
+    },
+    "mechanism_libraries": {
+      "/root/autodl-tmp/paper2_revision_20261004/mechanisms/x86_64/libnrnmech.so": {
+        "sha256": "dd01c39e5f7a418b175a42ae50a48103748399578c3b1ab133fa6dc2b6061572",
+        "bytes": 262776
+      },
+      "/root/autodl-tmp/paper2_revision_20261004/mechanisms/x86_64/.libs/libnrnmech.so": {
+        "sha256": "dd01c39e5f7a418b175a42ae50a48103748399578c3b1ab133fa6dc2b6061572",
+        "bytes": 262776
+      }
+    },
+    "mechanism_compile_command": "cd /root/autodl-tmp/paper2_revision_20261004/mechanisms && /root/autodl-tmp/paper2_revision_20261004/venv/bin/nrnivmodl /root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile",
+    "collected_at": "2026-10-04T18:33:00Z"
+  }
+}

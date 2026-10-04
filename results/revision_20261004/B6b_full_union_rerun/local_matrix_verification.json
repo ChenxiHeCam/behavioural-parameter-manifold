@@ -1,0 +1,38 @@
+{
+  "chemo": {
+    "J_shape": [
+      6,
+      14
+    ],
+    "G_shape": [
+      14,
+      14
+    ],
+    "J_mean_vs_path_relative_difference": 2.2762699022065345e-07,
+    "J_exactly_reconstructed_from_raw_rollouts": true
+  },
+  "loco": {
+    "J_shape": [
+      6,
+      14
+    ],
+    "G_shape": [
+      14,
+      14
+    ],
+    "J_mean_vs_path_relative_difference": 2.1917604715790234e-07,
+    "J_exactly_reconstructed_from_raw_rollouts": true
+  },
+  "union": {
+    "J_shape": [
+      12,
+      14
+    ],
+    "G_shape": [
+      14,
+      14
+    ],
+    "J_mean_vs_path_relative_difference": null
+  },
+  "union_Gram_equals_sum_atol1e_12": true
+}

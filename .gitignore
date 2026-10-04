@@ -7,3 +7,12 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Large result matrices and raw responses are public release downloads.
+/results/revision_20261004/E42_deposited_precision_matrices.npz
+/results/revision_20261004/E42_motor_voltage_matrices.npz
+/results/revision_20261004/E42_muscle_activation_matrices.npz
+/results/revision_20261004/E42_muscle_preactivation_matrices.npz
+/results/revision_20261004/E42_raw_responses.tar
+/results/prospective_20261004/formal_evidence_20261004.zip
+/repro/public_verification.json

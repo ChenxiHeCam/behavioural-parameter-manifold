@@ -20,15 +20,17 @@ where the response is above the numerical floor and still linear.
 import os
 for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS"):
     os.environ[_v] = "1"
-import json, pickle, subprocess, sys, time
+import json, pickle, subprocess, sys, time, hashlib
+from pathlib import Path
 import numpy as np
 import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
 CTX = mp.get_context("spawn")
-PY = "/root/miniconda3/bin/python"
-WORKER = "/root/autodl-tmp/baai_worker.py"
-ROOT = "/root/autodl-tmp/BAAIWorm_fresh"
+PY = os.environ.get("BAAI_PYTHON", sys.executable)
+WORKER = os.environ.get("BAAI_WORKER", str(Path(__file__).with_name("_baai_worker.py")))
+ROOT = os.environ.get("BAAI_ROOT", "/root/autodl-tmp/BAAIWorm_fresh")
+OUTDIR = Path(os.environ.get("PAPER2_OUTPUT_DIR", "results/revision_20261004/E42_legacy_probe"))
 DELTA = 0.5
 TSTOP = 2000
 N_CONN = 3076
@@ -60,6 +62,7 @@ def eff(H):
 
 
 def main():
+    OUTDIR.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     sys.path.insert(0, ROOT)
     sys.path.insert(0, os.path.join(ROOT, "eworm", "ghost_in_mesh_sim"))
@@ -72,7 +75,7 @@ def main():
     jobs = [(-1, 0)] + [(i, s) for i in range(N_CONN) for s in (+1, -1)]
     print(f"{len(jobs)} rollouts", flush=True)
     store = {}
-    with ProcessPoolExecutor(max_workers=40, mp_context=CTX) as pool:
+    with ProcessPoolExecutor(max_workers=int(os.environ.get("NWORK", "24")), mp_context=CTX) as pool:
         for n, (idx, sign, v) in enumerate(pool.map(rollout, jobs, chunksize=1), 1):
             store[(idx, sign)] = v
             if n % 500 == 0:
@@ -91,6 +94,8 @@ def main():
         t = min(base.shape[1], p.shape[1], q.shape[1])
         cols.append((((p[:, :t] - q[:, :t]) / (2 * DELTA)) / sd).ravel())
         used.append(i)
+    if len(used) != N_CONN:
+        raise RuntimeError(f"Incomplete connectome probe: {len(used)}/{N_CONN} usable columns")
     n = min(len(c) for c in cols)
     J = np.array([c[:n] for c in cols], dtype=np.float64).T
     print(f"Jacobian {J.shape}  {time.time()-t0:.0f}s", flush=True)
@@ -119,8 +124,15 @@ def main():
            "elasticity_percentiles": {str(p): float(np.percentile(elast, p))
                                       for p in (1, 25, 50, 75, 99)},
            "by_connection_category": by_cat,
+           "eigenvalues": np.linalg.eigvalsh(H)[::-1].tolist(),
+           "matrix_file": "full_matrices.npz",
+           "worker_sha256": hashlib.sha256(Path(WORKER).read_bytes()).hexdigest(),
+           "producer_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
            "elapsed_sec": round(time.time() - t0, 1)}
-    json.dump(out, open("/root/autodl-tmp/E42_baai_connectome.json", "w"), indent=2)
+    np.savez_compressed(OUTDIR / "full_matrices.npz", J=J, G=H, baseline=base,
+                        output_scale=sd, eigenvalues=np.linalg.eigvalsh(H)[::-1],
+                        connection_indices=np.asarray(used), connection_categories=np.asarray(cats))
+    json.dump(out, open(OUTDIR / "result.json", "w"), indent=2)
     print("=== E-42 RESULT ===", flush=True)
     print(f"  {len(used)} connection weights, {J.shape[0]} observables", flush=True)
     print(f"  eff-dim {e90} (90%) / {e99} (99%)   PR {pr:.2f}", flush=True)

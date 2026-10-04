@@ -1,0 +1,177 @@
+{
+  "flyvis_trained_dimensionless": {
+    "file": "flyvis_trained_dimensionless.json",
+    "spectrum_recalculation": "PASS",
+    "step_column_report": {
+      "0.01": {
+        "columns_above_10_percent_difference": 0,
+        "fraction_of_primary_sensitivity_in_these_columns": 0.0,
+        "column_indices": []
+      },
+      "0.003": {
+        "columns_above_10_percent_difference": 55,
+        "fraction_of_primary_sensitivity_in_these_columns": 2.5899628714389148e-05,
+        "column_indices": [
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          75,
+          76,
+          77,
+          79,
+          80,
+          81,
+          83,
+          85,
+          86,
+          87,
+          88,
+          89,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          251,
+          252,
+          253,
+          254
+        ]
+      },
+      "0.03": {
+        "columns_above_10_percent_difference": 54,
+        "fraction_of_primary_sensitivity_in_these_columns": 2.5899628714389148e-05,
+        "column_indices": [
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          75,
+          76,
+          77,
+          79,
+          80,
+          81,
+          83,
+          85,
+          86,
+          87,
+          88,
+          89,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          251,
+          252,
+          254
+        ]
+      }
+    }
+  },
+  "flyvis_initialized_dimensionless": {
+    "file": "flyvis_initialized_dimensionless.json",
+    "spectrum_recalculation": "PASS",
+    "step_column_report": {
+      "0.01": {
+        "columns_above_10_percent_difference": 0,
+        "fraction_of_primary_sensitivity_in_these_columns": 0.0,
+        "column_indices": []
+      },
+      "0.003": {
+        "columns_above_10_percent_difference": 0,
+        "fraction_of_primary_sensitivity_in_these_columns": 0.0,
+        "column_indices": []
+      },
+      "0.03": {
+        "columns_above_10_percent_difference": 0,
+        "fraction_of_primary_sensitivity_in_these_columns": 0.0,
+        "column_indices": []
+      }
+    }
+  },
+  "flyvis_trained_dt001": {
+    "file": "flyvis_trained_dt001.json",
+    "spectrum_recalculation": "PASS",
+    "step_column_report": {
+      "0.01": {
+        "columns_above_10_percent_difference": 0,
+        "fraction_of_primary_sensitivity_in_these_columns": 0.0,
+        "column_indices": []
+      }
+    }
+  },
+  "flyvis_trained_dt0005": {
+    "file": "flyvis_trained_dt0005.json",
+    "spectrum_recalculation": "PASS",
+    "step_column_report": {
+      "0.01": {
+        "columns_above_10_percent_difference": 0,
+        "fraction_of_primary_sensitivity_in_these_columns": 0.0,
+        "column_indices": []
+      }
+    }
+  }
+}

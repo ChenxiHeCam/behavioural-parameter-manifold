@@ -1,0 +1,172 @@
+{
+  "experiment": "B6b_full_union_rerun",
+  "labels": [
+    "AWA",
+    "AWC",
+    "ASE",
+    "ASH",
+    "AIY",
+    "AIZ",
+    "RIA",
+    "AIB",
+    "VA",
+    "VB",
+    "DA",
+    "DB",
+    "VD",
+    "DD"
+  ],
+  "observable_names": [
+    "net_disp",
+    "path_len",
+    "mean_speed",
+    "speed_std",
+    "rms_heading",
+    "fwd_world"
+  ],
+  "delta": 0.25,
+  "parameter_coordinate": "log multiplicative gain",
+  "summary": {
+    "chemo": {
+      "eigenvalues": [
+        9.727616677902338,
+        2.4763680342374883,
+        0.8552907813551098,
+        0.18886059296871033,
+        2.1553960644702078e-14,
+        2.5023682768234394e-16,
+        1.586901322414796e-16,
+        6.954306932362736e-17,
+        -2.022647972998634e-32,
+        -6.901418713337881e-17,
+        -7.931405664056263e-17,
+        -1.476175731978499e-16,
+        -1.8224871462359715e-16,
+        -3.5451305243459925e-16
+      ],
+      "singular_values": [
+        3.1189127397063134,
+        1.5736480020123578,
+        0.9248193236276532,
+        0.4345809394908043,
+        1.465777673351927e-07,
+        0.0
+      ],
+      "numerical_rank": 5,
+      "singular_value_rank_tolerance": 9.695528459172295e-15,
+      "rank_tolerance_interpretation": "floating-point algebraic tolerance; not a simulation noise floor",
+      "rank_at_relative_singular_tolerance": {
+        "0.0001": 4,
+        "1e-06": 4,
+        "1e-08": 5,
+        "1e-10": 5
+      },
+      "eff_dim_90": 2,
+      "eff_dim_99": 4
+    },
+    "loco": {
+      "eigenvalues": [
+        175.8656942533806,
+        2.2082141339181396,
+        0.20992490283393547,
+        0.1719256927444101,
+        2.8132950385989608e-14,
+        1.2716331400122465e-14,
+        6.294052407555384e-15,
+        1.3787736890893292e-15,
+        3.704258736261732e-16,
+        7.769181925073416e-18,
+        8.623086977239299e-32,
+        -6.37907036974742e-16,
+        -4.788221226594522e-15,
+        -9.450769964624934e-15
+      ],
+      "singular_values": [
+        13.261436357098745,
+        1.4860061015750057,
+        0.4581756244432184,
+        0.4146392320372154,
+        1.3672015424396357e-07,
+        0.0
+      ],
+      "numerical_rank": 5,
+      "singular_value_rank_tolerance": 4.122482555310612e-14,
+      "rank_tolerance_interpretation": "floating-point algebraic tolerance; not a simulation noise floor",
+      "rank_at_relative_singular_tolerance": {
+        "0.0001": 4,
+        "1e-06": 4,
+        "1e-08": 5,
+        "1e-10": 5
+      },
+      "eff_dim_90": 1,
+      "eff_dim_99": 2
+    },
+    "union": {
+      "eigenvalues": [
+        177.59787911059362,
+        8.626718472055309,
+        3.5216289831380805,
+        1.384275837753157,
+        0.26659388865666267,
+        0.19344640279179284,
+        0.07332075567989912,
+        0.04003161867215762,
+        1.446428247328621e-14,
+        3.1242169599519114e-17,
+        -8.13569633108947e-18,
+        -1.7161762712704702e-16,
+        -9.491302150646084e-16,
+        -6.561525078415068e-15
+      ],
+      "singular_values": [
+        13.326585425779319,
+        2.93712758865789,
+        1.8766003791798829,
+        1.1765525223096311,
+        0.5163273076805642,
+        0.4398254230848782,
+        0.27077805612696954,
+        0.20007903106561364,
+        1.1539135450997873e-07,
+        8.187909787061676e-08,
+        3.15722807170301e-17,
+        0.0
+      ],
+      "numerical_rank": 10,
+      "singular_value_rank_tolerance": 4.142734954213589e-14,
+      "rank_tolerance_interpretation": "floating-point algebraic tolerance; not a simulation noise floor",
+      "rank_at_relative_singular_tolerance": {
+        "0.0001": 8,
+        "1e-06": 8,
+        "1e-08": 8,
+        "1e-10": 10
+      },
+      "eff_dim_90": 1,
+      "eff_dim_99": 4
+    }
+  },
+  "stiff_subspace_overlap_top3_cos": 0.5340404490942506,
+  "baseline_observables": {
+    "chemo": {
+      "net_disp": 0.20290264743523245,
+      "path_len": 2.3539605140686035,
+      "mean_speed": 0.01978118158876896,
+      "speed_std": 0.012804129160940647,
+      "rms_heading": 1.3097307682037354,
+      "fwd_world": 0.7478991596638656
+    },
+    "loco": {
+      "net_disp": 0.05650863382846973,
+      "path_len": 2.4018986225128174,
+      "mean_speed": 0.020184021443128586,
+      "speed_std": 0.012361330911517143,
+      "rms_heading": 1.4028493165969849,
+      "fwd_world": 0.7478991596638656
+    }
+  },
+  "matrix_file": "full_matrices.npz",
+  "producer_sha256": "0ab98c0d5c7690647b8678c0d633f42bcb34d4188f5d6263d816ae33fef919de",
+  "worker_sha256": "85a64b3c0aa478a1bd2d2f86a063882893da22764744b43f7be20393785c3ae6",
+  "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+  "numpy": "1.26.3"
+}

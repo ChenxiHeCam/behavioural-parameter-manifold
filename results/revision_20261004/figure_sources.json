@@ -1,0 +1,20 @@
+{
+  "E42_baaiworm_connectome.json": "d153be23087b8623f69d9c84536163da0e325012c1e023b057d0aa19fc90db71",
+  "E45b_baai_named_channels.json": "1dcfe806bf0db12d14cbe7bd4f74bd26583f39c9487f782ed7b15c44e5609d6c",
+  "AB7_baai_participation.json": "e04f8464efd5b4699c39116b976d84103be6b038f7125bbfaf11cf88fd0fcc9c",
+  "E58_baai_multipoint.json": "70e3274cde8faedfcbaae62c7ea7c4a4a7ba537d1c2c90ce1c19aa973cfe8264",
+  "revision_20261004/E42_full_spectrum_rerun.json": "1f0ffabf9c1402f837ad210603a124f7ad5866f2a36ceea7d600a296215d2f44",
+  "AB4_flygym_delta.json": "3ee4244bccd9e109044fbb87998ca7af111bb137441c71302634c6c909e69ab7",
+  "E1_flygym_rank.json": "9fbc3ee373b7eab95d26b7e975d5950a21ec87557b20b1a41742a4681e24e978",
+  "BAAI_chemo.json": "5615c0ae676cf2390e5bedde62ee1b3059e8dd2016ff803b2aff35b186469880",
+  "E36b_flygym_validstep.json": "ea19eb8b354fa802171ebdef650a3d860ef9ea0e3abc83d9c10f7516d73826e4",
+  "B6_union_crossbehaviour.json": "2f41edfc08896a73828ff6791a5ad960cc1acb92e10791f5c8a9b610236b1fa2",
+  "revision_20261004/B6_full_union_rerun/result.json": "41711dc1654d09001890887fceb624c8a7e19d949c97f58df3d87f16162757c1",
+  "cell_panel3_result.json": "ce6954ad79af065afc5812b997d64d86db485d06c501323fea10d4fed5bd7689",
+  "cell_panel3b_result.json": "a36f42e18d16eea426dc2417c0c5fc0f98289377eff8065735b9ec167328c74c",
+  "mapk_showcase.json": "d1790121e288102fa89fc301192be7e1cb4d6498ecb5abe431cdede7efb79b09",
+  "cell_ladder_result.json": "8ac2dbc86e94cfae21bd44ca75c13822200f3c6a2bda9054c4fe8edc2eb52c33",
+  "revision_20261004/mapk_trace_metadata.json": "4c37c546b978bd8b600edf3a6bb25aa3368ca17b1a4d28049d6b0fa0ac4f68ae",
+  "cell_scale_result.json": "7b1ca22140dd1de801a9e6ec083662cd06ee3f98a763d19b16d97434e48b0ac1",
+  "revision_20261004/E42_motor_voltage_matrices.npz": "9116f671ae2174eebb481676e2eaf131ea83597ea4406b42505f30530cdeb80c"
+}

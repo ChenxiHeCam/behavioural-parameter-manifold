@@ -1,0 +1,6 @@
+{
+  "selection_frozen_epoch": 1791066067.6614184,
+  "additional_acquisition_begin_epoch": 1791066069.469748,
+  "status": "PASS",
+  "scope": "Fresh test case; selections do not receive generating gains or heldout predictions."
+}

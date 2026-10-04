@@ -1,0 +1,94 @@
+{
+  "worker_sha256": "90919a64bf4fb5244ba3283559174b86210b1339b0635a69832c71926ea4cf02",
+  "specs": {
+    "baseline": {
+      "conn": -1,
+      "tstop": 100
+    },
+    "slo1_egl19": {
+      "conn": -1,
+      "tstop": 100,
+      "channel": "gbslo1",
+      "mech": "slo1_egl19",
+      "sign": 1,
+      "delta": 0.5
+    },
+    "slo1_unc2": {
+      "conn": -1,
+      "tstop": 100,
+      "channel": "gbslo1",
+      "mech": "slo1_unc2",
+      "sign": 1,
+      "delta": 0.5
+    },
+    "slo2_egl19": {
+      "conn": -1,
+      "tstop": 100,
+      "channel": "gbslo2",
+      "mech": "slo2_egl19",
+      "sign": 1,
+      "delta": 0.5
+    },
+    "slo2_unc2": {
+      "conn": -1,
+      "tstop": 100,
+      "channel": "gbslo2",
+      "mech": "slo2_unc2",
+      "sign": 1,
+      "delta": 0.5
+    },
+    "muscle_preactivation": {
+      "conn": -1,
+      "tstop": 100,
+      "observable": "muscle_preactivation"
+    },
+    "muscle_activation": {
+      "conn": -1,
+      "tstop": 100,
+      "observable": "muscle_activation"
+    },
+    "missing_mechanism": {
+      "conn": -1,
+      "tstop": 100,
+      "channel": "gbnotreal",
+      "mech": "notreal",
+      "sign": 1,
+      "delta": 0.5
+    }
+  },
+  "checks": {
+    "slo1_egl19": {
+      "segments_touched": 136,
+      "motor_output_difference_norm": 0.06338958126814408
+    },
+    "slo1_unc2": {
+      "segments_touched": 136,
+      "motor_output_difference_norm": 38.777913257796314
+    },
+    "slo2_egl19": {
+      "segments_touched": 136,
+      "motor_output_difference_norm": 1.645612770461367
+    },
+    "slo2_unc2": {
+      "segments_touched": 136,
+      "motor_output_difference_norm": 2.627405183780754
+    },
+    "muscle_preactivation": {
+      "shape": [
+        96,
+        60
+      ],
+      "min": -14506.954771841414,
+      "max": 3849.4706583564475
+    },
+    "muscle_activation": {
+      "shape": [
+        96,
+        60
+      ],
+      "min": 0.0,
+      "max": 0.8
+    },
+    "missing_mechanism": "failed explicitly as expected"
+  }
+}

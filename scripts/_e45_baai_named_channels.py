@@ -16,15 +16,17 @@ measurable effect before being counted.
 import os
 for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS"):
     os.environ[_v] = "1"
-import glob, json, re, subprocess, sys, time
+import glob, json, re, subprocess, sys, time, hashlib
+from pathlib import Path
 import numpy as np
 import multiprocessing as mp
 from concurrent.futures import ProcessPoolExecutor
 
 CTX = mp.get_context("spawn")
-PY = "/root/miniconda3/bin/python"
-WORKER = "/root/autodl-tmp/baai_worker.py"
-MODDIR = "/root/autodl-tmp/BAAIWorm_fresh/eworm/components/mechanism/modfile"
+PY = os.environ.get("BAAI_PYTHON", sys.executable)
+WORKER = os.environ.get("BAAI_WORKER", str(Path(__file__).with_name("_baai_worker.py")))
+MODDIR = os.path.join(os.environ.get("BAAI_ROOT", "/root/autodl-tmp/BAAIWorm_fresh"), "eworm/components/mechanism/modfile")
+OUTDIR = Path(os.environ.get("PAPER2_OUTPUT_DIR", "results/revision_20261004/E45_named_channels"))
 DELTA = 0.5
 TSTOP = 1500
 NWORK = int(os.environ.get("NWORK", "120"))
@@ -79,6 +81,7 @@ def eff(H):
 
 
 def main():
+    OUTDIR.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     chans = channels()
     print(f"{len(chans)} conductances found in the compiled mechanism set", flush=True)
@@ -86,7 +89,7 @@ def main():
     specs = [("base", 0, {"conn": -1, "tstop": TSTOP})]
     for suf, g in chans:
         for sg in (+1, -1):
-            specs.append((g, sg, {"conn": -1, "tstop": TSTOP, "channel": g,
+            specs.append((suf, sg, {"conn": -1, "tstop": TSTOP, "channel": g, "mech": suf,
                                   "sign": sg, "delta": DELTA}))
     print(f"{len(specs)} rollouts on {NWORK} workers", flush=True)
 
@@ -102,7 +105,7 @@ def main():
     sd = base.std(1).clip(1e-3)[:, None]
     cols, names, dead = [], [], []
     for suf, g in chans:
-        p, q = store.get((g, +1)), store.get((g, -1))
+        p, q = store.get((suf, +1)), store.get((suf, -1))
         if p is None or q is None:
             dead.append((g, "simulation failed"))
             continue
@@ -130,8 +133,15 @@ def main():
            "mechanisms_without_measurable_effect": dead,
            "published_six_observable": {"eff_dim_90": 2, "eff_dim_99": 3,
                                         "n_mechanisms": 20},
+           "eigenvalues": np.linalg.eigvalsh(H)[::-1].tolist(),
+           "matrix_file": "full_matrices.npz",
+           "worker_sha256": hashlib.sha256(Path(WORKER).read_bytes()).hexdigest(),
+           "producer_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
            "elapsed_sec": round(time.time() - t0, 1)}
-    json.dump(out, open("/root/autodl-tmp/E45_baai_channels.json", "w"), indent=2)
+    np.savez_compressed(OUTDIR / "full_matrices.npz", J=J, G=H, baseline=base,
+                        output_scale=sd, eigenvalues=np.linalg.eigvalsh(H)[::-1],
+                        **{f"response_{k[0]}_{k[1]:+d}": v for k,v in store.items() if v is not None})
+    json.dump(out, open(OUTDIR / "result.json", "w"), indent=2)
     print("=== E-45 RESULT ===", flush=True)
     print(f"  {len(names)} live mechanisms, {J.shape[0]} observables", flush=True)
     print(f"  eff-dim {e90} (90%) / {e99} (99%)   PR {pr:.2f}", flush=True)

@@ -1,0 +1,1055 @@
+{
+  "provenance": {
+    "real_data": {
+      "paper": "Randi, Sharma, Dvali & Leifer 2023, Nature 623:406, PMC10632145",
+      "file": "41586_2023_6683_MOESM5_ESM.xlsx",
+      "sheets": [
+        "Figure2a, df_over_f",
+        "Figure2a, alpha=(1 - q_val)"
+      ],
+      "download_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10632145/supplementaryFiles",
+      "osf_project": "https://osf.io/e2syt (DOI 10.17605/OSF.IO/E2SYT; raw tarballs, not needed)",
+      "orientation": "matrix[i,j] = response of neuron i to stimulation of neuron j (rows=responding, cols=stimulated; from Fig 2a axes)",
+      "significance": "q < 0.05 (alpha > 0.95); NaN dF/F = unmeasured; diagonal autoresponse excluded",
+      "n_animals": 113,
+      "n_neurons_in_matrix": 168
+    },
+    "model_data": {
+      "B6b": "D:\\Warm\\paper2_release\\results\\B6b_cellclass_union.json",
+      "BAAI_chemo": "D:\\Warm\\paper2_release\\results\\BAAI_chemo.json"
+    }
+  },
+  "mapping": {
+    "AWA": [
+      "AWAL",
+      "AWAR"
+    ],
+    "AWC": [
+      "AWCL",
+      "AWCR"
+    ],
+    "ASE": [
+      "ASEL",
+      "ASER"
+    ],
+    "ASH": [
+      "ASHL",
+      "ASHR"
+    ],
+    "AIY": [
+      "AIYL",
+      "AIYR"
+    ],
+    "AIZ": [
+      "AIZL",
+      "AIZR"
+    ],
+    "RIA": [
+      "RIAL",
+      "RIAR"
+    ],
+    "AIB": [
+      "AIBL",
+      "AIBR"
+    ],
+    "VA": [
+      "VA1"
+    ],
+    "VB": [
+      "VB1",
+      "VB2"
+    ],
+    "DA": [
+      "DA1"
+    ],
+    "DB": [
+      "DB2"
+    ],
+    "VD": [],
+    "DD": [
+      "DD1"
+    ]
+  },
+  "model_load": {
+    "AWA": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 0
+    },
+    "AWC": {
+      "ordinal_chemotaxis": 4,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 4
+    },
+    "ASE": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 0
+    },
+    "ASH": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 0
+    },
+    "AIY": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 0
+    },
+    "AIZ": {
+      "ordinal_chemotaxis": 1,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 1
+    },
+    "RIA": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 0
+    },
+    "AIB": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 0
+    },
+    "VA": {
+      "ordinal_chemotaxis": 2,
+      "ordinal_locomotion": 3,
+      "ordinal_overall_max": 3
+    },
+    "VB": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 0
+    },
+    "DA": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 1,
+      "ordinal_overall_max": 1
+    },
+    "DB": {
+      "ordinal_chemotaxis": 3,
+      "ordinal_locomotion": 0,
+      "ordinal_overall_max": 3
+    },
+    "VD": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 2,
+      "ordinal_overall_max": 2
+    },
+    "DD": {
+      "ordinal_chemotaxis": 0,
+      "ordinal_locomotion": 4,
+      "ordinal_overall_max": 4
+    }
+  },
+  "model_union_hot_classes": [
+    "AWC",
+    "AIZ",
+    "VA",
+    "DA",
+    "DB",
+    "VD",
+    "DD"
+  ],
+  "baai_chemo_group_level": {
+    "close": {
+      "base_net_disp": 0.06106688183277987,
+      "chemo_perturb_behav_change": 0.8724286455753217,
+      "motor_perturb_behav_change": 0.10875216082018732
+    },
+    "far": {
+      "base_net_disp": 0.23073238455309156,
+      "chemo_perturb_behav_change": 0.12202641776730118,
+      "motor_perturb_behav_change": 0.3566923390423531
+    }
+  },
+  "real_out_strength": {
+    "AWA": {
+      "members": [
+        "AWAL",
+        "AWAR"
+      ],
+      "n_members": 2,
+      "n_measured_out": 289,
+      "n_sig_out": 15,
+      "sig_fraction": 0.05190311418685121,
+      "mean_abs_amp_sig": 0.17006446410395612,
+      "mean_abs_amp_all_measured": 0.05377173227813872,
+      "per_member": {
+        "AWAL": {
+          "n_measured_out": 142,
+          "n_sig_out": 6,
+          "mean_abs_amp_sig": 0.17443881748091025,
+          "mean_abs_amp_all_measured": 0.04837354321302932
+        },
+        "AWAR": {
+          "n_measured_out": 147,
+          "n_sig_out": 9,
+          "mean_abs_amp_sig": 0.16714822851932004,
+          "mean_abs_amp_all_measured": 0.05898630947028523
+        }
+      }
+    },
+    "AWC": {
+      "members": [
+        "AWCL",
+        "AWCR"
+      ],
+      "n_members": 2,
+      "n_measured_out": 261,
+      "n_sig_out": 11,
+      "sig_fraction": 0.0421455938697318,
+      "mean_abs_amp_sig": 0.17191082953957107,
+      "mean_abs_amp_all_measured": 0.05492083418229778,
+      "per_member": {
+        "AWCL": {
+          "n_measured_out": 156,
+          "n_sig_out": 5,
+          "mean_abs_amp_sig": 0.1412974049174706,
+          "mean_abs_amp_all_measured": 0.04581588185620642
+        },
+        "AWCR": {
+          "n_measured_out": 105,
+          "n_sig_out": 6,
+          "mean_abs_amp_sig": 0.1974220167246548,
+          "mean_abs_amp_all_measured": 0.06844819192391925
+        }
+      }
+    },
+    "ASE": {
+      "members": [
+        "ASEL",
+        "ASER"
+      ],
+      "n_members": 2,
+      "n_measured_out": 298,
+      "n_sig_out": 13,
+      "sig_fraction": 0.0436241610738255,
+      "mean_abs_amp_sig": 0.11224375033002486,
+      "mean_abs_amp_all_measured": 0.06166293716005145,
+      "per_member": {
+        "ASEL": {
+          "n_measured_out": 149,
+          "n_sig_out": 9,
+          "mean_abs_amp_sig": 0.08862552553414088,
+          "mean_abs_amp_all_measured": 0.05065210292151428
+        },
+        "ASER": {
+          "n_measured_out": 149,
+          "n_sig_out": 4,
+          "mean_abs_amp_sig": 0.16538475612076384,
+          "mean_abs_amp_all_measured": 0.07267377139858862
+        }
+      }
+    },
+    "ASH": {
+      "members": [
+        "ASHL",
+        "ASHR"
+      ],
+      "n_members": 2,
+      "n_measured_out": 305,
+      "n_sig_out": 20,
+      "sig_fraction": 0.06557377049180328,
+      "mean_abs_amp_sig": 0.1787553987344957,
+      "mean_abs_amp_all_measured": 0.047736395405174735,
+      "per_member": {
+        "ASHL": {
+          "n_measured_out": 158,
+          "n_sig_out": 15,
+          "mean_abs_amp_sig": 0.13302463727898312,
+          "mean_abs_amp_all_measured": 0.04302475076059952
+        },
+        "ASHR": {
+          "n_measured_out": 147,
+          "n_sig_out": 5,
+          "mean_abs_amp_sig": 0.3159476831010334,
+          "mean_abs_amp_all_measured": 0.05280061209798347
+        }
+      }
+    },
+    "AIY": {
+      "members": [
+        "AIYL",
+        "AIYR"
+      ],
+      "n_members": 2,
+      "n_measured_out": 265,
+      "n_sig_out": 8,
+      "sig_fraction": 0.03018867924528302,
+      "mean_abs_amp_sig": 0.3919791431515824,
+      "mean_abs_amp_all_measured": 0.060241297770085606,
+      "per_member": {
+        "AIYL": {
+          "n_measured_out": 134,
+          "n_sig_out": 3,
+          "mean_abs_amp_sig": 0.37555166671298607,
+          "mean_abs_amp_all_measured": 0.05818569800342469
+        },
+        "AIYR": {
+          "n_measured_out": 131,
+          "n_sig_out": 5,
+          "mean_abs_amp_sig": 0.4018356290147402,
+          "mean_abs_amp_all_measured": 0.062343972340563186
+        }
+      }
+    },
+    "AIZ": {
+      "members": [
+        "AIZL",
+        "AIZR"
+      ],
+      "n_members": 2,
+      "n_measured_out": 309,
+      "n_sig_out": 6,
+      "sig_fraction": 0.019417475728155338,
+      "mean_abs_amp_sig": 0.28314416768796624,
+      "mean_abs_amp_all_measured": 0.06057233648664845,
+      "per_member": {
+        "AIZL": {
+          "n_measured_out": 152,
+          "n_sig_out": 3,
+          "mean_abs_amp_sig": 0.32180559630430455,
+          "mean_abs_amp_all_measured": 0.06730406514781169
+        },
+        "AIZR": {
+          "n_measured_out": 157,
+          "n_sig_out": 3,
+          "mean_abs_amp_sig": 0.24448273907162799,
+          "mean_abs_amp_all_measured": 0.0540549940885796
+        }
+      }
+    },
+    "RIA": {
+      "members": [
+        "RIAL",
+        "RIAR"
+      ],
+      "n_members": 2,
+      "n_measured_out": 283,
+      "n_sig_out": 24,
+      "sig_fraction": 0.08480565371024736,
+      "mean_abs_amp_sig": 0.2526391249133838,
+      "mean_abs_amp_all_measured": 0.08162016738170909,
+      "per_member": {
+        "RIAL": {
+          "n_measured_out": 125,
+          "n_sig_out": 15,
+          "mean_abs_amp_sig": 0.26720234001356996,
+          "mean_abs_amp_all_measured": 0.0941741876694982
+        },
+        "RIAR": {
+          "n_measured_out": 158,
+          "n_sig_out": 9,
+          "mean_abs_amp_sig": 0.2283670997464068,
+          "mean_abs_amp_all_measured": 0.07168818930592655
+        }
+      }
+    },
+    "AIB": {
+      "members": [
+        "AIBL",
+        "AIBR"
+      ],
+      "n_members": 2,
+      "n_measured_out": 137,
+      "n_sig_out": 1,
+      "sig_fraction": 0.0072992700729927005,
+      "mean_abs_amp_sig": 0.0548119169466084,
+      "mean_abs_amp_all_measured": 0.05488559753479347,
+      "per_member": {
+        "AIBL": {
+          "n_measured_out": 75,
+          "n_sig_out": 1,
+          "mean_abs_amp_sig": 0.0548119169466084,
+          "mean_abs_amp_all_measured": 0.05964836054780626
+        },
+        "AIBR": {
+          "n_measured_out": 62,
+          "n_sig_out": 0,
+          "mean_abs_amp_sig": null,
+          "mean_abs_amp_all_measured": 0.04912419066421346
+        }
+      }
+    },
+    "VA": {
+      "members": [
+        "VA1"
+      ],
+      "n_members": 1,
+      "n_measured_out": 108,
+      "n_sig_out": 3,
+      "sig_fraction": 0.027777777777777776,
+      "mean_abs_amp_sig": 0.34566924259531867,
+      "mean_abs_amp_all_measured": 0.06780549832846244,
+      "per_member": {
+        "VA1": {
+          "n_measured_out": 108,
+          "n_sig_out": 3,
+          "mean_abs_amp_sig": 0.34566924259531867,
+          "mean_abs_amp_all_measured": 0.06780549832846244
+        }
+      }
+    },
+    "VB": {
+      "members": [
+        "VB1",
+        "VB2"
+      ],
+      "n_members": 2,
+      "n_measured_out": 324,
+      "n_sig_out": 7,
+      "sig_fraction": 0.021604938271604937,
+      "mean_abs_amp_sig": 0.10844751556490581,
+      "mean_abs_amp_all_measured": 0.04517113717314053,
+      "per_member": {
+        "VB1": {
+          "n_measured_out": 162,
+          "n_sig_out": 3,
+          "mean_abs_amp_sig": 0.1389867910173568,
+          "mean_abs_amp_all_measured": 0.048686917207376425
+        },
+        "VB2": {
+          "n_measured_out": 162,
+          "n_sig_out": 4,
+          "mean_abs_amp_sig": 0.08554305897556755,
+          "mean_abs_amp_all_measured": 0.04165535713890465
+        }
+      }
+    },
+    "DA": {
+      "members": [
+        "DA1"
+      ],
+      "n_members": 1,
+      "n_measured_out": 18,
+      "n_sig_out": 0,
+      "sig_fraction": 0.0,
+      "mean_abs_amp_sig": null,
+      "mean_abs_amp_all_measured": 0.059914037759176614,
+      "per_member": {
+        "DA1": {
+          "n_measured_out": 18,
+          "n_sig_out": 0,
+          "mean_abs_amp_sig": null,
+          "mean_abs_amp_all_measured": 0.059914037759176614
+        }
+      }
+    },
+    "DB": {
+      "members": [
+        "DB2"
+      ],
+      "n_members": 1,
+      "n_measured_out": 150,
+      "n_sig_out": 0,
+      "sig_fraction": 0.0,
+      "mean_abs_amp_sig": null,
+      "mean_abs_amp_all_measured": 0.05489839748854157,
+      "per_member": {
+        "DB2": {
+          "n_measured_out": 150,
+          "n_sig_out": 0,
+          "mean_abs_amp_sig": null,
+          "mean_abs_amp_all_measured": 0.05489839748854157
+        }
+      }
+    },
+    "VD": {
+      "members": [],
+      "n_members": 0,
+      "n_measured_out": 0,
+      "n_sig_out": 0,
+      "sig_fraction": null,
+      "mean_abs_amp_sig": null,
+      "mean_abs_amp_all_measured": null,
+      "per_member": {}
+    },
+    "DD": {
+      "members": [
+        "DD1"
+      ],
+      "n_members": 1,
+      "n_measured_out": 102,
+      "n_sig_out": 1,
+      "sig_fraction": 0.00980392156862745,
+      "mean_abs_amp_sig": 0.081458535922809,
+      "mean_abs_amp_all_measured": 0.03299242191503252,
+      "per_member": {
+        "DD1": {
+          "n_measured_out": 102,
+          "n_sig_out": 1,
+          "mean_abs_amp_sig": 0.081458535922809,
+          "mean_abs_amp_all_measured": 0.03299242191503252
+        }
+      }
+    }
+  },
+  "tests": {
+    "spearman": {
+      "all_measurable|mean_abs_amp_sig|ordinal_overall_max": {
+        "n": 11,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DD"
+        ],
+        "rho": 0.06336889051857336,
+        "p_two_sided": 0.8527157364213179,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|mean_abs_amp_sig|ordinal_chemotaxis": {
+        "n": 11,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DD"
+        ],
+        "rho": 0.41046634493080625,
+        "p_two_sided": 0.21188894055529722,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|mean_abs_amp_sig|ordinal_locomotion": {
+        "n": 11,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DD"
+        ],
+        "rho": -0.05393598899705937,
+        "p_two_sided": 0.8955955220223899,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|mean_abs_amp_all_measured|ordinal_overall_max": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.042017230597541894,
+        "p_two_sided": 0.8936555317223414,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|mean_abs_amp_all_measured|ordinal_chemotaxis": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": 0.25501632757219544,
+        "p_two_sided": 0.40239798801005994,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|mean_abs_amp_all_measured|ordinal_locomotion": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.052017659277318,
+        "p_two_sided": 0.8756956215218924,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|n_sig_out|ordinal_overall_max": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.5462260704372871,
+        "p_two_sided": 0.055559722201388995,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|n_sig_out|ordinal_chemotaxis": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.26581402573512014,
+        "p_two_sided": 0.37879810600946995,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|n_sig_out|ordinal_locomotion": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.5178857685147649,
+        "p_two_sided": 0.076119619401903,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|sig_fraction|ordinal_overall_max": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.46883644711607575,
+        "p_two_sided": 0.10548947255263724,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|sig_fraction|ordinal_chemotaxis": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.2184062846002147,
+        "p_two_sided": 0.46895765521172394,
+        "p_method": "permutation(200000)"
+      },
+      "all_measurable|sig_fraction|ordinal_locomotion": {
+        "n": 13,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB",
+          "VA",
+          "VB",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "rho": -0.3925297782131415,
+        "p_two_sided": 0.18337908310458448,
+        "p_method": "permutation(200000)"
+      },
+      "restricted_sensory_inter|mean_abs_amp_sig|ordinal_overall_max": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": 0.20263089807627865,
+        "p_two_sided": 0.6405099079883931,
+        "p_method": "exact"
+      },
+      "restricted_sensory_inter|mean_abs_amp_sig|ordinal_chemotaxis": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": 0.20263089807627865,
+        "p_two_sided": 0.6405099079883931,
+        "p_method": "exact"
+      },
+      "restricted_sensory_inter|mean_abs_amp_all_measured|ordinal_overall_max": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": 0.09352195295828246,
+        "p_two_sided": 0.8244835197539744,
+        "p_method": "exact"
+      },
+      "restricted_sensory_inter|mean_abs_amp_all_measured|ordinal_chemotaxis": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": 0.09352195295828246,
+        "p_two_sided": 0.8244835197539744,
+        "p_method": "exact"
+      },
+      "restricted_sensory_inter|n_sig_out|ordinal_overall_max": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": -0.34291382751370236,
+        "p_two_sided": 0.38312541851640586,
+        "p_method": "exact"
+      },
+      "restricted_sensory_inter|n_sig_out|ordinal_chemotaxis": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": -0.34291382751370236,
+        "p_two_sided": 0.38312541851640586,
+        "p_method": "exact"
+      },
+      "restricted_sensory_inter|sig_fraction|ordinal_overall_max": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": -0.34291382751370236,
+        "p_two_sided": 0.38312541851640586,
+        "p_method": "exact"
+      },
+      "restricted_sensory_inter|sig_fraction|ordinal_chemotaxis": {
+        "n": 8,
+        "classes": [
+          "AWA",
+          "AWC",
+          "ASE",
+          "ASH",
+          "AIY",
+          "AIZ",
+          "RIA",
+          "AIB"
+        ],
+        "rho": -0.34291382751370236,
+        "p_two_sided": 0.38312541851640586,
+        "p_method": "exact"
+      }
+    },
+    "mannwhitney": {
+      "all_measurable|mean_abs_amp_sig": {
+        "U": 17.0,
+        "p_one_sided_greater": 0.3242424242424242,
+        "n_hot": 4,
+        "n_cold": 7,
+        "median_hot": 0.22752749861376864,
+        "median_cold": 0.17006446410395612,
+        "hot_classes": [
+          "AWC",
+          "AIZ",
+          "VA",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB",
+          "VB"
+        ]
+      },
+      "all_measurable|mean_abs_amp_all_measured": {
+        "U": 23.0,
+        "p_one_sided_greater": 0.4178321678321678,
+        "n_hot": 6,
+        "n_cold": 7,
+        "median_hot": 0.0574174359707372,
+        "median_cold": 0.05488559753479347,
+        "hot_classes": [
+          "AWC",
+          "AIZ",
+          "VA",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB",
+          "VB"
+        ]
+      },
+      "all_measurable|n_sig_out": {
+        "U": 5.5,
+        "p_one_sided_greater": 0.9930069930069929,
+        "n_hot": 6,
+        "n_cold": 7,
+        "median_hot": 2.0,
+        "median_cold": 13.0,
+        "hot_classes": [
+          "AWC",
+          "AIZ",
+          "VA",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB",
+          "VB"
+        ]
+      },
+      "all_measurable|sig_fraction": {
+        "U": 7.0,
+        "p_one_sided_greater": 0.9825174825174825,
+        "n_hot": 6,
+        "n_cold": 7,
+        "median_hot": 0.014610698648391394,
+        "median_cold": 0.0436241610738255,
+        "hot_classes": [
+          "AWC",
+          "AIZ",
+          "VA",
+          "DA",
+          "DB",
+          "DD"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB",
+          "VB"
+        ]
+      },
+      "restricted_sensory_inter|mean_abs_amp_sig": {
+        "U": 8.0,
+        "p_one_sided_greater": 0.3214285714285714,
+        "n_hot": 2,
+        "n_cold": 6,
+        "median_hot": 0.22752749861376864,
+        "median_cold": 0.1744099314192259,
+        "hot_classes": [
+          "AWC",
+          "AIZ"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB"
+        ]
+      },
+      "restricted_sensory_inter|mean_abs_amp_all_measured": {
+        "U": 7.0,
+        "p_one_sided_greater": 0.42857142857142855,
+        "n_hot": 2,
+        "n_cold": 6,
+        "median_hot": 0.05774658533447312,
+        "median_cold": 0.05756344765243954,
+        "hot_classes": [
+          "AWC",
+          "AIZ"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB"
+        ]
+      },
+      "restricted_sensory_inter|n_sig_out": {
+        "U": 3.0,
+        "p_one_sided_greater": 0.8571428571428571,
+        "n_hot": 2,
+        "n_cold": 6,
+        "median_hot": 8.5,
+        "median_cold": 14.0,
+        "hot_classes": [
+          "AWC",
+          "AIZ"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB"
+        ]
+      },
+      "restricted_sensory_inter|sig_fraction": {
+        "U": 3.0,
+        "p_one_sided_greater": 0.8571428571428571,
+        "n_hot": 2,
+        "n_cold": 6,
+        "median_hot": 0.03078153479894357,
+        "median_cold": 0.047763637630338356,
+        "hot_classes": [
+          "AWC",
+          "AIZ"
+        ],
+        "cold_classes": [
+          "AWA",
+          "ASE",
+          "ASH",
+          "AIY",
+          "RIA",
+          "AIB"
+        ]
+      }
+    }
+  },
+  "confounds": {
+    "atlas_scope": "Head-ganglia neurons only (168 stimulated neurons, Fig 2a WT n=113 animals). Ventral-cord motor classes are represented ONLY by their head-most members: VA: ['VA1']; VB: ['VB1', 'VB2']; DA: ['DA1']; DB: ['DB2']; VD: NONE; DD: ['DD1']. VD has zero measured members and is untestable. The motor-class comparison is therefore built on 1-2 anterior members per class and is NOT a fair test of the model's ventral-cord claims; the restricted sensory/interneuron test (n=8) is the primary one.",
+    "background": "Wild-type dataset used (Fig 2a). unc-31 dataset (ED Fig 7) exists but not used.",
+    "directionality": "Model perturbation = chronic cell-autonomous leak-conductance change; atlas = acute optogenetic stimulation. Related but not identical quantities.",
+    "stimulation_efficacy": "Per-class coverage (n_measured_out) reported; count-based metrics are coverage-normalised (sig_fraction). Stimulation efficacy per neuron class (opsin expression, autoresponse amplitude) not controlled here.",
+    "model_side_limitation": "B6b JSON stores only ordered top-4 stiffest-class lists per condition, not continuous per-class curvature; model load is ordinal (4..1, else 0), heavily tied. BAAI_chemo gives only group-level (chemo-group vs motor-group) sensitivities, not per-class values."
+  }
+}

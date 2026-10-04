@@ -1,40 +1,9 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Vaxenburg et~al.(2025)Vaxenburg, Siwanowicz, Merel, Robie, Morrow,
-  Novati, Stupski, Card, and Turaga]{vaxenburg2025flybody}
-Roman Vaxenburg, Igor Siwanowicz, Josh Merel, Alice~A Robie, Carmen Morrow,
-  Guido Novati, Sam Stupski, Gwyneth~M Card, and Srinivas~C Turaga.
-\newblock Whole-body simulation of {\textit{drosophila}} reveals motor control
-  of behavior.
-\newblock \emph{Nature}, 2025.
-\newblock flybody release, Figshare DOI 10.25378/janelia.25309105.
-
-\bibitem[Wang-Chen et~al.(2024)]{wangchen2024neuromechfly}
-Sibo Wang-Chen et~al.
-\newblock Neuromechfly v2: simulating embodied sensorimotor control in adult
-  drosophila.
-\newblock \emph{Nature Methods}, 2024.
-
-\bibitem[Lobato-Rios et~al.(2022)Lobato-Rios, Ramalingasetty, {\"O}zdil,
-  Arreguit, Ijspeert, and Ramdya]{lobatorios2022neuromechfly}
-Victor Lobato-Rios, Shravan~Tata Ramalingasetty, Pembe~Gizem {\"O}zdil,
-  Jonathan Arreguit, Auke~Jan Ijspeert, and Pavan Ramdya.
-\newblock {NeuroMechFly}, a neuromechanical model of adult {Drosophila
-  melanogaster}.
-\newblock \emph{Nature Methods}, 19\penalty0 (5):\penalty0 620--627, 2022.
-
-\bibitem[Zhao et~al.(2024)Zhao, Wang, Jiang, Ma, Ma, He, Du, Ma, and
-  Huang]{wang2025baaiworm}
-Mengdi Zhao, Ning Wang, Xinyu Jiang, Xiaohan Ma, Haoran Ma, Gan He, Kai Du, Lei
-  Ma, and Tiejun Huang.
-\newblock An integrative data-driven model simulating \textit{C.~elegans}
-  brain, body and environment interactions.
-\newblock \emph{Nature Computational Science}, 4:\penalty0 106--120, 2024.
 
 \bibitem[Prinz et~al.(2004)Prinz, Bucher, and Marder]{prinz2004similar}
 Astrid~A Prinz, Dirk Bucher, and Eve Marder.
@@ -42,11 +11,31 @@ Astrid~A Prinz, Dirk Bucher, and Eve Marder.
 \newblock \emph{Nature Neuroscience}, 7\penalty0 (12):\penalty0 1345--1352,
   2004.
 
+\bibitem[Goldman et~al.(2001)Goldman, Golowasch, Marder, and
+  Abbott]{goldman2001global}
+Mark~S. Goldman, Jorge Golowasch, Eve Marder, and L.~F. Abbott.
+\newblock Global structure, robustness, and modulation of neuronal models.
+\newblock \emph{Journal of Neuroscience}, 21:\penalty0 5229--5238, 2001.
+
 \bibitem[Marder and Goaillard(2006)]{marder2006variability}
 Eve Marder and Jean-Marc Goaillard.
 \newblock Variability, compensation and homeostasis in neuron and network
   function.
 \newblock \emph{Nature Reviews Neuroscience}, 7:\penalty0 563--574, 2006.
+
+\bibitem[Marder and Taylor(2011)]{marder2011variability}
+Eve Marder and Adam~L Taylor.
+\newblock Multiple models to capture the variability in biological neurons and
+  networks.
+\newblock \emph{Nature Neuroscience}, 14\penalty0 (2):\penalty0 133--138, 2011.
+\newblock \doi{10.1038/nn.2735}.
+
+\bibitem[Brown and Sethna(2003)]{brown2003statistical}
+Kevin~S. Brown and James~P. Sethna.
+\newblock Statistical mechanical approaches to models with many poorly known
+  parameters.
+\newblock \emph{Physical Review E}, 68\penalty0 (2):\penalty0 021904, 2003.
+\newblock \doi{10.1103/physreve.68.021904}.
 
 \bibitem[Gutenkunst et~al.(2007)Gutenkunst, Waterfall, Casey, Brown, Myers, and
   Sethna]{gutenkunst2007universally}
@@ -64,35 +53,58 @@ Mark~K. Transtrum, Benjamin~B. Machta, Kevin~S. Brown, Bryan~C. Daniels,
   and beyond.
 \newblock \emph{Journal of Chemical Physics}, 143:\penalty0 010901, 2015.
 
-\bibitem[Goldman et~al.(2001)Goldman, Golowasch, Marder, and
-  Abbott]{goldman2001global}
-Mark~S. Goldman, Jorge Golowasch, Eve Marder, and L.~F. Abbott.
-\newblock Global structure, robustness, and modulation of neuronal models.
-\newblock \emph{Journal of Neuroscience}, 21:\penalty0 5229--5238, 2001.
+\bibitem[Raue et~al.(2009)Raue, Kreutz, Maiwald, Bachmann, Schilling,
+  Klingmüller, and Timmer]{raue2009identifiability}
+A.~Raue, C.~Kreutz, T.~Maiwald, J.~Bachmann, M.~Schilling, U.~Klingmüller, and
+  J.~Timmer.
+\newblock Structural and practical identifiability analysis of partially
+  observed dynamical models by exploiting the profile likelihood.
+\newblock \emph{Bioinformatics}, 25\penalty0 (15):\penalty0 1923--1929, 2009.
+\newblock \doi{10.1093/bioinformatics/btp358}.
 
-\bibitem[Marder and Taylor(2011)]{marder2011variability}
-Eve Marder and Adam~L Taylor.
-\newblock Multiple models to capture the variability in biological neurons and
-  networks.
-\newblock \emph{Nature Neuroscience}, 14\penalty0 (2):\penalty0 133--138, 2011.
-\newblock \doi{10.1038/nn.2735}.
+\bibitem[Villaverde and Banga(2014)]{villaverde2014reverse}
+Alejandro~F. Villaverde and Julio~R. Banga.
+\newblock Reverse engineering and identification in systems biology:
+  strategies, perspectives and challenges.
+\newblock \emph{Journal of the Royal Society Interface}, 11\penalty0
+  (91):\penalty0 20130505, 2014.
 
-\bibitem[Edelman and Gally(2001)]{edelman2001degeneracy}
-Gerald~M Edelman and Joseph~A Gally.
-\newblock Degeneracy and complexity in biological systems.
-\newblock \emph{Proceedings of the National Academy of Sciences}, 98\penalty0
-  (24):\penalty0 13763--13768, 2001.
+\bibitem[Chis et~al.(2016)Chis, Villaverde, Banga, and
+  Balsa-Canto]{chis2016sloppiness}
+Oana-Teodora Chis, Alejandro~F. Villaverde, Julio~R. Banga, and Eva
+  Balsa-Canto.
+\newblock On the relationship between sloppiness and identifiability.
+\newblock \emph{Mathematical Biosciences}, 282:\penalty0 147--161, 2016.
+\newblock \doi{10.1016/j.mbs.2016.10.009}.
 
-\bibitem[Shlizerman et~al.(2025)]{shlizerman2025modworm}
-Eli Shlizerman et~al.
-\newblock modworm: a modular muscular-skeletal c. elegans simulator.
-\newblock \emph{Preprint}, 2025.
+\bibitem[White et~al.(2016)White, Tolman, Thames, Withers, Mason, and
+  Transtrum]{white2016limitations}
+Andrew White, Malachi Tolman, Howard~D. Thames, Hubert~Rodney Withers, Kathy~A.
+  Mason, and Mark~K. Transtrum.
+\newblock The limitations of model-based experimental design and parameter
+  estimation in sloppy systems.
+\newblock \emph{PLOS Computational Biology}, 12\penalty0 (12):\penalty0
+  e1005227, 2016.
+\newblock \doi{10.1371/journal.pcbi.1005227}.
 
-\bibitem[Todorov et~al.(2012)Todorov, Erez, and Tassa]{todorov2012mujoco}
-Emanuel Todorov, Tom Erez, and Yuval Tassa.
-\newblock {MuJoCo}: A physics engine for model-based control.
-\newblock In \emph{2012 IEEE/RSJ International Conference on Intelligent Robots
-  and Systems (IROS)}, pages 5026--5033, 2012.
+\bibitem[Kreutz et~al.(2012)Kreutz, Raue, and Timmer]{kreutz2012prediction}
+Clemens Kreutz, Andreas Raue, and Jens Timmer.
+\newblock Likelihood based observability analysis and confidence intervals for
+  predictions of dynamic models.
+\newblock \emph{BMC Systems Biology}, 6\penalty0 (1):\penalty0 120, 2012.
+\newblock \doi{10.1186/1752-0509-6-120}.
+
+\bibitem[Fr{\"o}hlich et~al.(2018)Fr{\"o}hlich, Kessler, Weindl, Shadrin,
+  Schmiester, Hache, Muradyan, Sch{\"u}tte, Lim, Heinig, Theis, Lehrach,
+  Wierling, Lange, and Hasenauer]{froehlich2018efficient}
+Fabian Fr{\"o}hlich, Thomas Kessler, Daniel Weindl, Alexey Shadrin, Leonard
+  Schmiester, Hendrik Hache, Artur Muradyan, Moritz Sch{\"u}tte, Ji-Hyun Lim,
+  Matthias Heinig, Fabian~J. Theis, Hans Lehrach, Christoph Wierling, Bodo
+  Lange, and Jan Hasenauer.
+\newblock Efficient parameter estimation enables the prediction of drug
+  response using a mechanistic pan-cancer pathway model.
+\newblock \emph{Cell Systems}, 7\penalty0 (6):\penalty0 567--579.e6, 2018.
+\newblock \doi{10.1016/j.cels.2018.10.013}.
 
 \bibitem[White et~al.(1986)White, Southgate, Thomson, and
   Brenner]{white1986structure}
@@ -114,6 +126,11 @@ Sven Dorkenwald, Arie Matsliah, Amy~R. Sterling, et~al.
 \newblock Neuronal wiring diagram of an adult brain.
 \newblock \emph{Nature}, 634:\penalty0 124--138, 2024.
 
+\bibitem[Hines and Carnevale(1997)]{hines1997neuron}
+Michael~L. Hines and Nicholas~T. Carnevale.
+\newblock The {NEURON} simulation environment.
+\newblock \emph{Neural Computation}, 9\penalty0 (6):\penalty0 1179--1209, 1997.
+
 \bibitem[Szigeti et~al.(2014)Szigeti, Gleeson, Vella,
   et~al.]{szigeti2014openworm}
 Bal{\'a}zs Szigeti, Padraig Gleeson, Michael Vella, et~al.
@@ -128,39 +145,6 @@ Padraig Gleeson, David Lung, Radu Grober, et~al.
   \textit{Caenorhabditis elegans}.
 \newblock \emph{Philosophical Transactions of the Royal Society B},
   373\penalty0 (1758):\penalty0 20170379, 2018.
-
-\bibitem[Hines and Carnevale(1997)]{hines1997neuron}
-Michael~L. Hines and Nicholas~T. Carnevale.
-\newblock The {NEURON} simulation environment.
-\newblock \emph{Neural Computation}, 9\penalty0 (6):\penalty0 1179--1209, 1997.
-
-\bibitem[Kato et~al.(2015)Kato, Kaplan, Schr{\"o}del, et~al.]{kato2015global}
-Saul Kato, Harris~S Kaplan, Tina Schr{\"o}del, et~al.
-\newblock Global brain dynamics embed the motor command sequence of
-  \textit{Caenorhabditis elegans}.
-\newblock \emph{Cell}, 163\penalty0 (3):\penalty0 656--669, 2015.
-
-\bibitem[Nguyen et~al.(2016)Nguyen, Shipley, Linder, Plummer, Liu, Setru,
-  Shaevitz, and Leifer]{nguyen2016whole}
-Jeffrey~P. Nguyen, Frederick~B. Shipley, Ashley~N. Linder, George~S. Plummer,
-  Mochi Liu, Sagar~U. Setru, Joshua~W. Shaevitz, and Andrew~M. Leifer.
-\newblock Whole-brain calcium imaging with cellular resolution in freely
-  behaving {Caenorhabditis elegans}.
-\newblock \emph{Proceedings of the National Academy of Sciences}, 113\penalty0
-  (8):\penalty0 E1074--E1081, 2016.
-
-\bibitem[Randi and Leifer(2023)]{randi2023multimodal}
-Francesco Randi and Andrew~M Leifer.
-\newblock Multi-modal whole-organism neuroscience: Integrating behavior, neural
-  dynamics, and physiology in {C.~elegans}.
-\newblock \emph{Current Opinion in Neurobiology}, 79:\penalty0 102684, 2023.
-
-\bibitem[Stephens et~al.(2008)Stephens, Johnson-Kerner, Bialek, and
-  Ryu]{stephens2008dimensionality}
-Greg~J Stephens, Bethany Johnson-Kerner, William Bialek, and William~S Ryu.
-\newblock Dimensionality and dynamics in the behavior of \textit{C.~elegans}.
-\newblock \emph{PLoS Computational Biology}, 4\penalty0 (4):\penalty0 e1000028,
-  2008.
 
 \bibitem[Javer et~al.(2018)Javer, Currie, Lee, Hokanson, Li, Martineau, Yemini,
   Grundy, Li, Ch'ng, Schafer, Nollen, Kerr, and Brown]{javer2018open}
@@ -178,141 +162,27 @@ Talmo~D. Pereira, Joshua~W. Shaevitz, and Mala Murthy.
 \newblock \emph{Nature Neuroscience}, 23\penalty0 (12):\penalty0 1537--1549,
   2020.
 
-\bibitem[Cranmer et~al.(2020)Cranmer, Brehmer, and Louppe]{cranmer2020frontier}
-Kyle Cranmer, Johann Brehmer, and Gilles Louppe.
-\newblock The frontier of simulation-based inference.
-\newblock \emph{Proceedings of the National Academy of Sciences}, 117\penalty0
-  (48):\penalty0 30055--30062, 2020.
+\bibitem[Zhao et~al.(2024)Zhao, Wang, Jiang, Ma, Ma, He, Du, Ma, and
+  Huang]{wang2025baaiworm}
+Mengdi Zhao, Ning Wang, Xinyu Jiang, Xiaohan Ma, Haoran Ma, Gan He, Kai Du, Lei
+  Ma, and Tiejun Huang.
+\newblock An integrative data-driven model simulating \textit{C.~elegans}
+  brain, body and environment interactions.
+\newblock \emph{Nature Computational Science}, 4:\penalty0 106--120, 2024.
 
-\bibitem[Gon{\c{c}}alves et~al.(2020)Gon{\c{c}}alves, Lueckmann, Deistler,
-  et~al.]{goncalves2020training}
-Pedro~J Gon{\c{c}}alves, Jan-Matthis Lueckmann, Michael Deistler, et~al.
-\newblock Training deep neural density estimators to identify mechanistic
-  models of neural dynamics.
-\newblock \emph{eLife}, 9:\penalty0 e56261, 2020.
+\bibitem[Wang-Chen et~al.(2024)]{wangchen2024neuromechfly}
+Sibo Wang-Chen et~al.
+\newblock Neuromechfly v2: simulating embodied sensorimotor control in adult
+  drosophila.
+\newblock \emph{Nature Methods}, 2024.
 
-\bibitem[Tejero-Cantero et~al.(2020)Tejero-Cantero, Boelts, Deistler,
-  Lueckmann, Durkan, Gon{\c{c}}alves, Greenberg, and Macke]{tejero2020sbi}
-Alvaro Tejero-Cantero, Jan Boelts, Michael Deistler, Jan-Matthis Lueckmann,
-  Conor Durkan, Pedro~J Gon{\c{c}}alves, David~S Greenberg, and Jakob~H Macke.
-\newblock sbi: A toolkit for simulation-based inference.
-\newblock \emph{Journal of Open Source Software}, 5\penalty0 (52):\penalty0
-  2505, 2020.
-
-\bibitem[Spall(1992)]{spall1992multivariate}
-James~C Spall.
-\newblock Multivariate stochastic approximation using a simultaneous
-  perturbation gradient approximation.
-\newblock \emph{IEEE Transactions on Automatic Control}, 37\penalty0
-  (3):\penalty0 332--341, 1992.
-
-\bibitem[Hansen and Ostermeier(2001)]{hansen2001completely}
-Nikolaus Hansen and Andreas Ostermeier.
-\newblock Completely derandomized self-adaptation in evolution strategies.
-\newblock \emph{Evolutionary Computation}, 9\penalty0 (2):\penalty0 159--195,
-  2001.
-
-\bibitem[He(2026)]{he2026pgob}
-Chenxi He.
-\newblock Generating behaviour-equivalent parameters for whole-organism
-  simulators from tracking video.
-\newblock Preprint, 2026.
-\newblock URL \url{https://doi.org/10.21203/rs.3.rs-10486658/v1}.
-\newblock Preprint.
-
-\bibitem[Pospisil et~al.(2024)Pospisil, Aragon, Dorkenwald, Matsliah, Sterling,
-  Schlegel, Yu, McKellar, Costa, Eichler, Jefferis, Murthy, and
-  Pillow]{pospisil2024effectome}
-Dean~A. Pospisil, Max~J. Aragon, Sven Dorkenwald, Arie Matsliah, Amy~R.
-  Sterling, Philipp Schlegel, Szi-chieh Yu, Claire~E. McKellar, Marta Costa,
-  Katharina Eichler, Gregory S. X.~E. Jefferis, Mala Murthy, and Jonathan~W.
-  Pillow.
-\newblock The fly connectome reveals a path to the effectome.
-\newblock \emph{Nature}, 634:\penalty0 201--209, 2024.
-\newblock \doi{10.1038/s41586-024-07982-0}.
-
-\bibitem[Villaverde and Banga(2014)]{villaverde2014reverse}
-Alejandro~F. Villaverde and Julio~R. Banga.
-\newblock Reverse engineering and identification in systems biology:
-  strategies, perspectives and challenges.
-\newblock \emph{Journal of the Royal Society Interface}, 11\penalty0
-  (91):\penalty0 20130505, 2014.
-
-\bibitem[Saltelli et~al.(2008)Saltelli, Ratto, Andres, Campolongo, Cariboni,
-  Gatelli, Saisana, and Tarantola]{saltelli2008global}
-Andrea Saltelli, Marco Ratto, Terry Andres, Francesca Campolongo, Jessica
-  Cariboni, Debora Gatelli, Michaela Saisana, and Stefano Tarantola.
-\newblock \emph{Global Sensitivity Analysis: The Primer}.
-\newblock John Wiley \& Sons, 2008.
-
-\bibitem[Sethna(2010)]{sethna2010sloppy}
-James~P. Sethna.
-\newblock Sloppy models, parameter uncertainty, and the role of experimental
-  design.
-\newblock \emph{Molecular BioSystems}, 6:\penalty0 1846, 2010.
-
-\bibitem[Karr et~al.(2012)Karr, Sanghvi, Macklin, Gutschow, Jacobs, Bolival~Jr,
-  Assad-Garcia, Glass, and Covert]{karr2012whole}
-Jonathan~R. Karr, Jayodita~C. Sanghvi, Derek~N. Macklin, Miriam~V. Gutschow,
-  Jared~M. Jacobs, Benjamin Bolival~Jr, Nacyra Assad-Garcia, John~I. Glass, and
-  Markus~W. Covert.
-\newblock A whole-cell computational model predicts phenotype from genotype.
-\newblock \emph{Cell}, 150\penalty0 (2):\penalty0 389--401, 2012.
-
-\bibitem[Zador et~al.(2023)Zador, Escola, Richards, {\"O}lveczky, Bengio,
-  Boahen, et~al.]{zador2023catalyzing}
-Anthony Zador, Sean Escola, Blake Richards, Bence {\"O}lveczky, Yoshua Bengio,
-  Kwabena Boahen, et~al.
-\newblock Catalyzing next-generation artificial intelligence through {NeuroAI}.
-\newblock \emph{Nature Communications}, 14:\penalty0 1597, 2023.
-
-\bibitem[Gray et~al.(2005)Gray, Hill, and Bargmann]{gray2005circuit}
-Jesse~M. Gray, Joseph~J. Hill, and Cornelia~I. Bargmann.
-\newblock A circuit for navigation in caenorhabditis elegans.
-\newblock \emph{PNAS}, 102:\penalty0 3184--3191, 2005.
-
-\bibitem[Bargmann(2012)]{bargmann2012beyond}
-Cornelia~I Bargmann.
-\newblock Beyond the connectome: How neuromodulators shape neural circuits.
-\newblock \emph{BioEssays}, 34\penalty0 (6):\penalty0 458--465, 2012.
-
-\bibitem[Wen et~al.(2012)Wen, Po, Hulme, Chen, Liu, Kwok,
-  et~al.]{wen2012proprioceptive}
-Quan Wen, Michelle~D. Po, Elizabeth Hulme, Sway Chen, Xinyu Liu, Sze~Wai Kwok,
-  et~al.
-\newblock Proprioceptive coupling within motor neurons drives {C.~elegans}
-  forward locomotion.
-\newblock \emph{Neuron}, 76\penalty0 (4):\penalty0 750--761, 2012.
-
-\bibitem[Izquierdo and Beer(2018)]{izquierdo2018connecting}
-Eduardo~J Izquierdo and Randall~D Beer.
-\newblock Connecting a connectome to behavior: an ensemble of neuroanatomical
-  models of \textit{C.~elegans} klinotaxis.
-\newblock \emph{PLoS Computational Biology}, 14\penalty0 (2):\penalty0
-  e1005968, 2018.
-
-\bibitem[Kholodenko(2000)]{kholodenko2000negative}
-Boris~N. Kholodenko.
-\newblock Negative feedback and ultrasensitivity can bring about oscillations
-  in the mitogen-activated protein kinase cascades.
-\newblock \emph{European Journal of Biochemistry}, 267\penalty0 (6):\penalty0
-  1583--1588, 2000.
-\newblock \doi{10.1046/j.1432-1327.2000.01197.x}.
-
-\bibitem[Talts et~al.(2018)Talts, Betancourt, Simpson, Vehtari, and
-  Gelman]{talts2018validating}
-Sean Talts, Michael Betancourt, Daniel Simpson, Aki Vehtari, and Andrew Gelman.
-\newblock Validating {B}ayesian inference algorithms with simulation-based
-  calibration.
-\newblock \emph{arXiv preprint arXiv:1804.06788}, 2018.
-
-\bibitem[Hermans et~al.(2022)Hermans, Delaunoy, Rozet, Wehenkel, Begy, and
-  Louppe]{hermans2022sbc}
-Joeri Hermans, Arnaud Delaunoy, Fran{\c c}ois Rozet, Antoine Wehenkel,
-  Volodimir Begy, and Gilles Louppe.
-\newblock A trust crisis in simulation-based inference? {Y}our posterior
-  approximations can be unfaithful.
-\newblock In \emph{Transactions on Machine Learning Research}, 2022.
+\bibitem[Lobato-Rios et~al.(2022)Lobato-Rios, Ramalingasetty, {\"O}zdil,
+  Arreguit, Ijspeert, and Ramdya]{lobatorios2022neuromechfly}
+Victor Lobato-Rios, Shravan~Tata Ramalingasetty, Pembe~Gizem {\"O}zdil,
+  Jonathan Arreguit, Auke~Jan Ijspeert, and Pavan Ramdya.
+\newblock {NeuroMechFly}, a neuromechanical model of adult {Drosophila
+  melanogaster}.
+\newblock \emph{Nature Methods}, 19\penalty0 (5):\penalty0 620--627, 2022.
 
 \bibitem[Lappalainen et~al.(2024)Lappalainen, Tschopp, Prakhya, McGill, Nern,
   Shinomiya, Takemura, Gruntman, Macke, and Turaga]{lappalainen2024connectome}
@@ -322,5 +192,100 @@ Janne~K. Lappalainen, Fabian~D. Tschopp, Sridhama Prakhya, Mason McGill,
 \newblock Connectome-constrained networks predict neural activity across the
   fly visual system.
 \newblock \emph{Nature}, 634:\penalty0 1132--1140, 2024.
+
+\bibitem[Apgar et~al.(2010)Apgar, Witmer, White, and Tidor]{sethna2010sloppy}
+Joshua~F Apgar, David~K Witmer, Forest~M White, and Bruce Tidor.
+\newblock Sloppy models, parameter uncertainty, and the role of experimental
+  design.
+\newblock \emph{Molecular BioSystems}, 6\penalty0 (10):\penalty0 1890--1900,
+  2010.
+\newblock \doi{10.1039/b918098b}.
+
+\bibitem[Transtrum and Qiu(2012)]{transtrum2012selection}
+Mark~K Transtrum and Peng Qiu.
+\newblock Optimal experiment selection for parameter estimation in biological
+  differential equation models.
+\newblock \emph{BMC Bioinformatics}, 13\penalty0 (1):\penalty0 181, 2012.
+\newblock \doi{10.1186/1471-2105-13-181}.
+
+\bibitem[Balsa-Canto et~al.(2010)Balsa-Canto, Alonso, and
+  Banga]{balsacanto2010identification}
+Eva Balsa-Canto, Antonio~A Alonso, and Julio~R Banga.
+\newblock An iterative identification procedure for dynamic modeling of
+  biochemical networks.
+\newblock \emph{BMC Systems Biology}, 4\penalty0 (1):\penalty0 11, 2010.
+\newblock \doi{10.1186/1752-0509-4-11}.
+
+\bibitem[Hodgkin and Huxley(1952)]{hodgkin1952quantitative}
+Alan~L. Hodgkin and Andrew~F. Huxley.
+\newblock A quantitative description of membrane current and its application to
+  conduction and excitation in nerve.
+\newblock \emph{The Journal of Physiology}, 117\penalty0 (4):\penalty0
+  500--544, 1952.
+
+\bibitem[Connor and Stevens(1971)]{connor1971prediction}
+John~A. Connor and Charles~F. Stevens.
+\newblock Prediction of repetitive firing behaviour from voltage clamp data on
+  an isolated neurone soma.
+\newblock \emph{The Journal of Physiology}, 213:\penalty0 31--53, 1971.
+
+\bibitem[Wang and Buzs{\'a}ki(1996)]{wang1996gamma}
+Xiao-Jing Wang and Gy{\"o}rgy Buzs{\'a}ki.
+\newblock Gamma oscillation by synaptic inhibition in a hippocampal
+  interneuronal network model.
+\newblock \emph{Journal of Neuroscience}, 16:\penalty0 6402--6413, 1996.
+
+\bibitem[Morris and Lecar(1981)]{morris1981voltage}
+Catherine Morris and Harold Lecar.
+\newblock Voltage oscillations in the barnacle giant muscle fiber.
+\newblock \emph{Biophysical Journal}, 35:\penalty0 193--213, 1981.
+
+\bibitem[FitzHugh(1961)]{fitzhugh1961impulses}
+Richard FitzHugh.
+\newblock Impulses and physiological states in theoretical models of nerve
+  membrane.
+\newblock \emph{Biophysical Journal}, 1:\penalty0 445--466, 1961.
+
+\bibitem[Kholodenko(2000)]{kholodenko2000negative}
+Boris~N. Kholodenko.
+\newblock Negative feedback and ultrasensitivity can bring about oscillations
+  in the mitogen-activated protein kinase cascades.
+\newblock \emph{European Journal of Biochemistry}, 267\penalty0 (6):\penalty0
+  1583--1588, 2000.
+\newblock \doi{10.1046/j.1432-1327.2000.01197.x}.
+
+\bibitem[Elowitz and Leibler(2000)]{elowitz2000synthetic}
+Michael~B. Elowitz and Stanislas Leibler.
+\newblock A synthetic oscillatory network of transcriptional regulators.
+\newblock \emph{Nature}, 403:\penalty0 335--338, 2000.
+
+\bibitem[Goodwin(1965)]{goodwin1965oscillatory}
+Brian~C. Goodwin.
+\newblock Oscillatory behavior in enzymatic control processes.
+\newblock \emph{Advances in Enzyme Regulation}, 3:\penalty0 425--437, 1965.
+
+\bibitem[Sel'kov(1968)]{selkov1968self}
+Evgeni~E. Sel'kov.
+\newblock Self-oscillations in glycolysis. 1. a simple kinetic model.
+\newblock \emph{European Journal of Biochemistry}, 4:\penalty0 79--86, 1968.
+
+\bibitem[Prigogine and Lefever(1968)]{prigogine1968symmetry}
+Ilya Prigogine and Ren{\'e} Lefever.
+\newblock Symmetry breaking instabilities in dissipative systems. {II}.
+\newblock \emph{The Journal of Chemical Physics}, 48:\penalty0 1695--1700,
+  1968.
+
+\bibitem[Goldbeter(1991)]{goldbeter1991minimal}
+Albert Goldbeter.
+\newblock A minimal cascade model for the mitotic oscillator involving cyclin
+  and cdc2 kinase.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 88:\penalty0
+  9107--9111, 1991.
+
+\bibitem[He(2026)]{he2026data}
+Chenxi He.
+\newblock Behavioural-parameter-manifold: code, result files and reproduction
+  container, 2026.
+\newblock Deposited 2026.
 
 \end{thebibliography}

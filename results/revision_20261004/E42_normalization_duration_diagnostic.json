@@ -1,0 +1,26 @@
+{
+  "temporal_SD_per_neuron_2000ms": {
+    "d90": 26,
+    "d99": 66,
+    "participation_ratio": 6.826214303912985,
+    "n_observables": 9600
+  },
+  "across_neuron_SD_per_time_2000ms": {
+    "d90": 44,
+    "d99": 75,
+    "participation_ratio": 20.477061571837016,
+    "n_observables": 9600
+  },
+  "global_SD_2000ms": {
+    "d90": 45,
+    "d99": 75,
+    "participation_ratio": 20.696229062489074,
+    "n_observables": 9600
+  },
+  "temporal_SD_per_neuron_first1500ms": {
+    "d90": 27,
+    "d99": 67,
+    "participation_ratio": 6.817060968365316,
+    "n_observables": 7200
+  }
+}
