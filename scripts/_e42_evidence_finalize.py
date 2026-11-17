@@ -9,7 +9,7 @@ import zipfile
 import numpy as np
 
 root = Path(os.environ.get('BAAI_ROOT', '/root/autodl-tmp/BAAIWorm_fresh'))
-out = Path(os.environ['PAPER2_OUTPUT_DIR'])
+out = Path(os.environ['OUTPUT_SENSITIVITY_DIR'])
 sys.path[:0] = [str(root), str(root/'eworm/ghost_in_mesh_sim')]
 tuned = root/'eworm/ghost_in_mesh_sim/data/tuned/video_offline'
 with open(tuned/'video_offline_abscircuit.pkl', 'rb') as f:

@@ -15,7 +15,7 @@ from concurrent.futures import ProcessPoolExecutor
 CTX = mp.get_context("spawn")
 PY = os.environ.get("BAAI_PYTHON", sys.executable)
 WORKER = os.environ.get("BAAI_WORKER", str(Path(__file__).with_name("_baai_worker.py")))
-OUTDIR = Path(os.environ.get("PAPER2_OUTPUT_DIR", "results/revision_20261004/E60_explicit_readout"))
+OUTDIR = Path(os.environ.get("OUTPUT_SENSITIVITY_DIR", "results/revision_20261004/E60_explicit_readout"))
 OUT = str(OUTDIR / "result.json")
 NW = int(os.environ.get("NW", "28"))
 N_SAMPLE = 3076

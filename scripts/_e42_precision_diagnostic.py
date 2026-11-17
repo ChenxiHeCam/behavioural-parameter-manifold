@@ -6,7 +6,7 @@ from pathlib import Path
 import json
 import numpy as np
 
-out = Path(os.environ['PAPER2_OUTPUT_DIR'])
+out = Path(os.environ['OUTPUT_SENSITIVITY_DIR'])
 with np.load(out/'responses/connection_-001_+0.npz') as z:
     baseline = z['voltage']
 base32 = baseline.astype(np.float32)

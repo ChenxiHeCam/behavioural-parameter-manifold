@@ -22,7 +22,7 @@ def main():
             print('Verified existing',row['path']);continue
         temp=target.with_name(target.name+'.part')
         print('Downloading',row['asset'],flush=True)
-        request=urllib.request.Request(row['url'],headers={'User-Agent':'paper2-code-reproduction'})
+        request=urllib.request.Request(row['url'],headers={'User-Agent':'output-sensitivity-reproduction'})
         with urllib.request.urlopen(request,timeout=120) as response,temp.open('wb') as out:
             while True:
                 block=response.read(1024*1024)

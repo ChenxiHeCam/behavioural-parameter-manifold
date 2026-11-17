@@ -12,7 +12,7 @@ OBS = ['net_disp', 'path_len', 'mean_speed', 'speed_std', 'rms_heading', 'fwd_wo
 
 
 def measure_union(labels, spec_for, delta, food_close, food_far, experiment):
-    outdir = Path(os.environ.get('PAPER2_OUTPUT_DIR', 'results/revision_20261004')) / experiment
+    outdir = Path(os.environ.get('OUTPUT_SENSITIVITY_DIR', 'results/revision_20261004')) / experiment
     outdir.mkdir(parents=True, exist_ok=True)
     worker = Path(os.environ.get('BAAI_BODY_WORKER', str(Path(__file__).with_name('_b6_physics_worker.py'))))
     python = os.environ.get('BAAI_PYTHON', sys.executable)

@@ -11,7 +11,7 @@ import numpy as np
 
 def main():
     worker = Path(__file__).with_name('_baai_worker.py')
-    out = Path(os.environ['PAPER2_OUTPUT_DIR'])
+    out = Path(os.environ['OUTPUT_SENSITIVITY_DIR'])
     out.mkdir(parents=True, exist_ok=True)
     specs = {'baseline': {'conn': -1, 'tstop': 100}}
     for mechanism in ('slo1_egl19', 'slo1_unc2', 'slo2_egl19', 'slo2_unc2'):

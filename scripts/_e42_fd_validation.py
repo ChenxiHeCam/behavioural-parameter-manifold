@@ -10,7 +10,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 
-out=Path(os.environ['PAPER2_OUTPUT_DIR'])
+out=Path(os.environ['OUTPUT_SENSITIVITY_DIR'])
 worker=Path(__file__).with_name('_baai_worker.py')
 with np.load(out/'E42_motor_voltage_matrices.npz') as z:
     J=z['J']; base=z['baseline']; scale=z['output_scale']

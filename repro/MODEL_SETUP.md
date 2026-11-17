@@ -18,18 +18,18 @@ cd ../..
 export BAAI_ROOT="$PWD/reproduction_models/E42/model"
 export BAAI_MECHANISM_DIR="$PWD/reproduction_output/mechanisms"
 export BAAI_PYTHON="$(command -v python)"
-export PAPER2_OUTPUT_DIR="$PWD/reproduction_output/E42"
+export OUTPUT_SENSITIVITY_DIR="$PWD/reproduction_output/E42"
 export NWORK=4
 python scripts/_e42_recover_full_spectrum.py
 ```
 
-For named conductance gains, set a new `PAPER2_OUTPUT_DIR` and run `_e45_baai_named_channels.py` using the same environment. The model archives preserve the exact source/configuration files used by the corresponding assays.
+For named conductance gains, set a new `OUTPUT_SENSITIVITY_DIR` and run `_e45_baai_named_channels.py` using the same environment. The model archives preserve the exact source/configuration files used by the corresponding assays.
 
 ## Closed-loop stimulation conditions
 
 `B6_model_and_runtime_sources.zip` includes the model and headless physics adapter under `model/build_headless/`, with CMake sources. Compiler/runtime information is in `B6_model_runtime_provenance.json`. This model requires a Linux C++/Python environment and NEURON. Compile the adapter for your environment using its CMake specification.
 
-Set `BAAI_ROOT` to the extracted `model/`, `BAAI_MECHANISM_DIR` to the compiled mechanisms and `BAAI_INTERACT_DIR` to the directory containing the headless `interact` module. Set a new `PAPER2_OUTPUT_DIR`. Run `_b6_union_crossbehaviour.py` or `_b6b_cellclass_union.py`. Their shared producer uses the specified per-condition normalization.
+Set `BAAI_ROOT` to the extracted `model/`, `BAAI_MECHANISM_DIR` to the compiled mechanisms and `BAAI_INTERACT_DIR` to the directory containing the headless `interact` module. Set a new `OUTPUT_SENSITIVITY_DIR`. Run `_b6_union_crossbehaviour.py` or `_b6b_cellclass_union.py`. Their shared producer uses the specified per-condition normalization.
 
 ## Fly visual network
 

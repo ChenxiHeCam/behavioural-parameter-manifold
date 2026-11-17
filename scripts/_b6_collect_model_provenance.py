@@ -7,7 +7,7 @@ import sys
 import zipfile
 
 root = Path(os.environ.get('BAAI_ROOT', '/root/autodl-tmp/BAAIWorm_fresh'))
-out = Path(os.environ['PAPER2_OUTPUT_DIR'])
+out = Path(os.environ['OUTPUT_SENSITIVITY_DIR'])
 out.mkdir(parents=True, exist_ok=True)
 selected = [root/'eworm/network/config.json', root/'build_headless/build/interact.so',
             root/'build_headless/build/libsim.so', root/'build_headless/build/libfem.so',

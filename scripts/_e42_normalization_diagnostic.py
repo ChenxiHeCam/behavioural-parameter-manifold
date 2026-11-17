@@ -6,7 +6,7 @@ from pathlib import Path
 import json
 import numpy as np
 
-out=Path(os.environ['PAPER2_OUTPUT_DIR'])
+out=Path(os.environ['OUTPUT_SENSITIVITY_DIR'])
 with np.load(out/'E42_motor_voltage_matrices.npz') as z:
     base=z['baseline']; scale=z['output_scale']; J=z['J']
 raw=(J.reshape(base.shape+(J.shape[1],))*scale[:,:,None])

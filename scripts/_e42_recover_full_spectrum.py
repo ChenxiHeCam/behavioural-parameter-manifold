@@ -1,7 +1,7 @@
 """Rerun the point-circuit probe, retaining every response and full spectrum.
 
 Run on Linux with BAAI_ROOT, BAAI_MECHANISM_DIR, BAAI_PYTHON and
-PAPER2_OUTPUT_DIR set. The rerun is separate from all historical result files.
+OUTPUT_SENSITIVITY_DIR set. The rerun is separate from all historical result files.
 """
 import os
 for key in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS"):
@@ -17,7 +17,7 @@ import numpy as np
 from _baai_worker_support import select_readout
 
 ROOT = Path(os.environ.get("BAAI_ROOT", "/root/autodl-tmp/BAAIWorm_fresh"))
-OUT = Path(os.environ.get("PAPER2_OUTPUT_DIR", "results/revision_20261004"))
+OUT = Path(os.environ.get("OUTPUT_SENSITIVITY_DIR", "results/revision_20261004"))
 WORKER = Path(__file__).with_name("_baai_worker.py")
 PY = os.environ.get("BAAI_PYTHON", sys.executable)
 NWORK = int(os.environ.get("NWORK", "24"))
