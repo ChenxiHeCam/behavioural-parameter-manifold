@@ -4,14 +4,14 @@ Analysis and simulation code, model inputs and results for Chenxi He's study of 
 
 ## Free, anonymous access
 
-All repository files and [release assets](https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/tag/paper2-code-20261004) are public. Browse directly, select **Code → Download ZIP**, or clone:
+All repository files and [release assets](https://github.com/ChenxiHeCam/behavioural-parameter-manifold/releases/latest) are public. Browse directly, select **Code → Download ZIP**, or clone:
 
 ```bash
 git clone https://github.com/ChenxiHeCam/behavioural-parameter-manifold.git
 cd behavioural-parameter-manifold
 ```
 
-No account, login, password or personal information is required. Tag `paper2-code-20261004` identifies this version. Large matrices and raw response archives are release downloads; [release_assets.json](repro/release_assets.json) specifies their URLs, paths, sizes and SHA256 values.
+No account, login, password or personal information is required. The code and result release is dated 2026-10-04. Large matrices and raw response archives are release downloads; [release_assets.json](repro/release_assets.json) specifies their URLs, paths, sizes and SHA256 values.
 
 ## Recalculate stored results and figures
 

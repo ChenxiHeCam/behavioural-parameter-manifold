@@ -36,8 +36,8 @@ The prospective verifier reconstructs observations, fit objectives, compatible e
 Download the result matrices first, then:
 
 ```bash
-docker build -f repro/Dockerfile -t paper2-reproduction .
-docker run --rm paper2-reproduction
+docker build -f repro/Dockerfile -t output-sensitivity-reproduction .
+docker run --rm output-sensitivity-reproduction
 ```
 
 The image performs the stored-result checks, including the full connection calculation. Raw archives are unnecessary for this check.
